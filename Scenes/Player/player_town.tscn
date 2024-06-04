@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx02ogge4lfm5"]
+
+[ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
+
+[sub_resource type="Gradient" id="Gradient_7co4w"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_48wpj"]
+gradient = SubResource("Gradient_7co4w")
+fill_from = Vector2(0.16087, 0.204348)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5lx"]
+radius = 24.0
+height = 512.0
+
+[node name="PlayerTown" type="CharacterBody2D"]
+script = ExtResource("1_j6iwr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 8.3125)
+texture = SubResource("GradientTexture2D_48wpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_rb5lx")

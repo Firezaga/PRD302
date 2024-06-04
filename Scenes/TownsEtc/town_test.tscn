@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0wwd12kpysa7"]
+
+[ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
+
+[sub_resource type="Gradient" id="Gradient_kga2v"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7a81b"]
+gradient = SubResource("Gradient_kga2v")
+fill_from = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wdi5"]
+size = Vector2(64, 64)
+
+[node name="TownTest" type="Node2D"]
+
+[node name="PlayerTown" parent="." instance=ExtResource("1_1f5yi")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1160, -532)
+scale = Vector2(23.75, 15.375)
+texture = SubResource("GradientTexture2D_7a81b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_6wdi5")

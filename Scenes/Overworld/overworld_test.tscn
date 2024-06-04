@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyroak05o2fy"]
+
+[ext_resource type="PackedScene" uid="uid://fq3lc6h4our0" path="res://Scenes/Player/player_overworld.tscn" id="1_sdr83"]
+
+[sub_resource type="Gradient" id="Gradient_fyob0"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xnest"]
+gradient = SubResource("Gradient_fyob0")
+fill_from = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi171"]
+size = Vector2(64, 64)
+
+[node name="OverworldTest" type="Node2D"]
+
+[node name="PlayerOverworld" parent="." instance=ExtResource("1_sdr83")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-392, 12)
+scale = Vector2(6.5, 32.625)
+texture = SubResource("GradientTexture2D_xnest")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pi171")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(528, -40)
+scale = Vector2(6.5, 32.625)
+texture = SubResource("GradientTexture2D_xnest")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D"]
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pi171")

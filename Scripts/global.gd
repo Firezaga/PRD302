@@ -16,7 +16,7 @@ var PlayerAP = 1
 var PlayerStartingAP = 1
 var PlayerDefense = 0
 var PlayerStoryState = 0
-var PlayerMove = false
+var PlayerMove = true
 #endregion
 
 #region Leveling
@@ -146,5 +146,12 @@ func GOTO_game_over():
 func CORE_quit():
 	get_tree().quit()
 
+
+func CORE_pause():
+	PlayerMove = false
+
+
+func CORE_unpause():
+	PlayerMove = true
 #endregion
 
