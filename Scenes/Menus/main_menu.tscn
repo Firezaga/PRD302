@@ -1,0 +1,151 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjow41pg3pvx1"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_s2kol"]
+
+[sub_resource type="Gradient" id="Gradient_k4s5n"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_841qc"]
+gradient = SubResource("Gradient_k4s5n")
+
+[sub_resource type="Gradient" id="Gradient_356m5"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_m2ihb"]
+gradient = SubResource("Gradient_356m5")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2kol")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_841qc")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.129688
+anchor_top = 0.101852
+anchor_right = 0.508333
+anchor_bottom = 0.325
+offset_bottom = -51.0
+theme_override_font_sizes/font_size = 176
+text = "Title"
+metadata/_edit_use_anchors_ = true
+
+[node name="NewGameButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.241146
+anchor_top = 0.425926
+anchor_right = 0.374479
+anchor_bottom = 0.462963
+texture_normal = SubResource("GradientTexture1D_m2ihb")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="NewGameButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "New Game"
+
+[node name="ContinueButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.318229
+anchor_top = 0.502778
+anchor_right = 0.451562
+anchor_bottom = 0.539815
+texture_normal = SubResource("GradientTexture1D_m2ihb")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ContinueButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Continue"
+
+[node name="LoadButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.413021
+anchor_top = 0.574074
+anchor_right = 0.546354
+anchor_bottom = 0.611111
+texture_normal = SubResource("GradientTexture1D_m2ihb")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="LoadButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Load"
+
+[node name="SettingsButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.483854
+anchor_top = 0.653704
+anchor_right = 0.617188
+anchor_bottom = 0.690741
+texture_normal = SubResource("GradientTexture1D_m2ihb")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="SettingsButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Settings"
+
+[node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.59375
+anchor_top = 0.765741
+anchor_right = 0.727083
+anchor_bottom = 0.802778
+texture_normal = SubResource("GradientTexture1D_m2ihb")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="QuitButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Quit"
+
+[connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

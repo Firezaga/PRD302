@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqfrxi0xrr1yw"]
+
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_48lex"]
+
+[sub_resource type="Gradient" id="Gradient_5t135"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rjmu4"]
+gradient = SubResource("Gradient_5t135")
+
+[sub_resource type="Gradient" id="Gradient_w0svh"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_32tb5"]
+gradient = SubResource("Gradient_w0svh")
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48lex")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_rjmu4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 808.0
+offset_top = 231.0
+offset_right = 848.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 52
+text = "Game Over"
+
+[node name="MainMenuButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.164583
+anchor_top = 0.872222
+anchor_right = 0.297917
+anchor_bottom = 0.909259
+texture_normal = SubResource("GradientTexture1D_32tb5")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MainMenuButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Main Menu"
+
+[node name="LoadButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.409896
+anchor_top = 0.869444
+anchor_right = 0.543229
+anchor_bottom = 0.906482
+texture_normal = SubResource("GradientTexture1D_32tb5")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="LoadButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Load"
+
+[node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.654688
+anchor_top = 0.874074
+anchor_right = 0.788021
+anchor_bottom = 0.911111
+texture_normal = SubResource("GradientTexture1D_32tb5")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="QuitButton"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 187.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Quit Game"
+
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
