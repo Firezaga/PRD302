@@ -1,6 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=12 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
+[ext_resource type="PackedScene" uid="uid://dfch7dkw80gbn" path="res://Scenes/Menus/pause_menu.tscn" id="2_jafxd"]
+
+[sub_resource type="Gradient" id="Gradient_m3kto"]
+offsets = PackedFloat32Array(0, 0.556338, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.560784, 1, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_whugw"]
+gradient = SubResource("Gradient_m3kto")
+fill_from = Vector2(0, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_t815r"]
+offsets = PackedFloat32Array(0, 0.492958, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0.494118, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oayk6"]
+gradient = SubResource("Gradient_t815r")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_5hbbd"]
+offsets = PackedFloat32Array(0, 0.507042, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.273417, 0.577088, 0.435592, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7bar1"]
+gradient = SubResource("Gradient_5hbbd")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 1)
 
 [sub_resource type="Gradient" id="Gradient_7co4w"]
 colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
@@ -18,9 +45,33 @@ script = ExtResource("1_j6iwr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="PauseButton" type="TextureButton" parent="Camera2D"]
+z_index = 1
+offset_left = -896.0
+offset_top = 448.0
+offset_right = -832.0
+offset_bottom = 512.0
+texture_normal = SubResource("GradientTexture2D_whugw")
+texture_pressed = SubResource("GradientTexture2D_oayk6")
+texture_hover = SubResource("GradientTexture2D_7bar1")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1, 8.3125)
 texture = SubResource("GradientTexture2D_48wpj")
 
+[node name="PauseMenu" parent="." instance=ExtResource("2_jafxd")]
+visible = false
+offset_left = -960.0
+offset_top = -544.0
+offset_right = -960.0
+offset_bottom = -544.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_rb5lx")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_rb5lx")
+
+[connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]

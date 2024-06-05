@@ -5,6 +5,8 @@ var current_scene = null
 var MainMenu = "res://Scenes/Menus/main_menu.tscn"
 var Settings = "res://Scenes/Menus/settings.tscn"
 var GameOver = "res://Scenes/Menus/game_over.tscn"
+var TownTest = "res://Scenes/TownsEtc/town_test.tscn"
+var OverworldTest = "res://Scenes/Overworld/overworld_test.tscn"
 
 #region Character variables
 #region Basic Stats - (Name, Health, Attack, Defense)
@@ -47,8 +49,8 @@ var PlayerWeapon4Defense = null
 #region Misc
 var PlayerMoney = 15
 var PlayerPotion = 5
-var PlayerLocX = -31
-var PlayerLocY = 77
+var PlayerLocX = 0
+var PlayerLocY = 0
 #endregion
 #endregion
 
@@ -140,6 +142,13 @@ func GOTO_settings():
 
 func GOTO_game_over():
 	goto_scene(GameOver)
+
+func GOTO_town_test():
+	goto_scene(TownTest)
+
+
+func GOTO_overworld_test():
+	goto_scene(OverworldTest)
 #endregion
 
 #region Core Functions

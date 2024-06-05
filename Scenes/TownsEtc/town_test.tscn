@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0wwd12kpysa7"]
+[gd_scene load_steps=12 format=3 uid="uid://b0wwd12kpysa7"]
 
+[ext_resource type="Script" path="res://Scripts/town_test.gd" id="1_1e6pi"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
 
 [sub_resource type="Gradient" id="Gradient_kga2v"]
@@ -11,7 +12,29 @@ fill_from = Vector2(1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wdi5"]
 size = Vector2(64, 64)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
+radius = 16.0
+height = 992.0
+
+[sub_resource type="Gradient" id="Gradient_cewuq"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqj58"]
+gradient = SubResource("Gradient_cewuq")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0.0130435, 0.978261)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao53"]
+size = Vector2(376, 83.831)
+
+[sub_resource type="Gradient" id="Gradient_y6mv0"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uq5of"]
+gradient = SubResource("Gradient_y6mv0")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0.073913, 0.943478)
+
 [node name="TownTest" type="Node2D"]
+script = ExtResource("1_1e6pi")
 
 [node name="PlayerTown" parent="." instance=ExtResource("1_1f5yi")]
 
@@ -24,5 +47,41 @@ texture = SubResource("GradientTexture2D_7a81b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(0, -3.8147e-06)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_6wdi5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7.99997, -1056)
+rotation = 1.57589
+shape = SubResource("CapsuleShape2D_jeohk")
+
+[node name="NPC" type="Sprite2D" parent="."]
+position = Vector2(840, -216)
+scale = Vector2(1, 8.875)
+texture = SubResource("GradientTexture2D_pqj58")
+
+[node name="NPCArea" type="Area2D" parent="NPC"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/NPCArea"]
+position = Vector2(12, 2.25352)
+shape = SubResource("RectangleShape2D_4ao53")
+
+[node name="SpeechHint" type="Sprite2D" parent="NPC"]
+visible = false
+position = Vector2(120, -36.0563)
+scale = Vector2(1, 0.133803)
+texture = SubResource("GradientTexture2D_uq5of")
+
+[node name="Label" type="Label" parent="NPC/SpeechHint"]
+offset_left = -8.0
+offset_top = -20.2105
+offset_right = 32.0
+offset_bottom = 23.7895
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "E"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="NPC/NPCArea" to="." method="_on_npc_area_area_entered"]
+[connection signal="area_exited" from="NPC/NPCArea" to="." method="_on_npc_area_area_exited"]

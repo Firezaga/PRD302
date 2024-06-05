@@ -10,6 +10,7 @@ func _process(delta):
 		velocity.x += 1
 	if Input.is_action_pressed("left"):
 		velocity.x -= 1
+	
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 	if Input.is_action_pressed("down"):
@@ -20,3 +21,8 @@ func _process(delta):
 	
 	move_and_slide()
 	
+
+
+func _on_pause_button_pressed():
+	Global.PlayerMove = false
+	$PauseMenu.visible = true

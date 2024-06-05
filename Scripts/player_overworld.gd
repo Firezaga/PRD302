@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var speed = 1000;
 
+var move = true
+
 func _process(delta):
 	if !Global.PlayerMove:
 		return
@@ -20,3 +22,8 @@ func _process(delta):
 	
 	move_and_slide()
 	
+
+
+func _on_pause_button_pressed():
+	Global.PlayerMove = false
+	$PauseMenu.visible = true

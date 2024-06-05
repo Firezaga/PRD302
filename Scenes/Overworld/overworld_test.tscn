@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyroak05o2fy"]
+[gd_scene load_steps=9 format=3 uid="uid://dyroak05o2fy"]
 
 [ext_resource type="PackedScene" uid="uid://fq3lc6h4our0" path="res://Scenes/Player/player_overworld.tscn" id="1_sdr83"]
+[ext_resource type="Script" path="res://Scripts/overworld_test.gd" id="1_wt7q3"]
 
 [sub_resource type="Gradient" id="Gradient_fyob0"]
 
@@ -11,9 +12,20 @@ fill_from = Vector2(1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pi171"]
 size = Vector2(64, 64)
 
+[sub_resource type="Gradient" id="Gradient_mdb1v"]
+colors = PackedColorArray(0, 0, 1, 1, 0, 0, 0.839216, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mtyre"]
+gradient = SubResource("Gradient_mdb1v")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qnxu"]
+size = Vector2(64, 63.9999)
+
 [node name="OverworldTest" type="Node2D"]
+script = ExtResource("1_wt7q3")
 
 [node name="PlayerOverworld" parent="." instance=ExtResource("1_sdr83")]
+position = Vector2(64, 1104)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-392, 12)
@@ -24,7 +36,6 @@ texture = SubResource("GradientTexture2D_xnest")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(0, -3.8147e-06)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pi171")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -36,5 +47,18 @@ texture = SubResource("GradientTexture2D_xnest")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D"]
 position = Vector2(0, -3.8147e-06)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pi171")
+
+[node name="Town" type="Sprite2D" parent="."]
+position = Vector2(72, 952)
+scale = Vector2(7.25, 2.75)
+texture = SubResource("GradientTexture2D_mtyre")
+
+[node name="Area2D" type="Area2D" parent="Town"]
+
+[node name="TownCollider" type="CollisionShape2D" parent="Town/Area2D"]
+position = Vector2(5.72205e-06, 6.10352e-05)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1qnxu")
+
+[connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
