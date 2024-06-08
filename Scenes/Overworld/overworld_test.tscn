@@ -58,7 +58,6 @@ texture = SubResource("GradientTexture2D_mtyre")
 
 [node name="TownCollider" type="CollisionShape2D" parent="Town/Area2D"]
 position = Vector2(5.72205e-06, 6.10352e-05)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1qnxu")
 
 [connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
