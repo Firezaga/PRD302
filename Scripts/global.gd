@@ -86,7 +86,7 @@ var Enemy4Defense = 0
 var DiaBackground = "res://Art/BlakeTest/PH-Background(AI).png"
 var DiaSpriteRight = "res://Art/BlakeTest/PH-Sprite1(AI).jpg"
 var DiaSpriteLeft = "res://Art/BlakeTest/PH-Sprite2(AI).jpg"
-var DiaText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. ~Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.~"
+var DiaText = "^Placeholder text for the start of the conversation.~Pain in the fucking ass to get working.~@^Button 1 Placehold^Button 2 Placehold^Button 3 Placehold^Reply 1~Had worse experiences~^Reply 2~Second response~^Reply 3~Does this work?~^"
 #endregion
 
 
