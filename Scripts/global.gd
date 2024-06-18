@@ -7,6 +7,7 @@ var Settings = "res://Scenes/Menus/settings.tscn"
 var GameOver = "res://Scenes/Menus/game_over.tscn"
 var TownTest = "res://Scenes/TownsEtc/town_test.tscn"
 var OverworldTest = "res://Scenes/Overworld/overworld_test.tscn"
+var UpgradeShop = "res://Scenes/Menus/upgrade.tscn"
 
 #region Character variables
 #region Basic Stats - (Name, Health, Attack, Defense)
@@ -147,6 +148,12 @@ func GOTO_town_test():
 
 func GOTO_overworld_test():
 	goto_scene(OverworldTest)
+
+
+func LOAD_upgrade_shop():
+	var scene = load(UpgradeShop)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
 #endregion
 
 #region Core Functions

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b0wwd12kpysa7"]
+[gd_scene load_steps=24 format=3 uid="uid://b0wwd12kpysa7"]
 
 [ext_resource type="Script" path="res://Scripts/town_test.gd" id="1_1e6pi"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://b7jivmbn8uvwp" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece2.png" id="6_6y5tn"]
 [ext_resource type="Texture2D" uid="uid://c5pcdjb7akbqb" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece3.png" id="7_imin4"]
 [ext_resource type="Texture2D" uid="uid://hv87lbaiu86u" path="res://Art/SideScroller/Portal Separate Pieces/TestCircle.png" id="8_jjxk7"]
-[ext_resource type="PackedScene" uid="uid://dpwg2ae24c7i8" path="res://Scenes/Menus/upgrade_shop.tscn" id="10_n32c4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
 radius = 16.0
@@ -144,13 +143,6 @@ theme_override_font_sizes/font_size = 31
 text = "E"
 
 [node name="PlayerTown" parent="." instance=ExtResource("1_1f5yi")]
-
-[node name="UpgradeShop" parent="PlayerTown" instance=ExtResource("10_n32c4")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="NPCArea" type="Area2D" parent="."]
 position = Vector2(1488, -104)

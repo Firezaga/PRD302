@@ -1,40 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpwg2ae24c7i8"]
+[gd_scene load_steps=6 format=3 uid="uid://b0yx7cgvclxw3"]
 
-[ext_resource type="Shader" path="res://Shaders/blur.gdshader" id="1_a3tca"]
-[ext_resource type="Script" path="res://Scripts/upgrade_shop.gd" id="1_gw7ar"]
+[ext_resource type="Script" path="res://Scripts/upgrade_shop.gd" id="1_48kuf"]
+[ext_resource type="Shader" path="res://Shaders/blur.gdshader" id="2_dyn5e"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lknco"]
-shader = ExtResource("1_a3tca")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xfe0q"]
+shader = ExtResource("2_dyn5e")
 shader_parameter/amount = 1.0
 
-[sub_resource type="Gradient" id="Gradient_t0me1"]
+[sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_4x8xe"]
-gradient = SubResource("Gradient_t0me1")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5gdj1"]
+gradient = SubResource("Gradient_sf557")
 
-[node name="UpgradeShop" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_gw7ar")
+[node name="Upgrade" type="CanvasLayer"]
+script = ExtResource("1_48kuf")
 
 [node name="Control" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="BackgroundBlur" type="ColorRect" parent="Control"]
-material = SubResource("ShaderMaterial_lknco")
+material = SubResource("ShaderMaterial_xfe0q")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="FirstMenu" type="ReferenceRect" parent="."]
-layout_mode = 0
 offset_left = 40.0
 offset_top = 72.0
 offset_right = 896.0
@@ -57,7 +51,7 @@ offset_left = 272.0
 offset_top = 256.0
 offset_right = 536.0
 offset_bottom = 312.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/ExtorButton"]
@@ -76,7 +70,7 @@ offset_left = 80.0
 offset_top = 560.0
 offset_right = 344.0
 offset_bottom = 616.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp1Button"]
@@ -95,7 +89,7 @@ offset_left = 536.0
 offset_top = 560.0
 offset_right = 800.0
 offset_bottom = 616.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp2Button"]
@@ -114,7 +108,7 @@ offset_left = 80.0
 offset_top = 816.0
 offset_right = 344.0
 offset_bottom = 872.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp3Button"]
@@ -133,7 +127,7 @@ offset_left = 536.0
 offset_top = 816.0
 offset_right = 800.0
 offset_bottom = 872.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp4Button"]
@@ -151,7 +145,7 @@ offset_left = 56.0
 offset_top = 48.0
 offset_right = 320.0
 offset_bottom = 104.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/ExitButton"]
@@ -166,7 +160,6 @@ horizontal_alignment = 1
 
 [node name="FirstMenu2" type="ReferenceRect" parent="."]
 visible = false
-layout_mode = 0
 offset_left = 208.0
 offset_top = 56.0
 offset_right = 1792.0
@@ -199,7 +192,7 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/BackButton"]
@@ -218,7 +211,7 @@ offset_left = 592.0
 offset_top = 496.0
 offset_right = 856.0
 offset_bottom = 552.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/HealthButton"]
@@ -237,7 +230,7 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/DamageButton"]
@@ -256,7 +249,7 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/SPButton"]
@@ -324,7 +317,7 @@ offset_left = 72.0
 offset_top = 80.0
 offset_right = 336.0
 offset_bottom = 136.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/DebugCurrButton"]
@@ -352,7 +345,7 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp1/BackButton"]
@@ -371,7 +364,7 @@ offset_left = 592.0
 offset_top = 496.0
 offset_right = 856.0
 offset_bottom = 552.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp1/HealthButton"]
@@ -390,7 +383,7 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp1/DamageButton"]
@@ -409,7 +402,7 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp1/SPButton"]
@@ -478,7 +471,7 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp2/BackButton"]
@@ -497,7 +490,7 @@ offset_left = 592.0
 offset_top = 496.0
 offset_right = 856.0
 offset_bottom = 552.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp2/HealthButton"]
@@ -516,7 +509,7 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp2/DamageButton"]
@@ -535,7 +528,7 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp2/SPButton"]
@@ -604,7 +597,7 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp3/BackButton"]
@@ -623,7 +616,7 @@ offset_left = 592.0
 offset_top = 496.0
 offset_right = 856.0
 offset_bottom = 552.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp3/HealthButton"]
@@ -642,7 +635,7 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp3/DamageButton"]
@@ -661,7 +654,7 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp3/SPButton"]
@@ -730,7 +723,7 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp4/BackButton"]
@@ -749,7 +742,7 @@ offset_left = 592.0
 offset_top = 496.0
 offset_right = 856.0
 offset_bottom = 552.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp4/HealthButton"]
@@ -768,7 +761,7 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp4/DamageButton"]
@@ -787,7 +780,7 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_4x8xe")
+texture_normal = SubResource("GradientTexture1D_5gdj1")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp4/SPButton"]
@@ -852,7 +845,3 @@ text = "SP:"
 [connection signal="pressed" from="FirstMenu2/Extor/DamageButton" to="." method="_on_damage_button_pressed"]
 [connection signal="pressed" from="FirstMenu2/Extor/SPButton" to="." method="_on_sp_button_pressed"]
 [connection signal="pressed" from="FirstMenu2/Extor/DebugCurrButton" to="." method="_on_debug_curr_button_pressed"]
-[connection signal="pressed" from="FirstMenu2/Comp1/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="FirstMenu2/Comp2/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="FirstMenu2/Comp3/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="FirstMenu2/Comp4/BackButton" to="." method="_on_back_button_pressed"]

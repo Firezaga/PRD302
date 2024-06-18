@@ -13,6 +13,7 @@ func _process(delta):
 		$SpeechHint.visible = false
 		Global.PlayerMove = false
 		can_talk = false
+		Global.LOAD_upgrade_shop()
 	
 	#$NPC.rotation -= 0.1 * delta
 	$NPC/Sprite2D.rotation -= 0.12 * delta

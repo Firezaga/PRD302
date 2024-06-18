@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var back = $Control/BackgroundBlur
 
@@ -96,3 +96,8 @@ func _on_sp_button_pressed():
 func _on_debug_curr_button_pressed():
 	Global.PlayerCurrency += 20
 	$FirstMenu2/Extor/Currency.text = "Currency: " + str(Global.PlayerCurrency)
+
+
+func _on_exit_button_pressed():
+	Global.PlayerMove = true
+	queue_free()
