@@ -1,0 +1,818 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpwg2ae24c7i8"]
+
+[ext_resource type="Shader" path="res://Shaders/blur.gdshader" id="1_a3tca"]
+[ext_resource type="Script" path="res://Scripts/upgrade_shop.gd" id="1_gw7ar"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lknco"]
+shader = ExtResource("1_a3tca")
+shader_parameter/amount = 1.0
+
+[sub_resource type="Gradient" id="Gradient_sf557"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4x8xe"]
+gradient = SubResource("Gradient_sf557")
+
+[node name="UpgradeShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gw7ar")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackgroundBlur" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_lknco")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="FirstMenu" type="ReferenceRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 896.0
+offset_bottom = 984.0
+border_width = 5.0
+editor_only = false
+
+[node name="Background" type="ColorRect" parent="FirstMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ExtorButton" type="TextureButton" parent="FirstMenu"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 256.0
+offset_right = 536.0
+offset_bottom = 312.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu/ExtorButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Extor"
+horizontal_alignment = 1
+
+[node name="Comp1Button" type="TextureButton" parent="FirstMenu"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 560.0
+offset_right = 344.0
+offset_bottom = 616.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu/Comp1Button"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Comp 1"
+horizontal_alignment = 1
+
+[node name="Comp2Button" type="TextureButton" parent="FirstMenu"]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 560.0
+offset_right = 800.0
+offset_bottom = 616.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu/Comp2Button"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Comp 2"
+horizontal_alignment = 1
+
+[node name="Comp3Button" type="TextureButton" parent="FirstMenu"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 816.0
+offset_right = 344.0
+offset_bottom = 872.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu/Comp3Button"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Comp 3"
+horizontal_alignment = 1
+
+[node name="Comp4Button" type="TextureButton" parent="FirstMenu"]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 816.0
+offset_right = 800.0
+offset_bottom = 872.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu/Comp4Button"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Comp 4"
+horizontal_alignment = 1
+
+[node name="FirstMenu2" type="ReferenceRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 208.0
+offset_top = 56.0
+offset_right = 1792.0
+offset_bottom = 1000.0
+border_color = Color(0, 0, 1, 1)
+border_width = 5.0
+editor_only = false
+
+[node name="ColorRect" type="ColorRect" parent="FirstMenu2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Extor" type="ReferenceRect" parent="FirstMenu2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="TextureButton" parent="FirstMenu2/Extor"]
+offset_left = 48.0
+offset_top = 832.0
+offset_right = 312.0
+offset_bottom = 888.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Extor/BackButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Back"
+horizontal_alignment = 1
+
+[node name="HealthButton" type="TextureButton" parent="FirstMenu2/Extor"]
+offset_left = 592.0
+offset_top = 496.0
+offset_right = 856.0
+offset_bottom = 552.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Extor/HealthButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="DamageButton" type="TextureButton" parent="FirstMenu2/Extor"]
+offset_left = 592.0
+offset_top = 616.0
+offset_right = 856.0
+offset_bottom = 672.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Extor/DamageButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Damage"
+horizontal_alignment = 1
+
+[node name="SPButton" type="TextureButton" parent="FirstMenu2/Extor"]
+offset_left = 592.0
+offset_top = 720.0
+offset_right = 856.0
+offset_bottom = 776.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Extor/SPButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Skill Points"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="FirstMenu2/Extor"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 48.0
+offset_right = 1478.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 50
+text = "EXTOR"
+
+[node name="Currency" type="Label" parent="FirstMenu2/Extor"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 848.0
+offset_right = 1256.0
+offset_bottom = 871.0
+text = "Currency Available: "
+
+[node name="Health" type="Label" parent="FirstMenu2/Extor"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 680.0
+offset_bottom = 215.0
+text = "Health: "
+
+[node name="Damage" type="Label" parent="FirstMenu2/Extor"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 224.0
+offset_right = 680.0
+offset_bottom = 247.0
+text = "Damage: "
+
+[node name="SP" type="Label" parent="FirstMenu2/Extor"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 264.0
+offset_right = 680.0
+offset_bottom = 287.0
+text = "SP:"
+
+[node name="LVL" type="Label" parent="FirstMenu2/Extor"]
+layout_mode = 0
+offset_left = 1344.0
+offset_top = 144.0
+offset_right = 1384.0
+offset_bottom = 167.0
+text = "LVL: "
+
+[node name="DebugCurrButton" type="TextureButton" parent="FirstMenu2/Extor"]
+offset_left = 72.0
+offset_top = 80.0
+offset_right = 336.0
+offset_bottom = 136.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Extor/DebugCurrButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "DEBUG - CURRENCY"
+horizontal_alignment = 1
+
+[node name="Comp1" type="ReferenceRect" parent="FirstMenu2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="TextureButton" parent="FirstMenu2/Comp1"]
+offset_left = 48.0
+offset_top = 832.0
+offset_right = 312.0
+offset_bottom = 888.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp1/BackButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Back"
+horizontal_alignment = 1
+
+[node name="HealthButton" type="TextureButton" parent="FirstMenu2/Comp1"]
+offset_left = 592.0
+offset_top = 496.0
+offset_right = 856.0
+offset_bottom = 552.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp1/HealthButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="DamageButton" type="TextureButton" parent="FirstMenu2/Comp1"]
+offset_left = 592.0
+offset_top = 616.0
+offset_right = 856.0
+offset_bottom = 672.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp1/DamageButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Damage"
+horizontal_alignment = 1
+
+[node name="SPButton" type="TextureButton" parent="FirstMenu2/Comp1"]
+offset_left = 592.0
+offset_top = 720.0
+offset_right = 856.0
+offset_bottom = 776.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp1/SPButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="FirstMenu2/Comp1"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 48.0
+offset_right = 1478.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 50
+text = "COMP1"
+
+[node name="Currency" type="Label" parent="FirstMenu2/Comp1"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 848.0
+offset_right = 1256.0
+offset_bottom = 871.0
+text = "Currency Available: "
+
+[node name="Health" type="Label" parent="FirstMenu2/Comp1"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 680.0
+offset_bottom = 215.0
+text = "Health: "
+
+[node name="Damage" type="Label" parent="FirstMenu2/Comp1"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 224.0
+offset_right = 680.0
+offset_bottom = 247.0
+text = "Damage: "
+
+[node name="SP" type="Label" parent="FirstMenu2/Comp1"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 264.0
+offset_right = 680.0
+offset_bottom = 287.0
+text = "SP:"
+
+[node name="Comp2" type="ReferenceRect" parent="FirstMenu2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="TextureButton" parent="FirstMenu2/Comp2"]
+offset_left = 48.0
+offset_top = 832.0
+offset_right = 312.0
+offset_bottom = 888.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp2/BackButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Back"
+horizontal_alignment = 1
+
+[node name="HealthButton" type="TextureButton" parent="FirstMenu2/Comp2"]
+offset_left = 592.0
+offset_top = 496.0
+offset_right = 856.0
+offset_bottom = 552.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp2/HealthButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="DamageButton" type="TextureButton" parent="FirstMenu2/Comp2"]
+offset_left = 592.0
+offset_top = 616.0
+offset_right = 856.0
+offset_bottom = 672.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp2/DamageButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Damage"
+horizontal_alignment = 1
+
+[node name="SPButton" type="TextureButton" parent="FirstMenu2/Comp2"]
+offset_left = 592.0
+offset_top = 720.0
+offset_right = 856.0
+offset_bottom = 776.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp2/SPButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="FirstMenu2/Comp2"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 48.0
+offset_right = 1478.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 50
+text = "COMP2"
+
+[node name="Currency" type="Label" parent="FirstMenu2/Comp2"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 848.0
+offset_right = 1256.0
+offset_bottom = 871.0
+text = "Currency Available: "
+
+[node name="Health" type="Label" parent="FirstMenu2/Comp2"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 680.0
+offset_bottom = 215.0
+text = "Health: "
+
+[node name="Damage" type="Label" parent="FirstMenu2/Comp2"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 224.0
+offset_right = 680.0
+offset_bottom = 247.0
+text = "Damage: "
+
+[node name="SP" type="Label" parent="FirstMenu2/Comp2"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 264.0
+offset_right = 680.0
+offset_bottom = 287.0
+text = "SP:"
+
+[node name="Comp3" type="ReferenceRect" parent="FirstMenu2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="TextureButton" parent="FirstMenu2/Comp3"]
+offset_left = 48.0
+offset_top = 832.0
+offset_right = 312.0
+offset_bottom = 888.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp3/BackButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Back"
+horizontal_alignment = 1
+
+[node name="HealthButton" type="TextureButton" parent="FirstMenu2/Comp3"]
+offset_left = 592.0
+offset_top = 496.0
+offset_right = 856.0
+offset_bottom = 552.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp3/HealthButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="DamageButton" type="TextureButton" parent="FirstMenu2/Comp3"]
+offset_left = 592.0
+offset_top = 616.0
+offset_right = 856.0
+offset_bottom = 672.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp3/DamageButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Damage"
+horizontal_alignment = 1
+
+[node name="SPButton" type="TextureButton" parent="FirstMenu2/Comp3"]
+offset_left = 592.0
+offset_top = 720.0
+offset_right = 856.0
+offset_bottom = 776.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp3/SPButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="FirstMenu2/Comp3"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 48.0
+offset_right = 1478.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 50
+text = "COMP3"
+
+[node name="Currency" type="Label" parent="FirstMenu2/Comp3"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 848.0
+offset_right = 1256.0
+offset_bottom = 871.0
+text = "Currency Available: "
+
+[node name="Health" type="Label" parent="FirstMenu2/Comp3"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 680.0
+offset_bottom = 215.0
+text = "Health: "
+
+[node name="Damage" type="Label" parent="FirstMenu2/Comp3"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 224.0
+offset_right = 680.0
+offset_bottom = 247.0
+text = "Damage: "
+
+[node name="SP" type="Label" parent="FirstMenu2/Comp3"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 264.0
+offset_right = 680.0
+offset_bottom = 287.0
+text = "SP:"
+
+[node name="Comp4" type="ReferenceRect" parent="FirstMenu2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="TextureButton" parent="FirstMenu2/Comp4"]
+offset_left = 48.0
+offset_top = 832.0
+offset_right = 312.0
+offset_bottom = 888.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp4/BackButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Back"
+horizontal_alignment = 1
+
+[node name="HealthButton" type="TextureButton" parent="FirstMenu2/Comp4"]
+offset_left = 592.0
+offset_top = 496.0
+offset_right = 856.0
+offset_bottom = 552.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp4/HealthButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="DamageButton" type="TextureButton" parent="FirstMenu2/Comp4"]
+offset_left = 592.0
+offset_top = 616.0
+offset_right = 856.0
+offset_bottom = 672.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp4/DamageButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Damage"
+horizontal_alignment = 1
+
+[node name="SPButton" type="TextureButton" parent="FirstMenu2/Comp4"]
+offset_left = 592.0
+offset_top = 720.0
+offset_right = 856.0
+offset_bottom = 776.0
+texture_normal = SubResource("GradientTexture1D_4x8xe")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="FirstMenu2/Comp4/SPButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Upgrade Health"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="FirstMenu2/Comp4"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 48.0
+offset_right = 1478.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 50
+text = "COMP4"
+
+[node name="Currency" type="Label" parent="FirstMenu2/Comp4"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 848.0
+offset_right = 1256.0
+offset_bottom = 871.0
+text = "Currency Available: "
+
+[node name="Health" type="Label" parent="FirstMenu2/Comp4"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 680.0
+offset_bottom = 215.0
+text = "Health: "
+
+[node name="Damage" type="Label" parent="FirstMenu2/Comp4"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 224.0
+offset_right = 680.0
+offset_bottom = 247.0
+text = "Damage: "
+
+[node name="SP" type="Label" parent="FirstMenu2/Comp4"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 264.0
+offset_right = 680.0
+offset_bottom = 287.0
+text = "SP:"
+
+[connection signal="pressed" from="FirstMenu/ExtorButton" to="." method="_on_extor_button_pressed"]
+[connection signal="pressed" from="FirstMenu/Comp1Button" to="." method="_on_comp_1_button_pressed"]
+[connection signal="pressed" from="FirstMenu/Comp2Button" to="." method="_on_comp_2_button_pressed"]
+[connection signal="pressed" from="FirstMenu/Comp3Button" to="." method="_on_comp_3_button_pressed"]
+[connection signal="pressed" from="FirstMenu/Comp4Button" to="." method="_on_comp_4_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Extor/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Extor/HealthButton" to="." method="_on_health_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Extor/DamageButton" to="." method="_on_damage_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Extor/SPButton" to="." method="_on_sp_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Extor/DebugCurrButton" to="." method="_on_debug_curr_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp1/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp2/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp3/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp4/BackButton" to="." method="_on_back_button_pressed"]

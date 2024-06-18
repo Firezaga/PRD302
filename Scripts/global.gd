@@ -22,9 +22,7 @@ var PlayerMove = true
 #endregion
 
 #region Leveling
-var PlayerLvl = 2
-var PlayerMaxExperience = 200
-var PlayerCurExperience = 0
+var PlayerLvl = 1
 #endregion
 
 #region Weapons
@@ -47,7 +45,7 @@ var PlayerWeapon4Defense = null
 #endregion
 
 #region Misc
-var PlayerMoney = 15
+var PlayerCurrency = 15
 var PlayerPotion = 5
 var PlayerLocX = 0
 var PlayerLocY = 0

@@ -1,30 +1,65 @@
-[gd_scene load_steps=12 format=3 uid="uid://b0wwd12kpysa7"]
+[gd_scene load_steps=25 format=3 uid="uid://b0wwd12kpysa7"]
 
 [ext_resource type="Script" path="res://Scripts/town_test.gd" id="1_1e6pi"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
-
-[sub_resource type="Gradient" id="Gradient_kga2v"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_7a81b"]
-gradient = SubResource("Gradient_kga2v")
-fill_from = Vector2(1, 0)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wdi5"]
-size = Vector2(64, 64)
+[ext_resource type="Texture2D" uid="uid://vym8jn3e5xt0" path="res://Art/SideScroller/SkyBG.png" id="2_7f3vt"]
+[ext_resource type="Texture2D" uid="uid://djso5em1k7qbk" path="res://Art/SideScroller/GroundBG.png" id="3_vv4d1"]
+[ext_resource type="Texture2D" uid="uid://wphgws45cr5o" path="res://Art/SideScroller/Portal Separate Pieces/PortalMid.png" id="4_p0l3q"]
+[ext_resource type="Texture2D" uid="uid://sxeu7ad64dvv" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece1.png" id="5_jdc8n"]
+[ext_resource type="Texture2D" uid="uid://b7jivmbn8uvwp" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece2.png" id="6_6y5tn"]
+[ext_resource type="Texture2D" uid="uid://c5pcdjb7akbqb" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece3.png" id="7_imin4"]
+[ext_resource type="Texture2D" uid="uid://hv87lbaiu86u" path="res://Art/SideScroller/Portal Separate Pieces/TestCircle.png" id="8_jjxk7"]
+[ext_resource type="PackedScene" uid="uid://dpwg2ae24c7i8" path="res://Scenes/Menus/upgrade_shop.tscn" id="10_n32c4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
 radius = 16.0
 height = 992.0
 
-[sub_resource type="Gradient" id="Gradient_cewuq"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_38g4m"]
+blend_mode = 1
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqj58"]
-gradient = SubResource("Gradient_cewuq")
-fill_from = Vector2(0, 1)
-fill_to = Vector2(0.0130435, 0.978261)
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6kql2"]
+blend_mode = 1
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao53"]
-size = Vector2(376, 83.831)
+[sub_resource type="Curve" id="Curve_r3xst"]
+_data = [Vector2(0.313333, 0.252747), 0.0, 0.0, 0, 0, Vector2(0.94, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_fedte"]
+curve_x = SubResource("Curve_r3xst")
+
+[sub_resource type="Curve" id="Curve_1uehf"]
+_data = [Vector2(0.04, 0.285714), 0.0, 0.0, 0, 0, Vector2(0.473333, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_0huwy"]
+curve = SubResource("Curve_1uehf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mw114"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(5, 5, 1)
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector3(0, 0, 0)
+spread = 100.0
+angular_velocity_min = 1.0
+angular_velocity_max = 200.0
+directional_velocity_min = 1.0
+directional_velocity_max = 150.0
+directional_velocity_curve = SubResource("CurveXYZTexture_fedte")
+orbit_velocity_max = 0.1
+radial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_0huwy")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lij3q"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3e36r"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_biho8"]
+blend_mode = 1
 
 [sub_resource type="Gradient" id="Gradient_y6mv0"]
 
@@ -33,47 +68,73 @@ gradient = SubResource("Gradient_y6mv0")
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0.073913, 0.943478)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao53"]
+size = Vector2(904, 503)
+
 [node name="TownTest" type="Node2D"]
 script = ExtResource("1_1e6pi")
 
-[node name="PlayerTown" parent="." instance=ExtResource("1_1f5yi")]
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -5240.0
+offset_top = -1136.0
+offset_right = 8344.0
+offset_bottom = 304.0
+texture = ExtResource("2_7f3vt")
+stretch_mode = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1160, -532)
-scale = Vector2(23.75, 15.375)
-texture = SubResource("GradientTexture2D_7a81b")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, -3.8147e-06)
-shape = SubResource("RectangleShape2D_6wdi5")
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5240.0
+offset_top = 208.0
+offset_right = 8352.0
+offset_bottom = 1648.0
+texture = ExtResource("3_vv4d1")
+stretch_mode = 1
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(7.99997, -1056)
+position = Vector2(-1872, 8)
 rotation = 1.57589
 shape = SubResource("CapsuleShape2D_jeohk")
 
 [node name="NPC" type="Sprite2D" parent="."]
-position = Vector2(840, -216)
-scale = Vector2(1, 8.875)
-texture = SubResource("GradientTexture2D_pqj58")
+material = SubResource("CanvasItemMaterial_38g4m")
+position = Vector2(1488, -48)
+scale = Vector2(0.572222, 0.572222)
+texture = ExtResource("4_p0l3q")
 
-[node name="NPCArea" type="Area2D" parent="NPC"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="NPC"]
+modulate = Color(0, 0.729412, 1, 0.509804)
+material = SubResource("CanvasItemMaterial_6kql2")
+position = Vector2(0.00012207, -55.9223)
+amount = 512
+process_material = SubResource("ParticleProcessMaterial_mw114")
+texture = ExtResource("8_jjxk7")
+lifetime = 15.0
+preprocess = 120.0
+speed_scale = 0.5
+randomness = 1.0
+visibility_rect = Rect2(-100, -100, 2000, 200)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/NPCArea"]
-position = Vector2(12, 2.25352)
-shape = SubResource("RectangleShape2D_4ao53")
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+material = SubResource("CanvasItemMaterial_lij3q")
+texture = ExtResource("5_jdc8n")
 
-[node name="SpeechHint" type="Sprite2D" parent="NPC"]
+[node name="Sprite2D2" type="Sprite2D" parent="NPC"]
+material = SubResource("CanvasItemMaterial_3e36r")
+texture = ExtResource("6_6y5tn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="NPC"]
+material = SubResource("CanvasItemMaterial_biho8")
+texture = ExtResource("7_imin4")
+
+[node name="SpeechHint" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(120, -36.0563)
-scale = Vector2(1, 0.133803)
+position = Vector2(1510.89, -176.178)
+scale = Vector2(0.572222, 0.572222)
 texture = SubResource("GradientTexture2D_uq5of")
 
-[node name="Label" type="Label" parent="NPC/SpeechHint"]
+[node name="Label" type="Label" parent="SpeechHint"]
 offset_left = -8.0
 offset_top = -20.2105
 offset_right = 32.0
@@ -82,6 +143,23 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
 
+[node name="PlayerTown" parent="." instance=ExtResource("1_1f5yi")]
+
+[node name="UpgradeShop" parent="PlayerTown" instance=ExtResource("10_n32c4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="NPCArea" type="Area2D" parent="."]
+position = Vector2(1488, -104)
+scale = Vector2(0.572222, 0.572222)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCArea"]
+position = Vector2(-28, 241.5)
+shape = SubResource("RectangleShape2D_4ao53")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="NPC/NPCArea" to="." method="_on_npc_area_area_entered"]
-[connection signal="area_exited" from="NPC/NPCArea" to="." method="_on_npc_area_area_exited"]
+[connection signal="area_entered" from="NPCArea" to="." method="_on_npc_area_area_entered"]
+[connection signal="area_exited" from="NPCArea" to="." method="_on_npc_area_area_exited"]
