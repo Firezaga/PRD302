@@ -120,7 +120,7 @@ radius = 16.0
 height = 992.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao53"]
-size = Vector2(904, 503)
+size = Vector2(904, 706.02)
 
 [sub_resource type="Environment" id="Environment_25poj"]
 background_mode = 3
@@ -413,14 +413,14 @@ texture = ExtResource("21_60sey")
 [node name="NPC" type="Sprite2D" parent="Midground"]
 modulate = Color(1.2, 1.2, 1.2, 1)
 material = SubResource("CanvasItemMaterial_38g4m")
-position = Vector2(3775, -48)
-scale = Vector2(0.562, 0.562)
+position = Vector2(3735, -258)
+scale = Vector2(0.354944, 0.354944)
 texture = ExtResource("4_p0l3q")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Midground/NPC"]
 modulate = Color(0, 0.729, 1.5, 0.51)
 material = SubResource("CanvasItemMaterial_6kql2")
-position = Vector2(5.33798, 33.8078)
+position = Vector2(5.63512, 22.5389)
 scale = Vector2(1.3, 1.3)
 amount = 128
 process_material = SubResource("ParticleProcessMaterial_mw114")
@@ -464,7 +464,7 @@ theme_override_font_sizes/font_size = 31
 text = "E"
 
 [node name="PlayerTown" parent="Midground" instance=ExtResource("1_1f5yi")]
-position = Vector2(2287, 0)
+position = Vector2(805, -21)
 
 [node name="Foreground" type="Node2D" parent="."]
 position = Vector2(-28, -136)
@@ -582,7 +582,7 @@ scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("31_fvfjh")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(2287, 0)
+position = Vector2(8610, 31)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1872, 8)
@@ -594,7 +594,7 @@ position = Vector2(3775, -104)
 scale = Vector2(0.572222, 0.572222)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCArea"]
-position = Vector2(-28, 241.5)
+position = Vector2(-61.165, 200.971)
 shape = SubResource("RectangleShape2D_4ao53")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
