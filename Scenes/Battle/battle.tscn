@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=2 format=3 uid="uid://bkrfggobo587i"]
+
+[ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 
 [node name="Battle" type="CanvasLayer"]
+script = ExtResource("1_ndcpt")

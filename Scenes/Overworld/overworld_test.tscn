@@ -16,6 +16,7 @@ size = Vector2(64, 63.9999)
 script = ExtResource("1_wt7q3")
 
 [node name="PlayerOverworld" parent="." instance=ExtResource("1_sdr83")]
+position = Vector2(344, -304)
 
 [node name="Town" type="Sprite2D" parent="."]
 position = Vector2(688, 296)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b0wwd12kpysa7"]
+[gd_scene load_steps=25 format=3 uid="uid://b0wwd12kpysa7"]
 
 [ext_resource type="Script" path="res://Scripts/town_test.gd" id="1_1e6pi"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
@@ -9,10 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://b7jivmbn8uvwp" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece2.png" id="6_6y5tn"]
 [ext_resource type="Texture2D" uid="uid://c5pcdjb7akbqb" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece3.png" id="7_imin4"]
 [ext_resource type="Texture2D" uid="uid://hv87lbaiu86u" path="res://Art/SideScroller/Portal Separate Pieces/TestCircle.png" id="8_jjxk7"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
-radius = 16.0
-height = 992.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_38g4m"]
 blend_mode = 1
@@ -27,12 +23,14 @@ point_count = 2
 [sub_resource type="CurveXYZTexture" id="CurveXYZTexture_fedte"]
 curve_x = SubResource("Curve_r3xst")
 
-[sub_resource type="Curve" id="Curve_1uehf"]
-_data = [Vector2(0.04, 0.285714), 0.0, 0.0, 0, 0, Vector2(0.473333, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+[sub_resource type="Curve" id="Curve_rtvns"]
+min_value = -2.0
+max_value = 2.0
+_data = [Vector2(0.106667, 0.549451), 0.0, 0.0, 0, 0, Vector2(0.493333, 2), 0.0, 0.0, 0, 0, Vector2(1, -2), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_0huwy"]
-curve = SubResource("Curve_1uehf")
+[sub_resource type="CurveTexture" id="CurveTexture_isw6o"]
+curve = SubResource("Curve_rtvns")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mw114"]
 particle_flag_disable_z = true
@@ -47,9 +45,18 @@ directional_velocity_min = 1.0
 directional_velocity_max = 150.0
 directional_velocity_curve = SubResource("CurveXYZTexture_fedte")
 orbit_velocity_max = 0.1
+orbit_velocity_curve = SubResource("CurveTexture_isw6o")
 radial_velocity_max = 5.0
 gravity = Vector3(0, 0, 0)
-scale_curve = SubResource("CurveTexture_0huwy")
+scale_min = 0.2
+scale_over_velocity_max = 1.0
+hue_variation_min = -0.09
+hue_variation_max = 0.09
+turbulence_enabled = true
+turbulence_noise_strength = 1.5
+turbulence_noise_speed_random = 2.77
+turbulence_initial_displacement_min = 69.5
+turbulence_initial_displacement_max = 100.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lij3q"]
 blend_mode = 1
@@ -67,73 +74,92 @@ gradient = SubResource("Gradient_y6mv0")
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0.073913, 0.943478)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
+radius = 16.0
+height = 992.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao53"]
 size = Vector2(904, 503)
+
+[sub_resource type="Environment" id="Environment_25poj"]
+background_mode = 3
+background_color = Color(0.839216, 0.839216, 0.839216, 1)
+glow_enabled = true
+glow_levels/1 = 1.44
+glow_levels/2 = 2.52
+glow_levels/3 = 0.54
+glow_levels/5 = 0.0
+glow_mix = 0.061
+glow_blend_mode = 1
 
 [node name="TownTest" type="Node2D"]
 script = ExtResource("1_1e6pi")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-offset_left = -5240.0
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+offset_left = -2953.0
 offset_top = -1136.0
-offset_right = 8344.0
+offset_right = 10631.0
 offset_bottom = 304.0
 texture = ExtResource("2_7f3vt")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -5240.0
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_left = -2953.0
 offset_top = 208.0
-offset_right = 8352.0
+offset_right = 10639.0
 offset_bottom = 1648.0
 texture = ExtResource("3_vv4d1")
 stretch_mode = 1
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Midground" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1872, 8)
-rotation = 1.57589
-shape = SubResource("CapsuleShape2D_jeohk")
-
-[node name="NPC" type="Sprite2D" parent="."]
+[node name="NPC" type="Sprite2D" parent="Midground"]
+modulate = Color(1.2, 1.2, 1.2, 1)
 material = SubResource("CanvasItemMaterial_38g4m")
-position = Vector2(1488, -48)
-scale = Vector2(0.572222, 0.572222)
+position = Vector2(3775, -48)
+scale = Vector2(0.562, 0.562)
 texture = ExtResource("4_p0l3q")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="NPC"]
-modulate = Color(0, 0.729412, 1, 0.509804)
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Midground/NPC"]
+modulate = Color(0, 0.729, 1.5, 0.51)
 material = SubResource("CanvasItemMaterial_6kql2")
-position = Vector2(0.00012207, -55.9223)
-amount = 512
+position = Vector2(5.33798, 33.8078)
+scale = Vector2(1.3, 1.3)
+amount = 128
 process_material = SubResource("ParticleProcessMaterial_mw114")
 texture = ExtResource("8_jjxk7")
-lifetime = 15.0
+lifetime = 10.0
 preprocess = 120.0
 speed_scale = 0.5
 randomness = 1.0
-visibility_rect = Rect2(-100, -100, 2000, 200)
+visibility_rect = Rect2(-25000, -100, 50000, 2000)
+local_coords = true
+trail_enabled = true
+trail_lifetime = 5.0
+trail_sections = 44
+trail_section_subdivisions = 24
 
-[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+[node name="Sprite2D" type="Sprite2D" parent="Midground/NPC"]
 material = SubResource("CanvasItemMaterial_lij3q")
 texture = ExtResource("5_jdc8n")
 
-[node name="Sprite2D2" type="Sprite2D" parent="NPC"]
+[node name="Sprite2D2" type="Sprite2D" parent="Midground/NPC"]
 material = SubResource("CanvasItemMaterial_3e36r")
 texture = ExtResource("6_6y5tn")
 
-[node name="Sprite2D3" type="Sprite2D" parent="NPC"]
+[node name="Sprite2D3" type="Sprite2D" parent="Midground/NPC"]
 material = SubResource("CanvasItemMaterial_biho8")
 texture = ExtResource("7_imin4")
 
-[node name="SpeechHint" type="Sprite2D" parent="."]
+[node name="SpeechHint" type="Sprite2D" parent="Midground"]
 visible = false
-position = Vector2(1510.89, -176.178)
+position = Vector2(3798, -176)
 scale = Vector2(0.572222, 0.572222)
 texture = SubResource("GradientTexture2D_uq5of")
 
-[node name="Label" type="Label" parent="SpeechHint"]
+[node name="Label" type="Label" parent="Midground/SpeechHint"]
 offset_left = -8.0
 offset_top = -20.2105
 offset_right = 32.0
@@ -142,15 +168,29 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
 
-[node name="PlayerTown" parent="." instance=ExtResource("1_1f5yi")]
+[node name="PlayerTown" parent="Midground" instance=ExtResource("1_1f5yi")]
+position = Vector2(2287, 0)
+
+[node name="Foreground" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2287, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1872, 8)
+rotation = 1.57589
+shape = SubResource("CapsuleShape2D_jeohk")
 
 [node name="NPCArea" type="Area2D" parent="."]
-position = Vector2(1488, -104)
+position = Vector2(3775, -104)
 scale = Vector2(0.572222, 0.572222)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCArea"]
 position = Vector2(-28, 241.5)
 shape = SubResource("RectangleShape2D_4ao53")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_25poj")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="NPCArea" to="." method="_on_npc_area_area_entered"]
