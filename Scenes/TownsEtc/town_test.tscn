@@ -80,6 +80,7 @@ emission_shape = 1
 emission_sphere_radius = 128.0
 direction = Vector3(0, 0, 0)
 spread = 100.0
+initial_velocity_max = 20.0
 angular_velocity_min = 1.0
 angular_velocity_max = 200.0
 directional_velocity_min = 1.0
@@ -94,7 +95,6 @@ scale_over_velocity_max = 1.0
 hue_variation_min = -0.09
 hue_variation_max = 0.09
 turbulence_enabled = true
-turbulence_noise_strength = 1.5
 turbulence_noise_speed_random = 2.77
 turbulence_initial_displacement_min = 69.5
 turbulence_initial_displacement_max = 100.0
@@ -126,10 +126,12 @@ size = Vector2(904, 706.02)
 background_mode = 3
 background_color = Color(0.839216, 0.839216, 0.839216, 1)
 glow_enabled = true
-glow_levels/1 = 1.44
+glow_levels/1 = 2.6
 glow_levels/2 = 2.52
 glow_levels/3 = 0.54
-glow_levels/5 = 0.0
+glow_levels/4 = 0.33
+glow_levels/5 = 0.4
+glow_levels/7 = 1.33
 glow_mix = 0.061
 glow_blend_mode = 1
 
@@ -275,6 +277,7 @@ scale = Vector2(0.48375, 0.48375)
 texture = ExtResource("14_vw8sl")
 
 [node name="Structures" type="Node2D" parent="Midground"]
+modulate = Color(1, 1, 1.3, 1)
 position = Vector2(-2041, -242)
 
 [node name="Structure1" type="Sprite2D" parent="Midground/Structures"]
@@ -422,7 +425,7 @@ modulate = Color(0, 0.729, 1.5, 0.51)
 material = SubResource("CanvasItemMaterial_6kql2")
 position = Vector2(5.63512, 22.5389)
 scale = Vector2(1.3, 1.3)
-amount = 128
+amount = 32
 process_material = SubResource("ParticleProcessMaterial_mw114")
 texture = ExtResource("8_jjxk7")
 lifetime = 10.0
@@ -449,8 +452,7 @@ material = SubResource("CanvasItemMaterial_biho8")
 texture = ExtResource("7_imin4")
 
 [node name="SpeechHint" type="Sprite2D" parent="Midground"]
-visible = false
-position = Vector2(3798, -176)
+position = Vector2(3748, -346)
 scale = Vector2(0.572222, 0.572222)
 texture = SubResource("GradientTexture2D_uq5of")
 
@@ -512,6 +514,7 @@ scale = Vector2(0.116249, 0.116249)
 texture = ExtResource("22_edjri")
 
 [node name="Structures" type="Node2D" parent="Foreground"]
+modulate = Color(1.3, 1.3, 1.3, 1)
 
 [node name="Structure3Dark" type="Sprite2D" parent="Foreground/Structures"]
 position = Vector2(1229, 444)

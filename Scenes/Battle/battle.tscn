@@ -1,6 +1,131 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=7 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_5c15g"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_vl0r0"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ptxvu"]
+gradient = SubResource("Gradient_vl0r0")
+
+[sub_resource type="Gradient" id="Gradient_8hkkw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_h4ka2"]
+gradient = SubResource("Gradient_8hkkw")
+
 [node name="Battle" type="CanvasLayer"]
 script = ExtResource("1_ndcpt")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Log" type="ColorRect" parent="."]
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 528.0
+offset_bottom = 448.0
+
+[node name="Label" type="Label" parent="Log"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 472.0
+offset_bottom = 408.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "vd
+ds
+v
+sd
+fd
+sfsdf
+sd
+fs
+d
+fs
+dh
+trh
+hr
+htr
+hrt"
+label_settings = SubResource("LabelSettings_5c15g")
+horizontal_alignment = 2
+
+[node name="TeamOrder" type="ColorRect" parent="."]
+offset_left = 48.0
+offset_top = 496.0
+offset_right = 688.0
+offset_bottom = 1032.0
+
+[node name="Slot1" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(112, 152)
+
+[node name="Slot2" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(232, 368)
+
+[node name="Slot3" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(368, 160)
+
+[node name="Slot4" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(528, 376)
+
+[node name="Enemy" type="Sprite2D" parent="."]
+position = Vector2(1056, 432)
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(1592, 784)
+
+[node name="Comp1" type="Sprite2D" parent="Player"]
+position = Vector2(-152, 0)
+
+[node name="Comp2" type="Sprite2D" parent="Player"]
+position = Vector2(144, 0)
+
+[node name="Comp3" type="Sprite2D" parent="Player"]
+position = Vector2(-160, -152)
+
+[node name="Comp4" type="Sprite2D" parent="Player"]
+position = Vector2(152, -152)
+
+[node name="HealthBars" type="ReferenceRect" parent="."]
+offset_left = 640.0
+offset_top = 24.0
+offset_right = 1856.0
+offset_bottom = 128.0
+border_width = 5.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HealthBars"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 496.0
+offset_bottom = 72.0
+value = 52.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_ptxvu")
+texture_progress = SubResource("GradientTexture1D_h4ka2")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="HealthBars"]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 0
+offset_left = 696.0
+offset_top = 32.0
+offset_right = 1176.0
+offset_bottom = 72.0
+value = 52.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_ptxvu")
+texture_progress = SubResource("GradientTexture1D_h4ka2")
+
+[node name="Buttons" type="ReferenceRect" parent="."]
+offset_left = 1328.0
+offset_top = 808.0
+offset_right = 1856.0
+offset_bottom = 1040.0
+border_color = Color(0, 1, 0, 1)
+border_width = 5.0

@@ -846,3 +846,7 @@ text = "SP:"
 [connection signal="pressed" from="FirstMenu2/Extor/DamageButton" to="." method="_on_damage_button_pressed"]
 [connection signal="pressed" from="FirstMenu2/Extor/SPButton" to="." method="_on_sp_button_pressed"]
 [connection signal="pressed" from="FirstMenu2/Extor/DebugCurrButton" to="." method="_on_debug_curr_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp1/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp2/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp3/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="FirstMenu2/Comp4/BackButton" to="." method="_on_back_button_pressed"]
