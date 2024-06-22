@@ -8,6 +8,10 @@ var GameOver = "res://Scenes/Menus/game_over.tscn"
 var TownTest = "res://Scenes/TownsEtc/town_test.tscn"
 var OverworldTest = "res://Scenes/Overworld/overworld_test.tscn"
 var UpgradeShop = "res://Scenes/Menus/upgrade.tscn"
+var AlcoraFP = "res://Scenes/Player/alcora.tscn"
+var BeoulFP = "res://Scenes/Player/beoul.tscn"
+var ClaricoFP = "res://Scenes/Player/clarico.tscn"
+var VerityFP = "res://Scenes/Player/verity.tscn"
 
 #region Character variables
 #region Basic Stats - (Name, Health, Attack, Defense)
@@ -26,23 +30,18 @@ var PlayerMove = true
 var PlayerLvl = 1
 #endregion
 
-#region Weapons
-var PlayerWeapon1 = ""
-var PlayerWeapon1Name = null
-var PlayerWeapon1Attack = null
-var PlayerWeapon1Defense = null
-var PlayerWeapon2 = ""
-var PlayerWeapon2Name = null
-var PlayerWeapon2Attack = null
-var PlayerWeapon2Defense = null
-var PlayerWeapon3 = ""
-var PlayerWeapon3Name = null
-var PlayerWeapon3Attack = null
-var PlayerWeapon3Defense = null
-var PlayerWeapon4 = ""
-var PlayerWeapon4Name = null
-var PlayerWeapon4Attack = null
-var PlayerWeapon4Defense = null
+#region Companions
+# Order
+var Comp1 = null
+var Comp2 = null
+var Comp3 = null
+var Comp4 = null
+
+# Stored Nodes
+var Alcora
+var Beoul
+var Clarico
+var Verity
 #endregion
 
 #region Misc
@@ -56,29 +55,11 @@ var PlayerLocY = 0
 #region Enemy variables
 var EnemyNumberOf = 0
 
-var Enemy1 = ""
-var Enemy1Name = ""
-var Enemy1Health = 0
-var Enemy1Attack = 0
-var Enemy1Defense = 0
-
-var Enemy2 = ""
-var Enemy2Name = ""
-var Enemy2Health = 0
-var Enemy2Attack = 0
-var Enemy2Defense = 0
-
-var Enemy3 = ""
-var Enemy3Name = ""
-var Enemy3Health = 0
-var Enemy3Attack = 0
-var Enemy3Defense = 0
-
-var Enemy4 = ""
-var Enemy4Name = ""
-var Enemy4Health = 0
-var Enemy4Attack = 0
-var Enemy4Defense = 0
+var Enemy = ""
+var EnemyName = ""
+var EnemyHealth = 0
+var EnemyAttack = 0
+var EnemyDefense = 0
 #endregion
 
 #region Dialogue variables
@@ -93,6 +74,24 @@ var DiaText = "^Placeholder text for the start of the conversation.~Pain in the 
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+	
+	var node = load(AlcoraFP)
+	Alcora = node.instantiate()
+	
+	node = load(BeoulFP)
+	Beoul = node.instantiate()
+	
+	node = load(ClaricoFP)
+	Clarico = node.instantiate()
+	
+	node = load(VerityFP)
+	Verity = node.instantiate()
+	
+	# DEBUG --------------------------------------------------------------------
+	Comp1 = Alcora
+	Comp2 = Beoul
+	Comp3 = Clarico
+	Comp4 = Verity
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://uv8d81pyedv5"]
+
+[ext_resource type="Script" path="res://Scripts/Companions/alcora.gd" id="1_bsvdv"]
+
+[node name="Alcora" type="Node2D"]
+script = ExtResource("1_bsvdv")

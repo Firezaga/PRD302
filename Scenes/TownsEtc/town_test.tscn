@@ -126,12 +126,11 @@ size = Vector2(904, 706.02)
 background_mode = 3
 background_color = Color(0.839216, 0.839216, 0.839216, 1)
 glow_enabled = true
-glow_levels/1 = 2.6
-glow_levels/2 = 2.52
+glow_levels/1 = 0.66
 glow_levels/3 = 0.54
-glow_levels/4 = 0.33
-glow_levels/5 = 0.4
-glow_levels/7 = 1.33
+glow_levels/4 = 1.2
+glow_levels/5 = 0.8
+glow_levels/7 = 2.86
 glow_mix = 0.061
 glow_blend_mode = 1
 
@@ -229,6 +228,7 @@ texture = ExtResource("7_i8w4k")
 flip_h = true
 
 [node name="Midground" type="Node2D" parent="."]
+self_modulate = Color(0, 1, 1, 1)
 
 [node name="Ground" type="TextureRect" parent="Midground"]
 offset_left = -2963.0
@@ -421,7 +421,7 @@ scale = Vector2(0.354944, 0.354944)
 texture = ExtResource("4_p0l3q")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Midground/NPC"]
-modulate = Color(0, 0.729, 1.5, 0.51)
+modulate = Color(0, 0.729, 2, 0.51)
 material = SubResource("CanvasItemMaterial_6kql2")
 position = Vector2(5.63512, 22.5389)
 scale = Vector2(1.3, 1.3)
