@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://c1dv86jysbnmp"]
+[gd_scene load_steps=3 format=3 uid="uid://c1dv86jysbnmp"]
+
+[ext_resource type="Texture2D" uid="uid://ck3buxiovngg2" path="res://Art/BlakeTest/PH-Sprite4(AI).jpg" id="1_ljcwf"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_test.gd" id="2_3vfwq"]
 
 [node name="EnemyTest" type="Sprite2D"]
+scale = Vector2(0.710938, 0.710938)
+texture = ExtResource("1_ljcwf")
+script = ExtResource("2_3vfwq")

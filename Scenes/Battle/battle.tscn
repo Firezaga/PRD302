@@ -150,12 +150,15 @@ border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="Extor" type="ReferenceRect" parent="Buttons"]
+visible = false
+layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="EAttackButton" type="TextureButton" parent="Buttons/Extor"]
+layout_mode = 0
 offset_left = 79.0
 offset_top = 48.0
 offset_right = 199.0
@@ -175,6 +178,7 @@ text = "Attack"
 horizontal_alignment = 1
 
 [node name="EDefendButton" type="TextureButton" parent="Buttons/Extor"]
+layout_mode = 0
 offset_left = 329.0
 offset_top = 49.0
 offset_right = 449.0
@@ -194,6 +198,7 @@ text = "Defend"
 horizontal_alignment = 1
 
 [node name="EItemButton" type="TextureButton" parent="Buttons/Extor"]
+layout_mode = 0
 offset_left = 78.0
 offset_top = 142.0
 offset_right = 198.0
@@ -214,6 +219,7 @@ text = "Items"
 horizontal_alignment = 1
 
 [node name="ESpecialsButton" type="TextureButton" parent="Buttons/Extor"]
+layout_mode = 0
 offset_left = 333.0
 offset_top = 144.0
 offset_right = 453.0
@@ -233,13 +239,14 @@ text = "Specials"
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="Buttons"]
-visible = false
+layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="C1T1Button" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
@@ -259,6 +266,7 @@ text = "Tier 1"
 horizontal_alignment = 1
 
 [node name="C1T1A1Button" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -278,6 +286,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C1T1A2Button" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -297,6 +306,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C1T1A3Button" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -316,6 +326,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C1T2Button" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
@@ -335,6 +346,7 @@ horizontal_alignment = 1
 
 [node name="C1T2A1Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -355,6 +367,7 @@ horizontal_alignment = 1
 
 [node name="C1T2A2Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -375,6 +388,7 @@ horizontal_alignment = 1
 
 [node name="C1T2A3Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -394,6 +408,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C1T3Button" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
@@ -413,6 +428,7 @@ horizontal_alignment = 1
 
 [node name="C1T3A1Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -433,6 +449,7 @@ horizontal_alignment = 1
 
 [node name="C1T3A2Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -453,6 +470,7 @@ horizontal_alignment = 1
 
 [node name="C1T3A3Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -472,6 +490,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C1T4Button" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
@@ -492,6 +511,7 @@ horizontal_alignment = 1
 
 [node name="C1T4A1Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -512,6 +532,7 @@ horizontal_alignment = 1
 
 [node name="C1T4A2Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -532,6 +553,7 @@ horizontal_alignment = 1
 
 [node name="C1T4A3Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -551,6 +573,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C1SwapButton" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
@@ -570,6 +593,7 @@ text = "Swap"
 horizontal_alignment = 1
 
 [node name="C1WaitButton" type="TextureButton" parent="Buttons/Comp1"]
+layout_mode = 0
 offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
@@ -590,12 +614,14 @@ horizontal_alignment = 1
 
 [node name="Comp2" type="ReferenceRect" parent="Buttons"]
 visible = false
+layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="C2T1Button" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
@@ -615,6 +641,7 @@ text = "Tier 1"
 horizontal_alignment = 1
 
 [node name="C2T1A1Button" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -634,6 +661,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C2T1A2Button" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -653,6 +681,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C2T1A3Button" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -672,6 +701,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C2T2Button" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
@@ -691,6 +721,7 @@ horizontal_alignment = 1
 
 [node name="C2T2A1Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -711,6 +742,7 @@ horizontal_alignment = 1
 
 [node name="C2T2A2Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -731,6 +763,7 @@ horizontal_alignment = 1
 
 [node name="C2T2A3Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -750,6 +783,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C2T3Button" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
@@ -769,6 +803,7 @@ horizontal_alignment = 1
 
 [node name="C2T3A1Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -789,6 +824,7 @@ horizontal_alignment = 1
 
 [node name="C2T3A2Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -809,6 +845,7 @@ horizontal_alignment = 1
 
 [node name="C2T3A3Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -828,6 +865,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C2T4Button" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
@@ -848,6 +886,7 @@ horizontal_alignment = 1
 
 [node name="C2T4A1Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -868,6 +907,7 @@ horizontal_alignment = 1
 
 [node name="C2T4A2Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -888,6 +928,7 @@ horizontal_alignment = 1
 
 [node name="C2T4A3Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -907,6 +948,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C2SwapButton" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
@@ -926,6 +968,7 @@ text = "Swap"
 horizontal_alignment = 1
 
 [node name="C2WaitButton" type="TextureButton" parent="Buttons/Comp2"]
+layout_mode = 0
 offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
@@ -946,12 +989,14 @@ horizontal_alignment = 1
 
 [node name="Comp3" type="ReferenceRect" parent="Buttons"]
 visible = false
+layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="C3T1Button" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
@@ -971,6 +1016,7 @@ text = "Tier 1"
 horizontal_alignment = 1
 
 [node name="C3T1A1Button" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -990,6 +1036,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C3T1A2Button" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1009,6 +1056,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C3T1A3Button" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1028,6 +1076,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C3T2Button" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
@@ -1047,6 +1096,7 @@ horizontal_alignment = 1
 
 [node name="C3T2A1Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -1067,6 +1117,7 @@ horizontal_alignment = 1
 
 [node name="C3T2A2Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1087,6 +1138,7 @@ horizontal_alignment = 1
 
 [node name="C3T2A3Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1106,6 +1158,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C3T3Button" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
@@ -1125,6 +1178,7 @@ horizontal_alignment = 1
 
 [node name="C3T3A1Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -1145,6 +1199,7 @@ horizontal_alignment = 1
 
 [node name="C3T3A2Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1165,6 +1220,7 @@ horizontal_alignment = 1
 
 [node name="C3T3A3Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1184,6 +1240,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C3T4Button" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
@@ -1204,6 +1261,7 @@ horizontal_alignment = 1
 
 [node name="C3T4A1Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -1224,6 +1282,7 @@ horizontal_alignment = 1
 
 [node name="C3T4A2Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1244,6 +1303,7 @@ horizontal_alignment = 1
 
 [node name="C3T4A3Button" type="TextureButton" parent="Buttons/Comp3"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1263,6 +1323,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C3SwapButton" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
@@ -1282,6 +1343,7 @@ text = "Swap"
 horizontal_alignment = 1
 
 [node name="C3WaitButton" type="TextureButton" parent="Buttons/Comp3"]
+layout_mode = 0
 offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
@@ -1302,12 +1364,14 @@ horizontal_alignment = 1
 
 [node name="Comp4" type="ReferenceRect" parent="Buttons"]
 visible = false
+layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="C4T1Button" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
@@ -1327,6 +1391,7 @@ text = "Tier 1"
 horizontal_alignment = 1
 
 [node name="C4T1A1Button" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -1346,6 +1411,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C4T1A2Button" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1365,6 +1431,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C4T1A3Button" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1384,6 +1451,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C4T2Button" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
@@ -1403,6 +1471,7 @@ horizontal_alignment = 1
 
 [node name="C4T2A1Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -1423,6 +1492,7 @@ horizontal_alignment = 1
 
 [node name="C4T2A2Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1443,6 +1513,7 @@ horizontal_alignment = 1
 
 [node name="C4T2A3Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1462,6 +1533,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C4T3Button" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
@@ -1481,6 +1553,7 @@ horizontal_alignment = 1
 
 [node name="C4T3A1Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -1501,6 +1574,7 @@ horizontal_alignment = 1
 
 [node name="C4T3A2Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1521,6 +1595,7 @@ horizontal_alignment = 1
 
 [node name="C4T3A3Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1540,6 +1615,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C4T4Button" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
@@ -1560,6 +1636,7 @@ horizontal_alignment = 1
 
 [node name="C4T4A1Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
@@ -1580,6 +1657,7 @@ horizontal_alignment = 1
 
 [node name="C4T4A2Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
@@ -1600,6 +1678,7 @@ horizontal_alignment = 1
 
 [node name="C4T4A3Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
+layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
@@ -1619,6 +1698,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C4SwapButton" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
@@ -1638,6 +1718,7 @@ text = "Swap"
 horizontal_alignment = 1
 
 [node name="C4WaitButton" type="TextureButton" parent="Buttons/Comp4"]
+layout_mode = 0
 offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
