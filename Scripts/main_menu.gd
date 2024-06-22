@@ -20,7 +20,7 @@ func _on_continue_button_pressed():
 
 
 func _on_load_button_pressed():
-	pass # Replace with function body.
+	Global.restart_application()
 
 
 func _on_settings_button_pressed():

@@ -1,6 +1,6 @@
 extends Node
 
-# Paths to different scenes and scene changing variables
+#region File Paths
 var current_scene = null
 var MainMenu = "res://Scenes/Menus/main_menu.tscn"
 var Settings = "res://Scenes/Menus/settings.tscn"
@@ -12,6 +12,7 @@ var AlcoraFP = "res://Scenes/Player/alcora.tscn"
 var BeoulFP = "res://Scenes/Player/beoul.tscn"
 var ClaricoFP = "res://Scenes/Player/clarico.tscn"
 var VerityFP = "res://Scenes/Player/verity.tscn"
+#endregion
 
 #region Character variables
 #region Basic Stats - (Name, Health, Attack, Defense)
@@ -168,3 +169,8 @@ func CORE_unpause():
 	PlayerMove = true
 #endregion
 
+# Restart the application
+func restart_application():
+	var executable_path = OS.get_executable_path()
+	OS.execute(executable_path, [])  # Pass any command line arguments if needed
+	Global.CORE_quit()  # Quit the current instance of the application
