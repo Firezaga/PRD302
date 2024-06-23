@@ -14,7 +14,7 @@ var T4_unlock = false
 var T1A1_name = "Boost DEF"
 var T1A1_log = "Clarico is boosting defense"
 var T1A1_cost = 5
-var T1A1_is_attack = true
+var T1A1_is_attack = false
 func t1_a1(base):
 	return base + Strength
 
