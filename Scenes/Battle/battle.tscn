@@ -79,6 +79,20 @@ offset_right = 122.0
 offset_bottom = 48.0
 text = "LOG DEBUG"
 
+[node name="Button2" type="Button" parent="Log"]
+offset_left = 34.0
+offset_top = 71.0
+offset_right = 134.0
+offset_bottom = 102.0
+text = "ATTACK DEBUG"
+
+[node name="Button3" type="Button" parent="Log"]
+offset_left = 21.0
+offset_top = 130.0
+offset_right = 148.0
+offset_bottom = 161.0
+text = "DEFENSE DEBUG"
+
 [node name="TeamOrder" type="ColorRect" parent="."]
 offset_left = 48.0
 offset_top = 496.0
@@ -267,6 +281,7 @@ text = "Specials"
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="Buttons"]
+visible = false
 layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
@@ -2151,6 +2166,8 @@ text = "4"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Log/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Log/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T1Button" to="." method="_on_c1_t1_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T1A1Button" to="." method="_on_c1_t1_a1_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T1A2Button" to="." method="_on_c1_t1_a2_button_pressed"]
@@ -2166,9 +2183,72 @@ horizontal_alignment = 1
 [connection signal="pressed" from="Buttons/Comp1/C1T4Button" to="." method="_on_c1_t4_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T4A1Button" to="." method="_on_c1_t4_a1_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T4A2Button" to="." method="_on_c1_t4_a2_button_pressed"]
-[connection signal="pressed" from="Buttons/Comp1/C1T4A3Button" to="." method="_on_c_1t_4a_3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T4A3Button" to="." method="_on_c1_t4_a3_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1SwapButton" to="." method="_on_c1_swap_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1WaitButton" to="." method="_on_c1_wait_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/SwapButtons/C1S2Button" to="." method="_on_c1_s2_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/SwapButtons/C1S3Button" to="." method="_on_c1_s3_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/SwapButtons/C1S4Button" to="." method="_on_c1_s4_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T1Button" to="." method="_on_c2_t1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T1A1Button" to="." method="_on_c2_t1_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T1A2Button" to="." method="_on_c2_t1_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T1A3Button" to="." method="_on_c2_t1_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T2Button" to="." method="_on_c2_t2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T2A1Button" to="." method="_on_c2_t2_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T2A2Button" to="." method="_on_c2_t2_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T2A3Button" to="." method="_on_c2_t2_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T3Button" to="." method="_on_c2_t3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T3A1Button" to="." method="_on_c2_t3_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T3A2Button" to="." method="_on_c2_t3_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T3A3Button" to="." method="_on_c2_t3_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T4Button" to="." method="_on_c2_t4_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T4A1Button" to="." method="_on_c2_t4_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T4A2Button" to="." method="_on_c2_t4_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2T4A3Button" to="." method="_on_c2_t4_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2SwapButton" to="." method="_on_c2_swap_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/C2WaitButton" to="." method="_on_c2_wait_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/SwapButtons/C2S1Button" to="." method="_on_c2_s1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/SwapButtons/C2S3Button" to="." method="_on_c2_s3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp2/SwapButtons/C2S4Button" to="." method="_on_c2_s4_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T1Button" to="." method="_on_c3_t1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T1A1Button" to="." method="_on_c3_t1_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T1A2Button" to="." method="_on_c3_t1_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T1A3Button" to="." method="_on_c3_t1_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T2Button" to="." method="_on_c3_t2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T2A1Button" to="." method="_on_c3_t2_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T2A2Button" to="." method="_on_c3_t2_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T2A3Button" to="." method="_on_c3_t2_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T3Button" to="." method="_on_c3_t3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T3A1Button" to="." method="_on_c3_t3_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T3A2Button" to="." method="_on_c3_t3_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T3A3Button" to="." method="_on_c3_t3_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T4Button" to="." method="_on_c3_t4_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T4A1Button" to="." method="_on_c3_t4_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T4A2Button" to="." method="_on_c3_t4_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3T4A3Button" to="." method="_on_c3_t4_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3SwapButton" to="." method="_on_c3_swap_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/C3WaitButton" to="." method="_on_c3_wait_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/SwapButtons/C3S1Button" to="." method="_on_c3_s1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/SwapButtons/C3S2Button" to="." method="_on_c3_s2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp3/SwapButtons/C3S4Button" to="." method="_on_c3_s4_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T1Button" to="." method="_on_c4_t1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T1A1Button" to="." method="_on_c4_t1_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T1A2Button" to="." method="_on_c4_t1_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T1A3Button" to="." method="_on_c4_t1_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T2Button" to="." method="_on_c4_t2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T2A1Button" to="." method="_on_c4_t2_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T2A2Button" to="." method="_on_c4_t2_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T2A3Button" to="." method="_on_c4_t2_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T3Button" to="." method="_on_c4_t3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T3A1Button" to="." method="_on_c4_t3_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T3A2Button" to="." method="_on_c4_t3_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T3A3Button" to="." method="_on_c4_t3_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T4Button" to="." method="_on_c4_t4_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T4A1Button" to="." method="_on_c4_t4_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T4A2Button" to="." method="_on_c4_t4_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4T4A3Button" to="." method="_on_c4_t4_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4SwapButton" to="." method="_on_c4_swap_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/C4WaitButton" to="." method="_on_c4_wait_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/SwapButtons/C4S1Button" to="." method="_on_c4_s1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/SwapButtons/C4S2Button" to="." method="_on_c4_s2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp4/SwapButtons/C4S3Button" to="." method="_on_c4_s3_button_pressed"]

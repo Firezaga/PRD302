@@ -34,7 +34,6 @@ var T1A3_is_attack = true
 func t1_a3(base):
 	return base + Strength
 
-var T2A1_unlock = false
 var T2A1_name = "Placeholder"
 var T2A1_log = "Placeholder"
 var T2A1_cost = 5
@@ -58,7 +57,6 @@ var T2A3_is_attack = true
 func t2_a3(base):
 	return base + Strength
 
-var T3A1_unlock = false
 var T3A1_name = "Placeholder"
 var T3A1_log = "Placeholder"
 var T3A1_cost = 5
@@ -82,7 +80,6 @@ var T3A3_is_attack = true
 func t3_a3(base):
 	return base + Strength
 
-var T4A1_unlock = false
 var T4A1_name = "Placeholder"
 var T4A1_log = "Placeholder"
 var T4A1_cost = 5
