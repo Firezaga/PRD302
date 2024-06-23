@@ -1,28 +1,30 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=14 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
+[ext_resource type="Texture2D" uid="uid://bahld1iy3d2uy" path="res://Art/UI/Battle/HPBarBack.png" id="3_cepgi"]
+[ext_resource type="Texture2D" uid="uid://buujkocw4d4ec" path="res://Art/BlakeTest/PH-Sprite1(AI).jpg" id="3_p37p1"]
+[ext_resource type="Texture2D" uid="uid://dtbj53oqh3j7w" path="res://Art/UI/Battle/HPBarFront.png" id="4_phkr0"]
+[ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="5_urbfp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5c15g"]
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Gradient" id="Gradient_vl0r0"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_ptxvu"]
-gradient = SubResource("Gradient_vl0r0")
-
-[sub_resource type="Gradient" id="Gradient_8hkkw"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_h4ka2"]
-gradient = SubResource("Gradient_8hkkw")
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_oqjyb"]
 gradient = SubResource("Gradient_sf557")
+
+[sub_resource type="Gradient" id="Gradient_qsosk"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wr7rt"]
+gradient = SubResource("Gradient_qsosk")
+
+[sub_resource type="Gradient" id="Gradient_qyguw"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8uk5j"]
+gradient = SubResource("Gradient_qyguw")
 
 [node name="Battle" type="CanvasLayer"]
 script = ExtResource("1_ndcpt")
@@ -85,33 +87,54 @@ offset_bottom = 1032.0
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(112, 152)
+scale = Vector2(0.1, 0.1)
 
 [node name="Slot2" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(232, 368)
+scale = Vector2(0.1, 0.1)
 
 [node name="Slot3" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(368, 160)
+scale = Vector2(0.1, 0.1)
 
 [node name="Slot4" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(528, 376)
+scale = Vector2(0.1, 0.1)
+
+[node name="Label" type="Label" parent="TeamOrder"]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 43.0
+offset_right = 358.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "SP: "
 
 [node name="Enemy" type="Sprite2D" parent="."]
 position = Vector2(1056, 432)
+scale = Vector2(0.7, 0.7)
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(1592, 784)
+position = Vector2(1496, 624)
+scale = Vector2(0.415039, 0.415039)
+texture = ExtResource("3_p37p1")
 
 [node name="Comp1" type="Sprite2D" parent="Player"]
-position = Vector2(-152, 0)
+position = Vector2(-481.882, -216.847)
+scale = Vector2(0.3, 0.3)
 
 [node name="Comp2" type="Sprite2D" parent="Player"]
-position = Vector2(144, 0)
+position = Vector2(479.473, -197.572)
+scale = Vector2(0.3, 0.3)
 
 [node name="Comp3" type="Sprite2D" parent="Player"]
-position = Vector2(-160, -152)
+position = Vector2(-662.588, 257.807)
+scale = Vector2(0.3, 0.3)
 
 [node name="Comp4" type="Sprite2D" parent="Player"]
-position = Vector2(152, -152)
+position = Vector2(638.494, 245.76)
+scale = Vector2(0.3, 0.3)
 
 [node name="HealthBars" type="ReferenceRect" parent="."]
 offset_left = 640.0
@@ -120,7 +143,7 @@ offset_right = 1856.0
 offset_bottom = 128.0
 border_width = 5.0
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="HealthBars"]
+[node name="EnemyHealth" type="TextureProgressBar" parent="HealthBars"]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 0
 offset_left = 16.0
@@ -129,10 +152,11 @@ offset_right = 496.0
 offset_bottom = 72.0
 value = 52.0
 nine_patch_stretch = true
-texture_under = SubResource("GradientTexture1D_ptxvu")
-texture_progress = SubResource("GradientTexture1D_h4ka2")
+texture_under = ExtResource("3_cepgi")
+texture_over = ExtResource("4_phkr0")
+texture_progress = ExtResource("5_urbfp")
 
-[node name="TextureProgressBar2" type="TextureProgressBar" parent="HealthBars"]
+[node name="PlayerHealth" type="TextureProgressBar" parent="HealthBars"]
 modulate = Color(0, 1, 0, 1)
 layout_mode = 0
 offset_left = 696.0
@@ -141,8 +165,9 @@ offset_right = 1176.0
 offset_bottom = 72.0
 value = 52.0
 nine_patch_stretch = true
-texture_under = SubResource("GradientTexture1D_ptxvu")
-texture_progress = SubResource("GradientTexture1D_h4ka2")
+texture_under = ExtResource("3_cepgi")
+texture_over = ExtResource("4_phkr0")
+texture_progress = ExtResource("5_urbfp")
 
 [node name="Buttons" type="ReferenceRect" parent="."]
 offset_left = 1328.0
@@ -242,7 +267,6 @@ text = "Specials"
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="Buttons"]
-visible = false
 layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
@@ -276,6 +300,7 @@ offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
 texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_disabled = SubResource("GradientTexture1D_wr7rt")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -290,6 +315,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C1T1A2Button" type="TextureButton" parent="Buttons/Comp1"]
+visible = false
 layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
@@ -310,6 +336,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C1T1A3Button" type="TextureButton" parent="Buttons/Comp1"]
+visible = false
 layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
@@ -330,6 +357,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C1T2Button" type="TextureButton" parent="Buttons/Comp1"]
+visible = false
 layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
@@ -412,6 +440,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C1T3Button" type="TextureButton" parent="Buttons/Comp1"]
+visible = false
 layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
@@ -494,6 +523,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C1T4Button" type="TextureButton" parent="Buttons/Comp1"]
+visible = false
 layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
@@ -616,6 +646,97 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 horizontal_alignment = 1
 
+[node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp1"]
+visible = false
+layout_mode = 0
+offset_right = 528.0
+offset_bottom = 232.0
+border_color = Color(0, 1, 0, 1)
+border_width = 5.0
+
+[node name="C1S1Button" type="TextureButton" parent="Buttons/Comp1/SwapButtons"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 51.0
+offset_right = 142.0
+offset_bottom = 99.0
+disabled = true
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_disabled = SubResource("GradientTexture1D_8uk5j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp1/SwapButtons/C1S1Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+horizontal_alignment = 1
+
+[node name="C1S2Button" type="TextureButton" parent="Buttons/Comp1/SwapButtons"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 152.0
+offset_right = 244.0
+offset_bottom = 200.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp1/SwapButtons/C1S2Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="C1S3Button" type="TextureButton" parent="Buttons/Comp1/SwapButtons"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 54.0
+offset_right = 358.0
+offset_bottom = 102.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp1/SwapButtons/C1S3Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+horizontal_alignment = 1
+
+[node name="C1S4Button" type="TextureButton" parent="Buttons/Comp1/SwapButtons"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 144.0
+offset_right = 459.0
+offset_bottom = 192.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp1/SwapButtons/C1S4Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "4"
+horizontal_alignment = 1
+
 [node name="Comp2" type="ReferenceRect" parent="Buttons"]
 visible = false
 layout_mode = 0
@@ -665,6 +786,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C2T1A2Button" type="TextureButton" parent="Buttons/Comp2"]
+visible = false
 layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
@@ -685,6 +807,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C2T1A3Button" type="TextureButton" parent="Buttons/Comp2"]
+visible = false
 layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
@@ -705,6 +828,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C2T2Button" type="TextureButton" parent="Buttons/Comp2"]
+visible = false
 layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
@@ -787,6 +911,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C2T3Button" type="TextureButton" parent="Buttons/Comp2"]
+visible = false
 layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
@@ -869,6 +994,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C2T4Button" type="TextureButton" parent="Buttons/Comp2"]
+visible = false
 layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
@@ -991,6 +1117,97 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 horizontal_alignment = 1
 
+[node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp2"]
+visible = false
+layout_mode = 0
+offset_right = 528.0
+offset_bottom = 232.0
+border_color = Color(0, 1, 0, 1)
+border_width = 5.0
+
+[node name="C2S1Button" type="TextureButton" parent="Buttons/Comp2/SwapButtons"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 51.0
+offset_right = 142.0
+offset_bottom = 99.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_disabled = SubResource("GradientTexture1D_8uk5j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp2/SwapButtons/C2S1Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+horizontal_alignment = 1
+
+[node name="C2S2Button" type="TextureButton" parent="Buttons/Comp2/SwapButtons"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 152.0
+offset_right = 244.0
+offset_bottom = 200.0
+disabled = true
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp2/SwapButtons/C2S2Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="C2S3Button" type="TextureButton" parent="Buttons/Comp2/SwapButtons"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 54.0
+offset_right = 358.0
+offset_bottom = 102.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp2/SwapButtons/C2S3Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+horizontal_alignment = 1
+
+[node name="C2S4Button" type="TextureButton" parent="Buttons/Comp2/SwapButtons"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 144.0
+offset_right = 459.0
+offset_bottom = 192.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp2/SwapButtons/C2S4Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "4"
+horizontal_alignment = 1
+
 [node name="Comp3" type="ReferenceRect" parent="Buttons"]
 visible = false
 layout_mode = 0
@@ -1040,6 +1257,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C3T1A2Button" type="TextureButton" parent="Buttons/Comp3"]
+visible = false
 layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
@@ -1060,6 +1278,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C3T1A3Button" type="TextureButton" parent="Buttons/Comp3"]
+visible = false
 layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
@@ -1080,6 +1299,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C3T2Button" type="TextureButton" parent="Buttons/Comp3"]
+visible = false
 layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
@@ -1162,6 +1382,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C3T3Button" type="TextureButton" parent="Buttons/Comp3"]
+visible = false
 layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
@@ -1244,6 +1465,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C3T4Button" type="TextureButton" parent="Buttons/Comp3"]
+visible = false
 layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
@@ -1366,6 +1588,97 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 horizontal_alignment = 1
 
+[node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp3"]
+visible = false
+layout_mode = 0
+offset_right = 528.0
+offset_bottom = 232.0
+border_color = Color(0, 1, 0, 1)
+border_width = 5.0
+
+[node name="C3S1Button" type="TextureButton" parent="Buttons/Comp3/SwapButtons"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 51.0
+offset_right = 142.0
+offset_bottom = 99.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_disabled = SubResource("GradientTexture1D_8uk5j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp3/SwapButtons/C3S1Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+horizontal_alignment = 1
+
+[node name="C3S2Button" type="TextureButton" parent="Buttons/Comp3/SwapButtons"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 152.0
+offset_right = 244.0
+offset_bottom = 200.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp3/SwapButtons/C3S2Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="C3S3Button" type="TextureButton" parent="Buttons/Comp3/SwapButtons"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 54.0
+offset_right = 358.0
+offset_bottom = 102.0
+disabled = true
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp3/SwapButtons/C3S3Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+horizontal_alignment = 1
+
+[node name="C3S4Button" type="TextureButton" parent="Buttons/Comp3/SwapButtons"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 144.0
+offset_right = 459.0
+offset_bottom = 192.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp3/SwapButtons/C3S4Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "4"
+horizontal_alignment = 1
+
 [node name="Comp4" type="ReferenceRect" parent="Buttons"]
 visible = false
 layout_mode = 0
@@ -1415,6 +1728,7 @@ text = "Action 1"
 horizontal_alignment = 1
 
 [node name="C4T1A2Button" type="TextureButton" parent="Buttons/Comp4"]
+visible = false
 layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
@@ -1435,6 +1749,7 @@ text = "Action 2"
 horizontal_alignment = 1
 
 [node name="C4T1A3Button" type="TextureButton" parent="Buttons/Comp4"]
+visible = false
 layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
@@ -1455,6 +1770,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C4T2Button" type="TextureButton" parent="Buttons/Comp4"]
+visible = false
 layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
@@ -1537,6 +1853,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C4T3Button" type="TextureButton" parent="Buttons/Comp4"]
+visible = false
 layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
@@ -1619,6 +1936,7 @@ text = "Action 3"
 horizontal_alignment = 1
 
 [node name="C4T4Button" type="TextureButton" parent="Buttons/Comp4"]
+visible = false
 layout_mode = 0
 offset_left = 406.0
 offset_top = 1.0
@@ -1741,4 +2059,116 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 horizontal_alignment = 1
 
+[node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp4"]
+visible = false
+layout_mode = 0
+offset_right = 528.0
+offset_bottom = 232.0
+border_color = Color(0, 1, 0, 1)
+border_width = 5.0
+
+[node name="C4S1Button" type="TextureButton" parent="Buttons/Comp4/SwapButtons"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 51.0
+offset_right = 142.0
+offset_bottom = 99.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_disabled = SubResource("GradientTexture1D_8uk5j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp4/SwapButtons/C4S1Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+horizontal_alignment = 1
+
+[node name="C4S2Button" type="TextureButton" parent="Buttons/Comp4/SwapButtons"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 152.0
+offset_right = 244.0
+offset_bottom = 200.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp4/SwapButtons/C4S2Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="C4S3Button" type="TextureButton" parent="Buttons/Comp4/SwapButtons"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 54.0
+offset_right = 358.0
+offset_bottom = 102.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp4/SwapButtons/C4S3Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+horizontal_alignment = 1
+
+[node name="C4S4Button" type="TextureButton" parent="Buttons/Comp4/SwapButtons"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 144.0
+offset_right = 459.0
+offset_bottom = 192.0
+disabled = true
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Comp4/SwapButtons/C4S4Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "4"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T1Button" to="." method="_on_c1_t1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T1A1Button" to="." method="_on_c1_t1_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T1A2Button" to="." method="_on_c1_t1_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T1A3Button" to="." method="_on_c1_t1_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T2Button" to="." method="_on_c1_t2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T2A1Button" to="." method="_on_c1_t2_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T2A2Button" to="." method="_on_c1_t2_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T2A3Button" to="." method="_on_c1_t2_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T3Button" to="." method="_on_c1_t3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T3A1Button" to="." method="_on_c1_t3_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T3A2Button" to="." method="_on_c1_t3_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T3A3Button" to="." method="_on_c1_t3_a3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T4Button" to="." method="_on_c1_t4_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T4A1Button" to="." method="_on_c1_t4_a1_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T4A2Button" to="." method="_on_c1_t4_a2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1T4A3Button" to="." method="_on_c_1t_4a_3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1SwapButton" to="." method="_on_c1_swap_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/C1WaitButton" to="." method="_on_c1_wait_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/SwapButtons/C1S2Button" to="." method="_on_c1_s2_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/SwapButtons/C1S3Button" to="." method="_on_c1_s3_button_pressed"]
+[connection signal="pressed" from="Buttons/Comp1/SwapButtons/C1S4Button" to="." method="_on_c1_s4_button_pressed"]

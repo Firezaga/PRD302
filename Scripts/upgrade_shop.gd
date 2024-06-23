@@ -35,7 +35,7 @@ func _on_extor_button_pressed():
 	$FirstMenu2/Extor/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 	$FirstMenu2/Extor/Health.text = "Health: " + str(Global.PlayerMaxHealth)
 	$FirstMenu2/Extor/Damage.text = "Damage: " + str(Global.PlayerAttack)
-	$FirstMenu2/Extor/SP.text = "SP: " + str(Global.PlayerAP)
+	$FirstMenu2/Extor/SP.text = "SP: " + str(Global.PlayerAPMax)
 
 
 func _on_comp_1_button_pressed():
@@ -44,7 +44,7 @@ func _on_comp_1_button_pressed():
 	$FirstMenu2/Comp1/Lvl.text = "LVL: " + str(Global.Comp1.Lvl)
 	$FirstMenu2/Comp1/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 	$FirstMenu2/Comp1/AbilityStrength.text = "Ability Strength: " + str(Global.Comp1.Strength)
-	$FirstMenu2/Comp1/SP.text = "SP: " + str(Global.Comp1.SP)
+	$FirstMenu2/Comp1/SP.text = "SP: " + str(Global.Comp1.SPMax)
 	
 	$FirstMenu2.visible = true
 	$FirstMenu2/Comp1.visible = true
@@ -57,7 +57,7 @@ func _on_comp_2_button_pressed():
 	$FirstMenu2/Comp2/Lvl.text = "LVL: " + str(Global.Comp2.Lvl)
 	$FirstMenu2/Comp2/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 	$FirstMenu2/Comp2/AbilityStrength.text = "Ability Strength: " + str(Global.Comp2.Strength)
-	$FirstMenu2/Comp2/SP.text = "SP: " + str(Global.Comp2.SP)
+	$FirstMenu2/Comp2/SP.text = "SP: " + str(Global.Comp2.SPMax)
 	
 	$FirstMenu2.visible = true
 	$FirstMenu2/Comp2.visible = true
@@ -69,7 +69,7 @@ func _on_comp_3_button_pressed():
 	$FirstMenu2/Comp3/Lvl.text = "LVL: " + str(Global.Comp3.Lvl)
 	$FirstMenu2/Comp3/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 	$FirstMenu2/Comp3/AbilityStrength.text = "Ability Strength: " + str(Global.Comp3.Strength)
-	$FirstMenu2/Comp3/SP.text = "SP: " + str(Global.Comp3.SP)
+	$FirstMenu2/Comp3/SP.text = "SP: " + str(Global.Comp3.SPMax)
 	
 	$FirstMenu2.visible = true
 	$FirstMenu2/Comp3.visible = true
@@ -81,7 +81,7 @@ func _on_comp_4_button_pressed():
 	$FirstMenu2/Comp4/Lvl.text = "LVL: " + str(Global.Comp4.Lvl)
 	$FirstMenu2/Comp4/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 	$FirstMenu2/Comp4/AbilityStrength.text = "Ability Strength: " + str(Global.Comp4.Strength)
-	$FirstMenu2/Comp4/SP.text = "SP: " + str(Global.Comp4.SP)
+	$FirstMenu2/Comp4/SP.text = "SP: " + str(Global.Comp4.SPMax)
 	
 	$FirstMenu2.visible = true
 	$FirstMenu2/Comp4.visible = true
@@ -112,10 +112,10 @@ func _on_damage_button_pressed():
 func _on_sp_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
-		Global.PlayerAP += 5
+		Global.PlayerAPMax += 5
 		Global.PlayerLvl += 1
 		$FirstMenu2/Extor/Currency.text = "Currency: " + str(Global.PlayerCurrency)
-		$FirstMenu2/Extor/SP.text = "SP: " + str(Global.PlayerAP)
+		$FirstMenu2/Extor/SP.text = "SP: " + str(Global.PlayerAPMax)
 		$FirstMenu2/Extor/LVL.text = "LVL: " + str(Global.PlayerLvl)
 
 
@@ -136,10 +136,10 @@ func _on_strength_1_button_pressed():
 func _on_sp_1_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
-		Global.Comp1.SP += 10
+		Global.Comp1.SPMax += 10
 		Global.Comp1.Lvl += 1
 		$FirstMenu2/Comp1/Currency.text = "Currency: " + str(Global.PlayerCurrency)
-		$FirstMenu2/Comp1/SP.text = "SP: " + str(Global.Comp1.SP)
+		$FirstMenu2/Comp1/SP.text = "SP: " + str(Global.Comp1.SPMax)
 		$FirstMenu2/Comp1/Lvl.text = "LVL: " + str(Global.Comp1.Lvl)
 		
 #endregion
@@ -159,10 +159,10 @@ func _on_strength_2_button_pressed():
 func _on_sp_2_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
-		Global.Comp2.SP += 10
+		Global.Comp2.SPMax += 10
 		Global.Comp2.Lvl += 1
 		$FirstMenu2/Comp2/Currency.text = "Currency: " + str(Global.PlayerCurrency)
-		$FirstMenu2/Comp2/SP.text = "SP: " + str(Global.Comp2.SP)
+		$FirstMenu2/Comp2/SP.text = "SP: " + str(Global.Comp2.SPMax)
 		$FirstMenu2/Comp2/Lvl.text = "LVL: " + str(Global.Comp2.Lvl)
 		
 #endregion
@@ -182,10 +182,10 @@ func _on_strength_3_button_pressed():
 func _on_sp_3_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
-		Global.Comp3.SP += 10
+		Global.Comp3.SPMax += 10
 		Global.Comp3.Lvl += 1
 		$FirstMenu2/Comp3/Currency.text = "Currency: " + str(Global.PlayerCurrency)
-		$FirstMenu2/Comp3/SP.text = "SP: " + str(Global.Comp3.SP)
+		$FirstMenu2/Comp3/SP.text = "SP: " + str(Global.Comp3.SPMax)
 		$FirstMenu2/Comp3/Lvl.text = "LVL: " + str(Global.Comp3.Lvl)
 		
 #endregion
@@ -205,10 +205,10 @@ func _on_strength_4_button_pressed():
 func _on_sp_4_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
-		Global.Comp4.SP += 10
+		Global.Comp4.SPMax += 10
 		Global.Comp4.Lvl += 1
 		$FirstMenu2/Comp4/Currency.text = "Currency: " + str(Global.PlayerCurrency)
-		$FirstMenu2/Comp4/SP.text = "SP: " + str(Global.Comp4.SP)
+		$FirstMenu2/Comp4/SP.text = "SP: " + str(Global.Comp4.SPMax)
 		$FirstMenu2/Comp4/Lvl.text = "LVL: " + str(Global.Comp4.Lvl)
 		
 #endregion

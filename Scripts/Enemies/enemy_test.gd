@@ -1,9 +1,19 @@
 extends Sprite2D
 
 var Name = "Test Enemy"
+var SpriteFP = "res://Art/BlakeTest/PH-Sprite4(AI).jpg"
 var MaxHP = 500
-var Attack = 10
+var AttackMax = 15
+var AttackMin = 10
 var Defense = 10
+
+func attack():
+	var damage = randi_range(AttackMin, AttackMax)
+	return damage
+
+
+func defend():
+	return Defense
 
 
 # Called when the node enters the scene tree for the first time.

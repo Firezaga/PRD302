@@ -5,6 +5,7 @@ var current_scene = null
 var MainMenu = "res://Scenes/Menus/main_menu.tscn"
 var Settings = "res://Scenes/Menus/settings.tscn"
 var GameOver = "res://Scenes/Menus/game_over.tscn"
+var Battle = "res://Scenes/Battle/battle.tscn"
 var TownTest = "res://Scenes/TownsEtc/town_test.tscn"
 var OverworldTest = "res://Scenes/Overworld/overworld_test.tscn"
 var UpgradeShop = "res://Scenes/Menus/upgrade.tscn"
@@ -12,6 +13,8 @@ var AlcoraFP = "res://Scenes/Player/alcora.tscn"
 var BeoulFP = "res://Scenes/Player/beoul.tscn"
 var ClaricoFP = "res://Scenes/Player/clarico.tscn"
 var VerityFP = "res://Scenes/Player/verity.tscn"
+
+var DEBUGEnemyFP = "res://Scenes/Enemies/enemy_test.tscn"
 #endregion
 
 #region Character variables
@@ -20,8 +23,8 @@ var PlayerName = "Test"
 var PlayerMaxHealth = 200
 var PlayerCurHealth = 200
 var PlayerAttack = 50
-var PlayerAP = 1
-var PlayerStartingAP = 1
+var PlayerAPMax = 10
+var PlayerAPCur = 1
 var PlayerDefense = 0
 var PlayerStoryState = 0
 var PlayerMove = true
@@ -54,13 +57,7 @@ var PlayerLocY = 0
 #endregion
 
 #region Enemy variables
-var EnemyNumberOf = 0
-
-var Enemy = ""
-var EnemyName = ""
-var EnemyHealth = 0
-var EnemyAttack = 0
-var EnemyDefense = 0
+var Enemy
 #endregion
 
 #region Dialogue variables
@@ -93,6 +90,9 @@ func _ready():
 	Comp2 = Beoul
 	Comp3 = Clarico
 	Comp4 = Verity
+	
+	node = load(DEBUGEnemyFP)
+	Enemy = node.instantiate()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -152,6 +152,13 @@ func GOTO_overworld_test():
 
 func LOAD_upgrade_shop():
 	var scene = load(UpgradeShop)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
+
+func LOAD_battle(EnemyFP):
+	var node = load(EnemyFP)
+	Enemy = node.instantiate()
+	var scene = load(Battle)
 	var instance = scene.instantiate()
 	current_scene.add_child(instance)
 #endregion
