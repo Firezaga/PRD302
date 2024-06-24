@@ -13,4 +13,11 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
+	Global.CORE_refill_HPSP()
 	Global.GOTO_town_test()
+
+
+func _on_enemy_1_area_entered(area):
+	Global.PlayerMove = false
+	Global.LOAD_battle("res://Scenes/Enemies/enemy_test.tscn")
+	$Enemy1.queue_free()

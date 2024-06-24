@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_new_game_button_pressed():
-	Global.GOTO_overworld_test()
+	Global.GOTO_town_test()
 
 
 func _on_continue_button_pressed():

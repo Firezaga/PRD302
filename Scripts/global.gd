@@ -91,8 +91,7 @@ func _ready():
 	Comp3 = Clarico
 	Comp4 = Verity
 	
-	node = load(DEBUGEnemyFP)
-	Enemy = node.instantiate()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -175,6 +174,17 @@ func CORE_pause():
 func CORE_unpause():
 	PlayerMove = true
 #endregion
+
+func CORE_refill_HPSP():
+	PlayerCurHealth = PlayerMaxHealth
+	PlayerAPCur = PlayerAPMax
+	Comp1.SP = Comp1.SPMax
+	Comp2.SP = Comp2.SPMax
+	Comp3.SP = Comp3.SPMax
+	Comp4.SP = Comp4.SPMax
+	pass
+
+
 
 # Restart the application
 func restart_application():

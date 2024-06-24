@@ -285,12 +285,14 @@ horizontal_alignment = 1
 
 [node name="Specials" type="ReferenceRect" parent="Buttons/Extor"]
 visible = false
+layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="AllOutATKButton" type="TextureButton" parent="Buttons/Extor/Specials"]
+layout_mode = 0
 offset_left = 79.0
 offset_top = 48.0
 offset_right = 199.0
@@ -309,6 +311,7 @@ text = "All Out ATK"
 horizontal_alignment = 1
 
 [node name="AllOutDEFButton" type="TextureButton" parent="Buttons/Extor/Specials"]
+layout_mode = 0
 offset_left = 322.0
 offset_top = 51.0
 offset_right = 442.0

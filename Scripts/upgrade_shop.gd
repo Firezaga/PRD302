@@ -137,6 +137,7 @@ func _on_sp_1_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp1.SPMax += 10
+		Global.Comp1.SP += 10
 		Global.Comp1.Lvl += 1
 		$FirstMenu2/Comp1/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 		$FirstMenu2/Comp1/SP.text = "SP: " + str(Global.Comp1.SPMax)
@@ -160,6 +161,7 @@ func _on_sp_2_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp2.SPMax += 10
+		Global.Comp2.SP += 10
 		Global.Comp2.Lvl += 1
 		$FirstMenu2/Comp2/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 		$FirstMenu2/Comp2/SP.text = "SP: " + str(Global.Comp2.SPMax)
@@ -183,6 +185,7 @@ func _on_sp_3_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp3.SPMax += 10
+		Global.Comp3.SP += 10
 		Global.Comp3.Lvl += 1
 		$FirstMenu2/Comp3/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 		$FirstMenu2/Comp3/SP.text = "SP: " + str(Global.Comp3.SPMax)
@@ -206,6 +209,7 @@ func _on_sp_4_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp4.SPMax += 10
+		Global.Comp4.SP += 10
 		Global.Comp4.Lvl += 1
 		$FirstMenu2/Comp4/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 		$FirstMenu2/Comp4/SP.text = "SP: " + str(Global.Comp4.SPMax)

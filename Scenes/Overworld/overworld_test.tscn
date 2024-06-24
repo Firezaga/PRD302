@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyroak05o2fy"]
+[gd_scene load_steps=8 format=3 uid="uid://dyroak05o2fy"]
 
 [ext_resource type="PackedScene" uid="uid://fq3lc6h4our0" path="res://Scenes/Player/player_overworld.tscn" id="1_sdr83"]
 [ext_resource type="Script" path="res://Scripts/overworld_test.gd" id="1_wt7q3"]
+[ext_resource type="Texture2D" uid="uid://ck3buxiovngg2" path="res://Art/BlakeTest/PH-Sprite4(AI).jpg" id="3_rvtw7"]
 
 [sub_resource type="Gradient" id="Gradient_mdb1v"]
 colors = PackedColorArray(0, 0, 1, 1, 0, 0, 0.839216, 1)
@@ -11,6 +12,9 @@ gradient = SubResource("Gradient_mdb1v")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qnxu"]
 size = Vector2(64, 63.9999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijytg"]
+size = Vector2(1020, 1020)
 
 [node name="OverworldTest" type="Node2D"]
 script = ExtResource("1_wt7q3")
@@ -29,4 +33,16 @@ texture = SubResource("GradientTexture2D_mtyre")
 position = Vector2(5.72205e-06, 6.10352e-05)
 shape = SubResource("RectangleShape2D_1qnxu")
 
+[node name="Enemy1" type="Sprite2D" parent="."]
+position = Vector2(-523, -307)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_rvtw7")
+
+[node name="Enemy1" type="Area2D" parent="Enemy1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1/Enemy1"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ijytg")
+
 [connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy1/Enemy1" to="." method="_on_enemy_1_area_entered"]

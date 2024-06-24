@@ -6,10 +6,14 @@ var enemy_current_health
 
 var total_attack
 var total_defense
+var total_attack_e
+var total_defense_e
 
 #region Initialise all text and variables
 func _ready():
 	# Enemy
+	total_attack_e = 0
+	total_defense_e = Global.Enemy.Defense
 	$Enemy.texture = ResourceLoader.load(Global.Enemy.SpriteFP)
 	enemy_current_health = Global.Enemy.MaxHP
 	$HealthBars/EnemyHealth.max_value = enemy_current_health
@@ -66,7 +70,19 @@ func log_process_text(text):
 
 #region Enemy Turn
 func ET_start():
-	pass
+	await log_process_text(Global.Enemy.Name + " is thinking")
+	total_attack_e = 0
+	total_defense_e = Global.Enemy.Defense
+	await get_tree().create_timer(2.0).timeout
+	if enemy_current_health <= ($HealthBars/EnemyHealth.max_value / 2):
+		total_defense_e = Global.Enemy.defend(total_defense_e)
+		await log_process_text(Global.Enemy.Name + " defends")
+		PT_Comp1()
+	else:
+		total_attack_e = Global.Enemy.attack(total_attack_e)
+		await log_process_text(Global.Enemy.Name + " attacks")
+		await damage_extor(total_attack_e)
+		PT_Comp1()
 #endregion
 
 
@@ -1536,20 +1552,38 @@ func battle_start():
 	PT_Comp1()
 
 func damage_enemy(damage):
-	var act_damage = damage - Global.Enemy.Defense
+	var act_damage = damage - total_defense_e
 	if act_damage < 0:
 		act_damage = 0
 	enemy_current_health -= act_damage
 	var tween = get_tree().create_tween()
 	tween.tween_property($HealthBars/EnemyHealth, "value", enemy_current_health, 0.5)
+	await get_tree().create_timer(1.0).timeout
+	if enemy_current_health <= 0:
+		await log_process_text(Global.Enemy.Name + "has been defeated")
+		await log_process_text("Currency rewarded: " + str(Global.Enemy.Reward))
+		await get_tree().create_timer(1.0).timeout
+		Global.PlayerCurrency += Global.Enemy.Reward
+		Global.PlayerMove = true
+		queue_free()
 
 func damage_extor(damage):
 	var act_damage = damage - total_defense
 	if act_damage < 0:
 		act_damage = 0
-	enemy_current_health -= act_damage
+	Global.PlayerCurHealth -= act_damage
 	var tween = get_tree().create_tween()
-	tween.tween_property($HealthBars/EnemyHealth, "value", enemy_current_health, 0.5)
+	tween.tween_property($HealthBars/PlayerHealth, "value", Global.PlayerCurHealth, 0.5)
+	await get_tree().create_timer(1.0).timeout
+	if Global.PlayerCurHealth <= 0:
+		await log_process_text("Extor has been defeated")
+		await log_process_text("Currency lost forever: " + str(Global.PlayerCurrency))
+		await get_tree().create_timer(1.0).timeout
+		Global.PlayerCurrency = 0
+		Global.GOTO_town_test()
+		Global.CORE_refill_HPSP()
+		Global.PlayerMove = true
+		queue_free()
 #endregion
 
 
