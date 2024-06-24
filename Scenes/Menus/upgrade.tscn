@@ -1,17 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0yx7cgvclxw3"]
+[gd_scene load_steps=9 format=3 uid="uid://b0yx7cgvclxw3"]
 
 [ext_resource type="Script" path="res://Scripts/upgrade_shop.gd" id="1_48kuf"]
 [ext_resource type="Shader" path="res://Shaders/blur.gdshader" id="2_dyn5e"]
+[ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="3_qme48"]
+[ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="4_ciok2"]
+[ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="5_5ofsm"]
+[ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="6_fu6mb"]
+[ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="7_hitvv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xfe0q"]
 shader = ExtResource("2_dyn5e")
 shader_parameter/amount = 1.0
-
-[sub_resource type="Gradient" id="Gradient_sf557"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_5gdj1"]
-gradient = SubResource("Gradient_sf557")
 
 [node name="Upgrade" type="CanvasLayer"]
 script = ExtResource("1_48kuf")
@@ -34,7 +33,6 @@ offset_top = 72.0
 offset_right = 896.0
 offset_bottom = 984.0
 border_width = 5.0
-editor_only = false
 
 [node name="Background" type="ColorRect" parent="FirstMenu"]
 layout_mode = 1
@@ -45,13 +43,28 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="GreyNinePatch" parent="FirstMenu" instance=ExtResource("3_qme48")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="ExtorButton" type="TextureButton" parent="FirstMenu"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 256.0
-offset_right = 536.0
-offset_bottom = 312.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+offset_left = 299.0
+offset_top = 386.0
+offset_right = 563.0
+offset_bottom = 442.0
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/ExtorButton"]
@@ -62,6 +75,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Extor"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Comp1Button" type="TextureButton" parent="FirstMenu"]
@@ -70,7 +84,10 @@ offset_left = 80.0
 offset_top = 560.0
 offset_right = 344.0
 offset_bottom = 616.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp1Button"]
@@ -81,6 +98,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Comp 1"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Comp2Button" type="TextureButton" parent="FirstMenu"]
@@ -89,7 +107,10 @@ offset_left = 536.0
 offset_top = 560.0
 offset_right = 800.0
 offset_bottom = 616.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp2Button"]
@@ -100,6 +121,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Comp 2"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Comp3Button" type="TextureButton" parent="FirstMenu"]
@@ -108,7 +130,10 @@ offset_left = 80.0
 offset_top = 816.0
 offset_right = 344.0
 offset_bottom = 872.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp3Button"]
@@ -119,6 +144,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Comp 3"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Comp4Button" type="TextureButton" parent="FirstMenu"]
@@ -127,7 +153,11 @@ offset_left = 536.0
 offset_top = 816.0
 offset_right = 800.0
 offset_bottom = 872.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+texture_disabled = ExtResource("7_hitvv")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/Comp4Button"]
@@ -138,6 +168,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Comp 4"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="ExitButton" type="TextureButton" parent="FirstMenu"]
@@ -146,7 +177,11 @@ offset_left = 56.0
 offset_top = 48.0
 offset_right = 320.0
 offset_bottom = 104.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+texture_disabled = ExtResource("7_hitvv")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu/ExitButton"]
@@ -157,6 +192,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Back"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="GLBLLVL" type="Label" parent="FirstMenu"]
@@ -175,7 +211,6 @@ offset_right = 1792.0
 offset_bottom = 1000.0
 border_color = Color(0, 0, 1, 1)
 border_width = 5.0
-editor_only = false
 
 [node name="ColorRect" type="ColorRect" parent="FirstMenu2"]
 layout_mode = 1
@@ -185,6 +220,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="GreyNinePatch" parent="FirstMenu2" instance=ExtResource("3_qme48")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Extor" type="ReferenceRect" parent="FirstMenu2"]
 visible = false
@@ -201,7 +248,10 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/BackButton"]
@@ -212,6 +262,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Back"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="HealthButton" type="TextureButton" parent="FirstMenu2/Extor"]
@@ -220,7 +271,10 @@ offset_left = 592.0
 offset_top = 496.0
 offset_right = 856.0
 offset_bottom = 552.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/HealthButton"]
@@ -231,6 +285,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Health"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="DamageButton" type="TextureButton" parent="FirstMenu2/Extor"]
@@ -239,7 +294,10 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/DamageButton"]
@@ -250,6 +308,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Damage"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="SPButton" type="TextureButton" parent="FirstMenu2/Extor"]
@@ -258,7 +317,10 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/SPButton"]
@@ -269,6 +331,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Skill Points"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Name" type="Label" parent="FirstMenu2/Extor"]
@@ -326,7 +389,10 @@ offset_left = 72.0
 offset_top = 80.0
 offset_right = 336.0
 offset_bottom = 136.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("7_hitvv")
+texture_pressed = ExtResource("7_hitvv")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Extor/DebugCurrButton"]
@@ -337,6 +403,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "DEBUG - CURRENCY"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="FirstMenu2"]
@@ -354,7 +421,10 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp1/BackButton"]
@@ -365,6 +435,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Back"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Strength1Button" type="TextureButton" parent="FirstMenu2/Comp1"]
@@ -373,7 +444,10 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp1/Strength1Button"]
@@ -384,6 +458,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Ability Strength"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="SP1Button" type="TextureButton" parent="FirstMenu2/Comp1"]
@@ -392,7 +467,10 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp1/SP1Button"]
@@ -403,6 +481,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Skill Points"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Name" type="Label" parent="FirstMenu2/Comp1"]
@@ -461,7 +540,10 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp2/BackButton"]
@@ -472,6 +554,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Back"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Strength2Button" type="TextureButton" parent="FirstMenu2/Comp2"]
@@ -480,7 +563,10 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp2/Strength2Button"]
@@ -491,6 +577,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Ability Strength"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="SP2Button" type="TextureButton" parent="FirstMenu2/Comp2"]
@@ -499,7 +586,10 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp2/SP2Button"]
@@ -510,6 +600,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Skill Points"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Name" type="Label" parent="FirstMenu2/Comp2"]
@@ -568,7 +659,10 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp3/BackButton"]
@@ -579,6 +673,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Back"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Strength3Button" type="TextureButton" parent="FirstMenu2/Comp3"]
@@ -587,7 +682,10 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp3/Strength3Button"]
@@ -598,6 +696,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Ability Strength"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="SP3Button" type="TextureButton" parent="FirstMenu2/Comp3"]
@@ -606,7 +705,10 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp3/SP3Button"]
@@ -617,6 +719,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Skill Points"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Name" type="Label" parent="FirstMenu2/Comp3"]
@@ -675,7 +778,10 @@ offset_left = 48.0
 offset_top = 832.0
 offset_right = 312.0
 offset_bottom = 888.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp4/BackButton"]
@@ -686,6 +792,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Back"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Strength4Button" type="TextureButton" parent="FirstMenu2/Comp4"]
@@ -694,7 +801,10 @@ offset_left = 592.0
 offset_top = 616.0
 offset_right = 856.0
 offset_bottom = 672.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp4/Strength4Button"]
@@ -705,6 +815,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Ability Strength"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="SP4Button" type="TextureButton" parent="FirstMenu2/Comp4"]
@@ -713,7 +824,10 @@ offset_left = 592.0
 offset_top = 720.0
 offset_right = 856.0
 offset_bottom = 776.0
-texture_normal = SubResource("GradientTexture1D_5gdj1")
+texture_normal = ExtResource("4_ciok2")
+texture_pressed = ExtResource("5_5ofsm")
+texture_hover = ExtResource("5_5ofsm")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="FirstMenu2/Comp4/SP4Button"]
@@ -724,6 +838,7 @@ offset_right = 248.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Upgrade Skill Points"
+label_settings = ExtResource("6_fu6mb")
 horizontal_alignment = 1
 
 [node name="Name" type="Label" parent="FirstMenu2/Comp4"]
