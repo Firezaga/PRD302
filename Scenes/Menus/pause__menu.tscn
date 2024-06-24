@@ -1,33 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfch7dkw80gbn"]
+[gd_scene load_steps=6 format=3 uid="uid://t5no0sfgmup2"]
 
-[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_tp0ra"]
+[ext_resource type="Script" path="res://Scripts/pause__menu.gd" id="1_oo2o2"]
 
-[sub_resource type="Gradient" id="Gradient_j7r1c"]
+[sub_resource type="Gradient" id="Gradient_5t135"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_w1hm4"]
-gradient = SubResource("Gradient_j7r1c")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wjjnt"]
+gradient = SubResource("Gradient_5t135")
 
-[sub_resource type="Gradient" id="Gradient_0njmx"]
+[sub_resource type="Gradient" id="Gradient_w0svh"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_38tj7"]
-gradient = SubResource("Gradient_0njmx")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_htghn"]
+gradient = SubResource("Gradient_w0svh")
 
-[node name="PauseMenu" type="Control"]
-z_index = 2
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_tp0ra")
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_oo2o2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = SubResource("GradientTexture1D_w1hm4")
+texture = SubResource("GradientTexture1D_wjjnt")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
 offset_left = 808.0
 offset_top = 231.0
 offset_right = 848.0
@@ -36,12 +31,11 @@ theme_override_font_sizes/font_size = 52
 text = "Pause"
 
 [node name="MainMenuButton" type="TextureButton" parent="."]
-layout_mode = 1
 offset_left = 264.0
 offset_top = 936.0
 offset_right = 520.0
 offset_bottom = 976.0
-texture_normal = SubResource("GradientTexture1D_38tj7")
+texture_normal = SubResource("GradientTexture1D_htghn")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="MainMenuButton"]
@@ -54,12 +48,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Main Menu"
 
 [node name="ResumeButton" type="TextureButton" parent="."]
-layout_mode = 1
 offset_left = 752.0
 offset_top = 936.0
 offset_right = 1008.0
 offset_bottom = 976.0
-texture_normal = SubResource("GradientTexture1D_38tj7")
+texture_normal = SubResource("GradientTexture1D_htghn")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="ResumeButton"]
@@ -72,12 +65,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Resume"
 
 [node name="QuitButton" type="TextureButton" parent="."]
-layout_mode = 1
 offset_left = 1352.0
 offset_top = 928.0
 offset_right = 1608.0
 offset_bottom = 976.0
-texture_normal = SubResource("GradientTexture1D_38tj7")
+texture_normal = SubResource("GradientTexture1D_htghn")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="QuitButton"]
