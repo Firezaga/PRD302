@@ -1,6 +1,7 @@
 #region Dialogue Instructions
 # Normal
 # '~' is used to seperate blocks of text for processing to the text box
+# '%' is used to end the dialogue scene
 # Example below
 # Simple placeholder text.~Some more simple placeholder text.~
 
@@ -50,6 +51,10 @@ func ProText():
 			await get_tree().create_timer(2.0).timeout
 			text_to_send = ""
 			continue
+		if raw_text[i] == '%':
+			await DisplayText(text_to_send)
+			await get_tree().create_timer(2.0).timeout
+			queue_free()
 		text_to_send += raw_text[i]
 
 func ProTextM(text):
@@ -62,6 +67,10 @@ func ProTextM(text):
 			continue
 		if (text[i] == '@'):
 			$Choice.visible = true
+		if text[i] == '%':
+			await DisplayText(text_to_send)
+			await get_tree().create_timer(2.0).timeout
+			queue_free()
 		text_to_send += text[i]
 
 func ProMulti():

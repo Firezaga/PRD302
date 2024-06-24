@@ -49,6 +49,7 @@ autowrap_mode = 3
 wait_time = 0.5
 
 [node name="Choice" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
