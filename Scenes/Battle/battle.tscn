@@ -1,31 +1,26 @@
-[gd_scene load_steps=15 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=18 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
 [ext_resource type="Texture2D" uid="uid://bahld1iy3d2uy" path="res://Art/UI/Battle/HPBarBack.png" id="3_cepgi"]
 [ext_resource type="Texture2D" uid="uid://buujkocw4d4ec" path="res://Art/BlakeTest/PH-Sprite1(AI).jpg" id="3_p37p1"]
+[ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="4_nbqtf"]
 [ext_resource type="Texture2D" uid="uid://dtbj53oqh3j7w" path="res://Art/UI/Battle/HPBarFront.png" id="4_phkr0"]
+[ext_resource type="LabelSettings" uid="uid://bmhp3078ewa1a" path="res://Fonts/battle_log_font.tres" id="4_ut2ga"]
+[ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="5_bw7tk"]
 [ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="5_urbfp"]
+[ext_resource type="Texture2D" uid="uid://dcbhwj75bauxb" path="res://Art/BlakeTest/CompOrderSine.png" id="6_1ktr2"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_ybd0t"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_5c15g"]
-font_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="8_wcxfo"]
+[ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="9_vcbur"]
+[ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="10_sahna"]
+[ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="11_1qwoe"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_oqjyb"]
 gradient = SubResource("Gradient_sf557")
-
-[sub_resource type="Gradient" id="Gradient_qsosk"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_wr7rt"]
-gradient = SubResource("Gradient_qsosk")
-
-[sub_resource type="Gradient" id="Gradient_qyguw"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_8uk5j"]
-gradient = SubResource("Gradient_qyguw")
 
 [node name="Battle" type="CanvasLayer"]
 script = ExtResource("1_ndcpt")
@@ -46,11 +41,16 @@ pivot_offset = Vector2(960, 540)
 texture = ExtResource("2_frhtk")
 expand_mode = 1
 
-[node name="Log" type="ColorRect" parent="."]
+[node name="Log" parent="." instance=ExtResource("7_ybd0t")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 40.0
 offset_top = 24.0
-offset_right = 528.0
-offset_bottom = 448.0
+offset_right = -1392.0
+offset_bottom = -632.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="Log"]
 layout_mode = 0
@@ -67,7 +67,7 @@ fd
 sfsdf
 sd
 "
-label_settings = SubResource("LabelSettings_5c15g")
+label_settings = ExtResource("4_ut2ga")
 horizontal_alignment = 2
 vertical_alignment = 2
 text_overrun_behavior = 2
@@ -76,15 +76,15 @@ text_overrun_behavior = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
-offset_right = 122.0
-offset_bottom = 48.0
+offset_right = 132.0
+offset_bottom = 53.0
 text = "LOG DEBUG"
 
 [node name="Button2" type="Button" parent="Log"]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 71.0
-offset_right = 134.0
+offset_right = 161.0
 offset_bottom = 102.0
 text = "ATTACK DEBUG"
 
@@ -92,30 +92,43 @@ text = "ATTACK DEBUG"
 layout_mode = 0
 offset_left = 21.0
 offset_top = 130.0
-offset_right = 148.0
+offset_right = 157.0
 offset_bottom = 161.0
 text = "DEFENSE DEBUG"
 
-[node name="TeamOrder" type="ColorRect" parent="."]
+[node name="TeamOrder" parent="." instance=ExtResource("4_nbqtf")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 48.0
 offset_top = 496.0
-offset_right = 688.0
-offset_bottom = 1032.0
+offset_right = -1232.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SinWave" type="TextureRect" parent="TeamOrder"]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 637.0
+offset_bottom = 536.0
+texture = ExtResource("6_1ktr2")
+expand_mode = 1
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(112, 152)
+position = Vector2(138, 146)
 scale = Vector2(0.1, 0.1)
 
 [node name="Slot2" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(232, 368)
+position = Vector2(257, 362)
 scale = Vector2(0.1, 0.1)
 
 [node name="Slot3" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(368, 160)
+position = Vector2(378, 146)
 scale = Vector2(0.1, 0.1)
 
 [node name="Slot4" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(528, 376)
+position = Vector2(500, 358)
 scale = Vector2(0.1, 0.1)
 
 [node name="Label" type="Label" parent="TeamOrder"]
@@ -127,6 +140,7 @@ offset_bottom = 79.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "SP: "
+label_settings = ExtResource("5_bw7tk")
 
 [node name="Enemy" type="Sprite2D" parent="."]
 position = Vector2(1056, 432)
@@ -168,6 +182,7 @@ offset_top = 32.0
 offset_right = 496.0
 offset_bottom = 72.0
 value = 52.0
+fill_mode = 6
 nine_patch_stretch = true
 texture_under = ExtResource("3_cepgi")
 texture_over = ExtResource("4_phkr0")
@@ -181,6 +196,7 @@ offset_top = 32.0
 offset_right = 1176.0
 offset_bottom = 72.0
 value = 52.0
+fill_mode = 6
 nine_patch_stretch = true
 texture_under = ExtResource("3_cepgi")
 texture_over = ExtResource("4_phkr0")
@@ -195,7 +211,6 @@ border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
 [node name="GreyNinePatch" parent="Buttons" instance=ExtResource("7_ybd0t")]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -221,7 +236,10 @@ offset_left = 79.0
 offset_top = 48.0
 offset_right = 199.0
 offset_bottom = 96.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -233,6 +251,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Attack"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="EDefendButton" type="TextureButton" parent="Buttons/Extor"]
@@ -241,7 +260,10 @@ offset_left = 329.0
 offset_top = 49.0
 offset_right = 449.0
 offset_bottom = 97.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -253,6 +275,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Defend"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="EItemButton" type="TextureButton" parent="Buttons/Extor"]
@@ -283,7 +306,10 @@ offset_left = 207.0
 offset_top = 148.0
 offset_right = 327.0
 offset_bottom = 196.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -295,6 +321,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Specials"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="Specials" type="ReferenceRect" parent="Buttons/Extor"]
@@ -311,7 +338,10 @@ offset_left = 79.0
 offset_top = 48.0
 offset_right = 199.0
 offset_bottom = 96.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -322,6 +352,7 @@ offset_right = 120.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "All Out ATK"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="AllOutDEFButton" type="TextureButton" parent="Buttons/Extor/Specials"]
@@ -330,7 +361,10 @@ offset_left = 322.0
 offset_top = 51.0
 offset_right = 442.0
 offset_bottom = 99.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -341,6 +375,7 @@ offset_right = 120.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "All Out DEF"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="Buttons"]
@@ -357,7 +392,10 @@ offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
 offset_bottom = 50.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -369,6 +407,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T1A1Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -377,8 +416,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
-texture_disabled = SubResource("GradientTexture1D_wr7rt")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -390,6 +431,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T1A2Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -399,7 +441,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -411,6 +456,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T1A3Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -420,7 +466,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -432,6 +481,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T2Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -440,7 +490,10 @@ layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -452,6 +505,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T2A1Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -461,7 +515,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -473,6 +530,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T2A2Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -482,7 +540,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -494,6 +555,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T2A3Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -503,7 +565,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -515,6 +580,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T3Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -523,7 +589,10 @@ layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -535,6 +604,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T3A1Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -544,7 +614,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -556,6 +629,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T3A2Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -565,7 +639,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -577,6 +654,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T3A3Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -586,7 +664,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -598,6 +679,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T4Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -607,7 +689,10 @@ offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
 offset_bottom = 49.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -619,6 +704,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T4A1Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -628,7 +714,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -640,6 +729,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T4A2Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -649,7 +739,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -661,6 +754,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T4A3Button" type="TextureButton" parent="Buttons/Comp1"]
@@ -670,7 +764,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -682,6 +779,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1SwapButton" type="TextureButton" parent="Buttons/Comp1"]
@@ -690,7 +788,10 @@ offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
 offset_bottom = 212.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -702,6 +803,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1WaitButton" type="TextureButton" parent="Buttons/Comp1"]
@@ -710,7 +812,10 @@ offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
 offset_bottom = 210.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -722,6 +827,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp1"]
@@ -739,8 +845,10 @@ offset_top = 51.0
 offset_right = 142.0
 offset_bottom = 99.0
 disabled = true
-texture_normal = SubResource("GradientTexture1D_oqjyb")
-texture_disabled = SubResource("GradientTexture1D_8uk5j")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -752,6 +860,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1S2Button" type="TextureButton" parent="Buttons/Comp1/SwapButtons"]
@@ -760,7 +869,10 @@ offset_left = 124.0
 offset_top = 152.0
 offset_right = 244.0
 offset_bottom = 200.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -773,6 +885,7 @@ offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "2
 "
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1S3Button" type="TextureButton" parent="Buttons/Comp1/SwapButtons"]
@@ -781,7 +894,10 @@ offset_left = 238.0
 offset_top = 54.0
 offset_right = 358.0
 offset_bottom = 102.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -793,6 +909,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1S4Button" type="TextureButton" parent="Buttons/Comp1/SwapButtons"]
@@ -801,7 +918,10 @@ offset_left = 339.0
 offset_top = 144.0
 offset_right = 459.0
 offset_bottom = 192.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -813,6 +933,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="Comp2" type="ReferenceRect" parent="Buttons"]
@@ -829,7 +950,10 @@ offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
 offset_bottom = 50.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -841,6 +965,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T1A1Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -849,7 +974,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -861,6 +989,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T1A2Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -870,7 +999,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -882,6 +1014,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T1A3Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -891,7 +1024,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -903,6 +1039,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T2Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -911,7 +1048,10 @@ layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -923,6 +1063,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T2A1Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -932,7 +1073,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -944,6 +1088,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T2A2Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -953,7 +1098,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -965,6 +1113,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T2A3Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -974,7 +1123,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -986,6 +1138,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T3Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -994,7 +1147,10 @@ layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1006,6 +1162,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T3A1Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -1015,7 +1172,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1027,6 +1187,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T3A2Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -1036,7 +1197,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1048,6 +1212,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T3A3Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -1057,7 +1222,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1069,6 +1237,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T4Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -1078,7 +1247,10 @@ offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
 offset_bottom = 49.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1090,6 +1262,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T4A1Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -1099,7 +1272,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1111,6 +1287,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T4A2Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -1120,7 +1297,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1132,6 +1312,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2T4A3Button" type="TextureButton" parent="Buttons/Comp2"]
@@ -1141,7 +1322,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1153,6 +1337,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2SwapButton" type="TextureButton" parent="Buttons/Comp2"]
@@ -1161,7 +1346,10 @@ offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
 offset_bottom = 212.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1173,6 +1361,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2WaitButton" type="TextureButton" parent="Buttons/Comp2"]
@@ -1181,7 +1370,10 @@ offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
 offset_bottom = 210.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1193,6 +1385,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp2"]
@@ -1209,8 +1402,10 @@ offset_left = 22.0
 offset_top = 51.0
 offset_right = 142.0
 offset_bottom = 99.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
-texture_disabled = SubResource("GradientTexture1D_8uk5j")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1222,6 +1417,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2S2Button" type="TextureButton" parent="Buttons/Comp2/SwapButtons"]
@@ -1231,7 +1427,10 @@ offset_top = 152.0
 offset_right = 244.0
 offset_bottom = 200.0
 disabled = true
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1244,6 +1443,7 @@ offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "2
 "
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2S3Button" type="TextureButton" parent="Buttons/Comp2/SwapButtons"]
@@ -1252,7 +1452,10 @@ offset_left = 238.0
 offset_top = 54.0
 offset_right = 358.0
 offset_bottom = 102.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1264,6 +1467,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C2S4Button" type="TextureButton" parent="Buttons/Comp2/SwapButtons"]
@@ -1272,7 +1476,10 @@ offset_left = 339.0
 offset_top = 144.0
 offset_right = 459.0
 offset_bottom = 192.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1284,6 +1491,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="Comp3" type="ReferenceRect" parent="Buttons"]
@@ -1300,7 +1508,10 @@ offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
 offset_bottom = 50.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1312,6 +1523,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T1A1Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1320,7 +1532,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1332,6 +1547,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T1A2Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1341,7 +1557,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1353,6 +1572,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T1A3Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1362,7 +1582,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1374,6 +1597,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T2Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1382,7 +1606,10 @@ layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1394,6 +1621,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T2A1Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1403,7 +1631,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1415,6 +1646,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T2A2Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1424,7 +1656,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1436,6 +1671,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T2A3Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1445,7 +1681,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1457,6 +1696,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T3Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1465,7 +1705,10 @@ layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1477,6 +1720,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T3A1Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1486,7 +1730,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1498,6 +1745,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T3A2Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1507,7 +1755,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1519,6 +1770,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T3A3Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1528,7 +1780,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1540,6 +1795,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T4Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1549,7 +1805,10 @@ offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
 offset_bottom = 49.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1561,6 +1820,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T4A1Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1570,7 +1830,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1582,6 +1845,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T4A2Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1591,7 +1855,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1603,6 +1870,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3T4A3Button" type="TextureButton" parent="Buttons/Comp3"]
@@ -1612,7 +1880,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1624,6 +1895,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3SwapButton" type="TextureButton" parent="Buttons/Comp3"]
@@ -1632,7 +1904,10 @@ offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
 offset_bottom = 212.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1644,6 +1919,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3WaitButton" type="TextureButton" parent="Buttons/Comp3"]
@@ -1652,7 +1928,10 @@ offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
 offset_bottom = 210.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1664,6 +1943,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp3"]
@@ -1680,8 +1960,10 @@ offset_left = 22.0
 offset_top = 51.0
 offset_right = 142.0
 offset_bottom = 99.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
-texture_disabled = SubResource("GradientTexture1D_8uk5j")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1693,6 +1975,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3S2Button" type="TextureButton" parent="Buttons/Comp3/SwapButtons"]
@@ -1701,7 +1984,10 @@ offset_left = 124.0
 offset_top = 152.0
 offset_right = 244.0
 offset_bottom = 200.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1714,6 +2000,7 @@ offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "2
 "
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3S3Button" type="TextureButton" parent="Buttons/Comp3/SwapButtons"]
@@ -1723,7 +2010,10 @@ offset_top = 54.0
 offset_right = 358.0
 offset_bottom = 102.0
 disabled = true
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1735,6 +2025,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C3S4Button" type="TextureButton" parent="Buttons/Comp3/SwapButtons"]
@@ -1743,7 +2034,10 @@ offset_left = 339.0
 offset_top = 144.0
 offset_right = 459.0
 offset_bottom = 192.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1755,6 +2049,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="Comp4" type="ReferenceRect" parent="Buttons"]
@@ -1771,7 +2066,10 @@ offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
 offset_bottom = 50.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1783,6 +2081,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T1A1Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1791,7 +2090,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1803,6 +2105,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T1A2Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1812,7 +2115,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1824,6 +2130,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T1A3Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1833,7 +2140,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1845,6 +2155,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T2Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1853,7 +2164,10 @@ layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1865,6 +2179,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T2A1Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1874,7 +2189,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1886,6 +2204,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T2A2Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1895,7 +2214,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1907,6 +2229,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T2A3Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1916,7 +2239,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1928,6 +2254,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T3Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1936,7 +2263,10 @@ layout_mode = 0
 offset_left = 268.0
 offset_right = 388.0
 offset_bottom = 48.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1948,6 +2278,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T3A1Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1957,7 +2288,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1969,6 +2303,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T3A2Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1978,7 +2313,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1990,6 +2328,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T3A3Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -1999,7 +2338,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2011,6 +2353,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T4Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -2020,7 +2363,10 @@ offset_left = 406.0
 offset_top = 1.0
 offset_right = 526.0
 offset_bottom = 49.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2032,6 +2378,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T4A1Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -2041,7 +2388,10 @@ offset_left = 65.0
 offset_top = 83.0
 offset_right = 185.0
 offset_bottom = 131.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2053,6 +2403,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T4A2Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -2062,7 +2413,10 @@ offset_left = 210.0
 offset_top = 82.0
 offset_right = 330.0
 offset_bottom = 130.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2074,6 +2428,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4T4A3Button" type="TextureButton" parent="Buttons/Comp4"]
@@ -2083,7 +2438,10 @@ offset_left = 365.0
 offset_top = 81.0
 offset_right = 485.0
 offset_bottom = 129.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2095,6 +2453,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4SwapButton" type="TextureButton" parent="Buttons/Comp4"]
@@ -2103,7 +2462,10 @@ offset_left = 66.0
 offset_top = 164.0
 offset_right = 186.0
 offset_bottom = 212.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2115,6 +2477,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4WaitButton" type="TextureButton" parent="Buttons/Comp4"]
@@ -2123,7 +2486,10 @@ offset_left = 309.0
 offset_top = 162.0
 offset_right = 429.0
 offset_bottom = 210.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2135,6 +2501,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="SwapButtons" type="ReferenceRect" parent="Buttons/Comp4"]
@@ -2151,8 +2518,10 @@ offset_left = 22.0
 offset_top = 51.0
 offset_right = 142.0
 offset_bottom = 99.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
-texture_disabled = SubResource("GradientTexture1D_8uk5j")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2164,6 +2533,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "1"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4S2Button" type="TextureButton" parent="Buttons/Comp4/SwapButtons"]
@@ -2172,7 +2542,10 @@ offset_left = 124.0
 offset_top = 152.0
 offset_right = 244.0
 offset_bottom = 200.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2185,6 +2558,7 @@ offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "2
 "
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4S3Button" type="TextureButton" parent="Buttons/Comp4/SwapButtons"]
@@ -2193,7 +2567,10 @@ offset_left = 238.0
 offset_top = 54.0
 offset_right = 358.0
 offset_bottom = 102.0
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2205,6 +2582,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C4S4Button" type="TextureButton" parent="Buttons/Comp4/SwapButtons"]
@@ -2214,7 +2592,10 @@ offset_top = 144.0
 offset_right = 459.0
 offset_bottom = 192.0
 disabled = true
-texture_normal = SubResource("GradientTexture1D_oqjyb")
+texture_normal = ExtResource("8_wcxfo")
+texture_pressed = ExtResource("9_vcbur")
+texture_hover = ExtResource("9_vcbur")
+texture_disabled = ExtResource("10_sahna")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2226,6 +2607,7 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "4"
+label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
