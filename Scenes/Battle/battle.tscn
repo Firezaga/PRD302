@@ -80,6 +80,7 @@ offset_bottom = 48.0
 text = "LOG DEBUG"
 
 [node name="Button2" type="Button" parent="Log"]
+layout_mode = 0
 offset_left = 34.0
 offset_top = 71.0
 offset_right = 134.0
@@ -87,6 +88,7 @@ offset_bottom = 102.0
 text = "ATTACK DEBUG"
 
 [node name="Button3" type="Button" parent="Log"]
+layout_mode = 0
 offset_left = 21.0
 offset_top = 130.0
 offset_right = 148.0
@@ -240,6 +242,7 @@ text = "Defend"
 horizontal_alignment = 1
 
 [node name="EItemButton" type="TextureButton" parent="Buttons/Extor"]
+visible = false
 layout_mode = 0
 offset_left = 78.0
 offset_top = 142.0
@@ -262,10 +265,10 @@ horizontal_alignment = 1
 
 [node name="ESpecialsButton" type="TextureButton" parent="Buttons/Extor"]
 layout_mode = 0
-offset_left = 333.0
-offset_top = 144.0
-offset_right = 453.0
-offset_bottom = 192.0
+offset_left = 207.0
+offset_top = 148.0
+offset_right = 327.0
+offset_bottom = 196.0
 texture_normal = SubResource("GradientTexture1D_oqjyb")
 ignore_texture_size = true
 stretch_mode = 0
@@ -278,6 +281,49 @@ offset_right = 106.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Specials"
+horizontal_alignment = 1
+
+[node name="Specials" type="ReferenceRect" parent="Buttons/Extor"]
+visible = false
+offset_right = 528.0
+offset_bottom = 232.0
+border_color = Color(0, 1, 0, 1)
+border_width = 5.0
+
+[node name="AllOutATKButton" type="TextureButton" parent="Buttons/Extor/Specials"]
+offset_left = 79.0
+offset_top = 48.0
+offset_right = 199.0
+offset_bottom = 96.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Extor/Specials/AllOutATKButton"]
+layout_mode = 0
+offset_top = 11.0
+offset_right = 120.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "All Out ATK"
+horizontal_alignment = 1
+
+[node name="AllOutDEFButton" type="TextureButton" parent="Buttons/Extor/Specials"]
+offset_left = 322.0
+offset_top = 51.0
+offset_right = 442.0
+offset_bottom = 99.0
+texture_normal = SubResource("GradientTexture1D_oqjyb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Extor/Specials/AllOutDEFButton"]
+layout_mode = 0
+offset_top = 11.0
+offset_right = 120.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "All Out DEF"
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="Buttons"]
@@ -2168,6 +2214,11 @@ horizontal_alignment = 1
 [connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Log/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Log/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Buttons/Extor/EAttackButton" to="." method="_on_e_attack_button_pressed"]
+[connection signal="pressed" from="Buttons/Extor/EDefendButton" to="." method="_on_e_defend_button_pressed"]
+[connection signal="pressed" from="Buttons/Extor/ESpecialsButton" to="." method="_on_e_specials_button_pressed"]
+[connection signal="pressed" from="Buttons/Extor/Specials/AllOutATKButton" to="." method="_on_all_out_atk_button_pressed"]
+[connection signal="pressed" from="Buttons/Extor/Specials/AllOutDEFButton" to="." method="_on_all_out_def_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T1Button" to="." method="_on_c1_t1_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T1A1Button" to="." method="_on_c1_t1_a1_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp1/C1T1A2Button" to="." method="_on_c1_t1_a2_button_pressed"]

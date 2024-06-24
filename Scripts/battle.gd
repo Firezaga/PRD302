@@ -65,7 +65,8 @@ func log_process_text(text):
 
 
 #region Enemy Turn
-
+func ET_start():
+	pass
 #endregion
 
 
@@ -1478,7 +1479,51 @@ func _on_c4_s3_button_pressed():
 
 #region Extor
 func PT_Extor():
-	pass
+	$TeamOrder/Label.text = "Extor's SP: " + str(Global.PlayerAPCur)
+	$Buttons/Extor/EAttackButton.visible = true
+	$Buttons/Extor/EDefendButton.visible = true
+	$Buttons/Extor/Specials.visible = false
+	if Global.PlayerAPCur < 20:
+		$Buttons/Extor/ESpecialsButton.visible = false
+	else:
+		$Buttons/Extor/ESpecialsButton.visible = true
+	$Buttons/Extor.visible = true
+
+func _on_e_attack_button_pressed():
+	$Buttons/Extor.visible = false
+	total_defense = Global.PlayerDefense
+	await log_process_text("Extor attacks")
+	await damage_enemy(total_attack)
+	ET_start()
+
+func _on_e_defend_button_pressed():
+	$Buttons/Extor.visible = false
+	await log_process_text("Extor defends")
+	ET_start()
+
+func _on_e_specials_button_pressed():
+	$Buttons/Extor/EAttackButton.visible = false
+	$Buttons/Extor/EDefendButton.visible = false
+	$Buttons/Extor/ESpecialsButton.visible = false
+	$Buttons/Extor/Specials.visible = true
+
+func _on_all_out_atk_button_pressed():
+	$Buttons/Extor.visible = false
+	Global.PlayerAPCur -= 20
+	total_attack = total_attack + total_defense
+	total_defense = 0
+	await log_process_text("Extor goes all out ATK")
+	await damage_enemy(total_attack)
+	ET_start()
+
+func _on_all_out_def_button_pressed():
+	$Buttons/Extor.visible = false
+	Global.PlayerAPCur -= 20
+	total_defense = total_attack + total_defense
+	total_attack = 0
+	await log_process_text("Extor goes all out DEF")
+	ET_start()
+
 #endregion
 
 #endregion
@@ -1490,10 +1535,22 @@ func battle_start():
 	await log_process_text(Global.Enemy.Name + " has appeared!! But test!")
 	PT_Comp1()
 
+func damage_enemy(damage):
+	var act_damage = damage - Global.Enemy.Defense
+	if act_damage < 0:
+		act_damage = 0
+	enemy_current_health -= act_damage
+	var tween = get_tree().create_tween()
+	tween.tween_property($HealthBars/EnemyHealth, "value", enemy_current_health, 0.5)
+
+func damage_extor(damage):
+	var act_damage = damage - total_defense
+	if act_damage < 0:
+		act_damage = 0
+	enemy_current_health -= act_damage
+	var tween = get_tree().create_tween()
+	tween.tween_property($HealthBars/EnemyHealth, "value", enemy_current_health, 0.5)
 #endregion
-
-
-
 
 
 
