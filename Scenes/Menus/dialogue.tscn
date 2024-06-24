@@ -1,12 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c25wos2dasiwm"]
+[gd_scene load_steps=7 format=3 uid="uid://c25wos2dasiwm"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_oohnh"]
-
-[sub_resource type="Gradient" id="Gradient_e4v1t"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1x0hm"]
-gradient = SubResource("Gradient_e4v1t")
+[ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="2_v67bk"]
+[ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="3_ai1wi"]
+[ext_resource type="Texture2D" uid="uid://dehy1j8jvi507" path="res://Art/UI/NinePatchGrey.png" id="4_apgn2"]
+[ext_resource type="Texture2D" uid="uid://dx10d1nl5cryq" path="res://Art/UI/NinePatchBlue.png" id="5_4df8n"]
+[ext_resource type="LabelSettings" uid="uid://c2xbirwhr4xjo" path="res://Fonts/dialogue_button_font.tres" id="6_wofe7"]
 
 [node name="Dialogue" type="CanvasLayer"]
 script = ExtResource("1_oohnh")
@@ -23,11 +22,16 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(1448, 464)
 scale = Vector2(0.5, 0.5)
 
-[node name="TextBackground" type="ColorRect" parent="."]
+[node name="TextBackground" parent="." instance=ExtResource("2_v67bk")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 64.0
 offset_top = 768.0
-offset_right = 1856.0
-offset_bottom = 1024.0
+offset_right = -64.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="TextBackground"]
 layout_mode = 0
@@ -38,13 +42,13 @@ offset_bottom = 232.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "Lorem ipsum"
+label_settings = ExtResource("3_ai1wi")
 autowrap_mode = 3
 
 [node name="DiaTimer" type="Timer" parent="."]
 wait_time = 0.5
 
 [node name="Choice" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -56,7 +60,10 @@ offset_left = 184.0
 offset_top = 984.0
 offset_right = 544.0
 offset_bottom = 1048.0
-texture_normal = SubResource("GradientTexture2D_1x0hm")
+texture_normal = ExtResource("4_apgn2")
+texture_pressed = ExtResource("5_4df8n")
+texture_hover = ExtResource("5_4df8n")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Choice/Button1"]
@@ -66,6 +73,7 @@ offset_top = 8.0
 offset_right = 352.0
 offset_bottom = 56.0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus."
+label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -75,7 +83,10 @@ offset_left = 784.0
 offset_top = 984.0
 offset_right = 1144.0
 offset_bottom = 1048.0
-texture_normal = SubResource("GradientTexture2D_1x0hm")
+texture_normal = ExtResource("4_apgn2")
+texture_pressed = ExtResource("5_4df8n")
+texture_hover = ExtResource("5_4df8n")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Choice/Button2"]
@@ -85,6 +96,7 @@ offset_top = 8.0
 offset_right = 352.0
 offset_bottom = 56.0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus."
+label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -94,7 +106,10 @@ offset_left = 1408.0
 offset_top = 984.0
 offset_right = 1768.0
 offset_bottom = 1048.0
-texture_normal = SubResource("GradientTexture2D_1x0hm")
+texture_normal = ExtResource("4_apgn2")
+texture_pressed = ExtResource("5_4df8n")
+texture_hover = ExtResource("5_4df8n")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Choice/Button3"]
@@ -104,6 +119,7 @@ offset_top = 8.0
 offset_right = 352.0
 offset_bottom = 56.0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus."
+label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 autowrap_mode = 3
 
