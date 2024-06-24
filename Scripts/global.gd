@@ -91,7 +91,8 @@ func _ready():
 	Comp3 = Clarico
 	Comp4 = Verity
 	
-	
+	node = load("res://Scenes/Enemies/enemy_test.tscn")
+	Enemy = node.instantiate()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

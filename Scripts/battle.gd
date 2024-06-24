@@ -127,6 +127,7 @@ func PT_Comp1():
 		$Buttons/Comp1/C1T1A1Button.disabled = false
 	
 	$Buttons/Comp1.visible = true
+	$Buttons/GreyNinePatch.visible = true
 
 func _on_c1_t1_button_pressed():
 	$Buttons/Comp1/C1T2A1Button.visible = false
@@ -1506,6 +1507,7 @@ func PT_Extor():
 	$Buttons/Extor.visible = true
 
 func _on_e_attack_button_pressed():
+	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	total_defense = Global.PlayerDefense
 	await log_process_text("Extor attacks")
@@ -1513,6 +1515,7 @@ func _on_e_attack_button_pressed():
 	ET_start()
 
 func _on_e_defend_button_pressed():
+	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	await log_process_text("Extor defends")
 	ET_start()
@@ -1524,6 +1527,7 @@ func _on_e_specials_button_pressed():
 	$Buttons/Extor/Specials.visible = true
 
 func _on_all_out_atk_button_pressed():
+	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	Global.PlayerAPCur -= 20
 	total_attack = total_attack + total_defense
@@ -1533,6 +1537,7 @@ func _on_all_out_atk_button_pressed():
 	ET_start()
 
 func _on_all_out_def_button_pressed():
+	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	Global.PlayerAPCur -= 20
 	total_defense = total_attack + total_defense

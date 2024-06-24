@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=15 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://buujkocw4d4ec" path="res://Art/BlakeTest/PH-Sprite1(AI).jpg" id="3_p37p1"]
 [ext_resource type="Texture2D" uid="uid://dtbj53oqh3j7w" path="res://Art/UI/Battle/HPBarFront.png" id="4_phkr0"]
 [ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="5_urbfp"]
+[ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_ybd0t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5c15g"]
 font_color = Color(0, 0, 0, 1)
@@ -192,6 +193,19 @@ offset_right = 1856.0
 offset_bottom = 1040.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
+
+[node name="GreyNinePatch" parent="Buttons" instance=ExtResource("7_ybd0t")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Extor" type="ReferenceRect" parent="Buttons"]
 visible = false
