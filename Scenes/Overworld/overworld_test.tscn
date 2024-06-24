@@ -44,7 +44,7 @@ texture = ExtResource("3_rvtw7")
 shape = SubResource("RectangleShape2D_ijytg")
 
 [node name="Enemy2" type="Sprite2D" parent="."]
-position = Vector2(-523, -307)
+position = Vector2(-601, 685)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_rvtw7")
 
