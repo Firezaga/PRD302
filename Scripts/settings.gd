@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_main_menu_button_pressed():
-	Global.GOTO_main_menu()
+	queue_free()
 
 
 func _on_quit_button_pressed():

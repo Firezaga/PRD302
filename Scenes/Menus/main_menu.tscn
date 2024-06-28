@@ -1,18 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjow41pg3pvx1"]
+[gd_scene load_steps=8 format=3 uid="uid://bjow41pg3pvx1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_s2kol"]
+[ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="2_14rfb"]
+[ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="3_gxx0e"]
+[ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="4_pn020"]
+[ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="5_r2n4y"]
 
 [sub_resource type="Gradient" id="Gradient_k4s5n"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_841qc"]
 gradient = SubResource("Gradient_k4s5n")
-
-[sub_resource type="Gradient" id="Gradient_356m5"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_m2ihb"]
-gradient = SubResource("Gradient_356m5")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -34,11 +32,12 @@ grow_vertical = 2
 texture = SubResource("GradientTexture1D_841qc")
 
 [node name="TitleLabel" type="Label" parent="."]
-layout_mode = 0
-anchor_left = 0.129688
-anchor_top = 0.101852
-anchor_right = 0.508333
-anchor_bottom = 0.325
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.373437
+anchor_top = 0.29537
+anchor_right = 0.752083
+anchor_bottom = 0.565741
 offset_bottom = -51.0
 theme_override_font_sizes/font_size = 176
 text = "Title"
@@ -47,11 +46,14 @@ metadata/_edit_use_anchors_ = true
 [node name="NewGameButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.241146
-anchor_top = 0.425926
-anchor_right = 0.374479
-anchor_bottom = 0.462963
-texture_normal = SubResource("GradientTexture1D_m2ihb")
+anchor_left = 0.0666667
+anchor_top = 0.851852
+anchor_right = 0.2
+anchor_bottom = 0.888889
+texture_normal = ExtResource("2_14rfb")
+texture_pressed = ExtResource("3_gxx0e")
+texture_hover = ExtResource("3_gxx0e")
+ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -63,15 +65,21 @@ offset_right = 187.0
 offset_bottom = 30.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "New Game"
+label_settings = ExtResource("4_pn020")
+horizontal_alignment = 1
 
 [node name="ContinueButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.318229
-anchor_top = 0.502778
-anchor_right = 0.451562
-anchor_bottom = 0.539815
-texture_normal = SubResource("GradientTexture1D_m2ihb")
+anchor_left = 0.266667
+anchor_top = 0.851852
+anchor_right = 0.4
+anchor_bottom = 0.888889
+texture_normal = ExtResource("2_14rfb")
+texture_pressed = ExtResource("3_gxx0e")
+texture_hover = ExtResource("3_gxx0e")
+texture_disabled = ExtResource("5_r2n4y")
+ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -83,35 +91,20 @@ offset_right = 187.0
 offset_bottom = 30.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Continue"
-
-[node name="LoadButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.413021
-anchor_top = 0.574074
-anchor_right = 0.546354
-anchor_bottom = 0.611111
-texture_normal = SubResource("GradientTexture1D_m2ihb")
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="LoadButton"]
-layout_mode = 0
-offset_left = 71.0
-offset_top = 7.0
-offset_right = 187.0
-offset_bottom = 30.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Load"
+label_settings = ExtResource("4_pn020")
+horizontal_alignment = 1
 
 [node name="SettingsButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.483854
-anchor_top = 0.653704
-anchor_right = 0.617188
-anchor_bottom = 0.690741
-texture_normal = SubResource("GradientTexture1D_m2ihb")
+anchor_left = 0.466667
+anchor_top = 0.851852
+anchor_right = 0.600001
+anchor_bottom = 0.888889
+texture_normal = ExtResource("2_14rfb")
+texture_pressed = ExtResource("3_gxx0e")
+texture_hover = ExtResource("3_gxx0e")
+ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -123,15 +116,20 @@ offset_right = 187.0
 offset_bottom = 30.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Settings"
+label_settings = ExtResource("4_pn020")
+horizontal_alignment = 1
 
 [node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.59375
-anchor_top = 0.765741
-anchor_right = 0.727083
-anchor_bottom = 0.802778
-texture_normal = SubResource("GradientTexture1D_m2ihb")
+anchor_left = 0.833333
+anchor_top = 0.911111
+anchor_right = 0.966666
+anchor_bottom = 0.948148
+texture_normal = ExtResource("2_14rfb")
+texture_pressed = ExtResource("3_gxx0e")
+texture_hover = ExtResource("5_r2n4y")
+ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -143,9 +141,10 @@ offset_right = 187.0
 offset_bottom = 30.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Quit"
+label_settings = ExtResource("4_pn020")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
-[connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

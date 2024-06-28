@@ -93,6 +93,7 @@ func _on_health_button_pressed():
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.PlayerMaxHealth += 50
+		Global.PlayerCurHealth = Global.PlayerMaxHealth
 		Global.PlayerLvl += 1
 		$FirstMenu2/Extor/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 		$FirstMenu2/Extor/Health.text = "Health: " + str(Global.PlayerMaxHealth)

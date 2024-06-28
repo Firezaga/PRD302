@@ -1,17 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=8 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
 [ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_5llrf"]
 [ext_resource type="Texture2D" uid="uid://frq66f336xyg" path="res://Art/UI/PauseButtonGrey.png" id="3_lufuq"]
 [ext_resource type="Texture2D" uid="uid://8hun6j3mq01t" path="res://Art/UI/PauseButtonRed.png" id="4_5bbhw"]
+[ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="5_8snrh"]
 [ext_resource type="PackedScene" uid="uid://t5no0sfgmup2" path="res://Scenes/Menus/pause__menu.tscn" id="5_w1u0m"]
-
-[sub_resource type="Gradient" id="Gradient_7co4w"]
-colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_48wpj"]
-gradient = SubResource("Gradient_7co4w")
-fill_from = Vector2(0.16087, 0.204348)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5lx"]
 radius = 24.0
@@ -35,8 +29,8 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 8.3125)
-texture = SubResource("GradientTexture2D_48wpj")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_8snrh")
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_w1u0m")]
 visible = false

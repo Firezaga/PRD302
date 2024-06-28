@@ -3,7 +3,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if not FileAccess.file_exists("user://savegame.save"):
+		$ContinueButton.disabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,11 +17,7 @@ func _on_new_game_button_pressed():
 
 
 func _on_continue_button_pressed():
-	pass # Replace with function body.
-
-
-func _on_load_button_pressed():
-	Global.restart_application()
+	Global.CORE_load_game()
 
 
 func _on_settings_button_pressed():

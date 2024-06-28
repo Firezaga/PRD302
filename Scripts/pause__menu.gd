@@ -22,3 +22,7 @@ func _on_resume_button_pressed():
 
 func _on_quit_button_pressed():
 	Global.CORE_quit()
+
+
+func _on_save_button_pressed():
+	Global.CORE_save_game()

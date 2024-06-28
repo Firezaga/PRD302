@@ -136,7 +136,9 @@ func GOTO_main_menu():
 
 
 func GOTO_settings():
-	goto_scene(Settings)
+	var scene = load(Settings)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
 
 
 func GOTO_game_over():
@@ -185,6 +187,92 @@ func CORE_refill_HPSP():
 	Comp4.SP = Comp4.SPMax
 	pass
 
+func CORE_save_game():
+	var save_dict = {
+		"PlayerHealth" : PlayerMaxHealth,
+		"PlayerAttack" : PlayerAttack,
+		"PlayerAP" : PlayerAPMax,
+		"PlayerDefense" : PlayerDefense,
+		"StoryState" : PlayerStoryState,
+		"PlayerLvl" : PlayerLvl,
+		"PlayerCurrency" : PlayerCurrency,
+		"AlcoraLvl" : Alcora.Lvl,
+		"AlcoraSP" : Alcora.SPMax,
+		"AlcoraStrangth" : Alcora.Strength,
+		"AlcoraT2" : Alcora.T2_unlock,
+		"AlcoraT3" : Alcora.T3_unlock,
+		"AlcoraT4" : Alcora.T4_unlock,
+		"BeoulLvl" : Beoul.Lvl,
+		"BeoulSP" : Beoul.SPMax,
+		"BeoulStrangth" : Beoul.Strength,
+		"BeoulT2" : Beoul.T2_unlock,
+		"BeoulT3" : Beoul.T3_unlock,
+		"BeoulT4" : Beoul.T4_unlock,
+		"ClaricoLvl" : Clarico.Lvl,
+		"ClaricoSP" : Clarico.SPMax,
+		"ClaricoStrangth" : Clarico.Strength,
+		"ClaricoT2" : Clarico.T2_unlock,
+		"ClaricoT3" : Clarico.T3_unlock,
+		"ClaricoT4" : Clarico.T4_unlock,
+		"VerityLvl" : Verity.Lvl,
+		"VeritySP" : Verity.SPMax,
+		"VerityStrangth" : Verity.Strength,
+		"VerityT2" : Verity.T2_unlock,
+		"VerityT3" : Verity.T3_unlock,
+		"VerityT4" : Verity.T4_unlock
+	}
+	
+	var save_game = FileAccess.open("user://savegame.save", FileAccess.WRITE)
+	var json_string = JSON.stringify(save_dict)
+	
+	save_game.store_line(json_string)
+	print("Saving Finished")
+
+func CORE_load_game():
+	if not FileAccess.file_exists("user://savegame.save"):
+		return
+	
+	var save_game = FileAccess.open("user://savegame.save", FileAccess.READ)
+	var json = JSON.new()
+	
+	var parse_result = json.parse(save_game.get_line())
+	if not parse_result == OK:
+		print("JSON Parse Error: ", json.get_error_message(), " in ", save_game.get_line(), " at line ", json.get_error_line())
+	
+	var save_data = json.get_data()
+	PlayerMaxHealth = save_data["PlayerHealth"]
+	PlayerAttack = save_data["PlayerAttack"]
+	PlayerAPMax = save_data["PlayerAP"]
+	PlayerDefense = save_data["PlayerDefense"]
+	PlayerStoryState = save_data["StoryState"]
+	PlayerLvl = save_data["PlayerLvl"]
+	PlayerCurrency = save_data["PlayerCurrency"]
+	Alcora.Lvl = save_data["AlcoraLvl"]
+	Alcora.SPMax = save_data["AlcoraSP"]
+	Alcora.Strength = save_data["AlcoraStrangth"]
+	Alcora.T2_unlock = save_data["AlcoraT2"]
+	Alcora.T3_unlock = save_data["AlcoraT3"]
+	Alcora.T4_unlock = save_data["AlcoraT4"]
+	Beoul.Lvl = save_data["BeoulLvl"]
+	Beoul.SPMax = save_data["BeoulSP"]
+	Beoul.Strength = save_data["BeoulStrangth"]
+	Beoul.T2_unlock = save_data["BeoulT2"]
+	Beoul.T3_unlock = save_data["BeoulT3"]
+	Beoul.T4_unlock = save_data["BeoulT4"]
+	Clarico.Lvl = save_data["ClaricoLvl"]
+	Clarico.SPMax = save_data["ClaricoSP"]
+	Clarico.Strength = save_data["ClaricoStrangth"]
+	Clarico.T2_unlock = save_data["ClaricoT2"]
+	Clarico.T3_unlock = save_data["ClaricoT3"]
+	Clarico.T4_unlock = save_data["ClaricoT4"]
+	Verity.Lvl = save_data["VerityLvl"]
+	Verity.SPMax = save_data["VeritySP"]
+	Verity.Strength = save_data["VerityStrangth"]
+	Verity.T2_unlock = save_data["VerityT2"]
+	Verity.T3_unlock = save_data["VerityT3"]
+	Verity.T4_unlock = save_data["VerityT4"]
+	
+	GOTO_town_test()
 
 
 # Restart the application

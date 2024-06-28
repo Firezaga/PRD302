@@ -1,17 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://fq3lc6h4our0"]
+[gd_scene load_steps=8 format=3 uid="uid://fq3lc6h4our0"]
 
 [ext_resource type="Script" path="res://Scripts/player_overworld.gd" id="1_ixyi4"]
+[ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="2_1p603"]
 [ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_io4ib"]
 [ext_resource type="Texture2D" uid="uid://frq66f336xyg" path="res://Art/UI/PauseButtonGrey.png" id="3_u48t1"]
 [ext_resource type="Texture2D" uid="uid://8hun6j3mq01t" path="res://Art/UI/PauseButtonRed.png" id="4_3edoc"]
 [ext_resource type="PackedScene" uid="uid://t5no0sfgmup2" path="res://Scenes/Menus/pause__menu.tscn" id="5_iyagj"]
-
-[sub_resource type="Gradient" id="Gradient_2kdrl"]
-colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_063lr"]
-gradient = SubResource("Gradient_2kdrl")
-fill_from = Vector2(0.23913, 0.426087)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbj54"]
 radius = 29.0
@@ -21,7 +15,9 @@ height = 58.0
 script = ExtResource("1_ixyi4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("GradientTexture2D_063lr")
+position = Vector2(-6.05583e-05, -3.8147e-06)
+scale = Vector2(0.05, 0.0666667)
+texture = ExtResource("2_1p603")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
