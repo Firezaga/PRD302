@@ -1,7 +1,7 @@
 extends Sprite2D
 
 var Name = "Test Enemy"
-var SpriteFP = "res://Art/BlakeTest/PH-Sprite4(AI).jpg"
+var SpriteFP = "res://Art/BlakeTest/Enemy.png"
 var MaxHP = 200
 var HP = 200
 var AttackMax = 200

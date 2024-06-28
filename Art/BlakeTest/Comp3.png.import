@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daidm3qr3ft1c"
-path="res://.godot/imported/PH-SpaceTexture(AI).jpg-94134df33abb2d14a8d798b626f8c1a9.ctex"
+uid="uid://cacd20vnclbdm"
+path="res://.godot/imported/Comp3.png-4d679df58ac2a23e751e80ade9f97acf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/BlakeTest/PH-SpaceTexture(AI).jpg"
-dest_files=["res://.godot/imported/PH-SpaceTexture(AI).jpg-94134df33abb2d14a8d798b626f8c1a9.ctex"]
+source_file="res://Art/BlakeTest/Comp3.png"
+dest_files=["res://.godot/imported/Comp3.png-4d679df58ac2a23e751e80ade9f97acf.ctex"]
 
 [params]
 

@@ -110,37 +110,39 @@ grow_vertical = 2
 [node name="SinWave" type="TextureRect" parent="TeamOrder"]
 layout_mode = 0
 offset_left = 3.0
+offset_top = 36.0
 offset_right = 637.0
-offset_bottom = 536.0
+offset_bottom = 572.0
 texture = ExtResource("6_1ktr2")
 expand_mode = 1
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(138, 146)
-scale = Vector2(0.1, 0.1)
+position = Vector2(138, 125)
+scale = Vector2(0.3, 0.3)
 
 [node name="Slot2" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(257, 362)
-scale = Vector2(0.1, 0.1)
+position = Vector2(257, 457)
+scale = Vector2(0.3, 0.3)
 
 [node name="Slot3" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(378, 146)
-scale = Vector2(0.1, 0.1)
+position = Vector2(378, 125)
+scale = Vector2(0.3, 0.3)
 
 [node name="Slot4" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(500, 358)
-scale = Vector2(0.1, 0.1)
+position = Vector2(500, 462)
+scale = Vector2(0.3, 0.3)
 
 [node name="Label" type="Label" parent="TeamOrder"]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 43.0
-offset_right = 358.0
-offset_bottom = 79.0
+offset_left = 428.0
+offset_top = 14.0
+offset_right = 617.0
+offset_bottom = 53.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "SP: "
 label_settings = ExtResource("5_bw7tk")
+horizontal_alignment = 2
 
 [node name="Enemy" type="Sprite2D" parent="."]
 position = Vector2(1056, 432)
@@ -153,19 +155,19 @@ texture = ExtResource("8_8h07o")
 
 [node name="Comp1" type="Sprite2D" parent="Player"]
 position = Vector2(-481.882, -216.847)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.8, 0.8)
 
 [node name="Comp2" type="Sprite2D" parent="Player"]
 position = Vector2(479.473, -197.572)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.8, 0.8)
 
 [node name="Comp3" type="Sprite2D" parent="Player"]
 position = Vector2(-662.588, 257.807)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.8, 0.8)
 
 [node name="Comp4" type="Sprite2D" parent="Player"]
 position = Vector2(638.494, 245.76)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.8, 0.8)
 
 [node name="HealthBars" type="ReferenceRect" parent="."]
 offset_left = 640.0

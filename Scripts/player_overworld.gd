@@ -26,4 +26,5 @@ func _process(delta):
 
 func _on_pause_button_pressed():
 	Global.PlayerMove = false
+	$PauseMenu.refresh()
 	$PauseMenu.visible = true

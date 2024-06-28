@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://fq3lc6h4our0" path="res://Scenes/Player/player_overworld.tscn" id="1_sdr83"]
 [ext_resource type="Script" path="res://Scripts/overworld_test.gd" id="1_wt7q3"]
-[ext_resource type="Texture2D" uid="uid://ck3buxiovngg2" path="res://Art/BlakeTest/PH-Sprite4(AI).jpg" id="3_rvtw7"]
+[ext_resource type="Texture2D" uid="uid://dey2m0qod4fwn" path="res://Art/BlakeTest/Enemy.png" id="3_3gxqa"]
 
 [sub_resource type="Gradient" id="Gradient_mdb1v"]
 colors = PackedColorArray(0, 0, 1, 1, 0, 0, 0.839216, 1)
@@ -14,7 +14,7 @@ gradient = SubResource("Gradient_mdb1v")
 size = Vector2(64, 63.9999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijytg"]
-size = Vector2(1020, 1020)
+size = Vector2(440, 410)
 
 [node name="OverworldTest" type="Node2D"]
 script = ExtResource("1_wt7q3")
@@ -36,17 +36,19 @@ shape = SubResource("RectangleShape2D_1qnxu")
 [node name="Enemy1" type="Sprite2D" parent="."]
 position = Vector2(-523, -307)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_rvtw7")
+texture = ExtResource("3_3gxqa")
 
 [node name="Enemy1" type="Area2D" parent="Enemy1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1/Enemy1"]
+position = Vector2(40, 35)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ijytg")
 
 [node name="Enemy2" type="Sprite2D" parent="."]
 position = Vector2(-601, 685)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_rvtw7")
+texture = ExtResource("3_3gxqa")
 
 [node name="Enemy2" type="Area2D" parent="Enemy2"]
 
@@ -56,7 +58,7 @@ shape = SubResource("RectangleShape2D_ijytg")
 [node name="Enemy3" type="Sprite2D" parent="."]
 position = Vector2(209, -478)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_rvtw7")
+texture = ExtResource("3_3gxqa")
 
 [node name="Enemy3" type="Area2D" parent="Enemy3"]
 

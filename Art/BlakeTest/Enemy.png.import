@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n62ds62mde23"
-path="res://.godot/imported/PH-Sprite2(AI).jpg-2d6e6be0403c882f0b9332280318c943.ctex"
+uid="uid://dey2m0qod4fwn"
+path="res://.godot/imported/Enemy.png-e9105b72b8e299300e6bd0a683eb32eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/BlakeTest/PH-Sprite2(AI).jpg"
-dest_files=["res://.godot/imported/PH-Sprite2(AI).jpg-2d6e6be0403c882f0b9332280318c943.ctex"]
+source_file="res://Art/BlakeTest/Enemy.png"
+dest_files=["res://.godot/imported/Enemy.png-e9105b72b8e299300e6bd0a683eb32eb.ctex"]
 
 [params]
 

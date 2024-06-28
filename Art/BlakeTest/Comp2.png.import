@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2jojn3unkl16"
-path="res://.godot/imported/PH-Sprite3(AI).jpg-6e4fbc79c3e595ede299cbc3cdca2500.ctex"
+uid="uid://cqel1uur1sx7e"
+path="res://.godot/imported/Comp2.png-dba86c5ca94c19c73e739740c4dd2ed4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/BlakeTest/PH-Sprite3(AI).jpg"
-dest_files=["res://.godot/imported/PH-Sprite3(AI).jpg-6e4fbc79c3e595ede299cbc3cdca2500.ctex"]
+source_file="res://Art/BlakeTest/Comp2.png"
+dest_files=["res://.godot/imported/Comp2.png-dba86c5ca94c19c73e739740c4dd2ed4.ctex"]
 
 [params]
 

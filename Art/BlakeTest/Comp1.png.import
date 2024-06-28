@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqe3tyv04tk67"
-path="res://.godot/imported/PH-Background(AI).png-c416af95e768fdfcd7b21f64fa8304d3.ctex"
+uid="uid://bby30d6prqvp5"
+path="res://.godot/imported/Comp1.png-bd81e1767949ea85a3ab330b6f122071.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/BlakeTest/PH-Background(AI).png"
-dest_files=["res://.godot/imported/PH-Background(AI).png-c416af95e768fdfcd7b21f64fa8304d3.ctex"]
+source_file="res://Art/BlakeTest/Comp1.png"
+dest_files=["res://.godot/imported/Comp1.png-bd81e1767949ea85a3ab330b6f122071.ctex"]
 
 [params]
 
