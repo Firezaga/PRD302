@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
 [ext_resource type="Texture2D" uid="uid://bahld1iy3d2uy" path="res://Art/UI/Battle/HPBarBack.png" id="3_cepgi"]
-[ext_resource type="Texture2D" uid="uid://buujkocw4d4ec" path="res://Art/BlakeTest/PH-Sprite1(AI).jpg" id="3_p37p1"]
 [ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="4_nbqtf"]
 [ext_resource type="Texture2D" uid="uid://dtbj53oqh3j7w" path="res://Art/UI/Battle/HPBarFront.png" id="4_phkr0"]
 [ext_resource type="LabelSettings" uid="uid://bmhp3078ewa1a" path="res://Fonts/battle_log_font.tres" id="4_ut2ga"]
@@ -11,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="5_urbfp"]
 [ext_resource type="Texture2D" uid="uid://dcbhwj75bauxb" path="res://Art/BlakeTest/CompOrderSine.png" id="6_1ktr2"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_ybd0t"]
+[ext_resource type="Texture2D" uid="uid://ck4fqj11vhc5p" path="res://Art/Characters/Extor/Battle/ExtorBattleIdle1.png" id="8_8h07o"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="8_wcxfo"]
 [ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="9_vcbur"]
 [ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="10_sahna"]
@@ -149,7 +149,7 @@ scale = Vector2(0.7, 0.7)
 [node name="Player" type="Sprite2D" parent="."]
 position = Vector2(1496, 624)
 scale = Vector2(0.415039, 0.415039)
-texture = ExtResource("3_p37p1")
+texture = ExtResource("8_8h07o")
 
 [node name="Comp1" type="Sprite2D" parent="Player"]
 position = Vector2(-481.882, -216.847)
