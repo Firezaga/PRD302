@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4doksvs4jsof"
-path="res://.godot/imported/BeoulIcon.png-fe54b6d39762e9a09290d347dcece452.ctex"
+uid="uid://bsurxuxi8cvw1"
+path="res://.godot/imported/VerityBattleIcon.png-447cbe09c035564a7c9fd0707f14ac7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Characters/Beoul/Battle/BeoulIcon.png"
-dest_files=["res://.godot/imported/BeoulIcon.png-fe54b6d39762e9a09290d347dcece452.ctex"]
+source_file="res://Art/Characters/Verity/Battle/VerityBattleIcon.png"
+dest_files=["res://.godot/imported/VerityBattleIcon.png-447cbe09c035564a7c9fd0707f14ac7b.ctex"]
 
 [params]
 

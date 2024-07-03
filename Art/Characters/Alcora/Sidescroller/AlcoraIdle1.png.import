@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bimw5j7t0b1p3"
-path="res://.godot/imported/ClaricoBattleIcon.png-3b96a0b735ae005a700b25ae49c6bb59.ctex"
+uid="uid://cul568r1ijegd"
+path="res://.godot/imported/AlcoraIdle1.png-14bf97677d7ca585875f3ccfc0aa18d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Characters/Clarico/Battle/ClaricoBattleIcon.png"
-dest_files=["res://.godot/imported/ClaricoBattleIcon.png-3b96a0b735ae005a700b25ae49c6bb59.ctex"]
+source_file="res://Art/Characters/Alcora/Sidescroller/AlcoraIdle1.png"
+dest_files=["res://.godot/imported/AlcoraIdle1.png-14bf97677d7ca585875f3ccfc0aa18d1.ctex"]
 
 [params]
 

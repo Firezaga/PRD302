@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cul568r1ijegd"
-path="res://.godot/imported/AlcoraIdle1.png-f947dc518a06cd1ca37fa26b74a00e42.ctex"
+uid="uid://uoq1x7tpsxks"
+path="res://.godot/imported/VerityIdle1.png-04ea94c0d8ad7aa1fb2cb2addbccd9b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Characters/Alcora/AlcoraIdle1.png"
-dest_files=["res://.godot/imported/AlcoraIdle1.png-f947dc518a06cd1ca37fa26b74a00e42.ctex"]
+source_file="res://Art/Characters/Verity/SideScroller/VerityIdle1.png"
+dest_files=["res://.godot/imported/VerityIdle1.png-04ea94c0d8ad7aa1fb2cb2addbccd9b5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bimw5j7t0b1p3"
-path="res://.godot/imported/ClaricoBattleIcon.png-3b96a0b735ae005a700b25ae49c6bb59.ctex"
+uid="uid://b4doksvs4jsof"
+path="res://.godot/imported/BeoulBattleIcon.png-f212a7e0e5f29143bd6ecafb0d1770f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Characters/Clarico/Battle/ClaricoBattleIcon.png"
-dest_files=["res://.godot/imported/ClaricoBattleIcon.png-3b96a0b735ae005a700b25ae49c6bb59.ctex"]
+source_file="res://Art/Characters/Beoul/Battle/BeoulBattleIcon.png"
+dest_files=["res://.godot/imported/BeoulBattleIcon.png-f212a7e0e5f29143bd6ecafb0d1770f1.ctex"]
 
 [params]
 
