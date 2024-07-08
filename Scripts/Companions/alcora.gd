@@ -1,8 +1,8 @@
 extends Node2D
 
 var Name = "Alcora"
-var SpriteBattleFP = "res://Art/BlakeTest/Comp1.png"
-var IconBattleFP = "res://Art/BlakeTest/Comp1.png"
+var SpriteBattleFP = "res://Art/Characters/Alcora/Sidescroller/AlcoraIdle1.png"
+var IconBattleFP = "res://Art/Characters/Alcora/Battle/AlcoraBattleIcon.png"
 var Lvl = 1
 var SPMax = 10
 var SP = 10

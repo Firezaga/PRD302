@@ -28,8 +28,10 @@ var reply_3
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$SceneBackground.texture = ResourceLoader.load(Global.DiaBackground)
-	$SpriteLeft.texture = ResourceLoader.load(Global.DiaSpriteLeft)
-	$SpriteRight.texture = ResourceLoader.load(Global.DiaSpriteRight)
+	if !(Global.DiaSpriteLeft == ""):
+		$SpriteLeft.texture = ResourceLoader.load(Global.DiaSpriteLeft)
+	if !(Global.DiaSpriteRight == ""):
+		$SpriteRight.texture = ResourceLoader.load(Global.DiaSpriteRight)
 	raw_text = Global.DiaText
 	if raw_text[0] == '^':
 		ProMulti()

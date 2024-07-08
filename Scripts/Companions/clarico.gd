@@ -1,8 +1,8 @@
 extends Node2D
 
 var Name = "Clarico"
-var SpriteBattleFP = "res://Art/BlakeTest/Comp3.png"
-var IconBattleFP = "res://Art/BlakeTest/Comp3.png"
+var SpriteBattleFP = "res://Art/Characters/Clarico/Sidescroller/ClaricoIdle1.png"
+var IconBattleFP = "res://Art/Characters/Clarico/Battle/ClaricoBattleIcon.png"
 var Lvl = 1
 var SPMax = 10
 var SP = 10

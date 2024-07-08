@@ -9,6 +9,7 @@ var Battle = "res://Scenes/Battle/battle.tscn"
 var TownTest = "res://Scenes/TownsEtc/town_test.tscn"
 var OverworldTest = "res://Scenes/Overworld/overworld_test.tscn"
 var UpgradeShop = "res://Scenes/Menus/upgrade.tscn"
+var Dialogue = "res://Scenes/Menus/dialogue.tscn"
 var AlcoraFP = "res://Scenes/Player/alcora.tscn"
 var BeoulFP = "res://Scenes/Player/beoul.tscn"
 var ClaricoFP = "res://Scenes/Player/clarico.tscn"
@@ -61,9 +62,9 @@ var Enemy
 #endregion
 
 #region Dialogue variables
-var DiaBackground = "res://Art/BlakeTest/PH-Background(AI).png"
-var DiaSpriteRight = "res://Art/BlakeTest/PH-Sprite1(AI).jpg"
-var DiaSpriteLeft = "res://Art/BlakeTest/PH-Sprite2(AI).jpg"
+var DiaBackground = ""
+var DiaSpriteRight = ""
+var DiaSpriteLeft = ""
 var DiaText = "^Placeholder text for the start of the conversation.~Pain in the fucking ass to get working.~@^Button 1 Placehold^Button 2 Placehold^Button 3 Placehold^Reply 1~Had worse experiences%^Reply 2~Second response%^Reply 3~Does this work?%^"
 #endregion
 
@@ -161,6 +162,11 @@ func LOAD_battle(EnemyFP):
 	var node = load(EnemyFP)
 	Enemy = node.instantiate()
 	var scene = load(Battle)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
+
+func LOAD_dialogue():
+	var scene = load(Dialogue)
 	var instance = scene.instantiate()
 	current_scene.add_child(instance)
 #endregion

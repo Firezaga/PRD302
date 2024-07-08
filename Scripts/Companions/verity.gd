@@ -1,8 +1,8 @@
 extends Node2D
 
 var Name = "Verity"
-var SpriteBattleFP = "res://Art/BlakeTest/Comp4.png"
-var IconBattleFP = "res://Art/BlakeTest/Comp4.png"
+var SpriteBattleFP = "res://Art/Characters/Verity/SideScroller/VerityIdle1.png"
+var IconBattleFP = "res://Art/Characters/Verity/Battle/VerityBattleIcon.png"
 var Lvl = 1
 var SPMax = 10
 var SP = 10

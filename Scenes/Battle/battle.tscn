@@ -118,19 +118,19 @@ expand_mode = 1
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(138, 125)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 
 [node name="Slot2" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(257, 457)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 
 [node name="Slot3" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(378, 125)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 
 [node name="Slot4" type="Sprite2D" parent="TeamOrder"]
 position = Vector2(500, 462)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 
 [node name="Label" type="Label" parent="TeamOrder"]
 layout_mode = 0
@@ -145,29 +145,29 @@ label_settings = ExtResource("5_bw7tk")
 horizontal_alignment = 2
 
 [node name="Enemy" type="Sprite2D" parent="."]
-position = Vector2(1056, 432)
+position = Vector2(868, 434)
 scale = Vector2(0.7, 0.7)
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(1496, 624)
+position = Vector2(1452, 568)
 scale = Vector2(0.415039, 0.415039)
 texture = ExtResource("8_8h07o")
 
 [node name="Comp1" type="Sprite2D" parent="Player"]
-position = Vector2(-481.882, -216.847)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-467.426, 91.5577)
+scale = Vector2(0.45, 0.45)
 
 [node name="Comp2" type="Sprite2D" parent="Player"]
 position = Vector2(479.473, -197.572)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.45, 0.45)
 
 [node name="Comp3" type="Sprite2D" parent="Player"]
-position = Vector2(-662.588, 257.807)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-518.024, 595.125)
+scale = Vector2(0.5, 0.5)
 
 [node name="Comp4" type="Sprite2D" parent="Player"]
 position = Vector2(638.494, 245.76)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.5, 0.5)
 
 [node name="HealthBars" type="ReferenceRect" parent="."]
 offset_left = 640.0

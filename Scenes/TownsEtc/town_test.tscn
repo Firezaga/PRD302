@@ -133,6 +133,7 @@ glow_levels/2 = 0.3
 glow_levels/3 = 0.0
 glow_levels/5 = 0.0
 glow_levels/6 = 0.5
+glow_levels/7 = 0.5
 glow_mix = 0.061
 glow_blend_mode = 1
 

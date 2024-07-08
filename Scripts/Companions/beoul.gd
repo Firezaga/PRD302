@@ -1,8 +1,8 @@
 extends Node2D
 
 var Name = "Beoul"
-var SpriteBattleFP = "res://Art/BlakeTest/Comp2.png"
-var IconBattleFP = "res://Art/BlakeTest/Comp2.png"
+var SpriteBattleFP = "res://Art/Characters/Beoul/Sidescroller/BeoulIdle1.png"
+var IconBattleFP = "res://Art/Characters/Beoul/Battle/BeoulBattleIcon.png"
 var Lvl = 1
 var SPMax = 10
 var SP = 10
