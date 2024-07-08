@@ -27,6 +27,7 @@ var reply_3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_tree().paused = true
 	$SceneBackground.texture = ResourceLoader.load(Global.DiaBackground)
 	if !(Global.DiaSpriteLeft == ""):
 		$SpriteLeft.texture = ResourceLoader.load(Global.DiaSpriteLeft)
@@ -56,6 +57,8 @@ func ProText():
 		if raw_text[i] == '%':
 			await DisplayText(text_to_send)
 			await get_tree().create_timer(2.0).timeout
+			Global.DiaFinished = true
+			get_tree().paused = false
 			queue_free()
 		text_to_send += raw_text[i]
 
@@ -72,6 +75,8 @@ func ProTextM(text):
 		if text[i] == '%':
 			await DisplayText(text_to_send)
 			await get_tree().create_timer(2.0).timeout
+			Global.DiaFinished = true
+			get_tree().paused = false
 			queue_free()
 		text_to_send += text[i]
 

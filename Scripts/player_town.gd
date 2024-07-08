@@ -29,3 +29,6 @@ func _on_pause_button_pressed():
 	Global.PlayerMove = false
 	$PauseMenu.refresh()
 	$PauseMenu.visible = true
+
+func MovementTutorial():
+	$MovementTutorial.visible = true

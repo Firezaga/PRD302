@@ -8,6 +8,7 @@
 [ext_resource type="LabelSettings" uid="uid://c2xbirwhr4xjo" path="res://Fonts/dialogue_button_font.tres" id="6_wofe7"]
 
 [node name="Dialogue" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_oohnh")
 
 [node name="SceneBackground" type="TextureRect" parent="."]

@@ -9,6 +9,8 @@ var Battle = "res://Scenes/Battle/battle.tscn"
 var TownTest = "res://Scenes/TownsEtc/town_test.tscn"
 var OverworldTest = "res://Scenes/Overworld/overworld_test.tscn"
 var UpgradeShop = "res://Scenes/Menus/upgrade.tscn"
+var NewGame = "res://Scenes/Story/new_game.tscn"
+var MovTut = "res://Scenes/TownsEtc/movement_tutorial.tscn"
 var Dialogue = "res://Scenes/Menus/dialogue.tscn"
 var AlcoraFP = "res://Scenes/Player/alcora.tscn"
 var BeoulFP = "res://Scenes/Player/beoul.tscn"
@@ -62,6 +64,7 @@ var Enemy
 #endregion
 
 #region Dialogue variables
+var DiaFinished = false
 var DiaBackground = ""
 var DiaSpriteRight = ""
 var DiaSpriteLeft = ""
@@ -151,6 +154,14 @@ func GOTO_town_test():
 
 func GOTO_overworld_test():
 	goto_scene(OverworldTest)
+
+
+func GOTO_new_game():
+	goto_scene(NewGame)
+
+
+func GOTO_movement_tutorial():
+	goto_scene(MovTut)
 
 
 func LOAD_upgrade_shop():

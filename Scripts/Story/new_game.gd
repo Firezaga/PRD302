@@ -1,6 +1,8 @@
 extends Node2D
 
 
+var DiaCount = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.PlayerMaxHealth = 200
@@ -34,6 +36,7 @@ func _ready():
 	Global.Verity.T2_unlock = false
 	Global.Verity.T3_unlock = false
 	Global.Verity.T4_unlock = false
+	Global.DiaFinished = false
 	
 	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
 	Global.DiaText = "???: A new threat looms upon us. You will be summoned to the Planar of Reality with one main purpose.~???: To destroy the threats of Annihilation.%"
@@ -42,4 +45,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if (Global.DiaFinished && DiaCount == 0):
+		Global.DiaFinished = false
+		Dia2()
+	if (Global.DiaFinished && DiaCount == 1):
+		Global.DiaFinished = false
+		Global.GOTO_movement_tutorial()
+
+func Dia2():
+	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaText = "???: I will brief you with all you need to know. Please remember this throughout your journey.~MOAT: I am Moat, an Annihilation Averter. You are Extor, my summon to destroy the threats that seeks destruction. The persons you saw on my side are the people who seek destruction of all things, and your purpose will be to stop them.~MOAT: In order to succeed, you will require others by your side to join your cause. I will soon bring you near them. It will be up to you to state your purpose. Good luck.%"
+	await Global.LOAD_dialogue()
+	DiaCount += 1
