@@ -8,7 +8,7 @@
 # Multi Choice
 # There are 7 variables used in multi choice dialogue, seperated by '^', except the button text other strings can be broken up using '~', '@' reveals the buttons
 # Example string below
-# ^Placeholder text for the start of the conversation.~@^Button 1 Placehold^Button 2 Placehold^Button 3 Placehold^Reply 1~^Reply 2~^Reply 3~^
+# ^Placeholder text for the start of the conversation.~@^Button 1 Placehold^Button 2 Placehold^Button 3 Placehold^Reply 1%^Reply 2%^Reply 3%^
 #endregion
 
 
