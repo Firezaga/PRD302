@@ -1,11 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjow41pg3pvx1"]
+[gd_scene load_steps=18 format=3 uid="uid://bjow41pg3pvx1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_s2kol"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="2_14rfb"]
+[ext_resource type="Shader" path="res://Shaders/MainMenu/main_menu_1.gdshader" id="2_535ev"]
 [ext_resource type="Texture2D" uid="uid://dk6h7qfr07q6x" path="res://Art/Overworld/OverworldSkyBG.png" id="2_npr7y"]
 [ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="3_gxx0e"]
+[ext_resource type="Shader" path="res://Shaders/MainMenu/main_menu_2.gdshader" id="4_k7i5f"]
 [ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="4_pn020"]
+[ext_resource type="Texture2D" uid="uid://skhes2v0x14b" path="res://Art/Overworld/Stars/StarsBack.png" id="5_img77"]
 [ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="5_r2n4y"]
+[ext_resource type="Shader" path="res://Shaders/MainMenu/main_menu_3.gdshader" id="6_d3dul"]
+[ext_resource type="Texture2D" uid="uid://kgytvxfmtcr" path="res://Art/Overworld/Stars/StarsFront.png" id="7_ry666"]
+[ext_resource type="Shader" path="res://Shaders/MainMenu/main_menu_4.gdshader" id="8_ct6lg"]
+[ext_resource type="Texture2D" uid="uid://drc0k2kpgo2tc" path="res://Art/Overworld/Stars/StarsFrontADD.png" id="9_h2hxi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1ihm"]
+shader = ExtResource("2_535ev")
+shader_parameter/scroll_speed = 0.2
+shader_parameter/angle_degrees = 66.0
+shader_parameter/repeat_x = 2.0
+shader_parameter/repeat_y = 2.0
+shader_parameter/row_offset = 0.0
+shader_parameter/texture_to_scroll = ExtResource("2_npr7y")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7op5x"]
+shader = ExtResource("4_k7i5f")
+shader_parameter/scroll_speed = 0.08
+shader_parameter/angle_degrees = 40.0
+shader_parameter/repeat_x = 2.0
+shader_parameter/repeat_y = 2.0
+shader_parameter/row_offset = 1.0
+shader_parameter/texture_to_scroll = ExtResource("5_img77")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hipxp"]
+shader = ExtResource("6_d3dul")
+shader_parameter/scroll_speed = 0.08
+shader_parameter/angle_degrees = 45.0
+shader_parameter/repeat_x = 1.0
+shader_parameter/repeat_y = 1.0
+shader_parameter/row_offset = 1.0
+shader_parameter/texture_to_scroll = ExtResource("7_ry666")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6mbjx"]
+shader = ExtResource("8_ct6lg")
+shader_parameter/scroll_speed = 0.08
+shader_parameter/angle_degrees = 50.0
+shader_parameter/repeat_x = 3.0
+shader_parameter/repeat_y = 3.0
+shader_parameter/row_offset = 1.0
+shader_parameter/texture_to_scroll = ExtResource("9_h2hxi")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -18,6 +61,7 @@ script = ExtResource("1_s2kol")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
+material = SubResource("ShaderMaterial_e1ihm")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,6 +69,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_npr7y")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_7op5x")
+layout_mode = 0
+offset_left = -314.0
+offset_top = -174.0
+offset_right = 2246.0
+offset_bottom = 1266.0
+texture = ExtResource("5_img77")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_hipxp")
+layout_mode = 0
+offset_left = -314.0
+offset_top = -167.0
+offset_right = 2246.0
+offset_bottom = 1273.0
+texture = ExtResource("7_ry666")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_6mbjx")
+layout_mode = 0
+offset_left = -326.0
+offset_top = -178.0
+offset_right = 2234.0
+offset_bottom = 1262.0
+texture = ExtResource("9_h2hxi")
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 1
