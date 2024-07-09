@@ -39,9 +39,7 @@ func _process(delta):
 	if (Global.DiaFinished && DiaCount == 9):
 		Global.DiaFinished = false
 		Dia11()
-	if (Global.DiaFinished && DiaCount == 10):
-		Global.DiaFinished = false
-		#GOTO COMBAT TUTORIAL
+	
 	
 	#$NPC.rotation -= 0.1 * delta
 	$Midground/NPC/Sprite2D.rotation -= 0.12 * delta
@@ -125,6 +123,8 @@ func Dia10():
 
 func Dia11():
 	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
-	Global.DiaText = "THE PORTAL ON THE EDGE OF THE SURFACE SEEMS OMINOUS. THE AURA EXHUMES HOSTILITY.~ALCORA: And here we are! Welcome to the plane of \"get-ready-to-die-becauseeverything-has-already-been-ruinedand-you-will-die!\"~Everyone looks at Alcora with a dumbfounded face. Clarico on the other hand, looks like she's going to pass out of stupidity.~ALCORA: Anyway! Just jump on in, stick together and find something to kill!~ Everyone jumps in.%"
+	Global.DiaText = "THE PORTAL ON THE EDGE OF THE SURFACE SEEMS OMINOUS. THE AURA EXHUMES HOSTILITY.~ALCORA: And here we are! Welcome to the plane of \"get-ready-to-die-becauseeverything-has-already-been-ruinedand-you-will-die!\"~Everyone looks at Alcora with a dumbfounded face. Clarico on the other hand, looks like she's going to pass out of stupidity.~ALCORA: Anyway! Just jump on in, stick together and find something to kill!~Everyone jumps in.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
+	Global.DiaFinished = false
+	Global.LOAD_battle_tutorial()

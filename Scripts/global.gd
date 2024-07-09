@@ -11,6 +11,8 @@ var OverworldTest = "res://Scenes/Overworld/overworld_test.tscn"
 var UpgradeShop = "res://Scenes/Menus/upgrade.tscn"
 var NewGame = "res://Scenes/Story/new_game.tscn"
 var MovTut = "res://Scenes/TownsEtc/movement_tutorial.tscn"
+var BattleTut = "res://Scenes/Battle/battle_tutorial.tscn"
+var ProEnd = "res://Scenes/Story/prologue_end.tscn"
 var Dialogue = "res://Scenes/Menus/dialogue.tscn"
 var AlcoraFP = "res://Scenes/Player/alcora.tscn"
 var BeoulFP = "res://Scenes/Player/beoul.tscn"
@@ -163,6 +165,8 @@ func GOTO_new_game():
 func GOTO_movement_tutorial():
 	goto_scene(MovTut)
 
+func GOTO_prologue_end():
+	goto_scene(ProEnd)
 
 func LOAD_upgrade_shop():
 	var scene = load(UpgradeShop)
@@ -173,6 +177,13 @@ func LOAD_battle(EnemyFP):
 	var node = load(EnemyFP)
 	Enemy = node.instantiate()
 	var scene = load(Battle)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
+
+func LOAD_battle_tutorial():
+	var node = load(DEBUGEnemyFP)
+	Enemy = node.instantiate()
+	var scene = load(BattleTut)
 	var instance = scene.instantiate()
 	current_scene.add_child(instance)
 

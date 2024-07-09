@@ -159,3 +159,9 @@ func _on_button_2_pressed():
 func _on_button_3_pressed():
 	$Choice.visible = false
 	ProTextM(reply_3)
+
+
+func _on_texture_button_pressed():
+	Global.DiaFinished = true
+	get_tree().paused = false
+	queue_free()
