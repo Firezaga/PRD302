@@ -51,48 +51,48 @@ stretch_mode = 1
 [node name="PLXSpaceCloud" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="SpaceCloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(954, 35)
+position = Vector2(713.889, -195.25)
 scale = Vector2(0.441319, 0.441319)
 texture = ExtResource("3_0baeo")
 
 [node name="PurpleRift1Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(359, -580)
+position = Vector2(19, -600)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("10_3n2w8")
 
 [node name="PurpleRift2Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(1578, -381)
+position = Vector2(1296, -641)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("12_cmi7j")
 
 [node name="PurpleRift3Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(1283, 393)
+position = Vector2(699, 325)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("14_8citp")
 
 [node name="PurpleRift4Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(49, 146)
+position = Vector2(-203, 134)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("16_571sx")
 
 [node name="PurpleRift5Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(1742, 27)
+position = Vector2(1630, -233)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("18_byhpc")
 
 [node name="BluePlanetCloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(103, -236)
+position = Vector2(-153, -276)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("9_blua1")
 
 [node name="BluePlanetCloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(1647, 302)
+position = Vector2(1233, 96)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("9_blua1")
 flip_h = true
 
 [node name="BluePlanetCloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
-position = Vector2(1736, 236)
+position = Vector2(1322, 30)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_blua1")
 flip_h = true
@@ -132,55 +132,55 @@ stretch_mode = 1
 
 [node name="PurpleRift1" type="Sprite2D" parent="ParallaxBackground/Rifts"]
 modulate = Color(1, 1, 1, 0.768627)
-position = Vector2(359, -580)
+position = Vector2(19, -600)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_xsdqf")
 
 [node name="PurpleRift2" type="Sprite2D" parent="ParallaxBackground/Rifts"]
 modulate = Color(1, 1, 1, 0.768627)
-position = Vector2(1578, -381)
+position = Vector2(1296, -641)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_18bc4")
 
 [node name="PurpleRift3" type="Sprite2D" parent="ParallaxBackground/Rifts"]
 modulate = Color(1, 1, 1, 0.768627)
-position = Vector2(1283, 393)
+position = Vector2(699, 325)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("15_8dl2b")
 
 [node name="PurpleRift4" type="Sprite2D" parent="ParallaxBackground/Rifts"]
 modulate = Color(1, 1, 1, 0.768627)
-position = Vector2(49, 146)
+position = Vector2(-203, 134)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("17_ny8qt")
 
 [node name="PurpleRift5" type="Sprite2D" parent="ParallaxBackground/Rifts"]
 modulate = Color(1, 1, 1, 0.768627)
-position = Vector2(1742, 27)
+position = Vector2(1630, -233)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("19_16riq")
 
 [node name="HubWorldPlanets" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="BluePlanet" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
-position = Vector2(103, -236)
+position = Vector2(-153, -276)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("18_wdcq7")
 
 [node name="BluePlanet2" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
-position = Vector2(1647, 302)
+position = Vector2(1233, 96)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("18_wdcq7")
 flip_h = true
 
 [node name="BluePlanet3" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
-position = Vector2(1736, 236)
+position = Vector2(1322, 30)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("18_wdcq7")
 flip_h = true
 
 [node name="Town" type="Sprite2D" parent="."]
-position = Vector2(926, 28)
+position = Vector2(685.889, -202.25)
 scale = Vector2(0.252778, 0.252778)
 texture = ExtResource("3_u1rvm")
 
@@ -194,7 +194,7 @@ shape = SubResource("RectangleShape2D_1qnxu")
 position = Vector2(344, -304)
 
 [node name="Enemy1" type="Sprite2D" parent="."]
-position = Vector2(-523, -307)
+position = Vector2(628, -692)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_3gxqa")
 
@@ -205,7 +205,7 @@ position = Vector2(40, 35)
 shape = SubResource("RectangleShape2D_ijytg")
 
 [node name="Enemy2" type="Sprite2D" parent="."]
-position = Vector2(-601, 685)
+position = Vector2(964, 185)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_3gxqa")
 
@@ -215,13 +215,14 @@ texture = ExtResource("3_3gxqa")
 shape = SubResource("RectangleShape2D_ijytg")
 
 [node name="Enemy3" type="Sprite2D" parent="."]
-position = Vector2(209, -478)
+position = Vector2(-390, -296)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_3gxqa")
 
 [node name="Enemy3" type="Area2D" parent="Enemy3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/Enemy3"]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ijytg")
 
 [connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
