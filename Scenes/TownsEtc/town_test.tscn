@@ -1,8 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://b0wwd12kpysa7"]
+[gd_scene load_steps=56 format=3 uid="uid://b0wwd12kpysa7"]
 
 [ext_resource type="Script" path="res://Scripts/town_test.gd" id="1_1e6pi"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
 [ext_resource type="Texture2D" uid="uid://vym8jn3e5xt0" path="res://Art/SideScroller/SkyBG.png" id="2_7f3vt"]
+[ext_resource type="Shader" path="res://Shaders/texture_scrolling.gdshader" id="2_iu243"]
 [ext_resource type="Texture2D" uid="uid://b46ofo60gy2ou" path="res://Art/SideScroller/PlanetL.png" id="3_2u5h5"]
 [ext_resource type="Texture2D" uid="uid://djso5em1k7qbk" path="res://Art/SideScroller/GroundBG.png" id="3_vv4d1"]
 [ext_resource type="Texture2D" uid="uid://cd2b8m0h8rsmc" path="res://Art/SideScroller/Path.png" id="4_m8rli"]
@@ -32,6 +33,15 @@
 [ext_resource type="Texture2D" uid="uid://do6h03n1jhuy4" path="res://Art/SideScroller/Structures/Structure1Dark.png" id="30_w0voo"]
 [ext_resource type="Texture2D" uid="uid://bnci6qvherws8" path="res://Art/SideScroller/Foliage/TreeBack.png" id="31_fvfjh"]
 [ext_resource type="Texture2D" uid="uid://b7glgt2m10hrb" path="res://Art/SideScroller/Structures/Structure2Dark.png" id="32_j0vjq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gptcc"]
+shader = ExtResource("2_iu243")
+shader_parameter/scroll_speed = 0.01
+shader_parameter/angle_degrees = 0.0
+shader_parameter/repeat_x = 1.0
+shader_parameter/repeat_y = 1.0
+shader_parameter/row_offset = 0.0
+shader_parameter/texture_to_scroll = ExtResource("2_7f3vt")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_urejp"]
 blend_mode = 1
@@ -144,6 +154,7 @@ script = ExtResource("1_1e6pi")
 position = Vector2(-10, -140)
 
 [node name="Sky" type="TextureRect" parent="Background"]
+material = SubResource("ShaderMaterial_gptcc")
 offset_left = -2953.0
 offset_top = -1452.0
 offset_right = 10631.0

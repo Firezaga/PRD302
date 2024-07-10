@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://bjow41pg3pvx1"]
+[gd_scene load_steps=16 format=3 uid="uid://bjow41pg3pvx1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_s2kol"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="2_14rfb"]
-[ext_resource type="Shader" path="res://Shaders/MainMenu/main_menu_1.gdshader" id="2_535ev"]
 [ext_resource type="Texture2D" uid="uid://dk6h7qfr07q6x" path="res://Art/Overworld/OverworldSkyBG.png" id="2_npr7y"]
 [ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="3_gxx0e"]
 [ext_resource type="Shader" path="res://Shaders/MainMenu/main_menu_2.gdshader" id="4_k7i5f"]
@@ -13,15 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://kgytvxfmtcr" path="res://Art/Overworld/Stars/StarsFront.png" id="7_ry666"]
 [ext_resource type="Shader" path="res://Shaders/MainMenu/main_menu_4.gdshader" id="8_ct6lg"]
 [ext_resource type="Texture2D" uid="uid://drc0k2kpgo2tc" path="res://Art/Overworld/Stars/StarsFrontADD.png" id="9_h2hxi"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1ihm"]
-shader = ExtResource("2_535ev")
-shader_parameter/scroll_speed = 0.2
-shader_parameter/angle_degrees = 66.0
-shader_parameter/repeat_x = 2.0
-shader_parameter/repeat_y = 2.0
-shader_parameter/row_offset = 0.0
-shader_parameter/texture_to_scroll = ExtResource("2_npr7y")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7op5x"]
 shader = ExtResource("4_k7i5f")
@@ -61,7 +51,6 @@ script = ExtResource("1_s2kol")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
-material = SubResource("ShaderMaterial_e1ihm")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

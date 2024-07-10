@@ -16,6 +16,8 @@ height = 512.0
 script = ExtResource("1_j6iwr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.36, 1.36)
+zoom = Vector2(0.75, 0.75)
 
 [node name="PauseButton" type="TextureButton" parent="Camera2D"]
 z_index = 1

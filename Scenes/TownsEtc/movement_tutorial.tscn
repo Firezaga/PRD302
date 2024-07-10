@@ -126,7 +126,7 @@ radius = 16.0
 height = 992.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao53"]
-size = Vector2(904, 706.02)
+size = Vector2(493.94, 706.02)
 
 [sub_resource type="Environment" id="Environment_25poj"]
 background_mode = 3
@@ -605,7 +605,7 @@ position = Vector2(3775, -104)
 scale = Vector2(0.572222, 0.572222)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCArea"]
-position = Vector2(-2464.08, 332.039)
+position = Vector2(-2259.05, 332.039)
 shape = SubResource("RectangleShape2D_4ao53")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

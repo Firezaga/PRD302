@@ -373,7 +373,7 @@ func _on_c1_t4_a3_button_pressed():
 	PT_Comp2()
 
 func _on_c1_wait_button_pressed():
-	Global.Comp1.SP += int(0.1 * Global.Comp1.SPMax)
+	Global.Comp1.SP += int(0.3 * Global.Comp1.SPMax)
 	if Global.Comp1.SP > Global.Comp1.SPMax:
 		Global.Comp1.SP = Global.Comp1.SPMax
 	$Buttons/Comp1.visible = false
@@ -724,7 +724,7 @@ func _on_c2_t4_a3_button_pressed():
 	PT_Comp3()
 
 func _on_c2_wait_button_pressed():
-	Global.Comp2.SP += int(0.1 * Global.Comp2.SPMax)
+	Global.Comp2.SP += int(0.3 * Global.Comp2.SPMax)
 	if Global.Comp2.SP > Global.Comp2.SPMax:
 		Global.Comp2.SP = Global.Comp2.SPMax
 	$Buttons/Comp2.visible = false
@@ -1075,7 +1075,7 @@ func _on_c3_t4_a3_button_pressed():
 	PT_Comp4()
 
 func _on_c3_wait_button_pressed():
-	Global.Comp3.SP += int(0.1 * Global.Comp3.SPMax)
+	Global.Comp3.SP += int(0.3 * Global.Comp3.SPMax)
 	if Global.Comp3.SP > Global.Comp3.SPMax:
 		Global.Comp3.SP = Global.Comp3.SPMax
 	$Buttons/Comp3.visible = false
@@ -1426,7 +1426,7 @@ func _on_c4_t4_a3_button_pressed():
 	PT_Extor()
 
 func _on_c4_wait_button_pressed():
-	Global.Comp4.SP += int(0.1 * Global.Comp4.SPMax)
+	Global.Comp4.SP += int(0.3 * Global.Comp4.SPMax)
 	if Global.Comp4.SP > Global.Comp4.SPMax:
 		Global.Comp4.SP = Global.Comp4.SPMax
 	$Buttons/Comp4.visible = false

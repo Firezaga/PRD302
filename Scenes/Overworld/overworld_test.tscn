@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bctd8jvj3ps8w" path="res://Art/Overworld/Planets/Hubworld.png" id="3_u1rvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qnxu"]
-size = Vector2(64, 63.9999)
+size = Vector2(1582.42, 541.978)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijytg"]
 size = Vector2(440, 410)
@@ -41,15 +41,15 @@ stretch_mode = 1
 
 [node name="HubWorldPlanets" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="Town" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
+[node name="Town" type="Sprite2D" parent="."]
 position = Vector2(926, 28)
 scale = Vector2(0.252778, 0.252778)
 texture = ExtResource("3_u1rvm")
 
-[node name="Area2D" type="Area2D" parent="ParallaxBackground/HubWorldPlanets/Town"]
+[node name="Area2D" type="Area2D" parent="Town"]
 
-[node name="TownCollider" type="CollisionShape2D" parent="ParallaxBackground/HubWorldPlanets/Town/Area2D"]
-position = Vector2(5.72205e-06, 6.10352e-05)
+[node name="TownCollider" type="CollisionShape2D" parent="Town/Area2D"]
+position = Vector2(39.5605, 47.4725)
 shape = SubResource("RectangleShape2D_1qnxu")
 
 [node name="PlayerOverworld" parent="." instance=ExtResource("1_sdr83")]
@@ -86,7 +86,7 @@ texture = ExtResource("3_3gxqa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/Enemy3"]
 shape = SubResource("RectangleShape2D_ijytg")
 
-[connection signal="area_entered" from="ParallaxBackground/HubWorldPlanets/Town/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy1/Enemy1" to="." method="_on_enemy_1_area_entered"]
 [connection signal="area_entered" from="Enemy2/Enemy2" to="." method="_on_enemy_2_area_entered"]
 [connection signal="area_entered" from="Enemy3/Enemy3" to="." method="_on_enemy_3_area_entered"]
