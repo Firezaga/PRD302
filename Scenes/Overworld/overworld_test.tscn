@@ -1,10 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyroak05o2fy"]
+[gd_scene load_steps=25 format=3 uid="uid://dyroak05o2fy"]
 
 [ext_resource type="PackedScene" uid="uid://fq3lc6h4our0" path="res://Scenes/Player/player_overworld.tscn" id="1_sdr83"]
 [ext_resource type="Script" path="res://Scripts/overworld_test.gd" id="1_wt7q3"]
 [ext_resource type="Texture2D" uid="uid://dk6h7qfr07q6x" path="res://Art/Overworld/OverworldSkyBG.png" id="2_qc1xm"]
+[ext_resource type="Texture2D" uid="uid://umuknepmxig0" path="res://Art/Overworld/SpaceCloud.png" id="3_0baeo"]
 [ext_resource type="Texture2D" uid="uid://dey2m0qod4fwn" path="res://Art/BlakeTest/Enemy.png" id="3_3gxqa"]
 [ext_resource type="Texture2D" uid="uid://bctd8jvj3ps8w" path="res://Art/Overworld/Planets/Hubworld.png" id="3_u1rvm"]
+[ext_resource type="Texture2D" uid="uid://skhes2v0x14b" path="res://Art/Overworld/Stars/StarsBack.png" id="4_2buqj"]
+[ext_resource type="Texture2D" uid="uid://kgytvxfmtcr" path="res://Art/Overworld/Stars/StarsFront.png" id="5_wejyx"]
+[ext_resource type="Texture2D" uid="uid://drc0k2kpgo2tc" path="res://Art/Overworld/Stars/StarsFrontADD.png" id="6_2ba6k"]
+[ext_resource type="Texture2D" uid="uid://bpmru70r5div2" path="res://Art/Overworld/Planets/BluePlanetCloud.png" id="9_blua1"]
+[ext_resource type="Texture2D" uid="uid://digyimg54s0ar" path="res://Art/Overworld/PurpleRifts/PurpleRift1Cloud.png" id="10_3n2w8"]
+[ext_resource type="Texture2D" uid="uid://bepv4toy0hap7" path="res://Art/Overworld/PurpleRifts/PurpleRift1.png" id="11_xsdqf"]
+[ext_resource type="Texture2D" uid="uid://biiu4eup6kh65" path="res://Art/Overworld/PurpleRifts/PurpleRift2Cloud.png" id="12_cmi7j"]
+[ext_resource type="Texture2D" uid="uid://b20n22fk6n8ed" path="res://Art/Overworld/PurpleRifts/PurpleRift2.png" id="13_18bc4"]
+[ext_resource type="Texture2D" uid="uid://7ycewoy311pv" path="res://Art/Overworld/PurpleRifts/PurpleRift3Cloud.png" id="14_8citp"]
+[ext_resource type="Texture2D" uid="uid://skhgsfdxmnkc" path="res://Art/Overworld/PurpleRifts/PurpleRift3.png" id="15_8dl2b"]
+[ext_resource type="Texture2D" uid="uid://mgm2cxqox02b" path="res://Art/Overworld/PurpleRifts/PurpleRift4Cloud.png" id="16_571sx"]
+[ext_resource type="Texture2D" uid="uid://fdvwa6tu12os" path="res://Art/Overworld/PurpleRifts/PurpleRift4.png" id="17_ny8qt"]
+[ext_resource type="Texture2D" uid="uid://p6j2qsrnv8pp" path="res://Art/Overworld/PurpleRifts/PurpleRift5Cloud.png" id="18_byhpc"]
+[ext_resource type="Texture2D" uid="uid://ckglg62v5hryv" path="res://Art/Overworld/Planets/BluePlanet.png" id="18_wdcq7"]
+[ext_resource type="Texture2D" uid="uid://cp5ge0wnq3vgq" path="res://Art/Overworld/PurpleRifts/PurpleRift5.png" id="19_16riq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mwxyh"]
+blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qnxu"]
 size = Vector2(1582.42, 541.978)
@@ -23,23 +42,142 @@ motion_offset = Vector2(-100, -100)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/PLXSkyBG"]
 offset_left = -12597.0
-offset_top = -10382.0
+offset_top = -10364.0
 offset_right = 11217.0
-offset_bottom = 5930.0
+offset_bottom = 5948.0
 texture = ExtResource("2_qc1xm")
 stretch_mode = 1
 
 [node name="PLXSpaceCloud" type="ParallaxLayer" parent="ParallaxBackground"]
 
+[node name="SpaceCloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(954, 35)
+scale = Vector2(0.441319, 0.441319)
+texture = ExtResource("3_0baeo")
+
+[node name="PurpleRift1Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(359, -580)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_3n2w8")
+
+[node name="PurpleRift2Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1578, -381)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_cmi7j")
+
+[node name="PurpleRift3Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1283, 393)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_8citp")
+
+[node name="PurpleRift4Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(49, 146)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("16_571sx")
+
+[node name="PurpleRift5Cloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1742, 27)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("18_byhpc")
+
+[node name="BluePlanetCloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(103, -236)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_blua1")
+
+[node name="BluePlanetCloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1647, 302)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_blua1")
+flip_h = true
+
+[node name="BluePlanetCloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1736, 236)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_blua1")
+flip_h = true
+
 [node name="PLXStarsBack" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/PLXStarsBack"]
+offset_left = -620.0
+offset_top = -832.0
+offset_right = 1940.0
+offset_bottom = 608.0
+texture = ExtResource("4_2buqj")
+stretch_mode = 1
 
 [node name="PLXStarsFront" type="ParallaxLayer" parent="ParallaxBackground"]
 
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/PLXStarsFront"]
+offset_left = -615.0
+offset_top = -844.0
+offset_right = 1945.0
+offset_bottom = 596.0
+texture = ExtResource("5_wejyx")
+stretch_mode = 1
+
 [node name="PLXStarsFrontADD (opt)" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/PLXStarsFrontADD (opt)"]
+material = SubResource("CanvasItemMaterial_mwxyh")
+offset_left = -614.0
+offset_top = -847.0
+offset_right = 1946.0
+offset_bottom = 593.0
+texture = ExtResource("6_2ba6k")
+stretch_mode = 1
 
 [node name="Rifts" type="ParallaxLayer" parent="ParallaxBackground"]
 
+[node name="PurpleRift1" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(359, -580)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_xsdqf")
+
+[node name="PurpleRift2" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(1578, -381)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_18bc4")
+
+[node name="PurpleRift3" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(1283, 393)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("15_8dl2b")
+
+[node name="PurpleRift4" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(49, 146)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("17_ny8qt")
+
+[node name="PurpleRift5" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(1742, 27)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("19_16riq")
+
 [node name="HubWorldPlanets" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="BluePlanet" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
+position = Vector2(103, -236)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("18_wdcq7")
+
+[node name="BluePlanet2" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
+position = Vector2(1647, 302)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("18_wdcq7")
+flip_h = true
+
+[node name="BluePlanet3" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
+position = Vector2(1736, 236)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_wdcq7")
+flip_h = true
 
 [node name="Town" type="Sprite2D" parent="."]
 position = Vector2(926, 28)
