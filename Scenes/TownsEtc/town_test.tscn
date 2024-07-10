@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://b0wwd12kpysa7"]
+[gd_scene load_steps=58 format=3 uid="uid://b0wwd12kpysa7"]
 
 [ext_resource type="Script" path="res://Scripts/town_test.gd" id="1_1e6pi"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://cmraskjy5sbka" path="res://Art/SideScroller/Structures/PortalStructureGemsADD.png" id="19_oow8e"]
 [ext_resource type="Texture2D" uid="uid://cy2ma4435vbwe" path="res://Art/SideScroller/Foliage/Plant.png" id="21_60sey"]
 [ext_resource type="Texture2D" uid="uid://q4pgyjel7wvv" path="res://Art/SideScroller/Foliage/PlantDark.png" id="22_edjri"]
+[ext_resource type="Texture2D" uid="uid://bvd2v5oaqibl5" path="res://Art/SideScroller/PurpleRift.png" id="24_fv8do"]
+[ext_resource type="Texture2D" uid="uid://bfslnvg4dor3c" path="res://Art/SideScroller/PurpleRiftParticles.png" id="25_s7sxk"]
 [ext_resource type="Texture2D" uid="uid://bkbrkp4yalu3y" path="res://Art/SideScroller/Structures/Structure3Dark.png" id="29_3c8e2"]
 [ext_resource type="Texture2D" uid="uid://do6h03n1jhuy4" path="res://Art/SideScroller/Structures/Structure1Dark.png" id="30_w0voo"]
 [ext_resource type="Texture2D" uid="uid://bnci6qvherws8" path="res://Art/SideScroller/Foliage/TreeBack.png" id="31_fvfjh"]
@@ -426,6 +428,15 @@ texture = ExtResource("21_60sey")
 position = Vector2(7806, 205)
 scale = Vector2(0.11, 0.11)
 texture = ExtResource("21_60sey")
+
+[node name="Rift" type="Node2D" parent="Midground"]
+position = Vector2(-710, -29)
+
+[node name="PurpleRift" type="Sprite2D" parent="Midground/Rift"]
+texture = ExtResource("24_fv8do")
+
+[node name="PurpleRiftParticles" type="Sprite2D" parent="Midground/Rift"]
+texture = ExtResource("25_s7sxk")
 
 [node name="NPC" type="Sprite2D" parent="Midground"]
 modulate = Color(1.2, 1.2, 1.2, 1)
