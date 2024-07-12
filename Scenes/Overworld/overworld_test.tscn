@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://Scripts/overworld_test.gd" id="1_wt7q3"]
 [ext_resource type="Texture2D" uid="uid://dk6h7qfr07q6x" path="res://Art/Overworld/OverworldSkyBG.png" id="2_qc1xm"]
 [ext_resource type="Texture2D" uid="uid://umuknepmxig0" path="res://Art/Overworld/SpaceCloud.png" id="3_0baeo"]
-[ext_resource type="Texture2D" uid="uid://dey2m0qod4fwn" path="res://Art/BlakeTest/Enemy.png" id="3_3gxqa"]
 [ext_resource type="Texture2D" uid="uid://bctd8jvj3ps8w" path="res://Art/Overworld/Planets/Hubworld.png" id="3_u1rvm"]
 [ext_resource type="Texture2D" uid="uid://skhes2v0x14b" path="res://Art/Overworld/Stars/StarsBack.png" id="4_2buqj"]
 [ext_resource type="Texture2D" uid="uid://kgytvxfmtcr" path="res://Art/Overworld/Stars/StarsFront.png" id="5_wejyx"]
@@ -21,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://p6j2qsrnv8pp" path="res://Art/Overworld/PurpleRifts/PurpleRift5Cloud.png" id="18_byhpc"]
 [ext_resource type="Texture2D" uid="uid://ckglg62v5hryv" path="res://Art/Overworld/Planets/BluePlanet.png" id="18_wdcq7"]
 [ext_resource type="Texture2D" uid="uid://cp5ge0wnq3vgq" path="res://Art/Overworld/PurpleRifts/PurpleRift5.png" id="19_16riq"]
+[ext_resource type="Texture2D" uid="uid://dpkl1yvg0b8y7" path="res://Art/Enemies/Octospider.png" id="21_qjp6s"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mwxyh"]
 blend_mode = 1
@@ -196,7 +196,7 @@ position = Vector2(344, -304)
 [node name="Enemy1" type="Sprite2D" parent="."]
 position = Vector2(628, -692)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_3gxqa")
+texture = ExtResource("21_qjp6s")
 
 [node name="Enemy1" type="Area2D" parent="Enemy1"]
 
@@ -207,7 +207,7 @@ shape = SubResource("RectangleShape2D_ijytg")
 [node name="Enemy2" type="Sprite2D" parent="."]
 position = Vector2(964, 185)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_3gxqa")
+texture = ExtResource("21_qjp6s")
 
 [node name="Enemy2" type="Area2D" parent="Enemy2"]
 
@@ -217,12 +217,11 @@ shape = SubResource("RectangleShape2D_ijytg")
 [node name="Enemy3" type="Sprite2D" parent="."]
 position = Vector2(-390, -296)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_3gxqa")
+texture = ExtResource("21_qjp6s")
 
 [node name="Enemy3" type="Area2D" parent="Enemy3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/Enemy3"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ijytg")
 
 [connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]

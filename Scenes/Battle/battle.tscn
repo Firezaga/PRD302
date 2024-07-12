@@ -41,109 +41,6 @@ pivot_offset = Vector2(960, 540)
 texture = ExtResource("2_frhtk")
 expand_mode = 1
 
-[node name="Log" parent="." instance=ExtResource("7_ybd0t")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 24.0
-offset_right = -1392.0
-offset_bottom = -632.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Log"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 472.0
-offset_bottom = 408.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "vd
-ds
-v
-sd
-fd
-sfsdf
-sd
-"
-label_settings = ExtResource("4_ut2ga")
-horizontal_alignment = 2
-vertical_alignment = 2
-text_overrun_behavior = 2
-
-[node name="Button" type="Button" parent="Log"]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 22.0
-offset_right = 132.0
-offset_bottom = 53.0
-text = "LOG DEBUG"
-
-[node name="Button2" type="Button" parent="Log"]
-layout_mode = 0
-offset_left = 34.0
-offset_top = 71.0
-offset_right = 161.0
-offset_bottom = 102.0
-text = "ATTACK DEBUG"
-
-[node name="Button3" type="Button" parent="Log"]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 130.0
-offset_right = 157.0
-offset_bottom = 161.0
-text = "DEFENSE DEBUG"
-
-[node name="TeamOrder" parent="." instance=ExtResource("4_nbqtf")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 48.0
-offset_top = 496.0
-offset_right = -1232.0
-offset_bottom = -48.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SinWave" type="TextureRect" parent="TeamOrder"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 36.0
-offset_right = 637.0
-offset_bottom = 572.0
-texture = ExtResource("6_1ktr2")
-expand_mode = 1
-
-[node name="Slot1" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(138, 125)
-scale = Vector2(0.2, 0.2)
-
-[node name="Slot2" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(257, 457)
-scale = Vector2(0.2, 0.2)
-
-[node name="Slot3" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(378, 125)
-scale = Vector2(0.2, 0.2)
-
-[node name="Slot4" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(500, 462)
-scale = Vector2(0.2, 0.2)
-
-[node name="Label" type="Label" parent="TeamOrder"]
-layout_mode = 0
-offset_left = 428.0
-offset_top = 14.0
-offset_right = 617.0
-offset_bottom = 53.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "SP: "
-label_settings = ExtResource("5_bw7tk")
-horizontal_alignment = 2
-
 [node name="Enemy" type="Sprite2D" parent="."]
 position = Vector2(868, 434)
 scale = Vector2(0.7, 0.7)
@@ -238,6 +135,7 @@ offset_left = 79.0
 offset_top = 48.0
 offset_right = 199.0
 offset_bottom = 96.0
+tooltip_text = "Extor's Basic Attack"
 texture_normal = ExtResource("8_wcxfo")
 texture_pressed = ExtResource("9_vcbur")
 texture_hover = ExtResource("9_vcbur")
@@ -2612,9 +2510,109 @@ text = "4"
 label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
-[connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Log/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Log/Button3" to="." method="_on_button_3_pressed"]
+[node name="Log" parent="." instance=ExtResource("7_ybd0t")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 24.0
+offset_right = -1392.0
+offset_bottom = -632.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Log"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 472.0
+offset_bottom = 408.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "vd
+ds
+v
+sd
+fd
+sfsdf
+sd
+"
+label_settings = ExtResource("4_ut2ga")
+horizontal_alignment = 2
+vertical_alignment = 2
+text_overrun_behavior = 2
+
+[node name="Button" type="Button" parent="Log"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 132.0
+offset_bottom = 53.0
+text = "LOG DEBUG"
+
+[node name="Button2" type="Button" parent="Log"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 71.0
+offset_right = 161.0
+offset_bottom = 102.0
+text = "ATTACK DEBUG"
+
+[node name="Button3" type="Button" parent="Log"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 130.0
+offset_right = 157.0
+offset_bottom = 161.0
+text = "DEFENSE DEBUG"
+
+[node name="TeamOrder" parent="." instance=ExtResource("4_nbqtf")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 496.0
+offset_right = -1232.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SinWave" type="TextureRect" parent="TeamOrder"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 36.0
+offset_right = 637.0
+offset_bottom = 572.0
+texture = ExtResource("6_1ktr2")
+expand_mode = 1
+
+[node name="Slot1" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(138, 125)
+scale = Vector2(0.2, 0.2)
+
+[node name="Slot2" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(257, 457)
+scale = Vector2(0.2, 0.2)
+
+[node name="Slot3" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(378, 125)
+scale = Vector2(0.2, 0.2)
+
+[node name="Slot4" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(500, 462)
+scale = Vector2(0.2, 0.2)
+
+[node name="Label" type="Label" parent="TeamOrder"]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 14.0
+offset_right = 617.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "SP: "
+label_settings = ExtResource("5_bw7tk")
+horizontal_alignment = 2
+
 [connection signal="pressed" from="Buttons/Extor/EAttackButton" to="." method="_on_e_attack_button_pressed"]
 [connection signal="pressed" from="Buttons/Extor/EDefendButton" to="." method="_on_e_defend_button_pressed"]
 [connection signal="pressed" from="Buttons/Extor/ESpecialsButton" to="." method="_on_e_specials_button_pressed"]
@@ -2704,3 +2702,6 @@ horizontal_alignment = 1
 [connection signal="pressed" from="Buttons/Comp4/SwapButtons/C4S1Button" to="." method="_on_c4_s1_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp4/SwapButtons/C4S2Button" to="." method="_on_c4_s2_button_pressed"]
 [connection signal="pressed" from="Buttons/Comp4/SwapButtons/C4S3Button" to="." method="_on_c4_s3_button_pressed"]
+[connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Log/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Log/Button3" to="." method="_on_button_3_pressed"]

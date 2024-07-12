@@ -15,6 +15,7 @@ script = ExtResource("1_oohnh")
 [node name="SceneBackground" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
+expand_mode = 1
 
 [node name="SpriteLeft" type="Sprite2D" parent="."]
 position = Vector2(424, 464)

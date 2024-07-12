@@ -15,7 +15,8 @@ run/main_scene="res://Scenes/Menus/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://icon.svg"
+boot_splash/image="res://Art/GameIcons/GameIconSquare.png"
+config/icon="res://Art/GameIcons/GameIconSquare.png"
 
 [autoload]
 
