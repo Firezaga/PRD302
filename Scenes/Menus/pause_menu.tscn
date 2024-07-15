@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfch7dkw80gbn"]
+[gd_scene load_steps=7 format=3 uid="uid://dfch7dkw80gbn"]
 
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_tp0ra"]
+[ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="2_coicv"]
 
 [sub_resource type="Gradient" id="Gradient_j7r1c"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -25,15 +26,6 @@ layout_mode = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = SubResource("GradientTexture1D_w1hm4")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 808.0
-offset_top = 231.0
-offset_right = 848.0
-offset_bottom = 254.0
-theme_override_font_sizes/font_size = 52
-text = "Pause"
 
 [node name="MainMenuButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -88,6 +80,22 @@ offset_right = 187.0
 offset_bottom = 30.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Quit Game"
+
+[node name="BlueNinePatch" parent="." instance=ExtResource("2_coicv")]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 112.0
+offset_right = 1080.0
+offset_bottom = 742.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 231.0
+offset_right = 958.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 52
+text = "Pause"
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
