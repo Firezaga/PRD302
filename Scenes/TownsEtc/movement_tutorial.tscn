@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://gxejndecq43m"]
+[gd_scene load_steps=59 format=3 uid="uid://gxejndecq43m"]
 
 [ext_resource type="Script" path="res://Scripts/Story/movement_tutorial.gd" id="1_r7kht"]
 [ext_resource type="Texture2D" uid="uid://vym8jn3e5xt0" path="res://Art/SideScroller/SkyBG.png" id="2_033lv"]
@@ -120,6 +120,42 @@ blend_mode = 1
 gradient = SubResource("Gradient_y6mv0")
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0.073913, 0.943478)
+
+[sub_resource type="GDScript" id="GDScript_0krsl"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 1000;
+
+func _process(delta):
+	if !Global.PlayerMove:
+		return
+	velocity = Vector2.ZERO
+	if Input.is_action_pressed(\"right\"):
+		velocity.x += 1
+		$Sprite2D.flip_h = false
+	if Input.is_action_pressed(\"left\"):
+		velocity.x -= 1
+		$Sprite2D.flip_h = true
+	
+	#if Input.is_action_pressed(\"up\"):
+		#velocity.y -= 1
+	#if Input.is_action_pressed(\"down\"):
+		#velocity.y += 1
+	
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
+	
+	move_and_slide()
+	
+
+
+func _on_pause_button_pressed():
+	Global.PlayerMove = false
+	$CinematicPause.visible = true
+
+func MovementTutorial():
+	$MovementTutorial.visible = true
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
 radius = 16.0
@@ -475,6 +511,7 @@ text = "E"
 
 [node name="PlayerTown" parent="Midground" instance=ExtResource("28_pm6pk")]
 position = Vector2(805, -21)
+script = SubResource("GDScript_0krsl")
 
 [node name="Foreground" type="Node2D" parent="."]
 position = Vector2(-28, -136)

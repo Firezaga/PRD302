@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=10 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
 [ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_5llrf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://8hun6j3mq01t" path="res://Art/UI/PauseButtonRed.png" id="4_5bbhw"]
 [ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="5_8snrh"]
 [ext_resource type="PackedScene" uid="uid://t5no0sfgmup2" path="res://Scenes/Menus/pause__menu.tscn" id="5_w1u0m"]
+[ext_resource type="PackedScene" uid="uid://b3hl7rijx5lim" path="res://Scenes/Menus/cinematic_pause_menu.tscn" id="7_cbhu1"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_vwxk5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5lx"]
@@ -36,6 +37,9 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_8snrh")
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_w1u0m")]
+visible = false
+
+[node name="CinematicPause" parent="." instance=ExtResource("7_cbhu1")]
 visible = false
 
 [node name="Area2D" type="Area2D" parent="."]
