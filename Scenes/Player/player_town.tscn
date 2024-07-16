@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_5llrf"]
 [ext_resource type="Texture2D" uid="uid://frq66f336xyg" path="res://Art/UI/PauseButtonGrey.png" id="3_lufuq"]
 [ext_resource type="Texture2D" uid="uid://8hun6j3mq01t" path="res://Art/UI/PauseButtonRed.png" id="4_5bbhw"]
-[ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="5_8snrh"]
 [ext_resource type="PackedScene" uid="uid://t5no0sfgmup2" path="res://Scenes/Menus/pause__menu.tscn" id="5_w1u0m"]
+[ext_resource type="Texture2D" uid="uid://dcr5fqt8q6tcr" path="res://Art/Characters/Extor/SideScroller/ExtorSideScrollerPieces.png" id="6_64icl"]
 [ext_resource type="PackedScene" uid="uid://b3hl7rijx5lim" path="res://Scenes/Menus/cinematic_pause_menu.tscn" id="7_cbhu1"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_vwxk5"]
 
@@ -33,8 +33,173 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-9, 80)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_8snrh")
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(928, 736, 296, 672)
+
+[node name="LegR" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(90, 26.6667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1647, 54, 268, 206)
+
+[node name="AnkleR" type="Sprite2D" parent="Sprite2D/LegR"]
+texture_filter = 1
+position = Vector2(16.6667, 263.333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1290, 845, 277, 139)
+
+[node name="KneeR" type="Sprite2D" parent="Sprite2D/LegR"]
+texture_filter = 1
+position = Vector2(13.3333, 76.6667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1646, 268, 270, 117)
+
+[node name="CalfR" type="Sprite2D" parent="Sprite2D/LegR"]
+texture_filter = 1
+position = Vector2(20, 180)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1646, 393, 269, 272)
+
+[node name="FeetR" type="Sprite2D" parent="Sprite2D/LegR/CalfR"]
+texture_filter = 1
+position = Vector2(3.33333, 130)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1647, 672, 269, 131)
+
+[node name="LegL" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-6.66667, 16.6667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1290, 53, 269, 208)
+
+[node name="AnkleL" type="Sprite2D" parent="Sprite2D/LegL"]
+texture_filter = 1
+position = Vector2(-33.3333, 263.333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1289, 843, 277, 135)
+
+[node name="KneeL" type="Sprite2D" parent="Sprite2D/LegL"]
+texture_filter = 1
+position = Vector2(-10, 70)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1290, 268, 270, 117)
+
+[node name="CalfL" type="Sprite2D" parent="Sprite2D/LegL"]
+texture_filter = 1
+position = Vector2(-20, 180)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1291, 394, 266, 269)
+
+[node name="FeetL" type="Sprite2D" parent="Sprite2D/LegL/CalfL"]
+texture_filter = 1
+position = Vector2(-10, 143.333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1291, 672, 266, 129)
+
+[node name="ArmR" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(113.333, -276.667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(960, 56, 224, 184)
+
+[node name="WristR" type="Sprite2D" parent="Sprite2D/ArmR"]
+texture_filter = 1
+position = Vector2(36.6667, 186.667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1294, 838, 274, 115)
+
+[node name="ElbowR" type="Sprite2D" parent="Sprite2D/ArmR"]
+texture_filter = 1
+position = Vector2(0, 70)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(955, 250, 233, 81)
+
+[node name="ForearmR" type="Sprite2D" parent="Sprite2D/ArmR"]
+texture_filter = 1
+position = Vector2(13.3333, 123.333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(954, 339, 235, 187)
+
+[node name="HandR" type="Sprite2D" parent="Sprite2D/ArmR/ForearmR"]
+texture_filter = 1
+position = Vector2(23.3333, 90)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(955, 535, 233, 150)
+
+[node name="Hip" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(30, -73.3333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(232, 1181, 247, 161)
+
+[node name="Torso" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(26.6667, -226.667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(233, 784, 239, 331)
+
+[node name="ArmL" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-70, -263.333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(640, 49, 236, 190)
+
+[node name="WristL" type="Sprite2D" parent="Sprite2D/ArmL"]
+texture_filter = 1
+position = Vector2(9.99999, 156.667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1287, 849, 280, 128)
+
+[node name="ElbowL" type="Sprite2D" parent="Sprite2D/ArmL"]
+texture_filter = 1
+position = Vector2(-3.33334, 73.3334)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(641, 246, 235, 83)
+
+[node name="ForearmL" type="Sprite2D" parent="Sprite2D/ArmL"]
+texture_filter = 1
+position = Vector2(-10, 133.333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(642, 336, 233, 186)
+
+[node name="HandL" type="Sprite2D" parent="Sprite2D/ArmL/ForearmL"]
+texture_filter = 1
+position = Vector2(0, 86.6667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(641, 530, 235, 153)
+
+[node name="Head" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(6.66667, -576.667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(48, 48, 560, 680)
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_w1u0m")]
 visible = false
@@ -43,11 +208,14 @@ visible = false
 visible = false
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource("CapsuleShape2D_rb5lx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_rb5lx")
 
 [node name="MovementTutorial" parent="." instance=ExtResource("7_vwxk5")]
