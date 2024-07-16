@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=14 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
 [ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_5llrf"]
@@ -12,6 +12,58 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5lx"]
 radius = 24.0
 height = 512.0
+
+[sub_resource type="Animation" id="Animation_y2cac"]
+resource_name = "Extor_idle_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="Animation" id="Animation_ijba4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="Animation" id="Animation_hhiu7"]
+resource_name = "Extor_idle_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.3, 0.3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t8o7i"]
+_data = {
+"Extor_idle_left": SubResource("Animation_hhiu7"),
+"Extor_idle_right": SubResource("Animation_y2cac"),
+"RESET": SubResource("Animation_ijba4")
+}
 
 [node name="PlayerTown" type="CharacterBody2D"]
 script = ExtResource("1_j6iwr")
@@ -32,169 +84,171 @@ texture_hover = ExtResource("2_5llrf")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
+[node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-9, 80)
 scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(928, 736, 296, 672)
 
-[node name="LegR" type="Sprite2D" parent="Sprite2D"]
+[node name="LegR" type="Sprite2D" parent="Node2D/Sprite2D"]
 texture_filter = 1
 position = Vector2(90, 26.6667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1647, 54, 268, 206)
 
-[node name="AnkleR" type="Sprite2D" parent="Sprite2D/LegR"]
+[node name="AnkleR" type="Sprite2D" parent="Node2D/Sprite2D/LegR"]
 texture_filter = 1
 position = Vector2(16.6667, 263.333)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1290, 845, 277, 139)
 
-[node name="KneeR" type="Sprite2D" parent="Sprite2D/LegR"]
+[node name="KneeR" type="Sprite2D" parent="Node2D/Sprite2D/LegR"]
 texture_filter = 1
 position = Vector2(13.3333, 76.6667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1646, 268, 270, 117)
 
-[node name="CalfR" type="Sprite2D" parent="Sprite2D/LegR"]
+[node name="CalfR" type="Sprite2D" parent="Node2D/Sprite2D/LegR"]
 texture_filter = 1
 position = Vector2(20, 180)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1646, 393, 269, 272)
 
-[node name="FeetR" type="Sprite2D" parent="Sprite2D/LegR/CalfR"]
+[node name="FeetR" type="Sprite2D" parent="Node2D/Sprite2D/LegR/CalfR"]
 texture_filter = 1
 position = Vector2(3.33333, 130)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1647, 672, 269, 131)
 
-[node name="LegL" type="Sprite2D" parent="Sprite2D"]
+[node name="LegL" type="Sprite2D" parent="Node2D/Sprite2D"]
 texture_filter = 1
 position = Vector2(-6.66667, 16.6667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1290, 53, 269, 208)
 
-[node name="AnkleL" type="Sprite2D" parent="Sprite2D/LegL"]
+[node name="AnkleL" type="Sprite2D" parent="Node2D/Sprite2D/LegL"]
 texture_filter = 1
 position = Vector2(-33.3333, 263.333)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1289, 843, 277, 135)
 
-[node name="KneeL" type="Sprite2D" parent="Sprite2D/LegL"]
+[node name="KneeL" type="Sprite2D" parent="Node2D/Sprite2D/LegL"]
 texture_filter = 1
 position = Vector2(-10, 70)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1290, 268, 270, 117)
 
-[node name="CalfL" type="Sprite2D" parent="Sprite2D/LegL"]
+[node name="CalfL" type="Sprite2D" parent="Node2D/Sprite2D/LegL"]
 texture_filter = 1
 position = Vector2(-20, 180)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1291, 394, 266, 269)
 
-[node name="FeetL" type="Sprite2D" parent="Sprite2D/LegL/CalfL"]
+[node name="FeetL" type="Sprite2D" parent="Node2D/Sprite2D/LegL/CalfL"]
 texture_filter = 1
 position = Vector2(-10, 143.333)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1291, 672, 266, 129)
 
-[node name="ArmR" type="Sprite2D" parent="Sprite2D"]
+[node name="ArmR" type="Sprite2D" parent="Node2D/Sprite2D"]
 texture_filter = 1
 position = Vector2(113.333, -276.667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(960, 56, 224, 184)
 
-[node name="WristR" type="Sprite2D" parent="Sprite2D/ArmR"]
+[node name="WristR" type="Sprite2D" parent="Node2D/Sprite2D/ArmR"]
 texture_filter = 1
 position = Vector2(36.6667, 186.667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1294, 838, 274, 115)
 
-[node name="ElbowR" type="Sprite2D" parent="Sprite2D/ArmR"]
+[node name="ElbowR" type="Sprite2D" parent="Node2D/Sprite2D/ArmR"]
 texture_filter = 1
 position = Vector2(0, 70)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(955, 250, 233, 81)
 
-[node name="ForearmR" type="Sprite2D" parent="Sprite2D/ArmR"]
+[node name="ForearmR" type="Sprite2D" parent="Node2D/Sprite2D/ArmR"]
 texture_filter = 1
 position = Vector2(13.3333, 123.333)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(954, 339, 235, 187)
 
-[node name="HandR" type="Sprite2D" parent="Sprite2D/ArmR/ForearmR"]
+[node name="HandR" type="Sprite2D" parent="Node2D/Sprite2D/ArmR/ForearmR"]
 texture_filter = 1
 position = Vector2(23.3333, 90)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(955, 535, 233, 150)
 
-[node name="Hip" type="Sprite2D" parent="Sprite2D"]
+[node name="Hip" type="Sprite2D" parent="Node2D/Sprite2D"]
 texture_filter = 1
 position = Vector2(30, -73.3333)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(232, 1181, 247, 161)
 
-[node name="Torso" type="Sprite2D" parent="Sprite2D"]
+[node name="Torso" type="Sprite2D" parent="Node2D/Sprite2D"]
 texture_filter = 1
 position = Vector2(26.6667, -226.667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(233, 784, 239, 331)
 
-[node name="ArmL" type="Sprite2D" parent="Sprite2D"]
+[node name="ArmL" type="Sprite2D" parent="Node2D/Sprite2D"]
 texture_filter = 1
 position = Vector2(-70, -263.333)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(640, 49, 236, 190)
 
-[node name="WristL" type="Sprite2D" parent="Sprite2D/ArmL"]
+[node name="WristL" type="Sprite2D" parent="Node2D/Sprite2D/ArmL"]
 texture_filter = 1
 position = Vector2(9.99999, 156.667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1287, 849, 280, 128)
 
-[node name="ElbowL" type="Sprite2D" parent="Sprite2D/ArmL"]
+[node name="ElbowL" type="Sprite2D" parent="Node2D/Sprite2D/ArmL"]
 texture_filter = 1
 position = Vector2(-3.33334, 73.3334)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(641, 246, 235, 83)
 
-[node name="ForearmL" type="Sprite2D" parent="Sprite2D/ArmL"]
+[node name="ForearmL" type="Sprite2D" parent="Node2D/Sprite2D/ArmL"]
 texture_filter = 1
 position = Vector2(-10, 133.333)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(642, 336, 233, 186)
 
-[node name="HandL" type="Sprite2D" parent="Sprite2D/ArmL/ForearmL"]
+[node name="HandL" type="Sprite2D" parent="Node2D/Sprite2D/ArmL/ForearmL"]
 texture_filter = 1
 position = Vector2(0, 86.6667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(641, 530, 235, 153)
 
-[node name="Head" type="Sprite2D" parent="Sprite2D"]
+[node name="Head" type="Sprite2D" parent="Node2D/Sprite2D"]
 texture_filter = 1
 position = Vector2(6.66667, -576.667)
 texture = ExtResource("6_64icl")
@@ -234,5 +288,10 @@ offset_bottom = 144.0
 theme_override_font_sizes/font_size = 92
 text = "USE - W A S D - TO MOVE"
 horizontal_alignment = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t8o7i")
+}
 
 [connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]
