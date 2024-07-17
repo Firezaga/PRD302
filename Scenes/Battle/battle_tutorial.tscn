@@ -97,54 +97,6 @@ offset_right = 157.0
 offset_bottom = 161.0
 text = "DEFENSE DEBUG"
 
-[node name="TeamOrder" parent="." instance=ExtResource("5_bhmrl")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 48.0
-offset_top = 496.0
-offset_right = -1232.0
-offset_bottom = -48.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SinWave" type="TextureRect" parent="TeamOrder"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 36.0
-offset_right = 637.0
-offset_bottom = 572.0
-texture = ExtResource("6_0dwyp")
-expand_mode = 1
-
-[node name="Slot1" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(138, 125)
-scale = Vector2(0.2, 0.2)
-
-[node name="Slot2" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(257, 457)
-scale = Vector2(0.2, 0.2)
-
-[node name="Slot3" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(378, 125)
-scale = Vector2(0.2, 0.2)
-
-[node name="Slot4" type="Sprite2D" parent="TeamOrder"]
-position = Vector2(500, 462)
-scale = Vector2(0.2, 0.2)
-
-[node name="Label" type="Label" parent="TeamOrder"]
-layout_mode = 0
-offset_left = 428.0
-offset_top = 14.0
-offset_right = 617.0
-offset_bottom = 53.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "SP: "
-label_settings = ExtResource("7_jfa18")
-horizontal_alignment = 2
-
 [node name="Enemy" type="Sprite2D" parent="."]
 position = Vector2(868, 434)
 scale = Vector2(0.7, 0.7)
@@ -2612,6 +2564,54 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "4"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
+
+[node name="TeamOrder" parent="." instance=ExtResource("5_bhmrl")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 496.0
+offset_right = -1232.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SinWave" type="TextureRect" parent="TeamOrder"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 36.0
+offset_right = 637.0
+offset_bottom = 572.0
+texture = ExtResource("6_0dwyp")
+expand_mode = 1
+
+[node name="Slot1" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(138, 125)
+scale = Vector2(0.2, 0.2)
+
+[node name="Slot2" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(257, 457)
+scale = Vector2(0.2, 0.2)
+
+[node name="Slot3" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(378, 125)
+scale = Vector2(0.2, 0.2)
+
+[node name="Slot4" type="Sprite2D" parent="TeamOrder"]
+position = Vector2(500, 462)
+scale = Vector2(0.2, 0.2)
+
+[node name="Label" type="Label" parent="TeamOrder"]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 14.0
+offset_right = 617.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "SP: "
+label_settings = ExtResource("7_jfa18")
+horizontal_alignment = 2
 
 [connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Log/Button2" to="." method="_on_button_2_pressed"]
