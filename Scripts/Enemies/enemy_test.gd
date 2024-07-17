@@ -5,7 +5,7 @@ var SpriteFP = "res://Art/Enemies/Octospider.png"
 var MaxHP = 200
 var HP = 200
 var AttackMax = 200
-var AttackMin = 150
+var AttackMin = 40
 var Defense = 10
 var Reward = 20
 
