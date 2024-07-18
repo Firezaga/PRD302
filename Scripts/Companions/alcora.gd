@@ -10,6 +10,7 @@ var Strength = 5
 var T2_unlock = true
 var T3_unlock = true
 var T4_unlock = true
+var AlcoraCritAmpChance = 0
 
 var T1A1_name = "Boost ATK"
 var T1A1_log = "Alcora is boosting attack"
@@ -19,28 +20,29 @@ func t1_a1(base):
 	return base + Strength
 
 var T1A2_unlock = true
-var T1A2_name = "T1A2"
-var T1A2_log = "T1A2"
+var T1A2_name = "Boost DEF"
+var T1A2_log = "Alcora is boosting defense!"
 var T1A2_cost = 5
-var T1A2_is_attack = true
+var T1A2_is_attack = false
 func t1_a2(base):
 	return base + Strength
 
 var T1A3_unlock = true
-var T1A3_name = "T1A3"
-var T1A3_log = "T1A3"
-var T1A3_cost = 5
-var T1A3_is_attack = true
+var T1A3_name = "Crit Amp"
+var T1A3_log = "Alcora prays for good luck..."
+var T1A3_cost = 1
+var T1A3_is_attack = false
 func t1_a3(base):
-	return base + Strength
+	#actually this thing does nothing unless i can figure out how to add 15% chance to win
+	return base
 
 var T2A1_name = "Coin Flip"
 var T2A1_log = "Alcora flips a coin..."
 var T2A1_cost = 15
 var T2A1_is_attack = true
 func t2_a1(base):
-	var coinflip = (randi()%2)
-	if coinflip == 1:
+	var coinflip = (randi()%100)
+	if coinflip == range(0,49):
 		return base + (Strength*10)
 		#print success!
 	else:
