@@ -1,12 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=25 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
 [ext_resource type="Texture2D" uid="uid://bahld1iy3d2uy" path="res://Art/UI/Battle/HPBarBack.png" id="3_cepgi"]
+[ext_resource type="Texture2D" uid="uid://bby30d6prqvp5" path="res://Art/BlakeTest/Comp1.png" id="3_s4q7e"]
 [ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="4_nbqtf"]
 [ext_resource type="Texture2D" uid="uid://dtbj53oqh3j7w" path="res://Art/UI/Battle/HPBarFront.png" id="4_phkr0"]
 [ext_resource type="LabelSettings" uid="uid://bmhp3078ewa1a" path="res://Fonts/battle_log_font.tres" id="4_ut2ga"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="5_bw7tk"]
+[ext_resource type="Texture2D" uid="uid://cqel1uur1sx7e" path="res://Art/BlakeTest/Comp2.png" id="5_n3q7f"]
 [ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="5_urbfp"]
 [ext_resource type="Texture2D" uid="uid://dcbhwj75bauxb" path="res://Art/BlakeTest/CompOrderSine.png" id="6_1ktr2"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_ybd0t"]
@@ -22,10 +24,288 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_oqjyb"]
 gradient = SubResource("Gradient_sf557")
 
+[sub_resource type="Animation" id="Animation_leppk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1452, 568)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Enemy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(868, 434)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Buttons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1328, 808)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TeamOrder:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-694, 496)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Log:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(48, -467)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HealthBars:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oaa7o"]
+resource_name = "end_battle"
+
+[sub_resource type="Animation" id="Animation_i0vim"]
+resource_name = "idle_battle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1452, 568), Vector2(1452, 580)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Comp1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-467.426, 91.5577)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Comp2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(479.473, -197.572)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/Comp3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-518.024, 595.125)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player/Comp4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(638.494, 245.76)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Enemy:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(868, 434), Vector2(868, 500)]
+}
+
+[sub_resource type="Animation" id="Animation_3iwgp"]
+resource_name = "start_battle"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-391, -609), Vector2(868, 434)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1328, 1144), Vector2(1328, 808)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TeamOrder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-694, 496), Vector2(48, 496)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Log:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(48, -467), Vector2(48, 24)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2580, 572.836), Vector2(1452, 572.836)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HealthBars:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"battle_start"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8w1jy"]
+_data = {
+"RESET": SubResource("Animation_leppk"),
+"end_battle": SubResource("Animation_oaa7o"),
+"idle_battle": SubResource("Animation_i0vim"),
+"start_battle": SubResource("Animation_3iwgp")
+}
+
 [node name="Battle" type="CanvasLayer"]
 script = ExtResource("1_ndcpt")
 
 [node name="Background" type="TextureRect" parent="."]
+modulate = Color(0, 1, 0, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -44,6 +324,7 @@ expand_mode = 1
 [node name="Enemy" type="Sprite2D" parent="."]
 position = Vector2(868, 434)
 scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_s4q7e")
 
 [node name="Player" type="Sprite2D" parent="."]
 position = Vector2(1452, 568)
@@ -53,6 +334,8 @@ texture = ExtResource("8_8h07o")
 [node name="Comp1" type="Sprite2D" parent="Player"]
 position = Vector2(-467.426, 91.5577)
 scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_n3q7f")
+flip_h = true
 
 [node name="Comp2" type="Sprite2D" parent="Player"]
 position = Vector2(479.473, -197.572)
@@ -61,6 +344,7 @@ scale = Vector2(0.45, 0.45)
 [node name="Comp3" type="Sprite2D" parent="Player"]
 position = Vector2(-518.024, 595.125)
 scale = Vector2(0.5, 0.5)
+flip_h = true
 
 [node name="Comp4" type="Sprite2D" parent="Player"]
 position = Vector2(638.494, 245.76)
@@ -105,7 +389,7 @@ texture_progress = ExtResource("5_urbfp")
 offset_left = 1328.0
 offset_top = 808.0
 offset_right = 1856.0
-offset_bottom = 1040.0
+offset_bottom = 1040.01
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
@@ -2514,10 +2798,10 @@ horizontal_alignment = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 24.0
-offset_right = -1392.0
-offset_bottom = -632.0
+offset_left = 48.0
+offset_top = -467.0
+offset_right = -1384.0
+offset_bottom = -1123.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -2569,9 +2853,9 @@ text = "DEFENSE DEBUG"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 48.0
+offset_left = -694.0
 offset_top = 496.0
-offset_right = -1232.0
+offset_right = -1974.02
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -2612,6 +2896,13 @@ theme_override_font_sizes/font_size = 26
 text = "SP: "
 label_settings = ExtResource("5_bw7tk")
 horizontal_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_8w1jy")
+}
+autoplay = "start_battle"
 
 [connection signal="pressed" from="Buttons/Extor/EAttackButton" to="." method="_on_e_attack_button_pressed"]
 [connection signal="pressed" from="Buttons/Extor/EDefendButton" to="." method="_on_e_defend_button_pressed"]

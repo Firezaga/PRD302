@@ -22,7 +22,6 @@ func _process(delta):
 		velocity = velocity.normalized() * speed
 	
 	move_and_slide()
-	
 
 
 func _on_pause_button_pressed():

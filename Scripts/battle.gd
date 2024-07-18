@@ -33,7 +33,7 @@ func _ready():
 	$TeamOrder/Slot3.texture = ResourceLoader.load(Global.Comp3.IconBattleFP)
 	$TeamOrder/Slot4.texture = ResourceLoader.load(Global.Comp4.IconBattleFP)
 	
-	battle_start()
+	$AnimationPlayer.queue("idle_battle")
 
 #endregion
 

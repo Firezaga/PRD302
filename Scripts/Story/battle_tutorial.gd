@@ -53,7 +53,7 @@ func _process(delta):
 		Dia1()
 	if (Global.DiaFinished && DiaCount == 2):
 		Global.DiaFinished = false
-		
+		battle_start1()
 	if (Global.DiaFinished && DiaCount == 3):
 		Global.DiaFinished = false
 		Dia3()
@@ -65,17 +65,21 @@ func _process(delta):
 		Global.GOTO_prologue_end()
 
 #region DIALOG
+func battle_start1():
+	$AnimationPlayer.play("start_battle")
+
 func Dia():
 	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
 	Global.DiaText = "Suddenly, something approaches Beoul from behind. Alcora is the first to take notice.~ALCORA: IT'S BEHIND YOU!~And so the fight begins...%"
 	await Global.LOAD_dialogue()
-	battle_start()
+	
 	DiaCount += 1
 
 func Dia1():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/BlakeTest/1920x1080 transparent.png"
 	Global.DiaText = "EXPLANATION OF BATTLE~Extor's four companions act in order, using their abilities to strengthen Extor.~Extor acts last and decides the main course of action for the turn.~Rinse.~Repeat.~BE CAREFUL: All choices are final and cannot be changed.%"
 	await Global.LOAD_dialogue()
+	$AnimationPlayer.play("start_battle")
 	DiaCount += 1
 
 func Dia3():
