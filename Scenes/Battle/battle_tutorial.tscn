@@ -468,7 +468,7 @@ texture_under = ExtResource("9_7fv1b")
 texture_over = ExtResource("10_4k1gf")
 texture_progress = ExtResource("11_roowt")
 tint_over = Color(1, 1, 1, 0.905882)
-tint_progress = Color(0, 0.74902, 0.960784, 1)
+tint_progress = Color(0, 0.74902, 0.960784, 0.870588)
 
 [node name="Buttons" type="ReferenceRect" parent="."]
 offset_left = 1328.0
