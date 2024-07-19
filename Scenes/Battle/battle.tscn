@@ -375,6 +375,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("3_cepgi")
 texture_over = ExtResource("4_phkr0")
 texture_progress = ExtResource("5_urbfp")
+tint_over = Color(1, 1, 1, 0.905882)
 tint_progress = Color(1, 0, 0, 0.717647)
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="HealthBars"]

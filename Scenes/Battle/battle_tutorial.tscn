@@ -6,7 +6,6 @@
 [ext_resource type="LabelSettings" uid="uid://bmhp3078ewa1a" path="res://Fonts/battle_log_font.tres" id="4_hdu73"]
 [ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="5_bhmrl"]
 [ext_resource type="Texture2D" uid="uid://dey2m0qod4fwn" path="res://Art/BlakeTest/Enemy.png" id="5_e01j0"]
-[ext_resource type="Texture2D" uid="uid://dcbhwj75bauxb" path="res://Art/BlakeTest/CompOrderSine.png" id="6_0dwyp"]
 [ext_resource type="Texture2D" uid="uid://bby30d6prqvp5" path="res://Art/BlakeTest/Comp1.png" id="7_ano37"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="7_jfa18"]
 [ext_resource type="Texture2D" uid="uid://cqel1uur1sx7e" path="res://Art/BlakeTest/Comp2.png" id="8_enevr"]
@@ -20,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="13_y2dij"]
 [ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="14_4bi7d"]
 [ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="15_2y2r2"]
+[ext_resource type="Texture2D" uid="uid://dij0vhca16o61" path="res://Art/UI/Battle/Wave.png" id="19_rgoc0"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -441,7 +441,6 @@ offset_bottom = 128.0
 border_width = 5.0
 
 [node name="EnemyHealth" type="TextureProgressBar" parent="HealthBars"]
-modulate = Color(1, 0, 0, 1)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 32.0
@@ -453,9 +452,10 @@ nine_patch_stretch = true
 texture_under = ExtResource("9_7fv1b")
 texture_over = ExtResource("10_4k1gf")
 texture_progress = ExtResource("11_roowt")
+tint_over = Color(1, 1, 1, 0.905882)
+tint_progress = Color(1, 0, 0, 0.717647)
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="HealthBars"]
-modulate = Color(0, 1, 0, 1)
 layout_mode = 0
 offset_left = 696.0
 offset_top = 32.0
@@ -467,6 +467,8 @@ nine_patch_stretch = true
 texture_under = ExtResource("9_7fv1b")
 texture_over = ExtResource("10_4k1gf")
 texture_progress = ExtResource("11_roowt")
+tint_over = Color(1, 1, 1, 0.905882)
+tint_progress = Color(0, 0.74902, 0.960784, 1)
 
 [node name="Buttons" type="ReferenceRect" parent="."]
 offset_left = 1328.0
@@ -2890,10 +2892,10 @@ grow_vertical = 2
 [node name="SinWave" type="TextureRect" parent="TeamOrder"]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 36.0
+offset_top = 203.0
 offset_right = 637.0
-offset_bottom = 572.0
-texture = ExtResource("6_0dwyp")
+offset_bottom = 379.0
+texture = ExtResource("19_rgoc0")
 expand_mode = 1
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
