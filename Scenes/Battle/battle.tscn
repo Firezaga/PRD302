@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=26 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="9_vcbur"]
 [ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="10_sahna"]
 [ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="11_1qwoe"]
+[ext_resource type="Texture2D" uid="uid://clprxl6lo6krk" path="res://Art/UI/Battle/BattleTextButtonGrey.png" id="14_p6xk0"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -305,7 +306,6 @@ _data = {
 script = ExtResource("1_ndcpt")
 
 [node name="Background" type="TextureRect" parent="."]
-modulate = Color(0, 1, 0, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -327,26 +327,30 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_s4q7e")
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(1452, 568)
+position = Vector2(1452, 572.836)
 scale = Vector2(0.415039, 0.415039)
 texture = ExtResource("8_8h07o")
 
 [node name="Comp1" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(-467.426, 91.5577)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("5_n3q7f")
 flip_h = true
 
 [node name="Comp2" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(479.473, -197.572)
 scale = Vector2(0.45, 0.45)
 
 [node name="Comp3" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(-518.024, 595.125)
 scale = Vector2(0.5, 0.5)
 flip_h = true
 
 [node name="Comp4" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(638.494, 245.76)
 scale = Vector2(0.5, 0.5)
 
@@ -372,7 +376,7 @@ texture_over = ExtResource("4_phkr0")
 texture_progress = ExtResource("5_urbfp")
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="HealthBars"]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0, 0, 1, 1)
 layout_mode = 0
 offset_left = 696.0
 offset_top = 32.0
@@ -563,7 +567,6 @@ label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="Buttons"]
-visible = false
 layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
@@ -619,7 +622,6 @@ label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T1A2Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
 offset_left = 210.0
 offset_top = 82.0
@@ -644,7 +646,6 @@ label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T1A3Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
 offset_left = 365.0
 offset_top = 81.0
@@ -669,7 +670,6 @@ label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T2Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
@@ -768,12 +768,12 @@ label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T3Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
-offset_left = 268.0
-offset_right = 388.0
-offset_bottom = 48.0
-texture_normal = ExtResource("8_wcxfo")
+offset_left = 269.0
+offset_top = 1.0
+offset_right = 400.0
+offset_bottom = 52.0
+texture_normal = ExtResource("14_p6xk0")
 texture_pressed = ExtResource("9_vcbur")
 texture_hover = ExtResource("9_vcbur")
 texture_disabled = ExtResource("10_sahna")
@@ -867,13 +867,12 @@ label_settings = ExtResource("11_1qwoe")
 horizontal_alignment = 1
 
 [node name="C1T4Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
-offset_left = 406.0
+offset_left = 394.0
 offset_top = 1.0
 offset_right = 526.0
-offset_bottom = 49.0
-texture_normal = ExtResource("8_wcxfo")
+offset_bottom = 52.0
+texture_normal = ExtResource("14_p6xk0")
 texture_pressed = ExtResource("9_vcbur")
 texture_hover = ExtResource("9_vcbur")
 texture_disabled = ExtResource("10_sahna")
@@ -2799,9 +2798,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 48.0
-offset_top = -467.0
+offset_top = 24.0
 offset_right = -1384.0
-offset_bottom = -1123.0
+offset_bottom = -632.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -2853,9 +2852,9 @@ text = "DEFENSE DEBUG"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -694.0
+offset_left = 48.0
 offset_top = 496.0
-offset_right = -1974.02
+offset_right = -1232.02
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
