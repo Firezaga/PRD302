@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=28 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
@@ -10,7 +10,6 @@
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="5_bw7tk"]
 [ext_resource type="Texture2D" uid="uid://cqel1uur1sx7e" path="res://Art/BlakeTest/Comp2.png" id="5_n3q7f"]
 [ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="5_urbfp"]
-[ext_resource type="Texture2D" uid="uid://dcbhwj75bauxb" path="res://Art/BlakeTest/CompOrderSine.png" id="6_1ktr2"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_ybd0t"]
 [ext_resource type="Texture2D" uid="uid://ck4fqj11vhc5p" path="res://Art/Characters/Extor/Battle/ExtorBattleIdle1.png" id="8_8h07o"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="8_wcxfo"]
@@ -18,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="10_sahna"]
 [ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="11_1qwoe"]
 [ext_resource type="Texture2D" uid="uid://clprxl6lo6krk" path="res://Art/UI/Battle/BattleTextButtonGrey.png" id="14_p6xk0"]
+[ext_resource type="Texture2D" uid="uid://bovgc5txcbh5q" path="res://Art/UI/Battle/BattleTextButtonBlue.png" id="15_u8v2t"]
+[ext_resource type="Texture2D" uid="uid://bobonadfffl4v" path="res://Art/UI/Battle/BattleTextButtonRed.png" id="16_2ov8q"]
+[ext_resource type="Texture2D" uid="uid://dij0vhca16o61" path="res://Art/UI/Battle/Wave.png" id="19_tvcso"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -362,7 +364,6 @@ offset_bottom = 128.0
 border_width = 5.0
 
 [node name="EnemyHealth" type="TextureProgressBar" parent="HealthBars"]
-modulate = Color(1, 0, 0, 1)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 32.0
@@ -374,9 +375,9 @@ nine_patch_stretch = true
 texture_under = ExtResource("3_cepgi")
 texture_over = ExtResource("4_phkr0")
 texture_progress = ExtResource("5_urbfp")
+tint_progress = Color(1, 0, 0, 0.717647)
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="HealthBars"]
-modulate = Color(0, 0, 1, 1)
 layout_mode = 0
 offset_left = 696.0
 offset_top = 32.0
@@ -388,6 +389,8 @@ nine_patch_stretch = true
 texture_under = ExtResource("3_cepgi")
 texture_over = ExtResource("4_phkr0")
 texture_progress = ExtResource("5_urbfp")
+tint_over = Color(1, 1, 1, 0.905882)
+tint_progress = Color(0, 0.74902, 0.960784, 1)
 
 [node name="Buttons" type="ReferenceRect" parent="."]
 offset_left = 1328.0
@@ -579,10 +582,10 @@ offset_left = 3.0
 offset_top = 2.0
 offset_right = 123.0
 offset_bottom = 50.0
-texture_normal = ExtResource("8_wcxfo")
-texture_pressed = ExtResource("9_vcbur")
-texture_hover = ExtResource("9_vcbur")
-texture_disabled = ExtResource("10_sahna")
+texture_normal = ExtResource("14_p6xk0")
+texture_pressed = ExtResource("15_u8v2t")
+texture_hover = ExtResource("15_u8v2t")
+texture_disabled = ExtResource("16_2ov8q")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -674,10 +677,10 @@ layout_mode = 0
 offset_left = 133.0
 offset_right = 253.0
 offset_bottom = 48.0
-texture_normal = ExtResource("8_wcxfo")
-texture_pressed = ExtResource("9_vcbur")
-texture_hover = ExtResource("9_vcbur")
-texture_disabled = ExtResource("10_sahna")
+texture_normal = ExtResource("14_p6xk0")
+texture_pressed = ExtResource("15_u8v2t")
+texture_hover = ExtResource("15_u8v2t")
+texture_disabled = ExtResource("16_2ov8q")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -774,9 +777,9 @@ offset_top = 1.0
 offset_right = 400.0
 offset_bottom = 52.0
 texture_normal = ExtResource("14_p6xk0")
-texture_pressed = ExtResource("9_vcbur")
-texture_hover = ExtResource("9_vcbur")
-texture_disabled = ExtResource("10_sahna")
+texture_pressed = ExtResource("15_u8v2t")
+texture_hover = ExtResource("15_u8v2t")
+texture_disabled = ExtResource("16_2ov8q")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -873,9 +876,9 @@ offset_top = 1.0
 offset_right = 526.0
 offset_bottom = 52.0
 texture_normal = ExtResource("14_p6xk0")
-texture_pressed = ExtResource("9_vcbur")
-texture_hover = ExtResource("9_vcbur")
-texture_disabled = ExtResource("10_sahna")
+texture_pressed = ExtResource("15_u8v2t")
+texture_hover = ExtResource("15_u8v2t")
+texture_disabled = ExtResource("16_2ov8q")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2862,10 +2865,10 @@ grow_vertical = 2
 [node name="SinWave" type="TextureRect" parent="TeamOrder"]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 36.0
+offset_top = 203.0
 offset_right = 637.0
-offset_bottom = 572.0
-texture = ExtResource("6_1ktr2")
+offset_bottom = 379.0
+texture = ExtResource("19_tvcso")
 expand_mode = 1
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
