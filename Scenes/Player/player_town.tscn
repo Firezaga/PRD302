@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=16 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
 [ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_5llrf"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b3hl7rijx5lim" path="res://Scenes/Menus/cinematic_pause_menu.tscn" id="7_cbhu1"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_vwxk5"]
 [ext_resource type="Texture2D" uid="uid://bqk6txijsh5ni" path="res://Art/Characters/Extor/SideScroller/ExtorFaceRightComplete.png" id="9_gdxnh"]
-[ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="10_aggll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5lx"]
 radius = 24.0
@@ -2490,7 +2489,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(548, 2792, 634, 427)]
+"values": [Rect2(556, 2307, 617, 419)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -2514,7 +2513,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(641, 530, 235, 153)]
+"values": [Rect2(655, 1980, 235, 155)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -2526,7 +2525,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(642, 336, 233, 186)]
+"values": [Rect2(655, 1788, 236, 186)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -2538,7 +2537,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(641, 246, 235, 83)]
+"values": [Rect2(960, 2169, 254, 102)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -2550,7 +2549,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1287, 849, 280, 128)]
+"values": [Rect2(655, 1698, 235, 82)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -2562,7 +2561,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(640, 49, 236, 190)]
+"values": [Rect2(655, 1500, 236, 190)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -2586,7 +2585,7 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(246, 2632, 248, 162)]
+"values": [Rect2(246, 2632, 246, 162)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -2598,7 +2597,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(955, 535, 233, 150)]
+"values": [Rect2(969, 1985, 233, 151)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -2610,7 +2609,7 @@ tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(954, 339, 235, 187)]
+"values": [Rect2(969, 1791, 233, 184)]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
@@ -2622,7 +2621,7 @@ tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(955, 250, 233, 81)]
+"values": [Rect2(961, 2169, 247, 97)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
@@ -2634,7 +2633,7 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1294, 838, 274, 115)]
+"values": [Rect2(970, 1701, 232, 81)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -2646,7 +2645,7 @@ tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(960, 56, 224, 184)]
+"values": [Rect2(968, 1503, 235, 190)]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
@@ -2658,7 +2657,7 @@ tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1291, 672, 266, 129)]
+"values": [Rect2(1305, 2122, 268, 131)]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
@@ -2670,7 +2669,7 @@ tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1291, 394, 266, 269)]
+"values": [Rect2(1304, 1844, 269, 269)]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
@@ -2682,7 +2681,7 @@ tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1290, 268, 270, 117)]
+"values": [Rect2(960, 2184, 251, 97)]
 }
 tracks/18/type = "value"
 tracks/18/imported = false
@@ -2694,7 +2693,7 @@ tracks/18/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1289, 843, 277, 135)]
+"values": [Rect2(1304, 1719, 269, 116)]
 }
 tracks/19/type = "value"
 tracks/19/imported = false
@@ -2706,7 +2705,7 @@ tracks/19/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1290, 53, 269, 208)]
+"values": [Rect2(1304, 1504, 270, 208)]
 }
 tracks/20/type = "value"
 tracks/20/imported = false
@@ -2718,7 +2717,7 @@ tracks/20/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1647, 672, 269, 131)]
+"values": [Rect2(1662, 2123, 268, 129)]
 }
 tracks/21/type = "value"
 tracks/21/imported = false
@@ -2730,7 +2729,7 @@ tracks/21/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1646, 393, 269, 272)]
+"values": [Rect2(1662, 1845, 268, 269)]
 }
 tracks/22/type = "value"
 tracks/22/imported = false
@@ -2742,7 +2741,7 @@ tracks/22/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1646, 268, 270, 117)]
+"values": [Rect2(1291, -126, 278, 110)]
 }
 tracks/23/type = "value"
 tracks/23/imported = false
@@ -2754,7 +2753,7 @@ tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1290, 845, 277, 139)]
+"values": [Rect2(1661, 1720, 268, 116)]
 }
 tracks/24/type = "value"
 tracks/24/imported = false
@@ -2766,7 +2765,7 @@ tracks/24/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(1647, 54, 268, 206)]
+"values": [Rect2(1661, 1503, 268, 210)]
 }
 tracks/25/type = "value"
 tracks/25/imported = false
@@ -2778,7 +2777,7 @@ tracks/25/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Rect2(639, 727, 290, 679)]
+"values": [Rect2(643, 727, 286, 679)]
 }
 tracks/26/type = "value"
 tracks/26/imported = false
@@ -2826,7 +2825,7 @@ tracks/29/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(90, 26.6667)]
+"values": [Vector2(33.3333, 33.3333)]
 }
 tracks/30/type = "value"
 tracks/30/imported = false
@@ -2862,7 +2861,7 @@ tracks/32/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(16.6667, 263.333)]
+"values": [Vector2(-3.8147e-06, 263.333)]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
@@ -2934,7 +2933,7 @@ tracks/38/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(20, 180)]
+"values": [Vector2(13.3333, 176.667)]
 }
 tracks/39/type = "value"
 tracks/39/imported = false
@@ -2970,7 +2969,7 @@ tracks/41/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(3.33333, 130)]
+"values": [Vector2(-3.33333, 123.333)]
 }
 tracks/42/type = "value"
 tracks/42/imported = false
@@ -3006,7 +3005,7 @@ tracks/44/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-6.66667, 16.6667)]
+"values": [Vector2(43.3333, 36.6667)]
 }
 tracks/45/type = "value"
 tracks/45/imported = false
@@ -3042,7 +3041,7 @@ tracks/47/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-33.3333, 263.333)]
+"values": [Vector2(-6.66666, 263.333)]
 }
 tracks/48/type = "value"
 tracks/48/imported = false
@@ -3114,7 +3113,7 @@ tracks/53/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-20, 180)]
+"values": [Vector2(0, 180)]
 }
 tracks/54/type = "value"
 tracks/54/imported = false
@@ -3150,7 +3149,7 @@ tracks/56/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-10, 143.333)]
+"values": [Vector2(6.66667, 116.667)]
 }
 tracks/57/type = "value"
 tracks/57/imported = false
@@ -3186,7 +3185,7 @@ tracks/59/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113.333, -276.667)]
+"values": [Vector2(30, -243.333)]
 }
 tracks/60/type = "value"
 tracks/60/imported = false
@@ -3198,7 +3197,7 @@ tracks/60/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [-0.143413]
 }
 tracks/61/type = "value"
 tracks/61/imported = false
@@ -3210,7 +3209,7 @@ tracks/61/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(0.812057, 0.885965)]
 }
 tracks/62/type = "value"
 tracks/62/imported = false
@@ -3222,7 +3221,7 @@ tracks/62/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(36.6667, 186.667)]
+"values": [Vector2(25.6062, 176.875)]
 }
 tracks/63/type = "value"
 tracks/63/imported = false
@@ -3330,7 +3329,7 @@ tracks/71/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(23.3333, 90)]
+"values": [Vector2(4.6177, 89.9268)]
 }
 tracks/72/type = "value"
 tracks/72/imported = false
@@ -3366,7 +3365,7 @@ tracks/74/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(30, -53.3333)]
+"values": [Vector2(33.3333, -56.6667)]
 }
 tracks/75/type = "value"
 tracks/75/imported = false
@@ -3402,7 +3401,7 @@ tracks/77/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(26.6667, -226.667)]
+"values": [Vector2(33.3333, -233.333)]
 }
 tracks/78/type = "value"
 tracks/78/imported = false
@@ -3438,7 +3437,7 @@ tracks/80/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-70, -263.333)]
+"values": [Vector2(23.3333, -240)]
 }
 tracks/81/type = "value"
 tracks/81/imported = false
@@ -3474,7 +3473,7 @@ tracks/83/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(9.99999, 156.667)]
+"values": [Vector2(26.6667, 186.666)]
 }
 tracks/84/type = "value"
 tracks/84/imported = false
@@ -3546,7 +3545,7 @@ tracks/89/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-10, 133.333)]
+"values": [Vector2(6.66667, 130)]
 }
 tracks/90/type = "value"
 tracks/90/imported = false
@@ -3582,7 +3581,7 @@ tracks/92/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 86.6667)]
+"values": [Vector2(10, 86.6667)]
 }
 tracks/93/type = "value"
 tracks/93/imported = false
@@ -3618,7 +3617,7 @@ tracks/95/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-190, 83.3333)]
+"values": [Vector2(-200, 60)]
 }
 tracks/96/type = "value"
 tracks/96/imported = false
@@ -3654,7 +3653,7 @@ tracks/98/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(6.66667, -576.667)]
+"values": [Vector2(10, -570)]
 }
 tracks/99/type = "value"
 tracks/99/imported = false
@@ -3717,6 +3716,41 @@ texture_filter = 1
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(928, 736, 296, 672)
+
+[node name="ArmR" type="Sprite2D" parent="Sprites/Sprite2D"]
+texture_filter = 1
+position = Vector2(113.333, -276.667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(960, 56, 224, 184)
+
+[node name="WristR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR"]
+texture_filter = 1
+position = Vector2(36.6667, 186.667)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(1294, 838, 274, 115)
+
+[node name="ElbowR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR"]
+texture_filter = 1
+position = Vector2(0, 70)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(955, 250, 233, 81)
+
+[node name="ForearmR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR"]
+texture_filter = 1
+position = Vector2(13.3333, 123.333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(954, 339, 235, 187)
+
+[node name="HandR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR/ForearmR"]
+texture_filter = 1
+position = Vector2(23.3333, 90)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(955, 535, 233, 150)
 
 [node name="LegR" type="Sprite2D" parent="Sprites/Sprite2D"]
 texture_filter = 1
@@ -3788,41 +3822,6 @@ texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(1291, 672, 266, 129)
 
-[node name="ArmR" type="Sprite2D" parent="Sprites/Sprite2D"]
-texture_filter = 1
-position = Vector2(113.333, -276.667)
-texture = ExtResource("6_64icl")
-region_enabled = true
-region_rect = Rect2(960, 56, 224, 184)
-
-[node name="WristR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR"]
-texture_filter = 1
-position = Vector2(36.6667, 186.667)
-texture = ExtResource("6_64icl")
-region_enabled = true
-region_rect = Rect2(1294, 838, 274, 115)
-
-[node name="ElbowR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR"]
-texture_filter = 1
-position = Vector2(0, 70)
-texture = ExtResource("6_64icl")
-region_enabled = true
-region_rect = Rect2(955, 250, 233, 81)
-
-[node name="ForearmR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR"]
-texture_filter = 1
-position = Vector2(13.3333, 123.333)
-texture = ExtResource("6_64icl")
-region_enabled = true
-region_rect = Rect2(954, 339, 235, 187)
-
-[node name="HandR" type="Sprite2D" parent="Sprites/Sprite2D/ArmR/ForearmR"]
-texture_filter = 1
-position = Vector2(23.3333, 90)
-texture = ExtResource("6_64icl")
-region_enabled = true
-region_rect = Rect2(955, 535, 233, 150)
-
 [node name="Hip" type="Sprite2D" parent="Sprites/Sprite2D"]
 texture_filter = 1
 position = Vector2(30, -73.3333)
@@ -3836,6 +3835,12 @@ position = Vector2(26.6667, -226.667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(233, 784, 239, 331)
+
+[node name="CapeFront" type="Sprite2D" parent="Sprites/Sprite2D"]
+position = Vector2(-190, 83.3333)
+texture = ExtResource("6_64icl")
+region_enabled = true
+region_rect = Rect2(548, 2792, 634, 427)
 
 [node name="ArmL" type="Sprite2D" parent="Sprites/Sprite2D"]
 texture_filter = 1
@@ -3871,12 +3876,6 @@ position = Vector2(0, 86.6667)
 texture = ExtResource("6_64icl")
 region_enabled = true
 region_rect = Rect2(641, 530, 235, 153)
-
-[node name="CapeFront" type="Sprite2D" parent="Sprites/Sprite2D"]
-position = Vector2(-190, 83.3333)
-texture = ExtResource("6_64icl")
-region_enabled = true
-region_rect = Rect2(548, 2792, 634, 427)
 
 [node name="Head" type="Sprite2D" parent="Sprites/Sprite2D"]
 texture_filter = 1
@@ -3925,13 +3924,9 @@ libraries = {
 }
 
 [node name="Sizeref" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(202, 5)
 scale = Vector2(0.289583, 0.289583)
 texture = ExtResource("9_gdxnh")
-
-[node name="Sizeref2" type="Sprite2D" parent="."]
-position = Vector2(-135, 1)
-scale = Vector2(0.30638, 0.298958)
-texture = ExtResource("10_aggll")
 
 [connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]
