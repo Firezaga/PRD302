@@ -34,6 +34,8 @@ var T1A3_cost = 1
 var T1A3_is_attack = false
 func t1_a3(base):
 	#actually this thing does nothing unless i can figure out how to add 15% chance to win
+	#AFAIK it's got to do with ET_Start in battle.gd you gotta BZZT it yknow whatim sayin
+	#When ET_Start happens, add 3 stacks of AlcoraCritAmpChance. If AlcoraCritAmpChance > 1, remove 1 each turn.
 	return base
 
 var T2A1_name = "Coin Flip"
@@ -67,10 +69,12 @@ func t2_a2(base):
 		#Alcora completely lost the bet...
 
 var T2A3_unlock = true
-var T2A3_name = "Placehoder"
-var T2A3_log = "Placholder"
-var T2A3_cost = 5
-var T2A3_is_attack = true
+var T2A3_name = "SP Shaker"
+var T2A3_log = "Alcora puts her energy into a bottle, then shakes it!"
+var T2A3_cost = 10
+var T2A3_is_attack = false
+func t2_a3(base):
+	#uhh how do I increase the SP for the character?
 
 var T3A1_name = "Plaeholder"
 var T3A1_log = "Placehoder"

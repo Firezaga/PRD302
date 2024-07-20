@@ -10,6 +10,7 @@ var Strength = 5
 var T2_unlock = false
 var T3_unlock = false
 var T4_unlock = false
+var VerityPassiveBoost = 0
 
 var T1A1_name = "Boost DEF"
 var T1A1_log = "Verity is boosting defense"
@@ -34,16 +35,17 @@ var T1A3_is_attack = true
 func t1_a3(base):
 	return base + Strength
 
-var T2A1_name = "Placeholder"
-var T2A1_log = "Placeholder"
+var T2A1_name = "Reflect"
+var T2A1_log = "Verity prepares a thorny shield!"
 var T2A1_cost = 5
 var T2A1_is_attack = true
 func t2_a1(base):
+	#ok this one is complicated because it's based on if the enemy hits the player
 	return base + Strength
 
 var T2A2_unlock = false
-var T2A2_name = "Placeholder"
-var T2A2_log = "Placeholder"
+var T2A2_name = "Burn"
+var T2A2_log = "Verity prepares to throw a fireball!"
 var T2A2_cost = 5
 var T2A2_is_attack = true
 func t2_a2(base):
