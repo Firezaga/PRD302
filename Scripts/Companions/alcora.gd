@@ -75,6 +75,7 @@ var T2A3_cost = 10
 var T2A3_is_attack = false
 func t2_a3(base):
 	#uhh how do I increase the SP for the character?
+	return base + Strength
 
 var T3A1_name = "Plaeholder"
 var T3A1_log = "Placehoder"
