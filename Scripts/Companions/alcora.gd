@@ -120,8 +120,6 @@ func _ready():
 func _process(delta):
 	pass
 
-func t2_a3(base):
-	return base + Strength
 
 func t3_a1(base):
 	return base + Strength
