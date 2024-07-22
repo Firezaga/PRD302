@@ -41,7 +41,7 @@ var T2A1_log = "Clarico heals Extor!"
 var T2A1_cost = 7
 var T2A1_is_attack = false
 func t2_a1(base):
-	return base + Strength
+	return base
 
 var T2A2_unlock = false
 var T2A2_name = "Placeholder"

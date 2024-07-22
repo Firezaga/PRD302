@@ -56,7 +56,7 @@ func ProText():
 			continue
 		if raw_text[i] == '%':
 			await DisplayText(text_to_send)
-			await get_tree().create_timer(2.0).timeout
+			await get_tree().create_timer(6.5).timeout
 			Global.DiaFinished = true
 			get_tree().paused = false
 			queue_free()

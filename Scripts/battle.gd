@@ -76,11 +76,11 @@ func ET_start():
 	await get_tree().create_timer(2.0).timeout
 	if enemy_current_health <= ($HealthBars/EnemyHealth.max_value / 2):
 		total_defense_e = Global.Enemy.defend(total_defense_e)
-		await log_process_text(Global.Enemy.Name + " defends")
+		await log_process_text(Global.Enemy.Name + " defends...")
 		PT_Comp1()
 	else:
 		total_attack_e = Global.Enemy.attack(total_attack_e)
-		await log_process_text(Global.Enemy.Name + " attacks")
+		await log_process_text(Global.Enemy.Name + " attacks!")
 		await damage_extor(total_attack_e)
 		PT_Comp1()
 #endregion
