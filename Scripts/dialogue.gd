@@ -51,12 +51,14 @@ func ProText():
 	for i in len(raw_text):
 		if raw_text[i] == '~':
 			await DisplayText(text_to_send)
-			await get_tree().create_timer(5.0).timeout
+			await get_tree().create_timer(0.05).timeout
+			await advancedialog
 			text_to_send = ""
 			continue
 		if raw_text[i] == '%':
 			await DisplayText(text_to_send)
-			await get_tree().create_timer(6.5).timeout
+			await get_tree().create_timer(0.05).timeout
+			await advancedialog
 			Global.DiaFinished = true
 			get_tree().paused = false
 			queue_free()
@@ -129,18 +131,24 @@ func ProMulti():
 		text_temp += raw_text[i]
 	ProTextM(base_text)
 
+
+
+signal advancedialog
+func _input(event):
+	if event.is_action_pressed("AdvanceDialog"):
+		advancedialog.emit()
+		
 # Display Text
 func DisplayText(text):
 	$TextBackground/Label.text = ""
 	for i in len(text):
-		if Input.is_action_pressed("skip") && can_skip:
+		if Input.is_action_pressed("AdvanceDialog") && can_skip:
 			can_skip = false
 			$TextBackground/Label.text = text
 			$DiaTimer.start()
 			break
 		$TextBackground/Label.text += text[i]
 		await get_tree().create_timer(0.01).timeout
-
 
 func _on_dia_timer_timeout():
 	can_skip = true
