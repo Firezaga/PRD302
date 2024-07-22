@@ -17,7 +17,7 @@ var T1A1_log = "Alcora is boosting attack"
 var T1A1_cost = 5
 var T1A1_is_attack = true
 func t1_a1(base):
-	return base + Strength
+	return base + (Strength*1.6)
 
 var T1A2_unlock = true
 var T1A2_name = "Boost DEF"
@@ -25,7 +25,7 @@ var T1A2_log = "Alcora is boosting defense!"
 var T1A2_cost = 5
 var T1A2_is_attack = false
 func t1_a2(base):
-	return base + Strength
+	return base + (Strength*1.3)
 
 var T1A3_unlock = true
 var T1A3_name = "Crit Amp"

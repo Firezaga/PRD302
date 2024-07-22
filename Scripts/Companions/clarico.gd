@@ -17,7 +17,7 @@ var T1A1_log = "Clarico is boosting attack"
 var T1A1_cost = 5
 var T1A1_is_attack = true
 func t1_a1(base):
-	return base + Strength
+	return base + (Strength*1.4)
 
 var T1A2_unlock = false
 var T1A2_name = "Boost DEF"
@@ -25,7 +25,7 @@ var T1A2_log = "Clarico is boosting defense"
 var T1A2_cost = 5
 var T1A2_is_attack = false
 func t1_a2(base):
-	return base + Strength
+	return base + (Strength*2)
 
 var T1A3_unlock = false
 var T1A3_name = "Cleric's Touch"
@@ -34,7 +34,7 @@ var T1A3_cost = 5
 var T1A3_is_attack = false
 func t1_a3(base):
 	#Add ClaricoHealBuff.
-	return
+	return base
 
 var T2A1_name = "Healing Salve"
 var T2A1_log = "Clarico heals Extor!"
