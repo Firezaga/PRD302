@@ -51,7 +51,7 @@ func ProText():
 	for i in len(raw_text):
 		if raw_text[i] == '~':
 			await DisplayText(text_to_send)
-			await get_tree().create_timer(2.0).timeout
+			await get_tree().create_timer(5.0).timeout
 			text_to_send = ""
 			continue
 		if raw_text[i] == '%':
@@ -67,14 +67,14 @@ func ProTextM(text):
 	for i in len(text):
 		if text[i] == '~':
 			await DisplayText(text_to_send)
-			await get_tree().create_timer(2.0).timeout
+			await get_tree().create_timer(5.0).timeout
 			text_to_send = ""
 			continue
 		if (text[i] == '@'):
 			$Choice.visible = true
 		if text[i] == '%':
 			await DisplayText(text_to_send)
-			await get_tree().create_timer(2.0).timeout
+			await get_tree().create_timer(5.0).timeout
 			Global.DiaFinished = true
 			get_tree().paused = false
 			queue_free()
