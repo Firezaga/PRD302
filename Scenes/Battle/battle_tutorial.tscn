@@ -305,7 +305,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(1.5, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+"values": [Color(1, 0, 0, 0), Color(1, 1, 1, 1)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -317,7 +317,7 @@ tracks/8/keys = {
 "times": PackedFloat32Array(2.5, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 1, 0, 0), Color(0, 1, 0, 1)]
+"values": [Color(0, 1, 0, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8w1jy"]
@@ -333,6 +333,7 @@ process_mode = 3
 script = ExtResource("1_c2sm0")
 
 [node name="Background" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -353,9 +354,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 48.0
-offset_top = 24.0
+offset_top = -467.0
 offset_right = -1384.0
-offset_bottom = -632.0
+offset_bottom = -1123.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -404,12 +405,12 @@ offset_bottom = 161.0
 text = "DEFENSE DEBUG"
 
 [node name="Enemy" type="Sprite2D" parent="."]
-position = Vector2(868, 434)
+position = Vector2(-391, -609)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_e01j0")
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(1452, 572.836)
+position = Vector2(2580, 572.836)
 scale = Vector2(0.415039, 0.415039)
 texture = ExtResource("8_rw18e")
 
@@ -441,6 +442,7 @@ offset_bottom = 128.0
 border_width = 5.0
 
 [node name="EnemyHealth" type="TextureProgressBar" parent="HealthBars"]
+modulate = Color(1, 0, 0, 0)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 32.0
@@ -456,6 +458,7 @@ tint_over = Color(1, 1, 1, 0.905882)
 tint_progress = Color(1, 0, 0, 0.717647)
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="HealthBars"]
+modulate = Color(0, 1, 0, 0)
 layout_mode = 0
 offset_left = 696.0
 offset_top = 32.0
@@ -472,9 +475,9 @@ tint_progress = Color(0, 0.74902, 0.960784, 0.870588)
 
 [node name="Buttons" type="ReferenceRect" parent="."]
 offset_left = 1328.0
-offset_top = 808.0
+offset_top = 1144.0
 offset_right = 1856.0
-offset_bottom = 1040.0
+offset_bottom = 1376.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
@@ -2882,9 +2885,9 @@ horizontal_alignment = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 48.0
+offset_left = -694.0
 offset_top = 496.0
-offset_right = -1232.0
+offset_right = -1974.0
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
