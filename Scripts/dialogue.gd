@@ -133,7 +133,7 @@ func ProMulti():
 
 signal advancedialog
 func _input(event):
-	if event.is_action_pressed("AdvanceDialog"):
+	if Input.is_action_just_pressed("AdvanceDialog"):
 		advancedialog.emit()
 		
 # Display Text
