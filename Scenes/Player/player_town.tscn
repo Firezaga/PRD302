@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=32 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
 [ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_5llrf"]
@@ -7472,6 +7472,72 @@ _data = {
 "Spare_side_view": SubResource("Animation_vd7ck")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7dw6p"]
+animation = &"Extor_left_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gs83a"]
+animation = &"Extor_right_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_senyo"]
+animation = &"Extor_right_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ohnf7"]
+animation = &"Extor_right_idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_x03gj"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_7dw6p")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_gs83a")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_senyo")
+blend_point_2/pos = Vector2(0, 1.1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_ohnf7")
+blend_point_3/pos = Vector2(0, -1.1)
+min_space = Vector2(-1, -1.1)
+max_space = Vector2(1, 1.1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4pxo7"]
+animation = &"Extor_left_run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3oply"]
+animation = &"Extor_right_run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ow5oj"]
+animation = &"Extor_right_run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_imgls"]
+animation = &"Extor_right_run"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_qw5tf"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_4pxo7")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_3oply")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_ow5oj")
+blend_point_2/pos = Vector2(0, 1.1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_imgls")
+blend_point_3/pos = Vector2(0, -1.1)
+min_space = Vector2(-1, -1.1)
+max_space = Vector2(1, 1.1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8kva3"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q6f1p"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_05aex"]
+advance_mode = 0
+advance_condition = &"is_running"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lxpap"]
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_x03gj")
+states/Idle/position = Vector2(323, 113)
+states/Run/node = SubResource("AnimationNodeBlendSpace2D_qw5tf")
+states/Run/position = Vector2(463, 113)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8kva3"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_q6f1p"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_05aex")]
+
 [node name="PlayerTown" type="CharacterBody2D"]
 script = ExtResource("1_j6iwr")
 
@@ -7708,5 +7774,17 @@ libraries = {
 "": SubResource("AnimationLibrary_t8o7i")
 }
 speed_scale = 1.2
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_t8o7i")
+}
+tree_root = SubResource("AnimationNodeStateMachine_lxpap")
+advance_expression_base_node = NodePath("../AnimationPlayer")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_running = false
+parameters/Idle/blend_position = Vector2(0.0216904, 0.00340557)
+parameters/Run/blend_position = Vector2(-0.000747919, 0.00350881)
 
 [connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]
