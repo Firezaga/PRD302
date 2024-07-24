@@ -140,7 +140,7 @@ func _input(event):
 func DisplayText(text):
 	$TextBackground/Label.text = ""
 	for i in len(text):
-		if Input.is_action_just_pressed("AdvanceDialog") && can_skip:
+		if Input.is_action_just_released("AdvanceDialog") && can_skip:
 			can_skip = false
 			$TextBackground/Label.text = text
 			$DiaTimer.start()
