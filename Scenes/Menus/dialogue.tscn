@@ -127,11 +127,33 @@ label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="Label2" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 1026.0
+offset_right = 380.0
+offset_bottom = 1066.0
+theme_override_font_sizes/font_size = 28
+text = "//SPACE = FFWD//"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 386.0
+offset_top = 1026.0
+offset_right = 767.0
+offset_bottom = 1066.0
+theme_override_font_sizes/font_size = 28
+text = "//LEFT CLICK = CONTINUE//"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1632.0
-offset_top = 696.0
-offset_right = 1880.0
-offset_bottom = 752.0
+offset_left = 1609.0
+offset_top = 677.0
+offset_right = 1857.0
+offset_bottom = 733.0
 texture_normal = ExtResource("4_apgn2")
 texture_pressed = ExtResource("7_pneca")
 texture_hover = ExtResource("5_4df8n")
