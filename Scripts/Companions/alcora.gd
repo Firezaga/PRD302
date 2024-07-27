@@ -8,8 +8,8 @@ var SPMax = 10
 var SP = 10
 var Strength = 5
 var T2_unlock = true
-var T3_unlock = true
-var T4_unlock = true
+var T3_unlock = false
+var T4_unlock = false
 var AlcoraCritAmpChance = 0
 
 var T1A1_name = "Boost ATK"

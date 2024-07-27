@@ -49,7 +49,7 @@ var T2A2_log = "Verity prepares to throw a fireball!"
 var T2A2_cost = 5
 var T2A2_is_attack = true
 func t2_a2(base):
-	return base + Strength
+	return base + Strength*2
 
 var T2A3_unlock = false
 var T2A3_name = "Placeholder"
