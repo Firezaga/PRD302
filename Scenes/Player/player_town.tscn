@@ -7537,7 +7537,7 @@ advance_condition = &"is_running"
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_x03gj")
 states/Idle/position = Vector2(323, 113)
 states/Run/node = SubResource("AnimationNodeBlendSpace2D_qw5tf")
-states/Run/position = Vector2(462, 113)
+states/Run/position = Vector2(464, 76)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8kva3"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_q6f1p"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_05aex")]
 
 [node name="PlayerTown" type="CharacterBody2D"]
@@ -7787,6 +7787,6 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/is_not_running = false
 parameters/conditions/is_running = false
 parameters/Idle/blend_position = Vector2(0, -0.1)
-parameters/Run/blend_position = Vector2(1, 0)
+parameters/Run/blend_position = Vector2(0.20277, -0.0291005)
 
 [connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]

@@ -12,7 +12,7 @@ func _process(delta):
 		isMoving(true)
 		velocity.x += 1
 		$Sprites.scale.x = 0.3
-	if Input.is_action_pressed("left"):
+	elif Input.is_action_pressed("left"):
 		isMoving(true)
 		velocity.x -= 1
 		$Sprites.scale.x = -0.3
