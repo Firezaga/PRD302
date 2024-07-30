@@ -82,13 +82,13 @@ var T3A1_log = "Placehoder"
 var T3A1_cost = 5
 var T3A1_is_attack = true
 
-var T3A2_unlock = true
+var T3A2_unlock = false
 var T3A2_name = "Placehlder"
 var T3A2_log = "Placeolder"
 var T3A2_cost = 5
 var T3A2_is_attack = true
 
-var T3A3_unlock = true
+var T3A3_unlock = false
 var T3A3_name = "Placeholer"
 var T3A3_log = "Placehoder"
 var T3A3_cost = 5
@@ -99,13 +99,13 @@ var T4A1_log = "Placeolder"
 var T4A1_cost = 5
 var T4A1_is_attack = true
 
-var T4A2_unlock = true
+var T4A2_unlock = false
 var T4A2_name = "Placholder"
 var T4A2_log = "Placeolder"
 var T4A2_cost = 5
 var T4A2_is_attack = true
 
-var T4A3_unlock = true
+var T4A3_unlock = false
 var T4A3_name = "Placehoder"
 var T4A3_log = "Placehoder"
 var T4A3_cost = 5

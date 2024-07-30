@@ -19,7 +19,7 @@ var T1A1_is_attack = true
 func t1_a1(base):
 	return base + (Strength*1.2)
 
-var T1A2_unlock = false
+var T1A2_unlock = true
 var T1A2_name = "Boost DEF"
 var T1A2_log = "Verity is boosting defense"
 var T1A2_cost = 5
