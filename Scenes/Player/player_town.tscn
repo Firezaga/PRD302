@@ -7537,7 +7537,7 @@ advance_condition = &"is_running"
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_x03gj")
 states/Idle/position = Vector2(323, 113)
 states/Run/node = SubResource("AnimationNodeBlendSpace2D_qw5tf")
-states/Run/position = Vector2(464, 76)
+states/Run/position = Vector2(473, 113)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8kva3"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_q6f1p"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_05aex")]
 
 [node name="PlayerTown" type="CharacterBody2D"]
