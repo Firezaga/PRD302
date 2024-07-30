@@ -9,13 +9,13 @@ func _process(delta):
 	velocity = Vector2.ZERO
 	#input
 	if Input.is_action_pressed("right"):
+		isMoving(true)
 		velocity.x += 1
 		$Sprites.scale.x = 0.3
-		isMoving(true)
 	if Input.is_action_pressed("left"):
+		isMoving(true)
 		velocity.x -= 1
 		$Sprites.scale.x = -0.3
-		isMoving(true)
 	else:
 		isMoving(false)
 	update_blend_position()
