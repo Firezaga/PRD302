@@ -61,7 +61,7 @@ func t2_a2(base):
 	if AlcoraT2A2chance >= 19:
 		return base + (Strength*20)
 		#Alcora gets what she wants!
-	elif AlcoraT2A2chance < 20 && AlcoraT2A2chance > 79:
+	elif AlcoraT2A2chance <= 20 && AlcoraT2A2chance > 79:
 		return base + (Strength*2)
 		#Alcora lost the bet, but got some back!
 	else:
