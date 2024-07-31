@@ -140,9 +140,9 @@ uppercase = true
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 368.0
-offset_top = 718.0
+offset_top = 723.0
 offset_right = 749.0
-offset_bottom = 758.0
+offset_bottom = 763.0
 theme_override_font_sizes/font_size = 28
 text = "//LEFT CLICK = CONTINUE//"
 horizontal_alignment = 1
@@ -151,9 +151,9 @@ uppercase = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1609.0
-offset_top = 677.0
+offset_top = 702.0
 offset_right = 1857.0
-offset_bottom = 733.0
+offset_bottom = 758.0
 texture_normal = ExtResource("4_apgn2")
 texture_pressed = ExtResource("7_pneca")
 texture_hover = ExtResource("5_4df8n")
