@@ -7778,7 +7778,6 @@ libraries = {
 speed_scale = 1.2
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-active = false
 libraries = {
 "": SubResource("AnimationLibrary_t8o7i")
 }
