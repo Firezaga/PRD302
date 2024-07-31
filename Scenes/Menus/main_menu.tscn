@@ -260,7 +260,7 @@ stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="QuitButton"]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.843137, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -274,7 +274,7 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "QUIT"
+text = "QUIT GAME"
 label_settings = ExtResource("4_pn020")
 horizontal_alignment = 1
 
