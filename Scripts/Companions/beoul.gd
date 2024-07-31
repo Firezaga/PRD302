@@ -28,7 +28,7 @@ func t1_a2(base):
 	return base + (Strength*1.2)
 
 var T1A3_unlock = true
-var T1A3_name = "Special Delivery"
+var T1A3_name = "Spec. Delivery"
 var T1A3_log = "Beoul presents a special..!"
 var T1A3_cost = 5
 var T1A3_is_attack = true

@@ -1553,7 +1553,6 @@ func _on_all_out_def_button_pressed():
 #region CORE Functions
 func battle_start():
 	await log_process_text(Global.Enemy.Name + " has appeared!!")
-	await log_process_text(Global.Enemy.Name + " has appeared!! But test!")
 	PT_Comp1()
 
 func damage_enemy(damage):
