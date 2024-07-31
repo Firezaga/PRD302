@@ -43,8 +43,8 @@ var T2A1_log = "Alcora flips a coin..."
 var T2A1_cost = 15
 var T2A1_is_attack = true
 func t2_a1(base):
-	var coinflip = (randi()%100)
-	if coinflip == range(0,49):
+	var coinflip = randi_range(0, 99)
+	if coinflip >= 49:
 		return base + (Strength*10)
 		#print success!
 	else:
@@ -57,11 +57,11 @@ var T2A2_log = "Alcora bets high, and prays for fortune!"
 var T2A2_cost = 15
 var T2A2_is_attack = true
 func t2_a2(base):
-	var AlcoraT2A2chance = (randi()%100)
-	if AlcoraT2A2chance == range(0,19):
+	var AlcoraT2A2chance = randi_range(0, 99)
+	if AlcoraT2A2chance >= 19:
 		return base + (Strength*20)
 		#Alcora gets what she wants!
-	elif AlcoraT2A2chance == range(20,60):
+	elif AlcoraT2A2chance <= 20 && AlcoraT2A2chance > 79:
 		return base + (Strength*2)
 		#Alcora lost the bet, but got some back!
 	else:
