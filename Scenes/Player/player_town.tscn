@@ -48,10 +48,10 @@ tracks/2/path = NodePath("Sprites/Sprite2D/Head:region_rect")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Rect2(48, 48, 560, 680)]
+"values": [Rect2(48, 48, 560, 680), Rect2(48, 60, 560, 668), Rect2(48, 63, 560, 665)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -2530,10 +2530,10 @@ tracks/2/path = NodePath("Sprites/Sprite2D/Head:region_rect")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Rect2(48, 48, 560, 680)]
+"values": [Rect2(48, 48, 560, 680), Rect2(48, 57, 560, 671), Rect2(48, 59, 560, 669)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -7778,6 +7778,7 @@ libraries = {
 speed_scale = 1.2
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 libraries = {
 "": SubResource("AnimationLibrary_t8o7i")
 }
