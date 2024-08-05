@@ -152,6 +152,10 @@ func PT_Comp1():
 	$Buttons/Comp1/SwapButtons.visible = false
 	$Buttons/Comp1/C1T1Button.visible = true
 	$Buttons/Comp1/C1T1A1Button.visible = true
+	$TeamOrder/Slot1.scale = Vector2(0.3, 0.3)
+	$TeamOrder/Slot2.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot3.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot4.scale = Vector2(0.2, 0.2)
 	if Global.Comp1.T1A2_unlock:
 		$Buttons/Comp1/C1T1A2Button/Label.text = Global.Comp1.T1A2_name
 		$Buttons/Comp1/C1T1A2Button.visible = true
@@ -504,6 +508,10 @@ func PT_Comp2():
 	$Buttons/Comp2/SwapButtons.visible = false
 	$Buttons/Comp2/C2T1Button.visible = true
 	$Buttons/Comp2/C2T1A1Button.visible = true
+	$TeamOrder/Slot1.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot2.scale = Vector2(0.3, 0.3)
+	$TeamOrder/Slot3.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot4.scale = Vector2(0.2, 0.2)
 	if Global.Comp2.T1A2_unlock:
 		$Buttons/Comp2/C2T1A2Button/Label.text = Global.Comp2.T1A2_name
 		$Buttons/Comp2/C2T1A2Button.visible = true
@@ -855,6 +863,10 @@ func PT_Comp3():
 	$Buttons/Comp3/SwapButtons.visible = false
 	$Buttons/Comp3/C3T1Button.visible = true
 	$Buttons/Comp3/C3T1A1Button.visible = true
+	$TeamOrder/Slot1.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot2.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot3.scale = Vector2(0.3, 0.3)
+	$TeamOrder/Slot4.scale = Vector2(0.2, 0.2)
 	if Global.Comp3.T1A2_unlock:
 		$Buttons/Comp3/C3T1A2Button/Label.text = Global.Comp3.T1A2_name
 		$Buttons/Comp3/C3T1A2Button.visible = true
@@ -1206,6 +1218,10 @@ func PT_Comp4():
 	$Buttons/Comp4/SwapButtons.visible = false
 	$Buttons/Comp4/C4T1Button.visible = true
 	$Buttons/Comp4/C4T1A1Button.visible = true
+	$TeamOrder/Slot1.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot2.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot3.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot4.scale = Vector2(0.3, 0.3)
 	if Global.Comp4.T1A2_unlock:
 		$Buttons/Comp4/C4T1A2Button/Label.text = Global.Comp4.T1A2_name
 		$Buttons/Comp4/C4T1A2Button.visible = true
@@ -1555,6 +1571,10 @@ func PT_Extor():
 	$Buttons/Extor/EAttackButton.visible = true
 	$Buttons/Extor/EDefendButton.visible = true
 	$Buttons/Extor/Specials.visible = false
+	$TeamOrder/Slot1.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot2.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot3.scale = Vector2(0.2, 0.2)
+	$TeamOrder/Slot4.scale = Vector2(0.2, 0.2)
 	if Global.PlayerAPCur < 20:
 		$Buttons/Extor/ESpecialsButton.visible = false
 	else:
