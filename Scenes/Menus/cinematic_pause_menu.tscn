@@ -28,10 +28,10 @@ offset_right = 1872.0
 offset_bottom = 1043.0
 
 [node name="MainMenuButton" type="TextureButton" parent="."]
-offset_left = 105.0
-offset_top = 890.0
-offset_right = 361.0
-offset_bottom = 930.0
+offset_left = 848.0
+offset_top = 712.0
+offset_right = 1104.0
+offset_bottom = 752.0
 texture_normal = ExtResource("3_kurgu")
 texture_pressed = ExtResource("4_ko31c")
 texture_hover = ExtResource("4_ko31c")
@@ -49,10 +49,10 @@ text = "Main Menu"
 label_settings = ExtResource("5_1dnsa")
 
 [node name="ResumeButton" type="TextureButton" parent="."]
-offset_left = 117.0
-offset_top = 103.0
-offset_right = 373.0
-offset_bottom = 143.0
+offset_left = 848.0
+offset_top = 407.0
+offset_right = 1104.0
+offset_bottom = 447.0
 texture_normal = ExtResource("3_kurgu")
 texture_pressed = ExtResource("4_ko31c")
 texture_hover = ExtResource("4_ko31c")
@@ -70,10 +70,10 @@ text = "Resume"
 label_settings = ExtResource("5_1dnsa")
 
 [node name="QuitButton" type="TextureButton" parent="."]
-offset_left = 1592.0
-offset_top = 977.0
-offset_right = 1848.0
-offset_bottom = 1025.0
+offset_left = 848.0
+offset_top = 776.0
+offset_right = 1104.0
+offset_bottom = 824.0
 texture_normal = ExtResource("3_kurgu")
 texture_pressed = ExtResource("4_ko31c")
 texture_hover = ExtResource("6_4uvw8")
@@ -91,10 +91,10 @@ text = "Quit Game"
 label_settings = ExtResource("5_1dnsa")
 
 [node name="SaveButton" type="TextureButton" parent="."]
-offset_left = 106.0
-offset_top = 965.0
-offset_right = 362.0
-offset_bottom = 1005.0
+offset_left = 848.0
+offset_top = 466.0
+offset_right = 1104.0
+offset_bottom = 506.0
 texture_normal = ExtResource("3_kurgu")
 texture_pressed = ExtResource("4_ko31c")
 texture_hover = ExtResource("4_ko31c")
