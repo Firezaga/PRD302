@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://d33ujo48pv6fy"]
+
+[ext_resource type="FontFile" uid="uid://dafyac842y7w1" path="res://Fonts/Oxanium/Oxanium-Regular.ttf" id="1_0y34o"]
+
+[resource]
+font = ExtResource("1_0y34o")
+font_size = 52

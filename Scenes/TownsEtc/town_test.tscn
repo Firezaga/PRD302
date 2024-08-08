@@ -34,7 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bkbrkp4yalu3y" path="res://Art/SideScroller/Structures/Structure3Dark.png" id="29_3c8e2"]
 [ext_resource type="Texture2D" uid="uid://do6h03n1jhuy4" path="res://Art/SideScroller/Structures/Structure1Dark.png" id="30_w0voo"]
 [ext_resource type="Texture2D" uid="uid://bnci6qvherws8" path="res://Art/SideScroller/Foliage/TreeBack.png" id="31_fvfjh"]
-[ext_resource type="Texture2D" path="res://Art/UI [New]/Square Button Blank/SquareDark.png" id="31_ltn5s"]
+[ext_resource type="Texture2D" uid="uid://bddmo23f57isl" path="res://Art/UI [New]/Square Button Blank/SquareDark.png" id="31_ltn5s"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="32_d0eq1"]
 [ext_resource type="Texture2D" uid="uid://b7glgt2m10hrb" path="res://Art/SideScroller/Structures/Structure2Dark.png" id="32_j0vjq"]
 
