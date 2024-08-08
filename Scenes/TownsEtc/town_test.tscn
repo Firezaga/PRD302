@@ -490,8 +490,7 @@ texture = ExtResource("7_imin4")
 
 [node name="SpeechHint" type="Sprite2D" parent="Midground"]
 visible = false
-position = Vector2(3874, -176)
-scale = Vector2(0.8, 0.8)
+position = Vector2(3887, -155)
 texture = ExtResource("31_ltn5s")
 
 [node name="Label" type="Label" parent="Midground/SpeechHint"]
@@ -649,7 +648,7 @@ position = Vector2(3775, -104)
 scale = Vector2(0.572222, 0.572222)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCArea"]
-position = Vector2(-61.165, 200.971)
+position = Vector2(-54.1747, 234.175)
 shape = SubResource("RectangleShape2D_4ao53")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://fq3lc6h4our0"]
+[gd_scene load_steps=9 format=3 uid="uid://fq3lc6h4our0"]
 
 [ext_resource type="Script" path="res://Scripts/player_overworld.gd" id="1_ixyi4"]
 [ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="2_1p603"]
-[ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_io4ib"]
-[ext_resource type="Texture2D" uid="uid://frq66f336xyg" path="res://Art/UI/PauseButtonGrey.png" id="3_u48t1"]
-[ext_resource type="Texture2D" uid="uid://8hun6j3mq01t" path="res://Art/UI/PauseButtonRed.png" id="4_3edoc"]
+[ext_resource type="Texture2D" uid="uid://cqvg7y6rrjgae" path="res://Art/UI [New]/Pause Button/PauseButtonNormal.png" id="3_5fefm"]
+[ext_resource type="Texture2D" uid="uid://bynd80vou5hs4" path="res://Art/UI [New]/Pause Button/PauseButtonPressed.png" id="4_r71qf"]
+[ext_resource type="Texture2D" uid="uid://cwq0vcfdi3vh8" path="res://Art/UI [New]/Pause Button/PauseButtonHover.png" id="5_2geme"]
 [ext_resource type="PackedScene" uid="uid://t5no0sfgmup2" path="res://Scenes/Menus/pause__menu.tscn" id="5_iyagj"]
+[ext_resource type="Texture2D" uid="uid://coj8ae58joiqy" path="res://Art/UI [New]/Pause Button/PauseButtonDisabled.png" id="6_eeocu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbj54"]
 radius = 29.0
@@ -23,13 +24,15 @@ texture = ExtResource("2_1p603")
 
 [node name="PauseButton" type="TextureButton" parent="Camera2D"]
 z_index = 1
-offset_left = -896.0
-offset_top = 448.0
-offset_right = -832.0
-offset_bottom = 512.0
-texture_normal = ExtResource("3_u48t1")
-texture_pressed = ExtResource("4_3edoc")
-texture_hover = ExtResource("2_io4ib")
+offset_left = 824.265
+offset_top = 408.824
+offset_right = 888.265
+offset_bottom = 472.824
+scale = Vector2(1.4, 1.4)
+texture_normal = ExtResource("3_5fefm")
+texture_pressed = ExtResource("4_r71qf")
+texture_hover = ExtResource("5_2geme")
+texture_disabled = ExtResource("6_eeocu")
 ignore_texture_size = true
 stretch_mode = 5
 

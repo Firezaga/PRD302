@@ -1,9 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=33 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
-[ext_resource type="Texture2D" uid="uid://dqgiyf14idcm" path="res://Art/UI/PauseButtonBlue.png" id="2_5llrf"]
-[ext_resource type="Texture2D" uid="uid://frq66f336xyg" path="res://Art/UI/PauseButtonGrey.png" id="3_lufuq"]
-[ext_resource type="Texture2D" uid="uid://8hun6j3mq01t" path="res://Art/UI/PauseButtonRed.png" id="4_5bbhw"]
+[ext_resource type="Texture2D" uid="uid://cqvg7y6rrjgae" path="res://Art/UI [New]/Pause Button/PauseButtonNormal.png" id="2_nokbs"]
+[ext_resource type="Texture2D" uid="uid://bynd80vou5hs4" path="res://Art/UI [New]/Pause Button/PauseButtonPressed.png" id="3_rwdxs"]
+[ext_resource type="Texture2D" uid="uid://cwq0vcfdi3vh8" path="res://Art/UI [New]/Pause Button/PauseButtonHover.png" id="4_agn5c"]
+[ext_resource type="Texture2D" uid="uid://coj8ae58joiqy" path="res://Art/UI [New]/Pause Button/PauseButtonDisabled.png" id="5_iyhck"]
 [ext_resource type="PackedScene" uid="uid://t5no0sfgmup2" path="res://Scenes/Menus/pause__menu.tscn" id="5_w1u0m"]
 [ext_resource type="Texture2D" uid="uid://dcr5fqt8q6tcr" path="res://Art/Characters/Extor/SideScroller/ExtorSideScrollerPieces.png" id="6_64icl"]
 [ext_resource type="PackedScene" uid="uid://b3hl7rijx5lim" path="res://Scenes/Menus/cinematic_pause_menu.tscn" id="7_cbhu1"]
@@ -7549,13 +7550,15 @@ zoom = Vector2(0.75, 0.75)
 
 [node name="PauseButton" type="TextureButton" parent="Camera2D"]
 z_index = 1
-offset_left = -896.0
-offset_top = 448.0
-offset_right = -832.0
-offset_bottom = 512.0
-texture_normal = ExtResource("3_lufuq")
-texture_pressed = ExtResource("4_5bbhw")
-texture_hover = ExtResource("2_5llrf")
+offset_left = 824.265
+offset_top = 408.824
+offset_right = 888.265
+offset_bottom = 472.824
+scale = Vector2(1.4, 1.4)
+texture_normal = ExtResource("2_nokbs")
+texture_pressed = ExtResource("3_rwdxs")
+texture_hover = ExtResource("4_agn5c")
+texture_disabled = ExtResource("5_iyhck")
 ignore_texture_size = true
 stretch_mode = 5
 
