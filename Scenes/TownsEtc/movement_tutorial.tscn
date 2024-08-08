@@ -27,8 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://sxeu7ad64dvv" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece1.png" id="25_srknt"]
 [ext_resource type="Texture2D" uid="uid://b7jivmbn8uvwp" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece2.png" id="26_j0qtn"]
 [ext_resource type="Texture2D" uid="uid://c5pcdjb7akbqb" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece3.png" id="27_3tuwa"]
+[ext_resource type="Texture2D" path="res://Art/UI [New]/Square Button Blank/SquareDark.png" id="28_06pd4"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="28_pm6pk"]
 [ext_resource type="Texture2D" uid="uid://bkbrkp4yalu3y" path="res://Art/SideScroller/Structures/Structure3Dark.png" id="29_eb23l"]
+[ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="29_f8nwy"]
 [ext_resource type="Texture2D" uid="uid://do6h03n1jhuy4" path="res://Art/SideScroller/Structures/Structure1Dark.png" id="30_ksu2m"]
 [ext_resource type="Texture2D" uid="uid://b7glgt2m10hrb" path="res://Art/SideScroller/Structures/Structure2Dark.png" id="31_jbv4o"]
 [ext_resource type="Texture2D" uid="uid://bnci6qvherws8" path="res://Art/SideScroller/Foliage/TreeBack.png" id="32_tyr54"]
@@ -113,13 +115,6 @@ blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_biho8"]
 blend_mode = 1
-
-[sub_resource type="Gradient" id="Gradient_y6mv0"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uq5of"]
-gradient = SubResource("Gradient_y6mv0")
-fill_from = Vector2(0, 1)
-fill_to = Vector2(0.073913, 0.943478)
 
 [sub_resource type="GDScript" id="GDScript_0krsl"]
 script/source = "extends CharacterBody2D
@@ -508,18 +503,28 @@ texture = ExtResource("27_3tuwa")
 
 [node name="SpeechHint" type="Sprite2D" parent="Midground"]
 visible = false
-position = Vector2(3748, -346)
-scale = Vector2(0.572222, 0.572222)
-texture = SubResource("GradientTexture2D_uq5of")
+position = Vector2(3865, -151)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("28_06pd4")
 
 [node name="Label" type="Label" parent="Midground/SpeechHint"]
-offset_left = -8.0
-offset_top = -20.2105
-offset_right = 32.0
-offset_bottom = 23.7895
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = -64.5
+offset_right = -40.5
+offset_bottom = -35.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
+label_settings = ExtResource("29_f8nwy")
+metadata/_edit_use_anchors_ = true
 
 [node name="PlayerTown" parent="Midground" instance=ExtResource("28_pm6pk")]
 position = Vector2(805, -21)

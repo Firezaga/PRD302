@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgh8duyso88by"]
 
-[ext_resource type="Texture2D" uid="uid://dehy1j8jvi507" path="res://Art/UI/NinePatchGrey.png" id="1_eigoa"]
+[ext_resource type="Texture2D" uid="uid://be1rycee3li3o" path="res://Art/UI [New]/General Ninepatch/NinePatchGrey.png" id="1_5ijb5"]
 
 [node name="GreyNinePatch" type="NinePatchRect"]
 offset_left = 741.0
 offset_top = 327.0
 offset_right = 1137.0
 offset_bottom = 784.0
-texture = ExtResource("1_eigoa")
+texture = ExtResource("1_5ijb5")
 patch_margin_left = 33
 patch_margin_top = 18
 patch_margin_right = 33

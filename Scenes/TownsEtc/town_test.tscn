@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://bkbrkp4yalu3y" path="res://Art/SideScroller/Structures/Structure3Dark.png" id="29_3c8e2"]
 [ext_resource type="Texture2D" uid="uid://do6h03n1jhuy4" path="res://Art/SideScroller/Structures/Structure1Dark.png" id="30_w0voo"]
 [ext_resource type="Texture2D" uid="uid://bnci6qvherws8" path="res://Art/SideScroller/Foliage/TreeBack.png" id="31_fvfjh"]
+[ext_resource type="Texture2D" path="res://Art/UI [New]/Square Button Blank/SquareDark.png" id="31_ltn5s"]
+[ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="32_d0eq1"]
 [ext_resource type="Texture2D" uid="uid://b7glgt2m10hrb" path="res://Art/SideScroller/Structures/Structure2Dark.png" id="32_j0vjq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gptcc"]
@@ -121,13 +123,6 @@ blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_biho8"]
 blend_mode = 1
-
-[sub_resource type="Gradient" id="Gradient_y6mv0"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uq5of"]
-gradient = SubResource("Gradient_y6mv0")
-fill_from = Vector2(0, 1)
-fill_to = Vector2(0.073913, 0.943478)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
 radius = 16.0
@@ -487,18 +482,27 @@ texture = ExtResource("7_imin4")
 
 [node name="SpeechHint" type="Sprite2D" parent="Midground"]
 visible = false
-position = Vector2(3748, -346)
-scale = Vector2(0.572222, 0.572222)
-texture = SubResource("GradientTexture2D_uq5of")
+position = Vector2(3874, -176)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("31_ltn5s")
 
 [node name="Label" type="Label" parent="Midground/SpeechHint"]
-offset_left = -8.0
-offset_top = -20.2105
-offset_right = 32.0
-offset_bottom = 23.7895
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.5
+offset_top = -64.5
+offset_right = -39.5
+offset_bottom = -35.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
+label_settings = ExtResource("32_d0eq1")
 
 [node name="PlayerTown" parent="Midground" instance=ExtResource("1_1f5yi")]
 position = Vector2(805, -21)

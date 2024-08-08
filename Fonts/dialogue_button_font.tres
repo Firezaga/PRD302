@@ -1,3 +1,6 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://c2xbirwhr4xjo"]
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c2xbirwhr4xjo"]
+
+[ext_resource type="FontFile" uid="uid://c5yv28m51k336" path="res://Fonts/Oxanium/Oxanium-Medium.ttf" id="1_yq4vr"]
 
 [resource]
+font = ExtResource("1_yq4vr")

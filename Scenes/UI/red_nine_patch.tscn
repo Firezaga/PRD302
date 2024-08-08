@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3sw4lmv201vv"]
 
-[ext_resource type="Texture2D" uid="uid://dejiby1e82yoo" path="res://Art/UI/NinePatchRed.png" id="1_g11e6"]
+[ext_resource type="Texture2D" uid="uid://d125k8oi5p1c3" path="res://Art/UI [New]/General Ninepatch/NinePatchRed.png" id="1_d4bsd"]
 
 [node name="RedNinePatch" type="NinePatchRect"]
 offset_left = 1182.0
 offset_top = 177.0
 offset_right = 1863.0
 offset_bottom = 829.0
-texture = ExtResource("1_g11e6")
+texture = ExtResource("1_d4bsd")
 patch_margin_left = 33
 patch_margin_top = 18
 patch_margin_right = 33
