@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://c25wos2dasiwm"]
+[gd_scene load_steps=13 format=3 uid="uid://c25wos2dasiwm"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_oohnh"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="2_v67bk"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="3_ai1wi"]
-[ext_resource type="Texture2D" uid="uid://dehy1j8jvi507" path="res://Art/UI/NinePatchGrey.png" id="4_apgn2"]
-[ext_resource type="Texture2D" uid="uid://dx10d1nl5cryq" path="res://Art/UI/NinePatchBlue.png" id="5_4df8n"]
+[ext_resource type="Texture2D" path="res://Art/UI [New]/General Button Rect/RectNormalDark.png" id="4_ccrh1"]
+[ext_resource type="Texture2D" uid="uid://cailauutmx8ts" path="res://Art/UI [New]/General Button Rect/RectPressedBlue.png" id="5_6j12b"]
+[ext_resource type="Texture2D" uid="uid://b0t8vxdnl02j0" path="res://Art/UI [New]/General Button Rect/RectDisabled.png" id="6_5yqcd"]
+[ext_resource type="Texture2D" uid="uid://cynbnehslk0vn" path="res://Art/UI [New]/General Button Rect/RectHoverBlue.png" id="6_qdb17"]
 [ext_resource type="LabelSettings" uid="uid://c2xbirwhr4xjo" path="res://Fonts/dialogue_button_font.tres" id="6_wofe7"]
-[ext_resource type="Texture2D" uid="uid://dejiby1e82yoo" path="res://Art/UI/NinePatchRed.png" id="7_pneca"]
+[ext_resource type="Texture2D" uid="uid://fwroksbopjr6" path="res://Art/UI [New]/General Button Wave Y/WaveYNormal.png" id="7_vq4gi"]
+[ext_resource type="Texture2D" uid="uid://cel3leb25mkyi" path="res://Art/UI [New]/General Button Wave Y/WaveYPressedBlue.png" id="8_mewme"]
+[ext_resource type="Texture2D" uid="uid://bk6wvqpa3v6cs" path="res://Art/UI [New]/General Button Wave Y/WaveYHoverBlue.png" id="9_pi0f1"]
+[ext_resource type="Texture2D" uid="uid://blnn00c21gx81" path="res://Art/UI [New]/General Button Wave Y/WaveYDisabled.png" id="10_lelgh"]
 
 [node name="Dialogue" type="CanvasLayer"]
 process_mode = 3
@@ -63,10 +68,11 @@ layout_mode = 0
 offset_left = 184.0
 offset_top = 984.0
 offset_right = 544.0
-offset_bottom = 1048.0
-texture_normal = ExtResource("4_apgn2")
-texture_pressed = ExtResource("5_4df8n")
-texture_hover = ExtResource("5_4df8n")
+offset_bottom = 1054.0
+texture_normal = ExtResource("4_ccrh1")
+texture_pressed = ExtResource("5_6j12b")
+texture_hover = ExtResource("6_qdb17")
+texture_disabled = ExtResource("6_5yqcd")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -86,10 +92,11 @@ layout_mode = 0
 offset_left = 784.0
 offset_top = 984.0
 offset_right = 1144.0
-offset_bottom = 1048.0
-texture_normal = ExtResource("4_apgn2")
-texture_pressed = ExtResource("5_4df8n")
-texture_hover = ExtResource("5_4df8n")
+offset_bottom = 1054.0
+texture_normal = ExtResource("4_ccrh1")
+texture_pressed = ExtResource("5_6j12b")
+texture_hover = ExtResource("6_qdb17")
+texture_disabled = ExtResource("6_5yqcd")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -109,10 +116,11 @@ layout_mode = 0
 offset_left = 1408.0
 offset_top = 984.0
 offset_right = 1768.0
-offset_bottom = 1048.0
-texture_normal = ExtResource("4_apgn2")
-texture_pressed = ExtResource("5_4df8n")
-texture_hover = ExtResource("5_4df8n")
+offset_bottom = 1054.0
+texture_normal = ExtResource("4_ccrh1")
+texture_pressed = ExtResource("5_6j12b")
+texture_hover = ExtResource("6_qdb17")
+texture_disabled = ExtResource("6_5yqcd")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -128,46 +136,57 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="."]
-offset_left = -1.0
-offset_top = 721.0
-offset_right = 380.0
-offset_bottom = 761.0
+offset_left = -42.0
+offset_top = 718.0
+offset_right = 339.0
+offset_bottom = 758.0
 theme_override_font_sizes/font_size = 28
 text = "//SPACE = FFWD//"
+label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 368.0
-offset_top = 723.0
-offset_right = 749.0
-offset_bottom = 763.0
+offset_left = 252.0
+offset_top = 718.0
+offset_right = 633.0
+offset_bottom = 758.0
 theme_override_font_sizes/font_size = 28
 text = "//LEFT CLICK = CONTINUE//"
+label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1609.0
-offset_top = 702.0
-offset_right = 1857.0
-offset_bottom = 758.0
-texture_normal = ExtResource("4_apgn2")
-texture_pressed = ExtResource("7_pneca")
-texture_hover = ExtResource("5_4df8n")
+offset_left = 1617.0
+offset_top = 684.0
+offset_right = 1859.0
+offset_bottom = 746.0
+texture_normal = ExtResource("7_vq4gi")
+texture_pressed = ExtResource("8_mewme")
+texture_hover = ExtResource("9_pi0f1")
+texture_disabled = ExtResource("10_lelgh")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="TextureButton"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 8.0
-offset_right = 232.0
-offset_bottom = 48.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -20.0
+offset_right = 96.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 28
 text = "SKIP DIALOGUE"
+label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
