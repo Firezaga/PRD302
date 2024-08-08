@@ -291,9 +291,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Path" type="TextureRect" parent="Midground"]
 offset_left = -2959.0
-offset_top = -29.0
+offset_top = -5.0
 offset_right = 10607.0
-offset_bottom = 271.0
+offset_bottom = 295.0
 texture = ExtResource("12_ccjcb")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true

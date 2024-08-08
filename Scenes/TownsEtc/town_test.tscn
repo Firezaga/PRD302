@@ -125,7 +125,7 @@ blend_mode = 1
 blend_mode = 1
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jeohk"]
-radius = 16.0
+radius = 56.0146
 height = 992.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao53"]
@@ -176,12 +176,12 @@ position = Vector2(2335, -74)
 texture = ExtResource("5_8ftvt")
 
 [node name="PlanetL2" type="Sprite2D" parent="Background/Planets"]
-position = Vector2(6454.94, -257)
+position = Vector2(7167.88, -255)
 texture = ExtResource("3_2u5h5")
 flip_h = true
 
 [node name="PlanetS2" type="Sprite2D" parent="Background/Planets"]
-position = Vector2(5704.94, -329)
+position = Vector2(6177.94, -344)
 scale = Vector2(0.682679, 0.682679)
 texture = ExtResource("4_tjihn")
 
@@ -229,12 +229,12 @@ texture = ExtResource("9_y7syd")
 
 [node name="TreesSideAdd2" type="Sprite2D" parent="Background/Trees"]
 material = SubResource("CanvasItemMaterial_bj4ch")
-position = Vector2(6299, -274)
+position = Vector2(7011.94, -272)
 texture = ExtResource("6_we4kk")
 flip_h = true
 
 [node name="TreesSide2" type="Sprite2D" parent="Background/Trees"]
-position = Vector2(6760.94, -257)
+position = Vector2(7473.88, -255)
 texture = ExtResource("7_i8w4k")
 flip_h = true
 
@@ -252,9 +252,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Path" type="TextureRect" parent="Midground"]
 offset_left = -2959.0
-offset_top = -29.0
+offset_top = -5.0
 offset_right = 10607.0
-offset_bottom = 271.0
+offset_bottom = 295.0
 texture = ExtResource("4_m8rli")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
@@ -325,7 +325,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("16_rb0f3")
 
 [node name="Structure6" type="Sprite2D" parent="Midground/Structures"]
-position = Vector2(8254, 2.00001)
+position = Vector2(8459, 21)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("16_rb0f3")
 
@@ -428,18 +428,26 @@ texture = ExtResource("21_60sey")
 position = Vector2(-710, -29)
 
 [node name="PurpleRift" type="Sprite2D" parent="Midground/Rift"]
+position = Vector2(-50, -4)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("24_fv8do")
 
 [node name="PurpleRiftParticles" type="Sprite2D" parent="Midground/Rift"]
+position = Vector2(-50, -4)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("25_s7sxk")
 
 [node name="Rift2" type="Node2D" parent="Midground"]
 position = Vector2(7786, -29)
 
 [node name="PurpleRift" type="Sprite2D" parent="Midground/Rift2"]
+position = Vector2(68, -14)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("24_fv8do")
 
 [node name="PurpleRiftParticles" type="Sprite2D" parent="Midground/Rift2"]
+position = Vector2(68, -14)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("25_s7sxk")
 
 [node name="NPC" type="Sprite2D" parent="Midground"]
@@ -627,12 +635,12 @@ texture = ExtResource("31_fvfjh")
 position = Vector2(1112, -133)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1872, 8)
+position = Vector2(-1778, 109)
 rotation = 1.57589
 shape = SubResource("CapsuleShape2D_jeohk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(6652, 8)
+position = Vector2(6529, 78)
 rotation = 1.57589
 shape = SubResource("CapsuleShape2D_jeohk")
 
