@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_oohnh"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="2_v67bk"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="3_ai1wi"]
-[ext_resource type="Texture2D" path="res://Art/UI [New]/General Button Rect/RectNormalDark.png" id="4_ccrh1"]
+[ext_resource type="Texture2D" uid="uid://cy81vkpcns4me" path="res://Art/UI [New]/General Button Rect/RectNormalDark.png" id="4_ccrh1"]
 [ext_resource type="Texture2D" uid="uid://cailauutmx8ts" path="res://Art/UI [New]/General Button Rect/RectPressedBlue.png" id="5_6j12b"]
 [ext_resource type="Texture2D" uid="uid://b0t8vxdnl02j0" path="res://Art/UI [New]/General Button Rect/RectDisabled.png" id="6_5yqcd"]
 [ext_resource type="Texture2D" uid="uid://cynbnehslk0vn" path="res://Art/UI [New]/General Button Rect/RectHoverBlue.png" id="6_qdb17"]
@@ -52,6 +52,21 @@ theme_override_font_sizes/font_size = 31
 text = "Lorem ipsum"
 label_settings = ExtResource("3_ai1wi")
 autowrap_mode = 3
+
+[node name="LabelNew" type="RichTextLabel" parent="TextBackground"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 1767.0
+offset_bottom = 231.0
+theme_override_font_sizes/normal_font_size = 31
+theme_override_font_sizes/bold_font_size = 31
+theme_override_font_sizes/italics_font_size = 31
+theme_override_font_sizes/bold_italics_font_size = 31
+theme_override_font_sizes/mono_font_size = 31
+bbcode_enabled = true
+text = "Mother Chugger"
 
 [node name="DiaTimer" type="Timer" parent="."]
 wait_time = 0.5
