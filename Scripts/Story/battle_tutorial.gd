@@ -13,7 +13,7 @@ var DiaCount = 0
 
 #region Initialise all text and variables - with dialogue
 func _ready():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S1.png"
 	Global.DiaText = "THERE DOESN'T SEEM TO BE A SURFACE FOR YOUR LEGS TO STAND ON, YET ALL OF YOU SEEMINLY STAND UPRIGHT AS IF THERE WAS A FLOOR. BEOUL LOOKS AS IF HE HAS A HARD TIME ADJUSTING. CLARICO IS STILL LOOKING DOWN, PRESUMABLY STILL TIRED. ALCORA ON THE OTHER HAND IS LOOKING FOR THOSE MORSELS YOU TALKED ABOUT BEFOREHAND.~CLARICO: Everyone, I have a request.~VERITY: Go on, I'm listening.~CLARICO: I want to keep this short... I don't feel like I can last much longer...~ALCORA: Ah, don't worry! It's just one little rat, what could possibly go wrong?~VERITY: I'm telling you, if this Extor is a fake, Clarico is doomed.~CLARICO:  If that is the case, I can die with shame knowing all hope is lost.~ALCORA: Clarico...~Alcora suddenly looks sad. She suddenly seems sorry.~BEOUL: Hey! We looking for the morsel or what?%"
 	Global.LOAD_dialogue()
 	
@@ -69,7 +69,7 @@ func battle_start1():
 	$AnimationPlayer.play("start_battle")
 
 func Dia():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S2.png"
 	Global.DiaText = "Suddenly, something approaches Beoul from behind. Alcora is the first to take notice.~ALCORA: IT'S BEHIND YOU!~And so the fight begins...%"
 	await Global.LOAD_dialogue()
 	
@@ -83,13 +83,13 @@ func Dia1():
 	DiaCount += 1
 
 func Dia3():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S4.png"
 	Global.DiaText = "ALCORA: Oh no, CLARICO!?~VERITY: This is bad, let's get her to the safe point.~BEOUL: Don't worry Alcora, I'll carry her. She's still got a heartbeat. Must be for you.~Alcora is... angry?~ALCORA: Stop it! She'd better be alive when we get there, or else!~ As per your group's agreement, everyone returned to the safe point.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
 func Dia4():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S5.png"
 	Global.DiaText = "BACK INTO THE SAFE POINT, THE BLUE PORTAL SEEMS TO RADIATE SOME ENERGY.~ALCORA: Is she okay?~BEOUL: Yeah, she's fine. I think she's just tired.~VERITY: Let's set her down here, near the portal. I'll set up the bedding, Alcora set up the tent, and Extor... Go help someone.~Extor went ahead to help each side. Clarico is sleeping soundly, Alcora is looking after her, Beoul is deep in thought about something, and Verity ponders about religion, though he noticed you now idle.~VERITY: Hey, bing bong. So, you're the real thing, eh?~EXTOR: ...~VERITY:  Well, can't blame ya for making me lose my bet. It's just nature to prove who we are to others.~VERITY: Can I ask you; do you know anything about the \"Annihilator Averters\" or something?~Extor tries to recall any detail regarding the Annihilation Averters, but to their surprise, they don't recall anything...~EXTOR: I can't think of anything...~VERITY: Drat! That's the only reason why I thought you were fake! The moment you showed up like some lost wandering zombie, I was SO suspicious I was ready to hurt you too.~Verity is, simply put, NOT happy.~VERITY: A good thing Clarico lowered her energy, it was the sign something's definitely up... in a good way I mean.~VERITY: Don't apologize, by the way. I think you've proven yourself more than Clarico ever thought you were. Now if you'll excuse me, I think I'll go get a nap.~The party all rest.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
