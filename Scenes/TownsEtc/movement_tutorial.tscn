@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://sxeu7ad64dvv" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece1.png" id="25_srknt"]
 [ext_resource type="Texture2D" uid="uid://b7jivmbn8uvwp" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece2.png" id="26_j0qtn"]
 [ext_resource type="Texture2D" uid="uid://c5pcdjb7akbqb" path="res://Art/SideScroller/Portal Separate Pieces/PortalPiece3.png" id="27_3tuwa"]
-[ext_resource type="Texture2D" path="res://Art/UI [New]/Square Button Blank/SquareDark.png" id="28_06pd4"]
+[ext_resource type="Texture2D" uid="uid://bddmo23f57isl" path="res://Art/UI [New]/Square Button Blank/SquareDark.png" id="28_06pd4"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="28_pm6pk"]
 [ext_resource type="Texture2D" uid="uid://bkbrkp4yalu3y" path="res://Art/SideScroller/Structures/Structure3Dark.png" id="29_eb23l"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="29_f8nwy"]
