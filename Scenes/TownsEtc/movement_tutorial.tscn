@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Story/movement_tutorial.gd" id="1_r7kht"]
 [ext_resource type="Shader" path="res://Shaders/texture_scrolling2.gdshader" id="2_4can1"]
-[ext_resource type="Texture2D" uid="uid://vym8jn3e5xt0" path="res://Art/SideScroller/SkyBG.png" id="2_033lv"]
 [ext_resource type="Texture2D" uid="uid://b46ofo60gy2ou" path="res://Art/SideScroller/PlanetL.png" id="3_0wfwq"]
+[ext_resource type="Texture2D" uid="uid://c52oi5gte8c7q" path="res://Art/SideScroller/SkyBGBlank.png" id="3_aht62"]
 [ext_resource type="Texture2D" uid="uid://dm37ojebmldcq" path="res://Art/SideScroller/PlanetS.png" id="4_letp4"]
 [ext_resource type="Texture2D" uid="uid://yvgxwqnocyxl" path="res://Art/SideScroller/PlanetM.png" id="5_csyn5"]
 [ext_resource type="Texture2D" uid="uid://cukmlmmh8a5ew" path="res://Art/SideScroller/Foliage/AuroraADD.png" id="6_icaw5"]
@@ -217,7 +217,7 @@ offset_left = -2953.0
 offset_top = -1452.0
 offset_right = 10631.0
 offset_bottom = -12.0
-texture = ExtResource("2_033lv")
+texture = ExtResource("3_aht62")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
