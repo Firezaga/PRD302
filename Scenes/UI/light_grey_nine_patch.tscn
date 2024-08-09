@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://clwuofmaohfgn"]
+
+[ext_resource type="Texture2D" uid="uid://dpxgmc8073jsd" path="res://Art/UI [New]/General Ninepatch/NinePatchLightGrey.png" id="1_kpx0h"]
+
+[node name="LightGreyNinePatch" type="NinePatchRect"]
+offset_left = 194.0
+offset_top = 189.0
+offset_right = 594.0
+offset_bottom = 819.0
+texture = ExtResource("1_kpx0h")
+patch_margin_left = 32
+patch_margin_top = 17
+patch_margin_right = 33
+patch_margin_bottom = 17
