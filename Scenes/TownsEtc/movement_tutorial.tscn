@@ -1,6 +1,7 @@
-[gd_scene load_steps=59 format=3 uid="uid://gxejndecq43m"]
+[gd_scene load_steps=62 format=3 uid="uid://gxejndecq43m"]
 
 [ext_resource type="Script" path="res://Scripts/Story/movement_tutorial.gd" id="1_r7kht"]
+[ext_resource type="Shader" path="res://Shaders/texture_scrolling2.gdshader" id="2_4can1"]
 [ext_resource type="Texture2D" uid="uid://vym8jn3e5xt0" path="res://Art/SideScroller/SkyBG.png" id="2_033lv"]
 [ext_resource type="Texture2D" uid="uid://b46ofo60gy2ou" path="res://Art/SideScroller/PlanetL.png" id="3_0wfwq"]
 [ext_resource type="Texture2D" uid="uid://dm37ojebmldcq" path="res://Art/SideScroller/PlanetS.png" id="4_letp4"]
@@ -38,6 +39,26 @@
 [ext_resource type="Texture2D" uid="uid://dkwvl0vxcltkv" path="res://Art/Characters/Beoul/Sidescroller/BeoulIdle1.png" id="34_ru8b3"]
 [ext_resource type="Texture2D" uid="uid://b5hcwh8sxn7o2" path="res://Art/Characters/Clarico/Sidescroller/ClaricoIdle1.png" id="35_w10ej"]
 [ext_resource type="Texture2D" uid="uid://uoq1x7tpsxks" path="res://Art/Characters/Verity/SideScroller/VerityIdle1.png" id="36_6an48"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vl8nq"]
+load_path = "res://.godot/imported/SkyBG.png-a9a86e395f66a1e5bb94b9ea62713528.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncqo5"]
+shader = ExtResource("2_4can1")
+shader_parameter/scroll_speed = 0.068
+shader_parameter/angle_degrees = 0.0
+shader_parameter/repeat_x = 1.0
+shader_parameter/repeat_y = 1.0
+shader_parameter/row_offset = 1.0
+shader_parameter/brightness = -0.173
+shader_parameter/contrast = 1.548
+shader_parameter/saturation = 0.685
+shader_parameter/redVal = 1.0
+shader_parameter/greenVal = 1.0
+shader_parameter/blueVal = 1.0
+shader_parameter/tint_color = Color(1, 1, 1, 1)
+shader_parameter/tint_effect_factor = 0.0
+shader_parameter/texture_to_scroll = SubResource("CompressedTexture2D_vl8nq")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_urejp"]
 blend_mode = 1
@@ -191,6 +212,7 @@ script = ExtResource("1_r7kht")
 position = Vector2(-10, -140)
 
 [node name="Sky" type="TextureRect" parent="Background"]
+material = SubResource("ShaderMaterial_ncqo5")
 offset_left = -2953.0
 offset_top = -1452.0
 offset_right = 10631.0
