@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://cuimdqgelhvyp"]
+[gd_scene load_steps=13 format=3 uid="uid://cuimdqgelhvyp"]
 
 [ext_resource type="Script" path="res://Scripts/settings.gd" id="1_wn6k5"]
 [ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="2_tbunh"]
-[ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="3_47cno"]
-[ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="4_qxdph"]
+[ext_resource type="LabelSettings" uid="uid://d33ujo48pv6fy" path="res://Fonts/heading_font_medium.tres" id="3_hvc3v"]
+[ext_resource type="Texture2D" uid="uid://dsem3sfl3umaa" path="res://Art/UI [New]/General Button Wave X/WaveXNormal.png" id="4_8vnb3"]
+[ext_resource type="Texture2D" uid="uid://wg5w1nmgbk72" path="res://Art/UI [New]/General Button Wave X/WaveXPressedBlue.png" id="5_fy2kr"]
 [ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="5_mpvfg"]
+[ext_resource type="Texture2D" uid="uid://20i4gdqiw18i" path="res://Art/UI [New]/General Button Wave X/WaveXHoverBlue.png" id="6_eets3"]
+[ext_resource type="Texture2D" uid="uid://cyolhflkffudd" path="res://Art/UI [New]/General Button Wave X/WaveXDisabled.png" id="7_a48p7"]
+[ext_resource type="Texture2D" uid="uid://cqmbafgsltvjj" path="res://Art/UI [New]/General Button Wave X/WaveXPressedRed.png" id="9_w5f4y"]
+[ext_resource type="Texture2D" uid="uid://crrk68rmo5sbj" path="res://Art/UI [New]/General Button Wave X/WaveXHoverRed.png" id="10_jr4uv"]
 
 [sub_resource type="Gradient" id="Gradient_0igod"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -31,66 +36,85 @@ offset_right = 1872.0
 offset_bottom = 1043.0
 
 [node name="Label" type="Label" parent="."]
-offset_left = 847.0
-offset_top = 76.0
-offset_right = 1048.0
-offset_bottom = 148.0
+offset_left = 852.0
+offset_top = 90.0
+offset_right = 1053.0
+offset_bottom = 162.0
 theme_override_font_sizes/font_size = 52
 text = "Settings"
+label_settings = ExtResource("3_hvc3v")
 
 [node name="MainMenuButton" type="TextureButton" parent="."]
 anchors_preset = -1
-anchor_left = 0.164583
-anchor_top = 0.872222
-anchor_right = 0.297917
-anchor_bottom = 0.909259
-offset_left = 1272.0
-offset_top = -24.9998
-offset_right = 1272.0
-offset_bottom = -24.9998
-texture_normal = ExtResource("3_47cno")
-texture_pressed = ExtResource("4_qxdph")
-texture_hover = ExtResource("4_qxdph")
+anchor_left = 0.056
+anchor_top = 0.871
+anchor_right = 0.202
+anchor_bottom = 0.933
+offset_left = -0.520004
+offset_top = 0.319946
+offset_right = -0.840027
+offset_bottom = 0.360046
+texture_normal = ExtResource("4_8vnb3")
+texture_pressed = ExtResource("5_fy2kr")
+texture_hover = ExtResource("6_eets3")
+texture_disabled = ExtResource("7_a48p7")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="MainMenuButton"]
-layout_mode = 0
-offset_left = 71.0
-offset_top = 7.0
-offset_right = 187.0
-offset_bottom = 30.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -4.5
+offset_right = 58.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Back"
+text = "RETURN"
 label_settings = ExtResource("5_mpvfg")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="TextureButton" parent="."]
 anchors_preset = -1
-anchor_left = 0.654688
-anchor_top = 0.874074
-anchor_right = 0.788021
-anchor_bottom = 0.911111
-offset_left = 334.999
-offset_top = 39.0001
-offset_right = 334.999
-offset_bottom = 39.0001
-texture_normal = ExtResource("3_47cno")
-texture_pressed = ExtResource("4_qxdph")
-texture_hover = ExtResource("4_qxdph")
+anchor_left = 0.807
+anchor_top = 0.871
+anchor_right = 0.953
+anchor_bottom = 0.933
+offset_left = 0.559937
+offset_top = 0.319946
+offset_right = 0.239868
+offset_bottom = 0.359985
+texture_normal = ExtResource("4_8vnb3")
+texture_pressed = ExtResource("9_w5f4y")
+texture_hover = ExtResource("10_jr4uv")
+texture_disabled = ExtResource("7_a48p7")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="QuitButton"]
-layout_mode = 0
-offset_left = 71.0
-offset_top = 7.0
-offset_right = 187.0
-offset_bottom = 30.0
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -4.5
+offset_right = 58.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Quit Game"
+text = "QUIT GAME"
 label_settings = ExtResource("5_mpvfg")
 horizontal_alignment = 1
 
