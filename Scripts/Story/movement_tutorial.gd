@@ -48,8 +48,8 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	$Midground/PlayerTown.position.x = 1112
-	$Midground/PlayerTown.position.y = -133
+	$Midground/PlayerTown.position.x = 765
+	$Midground/PlayerTown.position.y = -21
 
 
 func _on_npc_area_area_entered(area):
