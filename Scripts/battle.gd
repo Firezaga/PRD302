@@ -1520,9 +1520,11 @@ func PT_Extor():
 	$TeamOrder/Slot2.scale = Vector2(0.2, 0.2)
 	$TeamOrder/Slot3.scale = Vector2(0.2, 0.2)
 	$TeamOrder/Slot4.scale = Vector2(0.2, 0.2)
-	if Global.PlayerAPCur < 20:
-		$Buttons/Extor/ESpecialsButton.visible = false
+	if Global.PlayerAPCur <= 19:
+		$Buttons/Extor/ESpecialsButton.disabled = true
+		$Buttons/Extor/ESpecialsButton.visible = true
 	else:
+		$Buttons/Extor/ESpecialsButton.disabled = false
 		$Buttons/Extor/ESpecialsButton.visible = true
 	$Buttons/Extor.visible = true
 
