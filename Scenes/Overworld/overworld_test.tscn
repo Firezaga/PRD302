@@ -161,6 +161,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("19_16riq")
 
 [node name="HubWorldPlanets" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 
 [node name="BluePlanet" type="Sprite2D" parent="ParallaxBackground/HubWorldPlanets"]
 position = Vector2(-153, -276)
