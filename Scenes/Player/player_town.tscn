@@ -7760,10 +7760,14 @@ shape = SubResource("CapsuleShape2D_rb5lx")
 
 [node name="MovementTutorial" parent="." instance=ExtResource("7_vwxk5")]
 visible = false
-offset_left = -829.0
-offset_top = -512.0
-offset_right = 848.0
-offset_bottom = -408.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -486.0
+offset_top = -485.0
+offset_right = 490.0
+offset_bottom = -381.0
+grow_horizontal = 2
 
 [node name="Label" type="Label" parent="MovementTutorial"]
 layout_mode = 1
