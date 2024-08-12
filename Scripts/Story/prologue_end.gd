@@ -34,7 +34,7 @@ func _process(delta):
 
 func Dia():
 	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
-	Global.DiaText = "^EXTOR APPROACHES THE TWO.~EXTOR: Are you okay?~ALCORA: She said to give her a minute. Might as well do something else while we wait.~ALCORA: Oh, and she said you were amazing. Exceeded her expectations by a cosmic mile.~@^I'm like that.^It was nothing.^Thanks^ALCORA: For a second there, I was expecting you to destroy reality or something!%^ALCORA: If there's anything smaller, I wanna see you tear it to shreds!%^ALCORA: Heh... makes me wish I was as strong as you.%^"
+	Global.DiaText = "^YOU APPROACH THE TWO.~EXTOR: Are you okay?~ALCORA: She said to give her a minute. Might as well do something else while we wait.~ALCORA: Oh, and she said you were amazing. Exceeded her expectations by a cosmic mile.~@^I'm like that.^It was nothing.^Thanks^ALCORA: For a second there, I was expecting you to destroy reality or something!%^ALCORA: If there's anything smaller, I wanna see you tear it to shreds!%^ALCORA: Heh... makes me wish I was as strong as you.%^"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
