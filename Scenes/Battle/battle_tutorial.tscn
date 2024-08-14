@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dptnfvantwogv"]
+[gd_scene load_steps=42 format=3 uid="uid://dptnfvantwogv"]
 
 [ext_resource type="Script" path="res://Scripts/Story/battle_tutorial.gd" id="1_c2sm0"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_ajltp"]
@@ -10,16 +10,30 @@
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="7_jfa18"]
 [ext_resource type="Texture2D" uid="uid://cqel1uur1sx7e" path="res://Art/BlakeTest/Comp2.png" id="8_enevr"]
 [ext_resource type="Texture2D" uid="uid://ck4fqj11vhc5p" path="res://Art/Characters/Extor/Battle/ExtorBattleIdle1.png" id="8_rw18e"]
-[ext_resource type="Texture2D" uid="uid://bahld1iy3d2uy" path="res://Art/UI/Battle/HPBarBack.png" id="9_7fv1b"]
 [ext_resource type="Texture2D" uid="uid://cacd20vnclbdm" path="res://Art/BlakeTest/Comp3.png" id="9_ndrll"]
-[ext_resource type="Texture2D" uid="uid://dtbj53oqh3j7w" path="res://Art/UI/Battle/HPBarFront.png" id="10_4k1gf"]
 [ext_resource type="Texture2D" uid="uid://dt1d7qcr2jtkv" path="res://Art/BlakeTest/Comp4.png" id="10_kiujc"]
-[ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="11_roowt"]
+[ext_resource type="Texture2D" uid="uid://c3m4dvug7ees6" path="res://Art/UI [New]/Bars/HPBarBack.png" id="11_4ldmr"]
+[ext_resource type="Texture2D" uid="uid://chr2pejdtvnx1" path="res://Art/UI [New]/Bars/HPBarFront.png" id="12_ja4bq"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="12_rd3yp"]
+[ext_resource type="Texture2D" uid="uid://7cyty8vc81o0" path="res://Art/UI [New]/Bars/HPBarFill.png" id="13_70qx5"]
 [ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="13_y2dij"]
 [ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="14_4bi7d"]
 [ext_resource type="LabelSettings" uid="uid://c7uq15oceubm2" path="res://Fonts/button_font.tres" id="15_2y2r2"]
-[ext_resource type="Texture2D" uid="uid://dij0vhca16o61" path="res://Art/UI/Battle/Wave.png" id="19_rgoc0"]
+[ext_resource type="Texture2D" uid="uid://bo57m7cxkmo2y" path="res://Art/UI [New]/Battle Wave/Wave.png" id="19_a7qi3"]
+[ext_resource type="Texture2D" uid="uid://cndh4vdsn3p22" path="res://Art/UI [New]/General Button Wave Y/WaveYPressedRed.png" id="19_gevjl"]
+[ext_resource type="Texture2D" uid="uid://bo3lamk27bmfo" path="res://Art/UI [New]/General Button Wave Y/WaveYHoverRed.png" id="20_nyihe"]
+[ext_resource type="Texture2D" uid="uid://dhrkkjy6w86ef" path="res://Art/UI [New]/Battle Panel Buttons/LeftEdgeButtonNormal.png" id="21_gbb4v"]
+[ext_resource type="Texture2D" uid="uid://fwroksbopjr6" path="res://Art/UI [New]/General Button Wave Y/WaveYNormal.png" id="21_wtuf5"]
+[ext_resource type="Texture2D" uid="uid://cel3leb25mkyi" path="res://Art/UI [New]/General Button Wave Y/WaveYPressedBlue.png" id="22_4ew0g"]
+[ext_resource type="Texture2D" uid="uid://kbp1lq3dx4cf" path="res://Art/UI [New]/Battle Panel Buttons/LeftEdgeButtonPressed.png" id="22_jl2ci"]
+[ext_resource type="Texture2D" uid="uid://bk6wvqpa3v6cs" path="res://Art/UI [New]/General Button Wave Y/WaveYHoverBlue.png" id="23_b4as7"]
+[ext_resource type="Texture2D" uid="uid://bp0fmljl4rh4" path="res://Art/UI [New]/Battle Panel Buttons/LeftEdgeButtonHover.png" id="23_vad00"]
+[ext_resource type="Texture2D" uid="uid://c73rm26qkv463" path="res://Art/UI [New]/Battle Panel Buttons/LeftEdgeButtonDisabled.png" id="24_r7ek3"]
+[ext_resource type="Texture2D" uid="uid://blnn00c21gx81" path="res://Art/UI [New]/General Button Wave Y/WaveYDisabled.png" id="24_slypl"]
+[ext_resource type="Texture2D" uid="uid://b554arv3wsc3f" path="res://Art/UI [New]/Battle Panel Buttons/MiddleButtonNormal.png" id="25_aby0o"]
+[ext_resource type="Texture2D" uid="uid://cji62f75tysx5" path="res://Art/UI [New]/Battle Panel Buttons/MiddleButtonPressed.png" id="26_p5p86"]
+[ext_resource type="Texture2D" uid="uid://dsknevab2dfcl" path="res://Art/UI [New]/Battle Panel Buttons/MiddleButtonHover.png" id="27_at457"]
+[ext_resource type="Texture2D" uid="uid://c627py3jw73k1" path="res://Art/UI [New]/Battle Panel Buttons/MiddleButtonDisabled.png" id="28_r5h2n"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -143,7 +157,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1452, 568), Vector2(1452, 580)]
+"values": [Vector2(1616, 583), Vector2(1616, 603)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -203,7 +217,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(868, 434), Vector2(868, 500)]
+"values": [Vector2(911, 472), Vector2(911, 510)]
 }
 
 [sub_resource type="Animation" id="Animation_3iwgp"]
@@ -219,7 +233,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0.5, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-391, -609), Vector2(868, 434)]
+"values": [Vector2(-391, -609), Vector2(911, 472)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -267,7 +281,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0.5, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2580, 572.836), Vector2(1452, 572.836)]
+"values": [Vector2(2580, 572.836), Vector2(1616, 583)]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
@@ -333,7 +347,6 @@ process_mode = 3
 script = ExtResource("1_c2sm0")
 
 [node name="Background" type="TextureRect" parent="."]
-modulate = Color(0, 0, 0, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -354,9 +367,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 48.0
-offset_top = -467.0
+offset_top = 24.0
 offset_right = -1384.0
-offset_bottom = -1123.0
+offset_bottom = -632.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -367,13 +380,13 @@ offset_top = 16.0
 offset_right = 472.0
 offset_bottom = 408.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "vd
-ds
-v
-sd
-fd
-sfsdf
-sd
+text = "--
+--
+--
+--
+--
+--
+--
 "
 label_settings = ExtResource("4_hdu73")
 horizontal_alignment = 2
@@ -398,38 +411,42 @@ text = "ATTACK DEBUG"
 
 [node name="Button3" type="Button" parent="Log"]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 130.0
-offset_right = 157.0
-offset_bottom = 161.0
+offset_left = 35.0
+offset_top = 127.0
+offset_right = 171.0
+offset_bottom = 158.0
 text = "DEFENSE DEBUG"
 
 [node name="Enemy" type="Sprite2D" parent="."]
-position = Vector2(-391, -609)
+position = Vector2(911, 472)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_e01j0")
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(2580, 572.836)
-scale = Vector2(0.415039, 0.415039)
+position = Vector2(1616, 583)
+scale = Vector2(0.477078, 0.477078)
 texture = ExtResource("8_rw18e")
 
 [node name="Comp1" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(-467.426, 91.5577)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("7_ano37")
 
 [node name="Comp2" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(479.473, -197.572)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("8_enevr")
 
 [node name="Comp3" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(-518.024, 595.125)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_ndrll")
 
 [node name="Comp4" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(638.494, 245.76)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_kiujc")
@@ -442,7 +459,6 @@ offset_bottom = 128.0
 border_width = 5.0
 
 [node name="EnemyHealth" type="TextureProgressBar" parent="HealthBars"]
-modulate = Color(1, 0, 0, 0)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 32.0
@@ -451,14 +467,13 @@ offset_bottom = 72.0
 value = 52.0
 fill_mode = 6
 nine_patch_stretch = true
-texture_under = ExtResource("9_7fv1b")
-texture_over = ExtResource("10_4k1gf")
-texture_progress = ExtResource("11_roowt")
+texture_under = ExtResource("11_4ldmr")
+texture_over = ExtResource("12_ja4bq")
+texture_progress = ExtResource("13_70qx5")
 tint_over = Color(1, 1, 1, 0.905882)
 tint_progress = Color(1, 0, 0, 0.717647)
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="HealthBars"]
-modulate = Color(0, 1, 0, 0)
 layout_mode = 0
 offset_left = 696.0
 offset_top = 32.0
@@ -467,17 +482,17 @@ offset_bottom = 72.0
 value = 52.0
 fill_mode = 6
 nine_patch_stretch = true
-texture_under = ExtResource("9_7fv1b")
-texture_over = ExtResource("10_4k1gf")
-texture_progress = ExtResource("11_roowt")
+texture_under = ExtResource("11_4ldmr")
+texture_over = ExtResource("12_ja4bq")
+texture_progress = ExtResource("13_70qx5")
 tint_over = Color(1, 1, 1, 0.905882)
 tint_progress = Color(0, 0.74902, 0.960784, 0.870588)
 
 [node name="Buttons" type="ReferenceRect" parent="."]
 offset_left = 1328.0
-offset_top = 1144.0
+offset_top = 808.0
 offset_right = 1856.0
-offset_bottom = 1376.0
+offset_bottom = 1040.0
 border_color = Color(0, 1, 0, 1)
 border_width = 5.0
 
@@ -503,23 +518,30 @@ border_width = 5.0
 
 [node name="EAttackButton" type="TextureButton" parent="Buttons/Extor"]
 layout_mode = 0
-offset_left = 79.0
+offset_left = 65.0
 offset_top = 48.0
-offset_right = 199.0
+offset_right = 211.0
 offset_bottom = 96.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Extor/EAttackButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Attack"
 label_settings = ExtResource("15_2y2r2")
@@ -527,23 +549,30 @@ horizontal_alignment = 1
 
 [node name="EDefendButton" type="TextureButton" parent="Buttons/Extor"]
 layout_mode = 0
-offset_left = 329.0
+offset_left = 315.0
 offset_top = 49.0
-offset_right = 449.0
+offset_right = 461.0
 offset_bottom = 97.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Extor/EDefendButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Defend"
 label_settings = ExtResource("15_2y2r2")
@@ -573,23 +602,31 @@ horizontal_alignment = 1
 
 [node name="ESpecialsButton" type="TextureButton" parent="Buttons/Extor"]
 layout_mode = 0
-offset_left = 207.0
+offset_left = 193.0
 offset_top = 148.0
-offset_right = 327.0
+offset_right = 339.0
 offset_bottom = 196.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Extor/ESpecialsButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+modulate = Color(0.262745, 0.74902, 0.960784, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Specials"
 label_settings = ExtResource("15_2y2r2")
@@ -605,22 +642,31 @@ border_width = 5.0
 
 [node name="AllOutATKButton" type="TextureButton" parent="Buttons/Extor/Specials"]
 layout_mode = 0
-offset_left = 79.0
-offset_top = 48.0
-offset_right = 199.0
-offset_bottom = 96.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 74.0
+offset_top = 83.0
+offset_right = 220.0
+offset_bottom = 131.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("19_gevjl")
+texture_hover = ExtResource("20_nyihe")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Extor/Specials/AllOutATKButton"]
-layout_mode = 0
-offset_top = 11.0
-offset_right = 120.0
-offset_bottom = 39.0
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -10.5
+offset_right = 60.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "All Out ATK"
 label_settings = ExtResource("15_2y2r2")
@@ -628,29 +674,37 @@ horizontal_alignment = 1
 
 [node name="AllOutDEFButton" type="TextureButton" parent="Buttons/Extor/Specials"]
 layout_mode = 0
-offset_left = 322.0
-offset_top = 51.0
-offset_right = 442.0
-offset_bottom = 99.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 306.0
+offset_top = 83.0
+offset_right = 452.0
+offset_bottom = 131.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Extor/Specials/AllOutDEFButton"]
-layout_mode = 0
-offset_top = 11.0
-offset_right = 120.0
-offset_bottom = 34.0
+modulate = Color(0.262745, 0.74902, 0.960784, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -11.5
+offset_right = 60.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "All Out DEF"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="Comp1" type="ReferenceRect" parent="Buttons"]
-visible = false
 layout_mode = 0
 offset_right = 528.0
 offset_bottom = 232.0
@@ -659,23 +713,30 @@ border_width = 5.0
 
 [node name="C1T1Button" type="TextureButton" parent="Buttons/Comp1"]
 layout_mode = 0
-offset_left = 3.0
+offset_left = 2.0
 offset_top = 2.0
-offset_right = 123.0
+offset_right = 142.0
 offset_bottom = 50.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_gbb4v")
+texture_pressed = ExtResource("22_jl2ci")
+texture_hover = ExtResource("23_vad00")
+texture_disabled = ExtResource("24_r7ek3")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
 label_settings = ExtResource("15_2y2r2")
@@ -683,97 +744,123 @@ horizontal_alignment = 1
 
 [node name="C1T1A1Button" type="TextureButton" parent="Buttons/Comp1"]
 layout_mode = 0
-offset_left = 65.0
-offset_top = 83.0
-offset_right = 185.0
-offset_bottom = 131.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 25.0
+offset_top = 84.0
+offset_right = 171.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T1A1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C1T1A2Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
-offset_left = 210.0
-offset_top = 82.0
-offset_right = 330.0
-offset_bottom = 130.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 191.0
+offset_top = 84.0
+offset_right = 337.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T1A2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C1T1A3Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
-offset_left = 365.0
-offset_top = 81.0
-offset_right = 485.0
-offset_bottom = 129.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 358.0
+offset_top = 84.0
+offset_right = 504.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T1A3Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C1T2Button" type="TextureButton" parent="Buttons/Comp1"]
-visible = false
 layout_mode = 0
-offset_left = 133.0
-offset_right = 253.0
-offset_bottom = 48.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 134.0
+offset_top = 2.0
+offset_right = 274.0
+offset_bottom = 50.0
+texture_normal = ExtResource("25_aby0o")
+texture_pressed = ExtResource("26_p5p86")
+texture_hover = ExtResource("27_at457")
+texture_disabled = ExtResource("28_r5h2n")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 2"
 label_settings = ExtResource("15_2y2r2")
@@ -782,23 +869,30 @@ horizontal_alignment = 1
 [node name="C1T2A1Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
 layout_mode = 0
-offset_left = 65.0
-offset_top = 83.0
-offset_right = 185.0
-offset_bottom = 131.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 25.0
+offset_top = 84.0
+offset_right = 171.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T2A1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
 label_settings = ExtResource("15_2y2r2")
@@ -807,23 +901,30 @@ horizontal_alignment = 1
 [node name="C1T2A2Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
 layout_mode = 0
-offset_left = 210.0
-offset_top = 82.0
-offset_right = 330.0
-offset_bottom = 130.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 191.0
+offset_top = 84.0
+offset_right = 337.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T2A2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
 label_settings = ExtResource("15_2y2r2")
@@ -832,23 +933,30 @@ horizontal_alignment = 1
 [node name="C1T2A3Button" type="TextureButton" parent="Buttons/Comp1"]
 visible = false
 layout_mode = 0
-offset_left = 365.0
-offset_top = 81.0
-offset_right = 485.0
-offset_bottom = 129.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 358.0
+offset_top = 84.0
+offset_right = 504.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1T2A3Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
 label_settings = ExtResource("15_2y2r2")
@@ -1055,23 +1163,30 @@ horizontal_alignment = 1
 
 [node name="C1SwapButton" type="TextureButton" parent="Buttons/Comp1"]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 164.0
-offset_right = 186.0
-offset_bottom = 212.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 121.0
+offset_top = 157.0
+offset_right = 249.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1SwapButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
 label_settings = ExtResource("15_2y2r2")
@@ -1079,23 +1194,30 @@ horizontal_alignment = 1
 
 [node name="C1WaitButton" type="TextureButton" parent="Buttons/Comp1"]
 layout_mode = 0
-offset_left = 309.0
-offset_top = 162.0
-offset_right = 429.0
-offset_bottom = 210.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 272.0
+offset_top = 157.0
+offset_right = 400.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp1/C1WaitButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 label_settings = ExtResource("15_2y2r2")
@@ -1217,23 +1339,30 @@ border_width = 5.0
 
 [node name="C2T1Button" type="TextureButton" parent="Buttons/Comp2"]
 layout_mode = 0
-offset_left = 3.0
+offset_left = 2.0
 offset_top = 2.0
-offset_right = 123.0
+offset_right = 142.0
 offset_bottom = 50.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_gbb4v")
+texture_pressed = ExtResource("22_jl2ci")
+texture_hover = ExtResource("23_vad00")
+texture_disabled = ExtResource("24_r7ek3")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
 label_settings = ExtResource("15_2y2r2")
@@ -1241,97 +1370,123 @@ horizontal_alignment = 1
 
 [node name="C2T1A1Button" type="TextureButton" parent="Buttons/Comp2"]
 layout_mode = 0
-offset_left = 65.0
-offset_top = 83.0
-offset_right = 185.0
-offset_bottom = 131.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 25.0
+offset_top = 84.0
+offset_right = 171.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T1A1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C2T1A2Button" type="TextureButton" parent="Buttons/Comp2"]
-visible = false
 layout_mode = 0
-offset_left = 210.0
-offset_top = 82.0
-offset_right = 330.0
-offset_bottom = 130.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 191.0
+offset_top = 85.0
+offset_right = 337.0
+offset_bottom = 133.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T1A2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C2T1A3Button" type="TextureButton" parent="Buttons/Comp2"]
-visible = false
 layout_mode = 0
-offset_left = 365.0
-offset_top = 81.0
-offset_right = 485.0
-offset_bottom = 129.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 358.0
+offset_top = 84.0
+offset_right = 504.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T1A3Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C2T2Button" type="TextureButton" parent="Buttons/Comp2"]
-visible = false
 layout_mode = 0
-offset_left = 133.0
-offset_right = 253.0
-offset_bottom = 48.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 134.0
+offset_top = 2.0
+offset_right = 274.0
+offset_bottom = 50.0
+texture_normal = ExtResource("25_aby0o")
+texture_pressed = ExtResource("26_p5p86")
+texture_hover = ExtResource("27_at457")
+texture_disabled = ExtResource("28_r5h2n")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 2"
 label_settings = ExtResource("15_2y2r2")
@@ -1340,23 +1495,30 @@ horizontal_alignment = 1
 [node name="C2T2A1Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
 layout_mode = 0
-offset_left = 65.0
-offset_top = 83.0
-offset_right = 185.0
-offset_bottom = 131.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 25.0
+offset_top = 84.0
+offset_right = 171.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T2A1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
 label_settings = ExtResource("15_2y2r2")
@@ -1365,23 +1527,30 @@ horizontal_alignment = 1
 [node name="C2T2A2Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
 layout_mode = 0
-offset_left = 210.0
-offset_top = 82.0
-offset_right = 330.0
-offset_bottom = 130.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 191.0
+offset_top = 84.0
+offset_right = 337.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T2A2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
 label_settings = ExtResource("15_2y2r2")
@@ -1390,23 +1559,30 @@ horizontal_alignment = 1
 [node name="C2T2A3Button" type="TextureButton" parent="Buttons/Comp2"]
 visible = false
 layout_mode = 0
-offset_left = 365.0
-offset_top = 81.0
-offset_right = 485.0
-offset_bottom = 129.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 358.0
+offset_top = 84.0
+offset_right = 504.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2T2A3Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 3"
 label_settings = ExtResource("15_2y2r2")
@@ -1613,23 +1789,30 @@ horizontal_alignment = 1
 
 [node name="C2SwapButton" type="TextureButton" parent="Buttons/Comp2"]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 164.0
-offset_right = 186.0
-offset_bottom = 212.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 121.0
+offset_top = 157.0
+offset_right = 249.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2SwapButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
 label_settings = ExtResource("15_2y2r2")
@@ -1637,23 +1820,30 @@ horizontal_alignment = 1
 
 [node name="C2WaitButton" type="TextureButton" parent="Buttons/Comp2"]
 layout_mode = 0
-offset_left = 309.0
-offset_top = 162.0
-offset_right = 429.0
-offset_bottom = 210.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 272.0
+offset_top = 157.0
+offset_right = 400.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp2/C2WaitButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 label_settings = ExtResource("15_2y2r2")
@@ -1775,23 +1965,30 @@ border_width = 5.0
 
 [node name="C3T1Button" type="TextureButton" parent="Buttons/Comp3"]
 layout_mode = 0
-offset_left = 3.0
+offset_left = 2.0
 offset_top = 2.0
-offset_right = 123.0
+offset_right = 142.0
 offset_bottom = 50.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_gbb4v")
+texture_pressed = ExtResource("22_jl2ci")
+texture_hover = ExtResource("23_vad00")
+texture_disabled = ExtResource("24_r7ek3")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp3/C3T1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
 label_settings = ExtResource("15_2y2r2")
@@ -1799,48 +1996,61 @@ horizontal_alignment = 1
 
 [node name="C3T1A1Button" type="TextureButton" parent="Buttons/Comp3"]
 layout_mode = 0
-offset_left = 65.0
+offset_left = 105.0
 offset_top = 83.0
-offset_right = 185.0
+offset_right = 251.0
 offset_bottom = 131.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp3/C3T1A1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C3T1A2Button" type="TextureButton" parent="Buttons/Comp3"]
-visible = false
 layout_mode = 0
-offset_left = 210.0
-offset_top = 82.0
-offset_right = 330.0
-offset_bottom = 130.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 276.0
+offset_top = 83.0
+offset_right = 422.0
+offset_bottom = 131.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp3/C3T1A2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
 label_settings = ExtResource("15_2y2r2")
@@ -2171,23 +2381,30 @@ horizontal_alignment = 1
 
 [node name="C3SwapButton" type="TextureButton" parent="Buttons/Comp3"]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 164.0
-offset_right = 186.0
-offset_bottom = 212.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 121.0
+offset_top = 157.0
+offset_right = 249.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp3/C3SwapButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
 label_settings = ExtResource("15_2y2r2")
@@ -2195,23 +2412,30 @@ horizontal_alignment = 1
 
 [node name="C3WaitButton" type="TextureButton" parent="Buttons/Comp3"]
 layout_mode = 0
-offset_left = 309.0
-offset_top = 162.0
-offset_right = 429.0
-offset_bottom = 210.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 272.0
+offset_top = 157.0
+offset_right = 400.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp3/C3WaitButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 label_settings = ExtResource("15_2y2r2")
@@ -2333,23 +2557,30 @@ border_width = 5.0
 
 [node name="C4T1Button" type="TextureButton" parent="Buttons/Comp4"]
 layout_mode = 0
-offset_left = 3.0
+offset_left = 2.0
 offset_top = 2.0
-offset_right = 123.0
+offset_right = 142.0
 offset_bottom = 50.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_gbb4v")
+texture_pressed = ExtResource("22_jl2ci")
+texture_hover = ExtResource("23_vad00")
+texture_disabled = ExtResource("24_r7ek3")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp4/C4T1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 1"
 label_settings = ExtResource("15_2y2r2")
@@ -2357,48 +2588,61 @@ horizontal_alignment = 1
 
 [node name="C4T1A1Button" type="TextureButton" parent="Buttons/Comp4"]
 layout_mode = 0
-offset_left = 65.0
+offset_left = 105.0
 offset_top = 83.0
-offset_right = 185.0
+offset_right = 251.0
 offset_bottom = 131.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp4/C4T1A1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
 label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C4T1A2Button" type="TextureButton" parent="Buttons/Comp4"]
-visible = false
 layout_mode = 0
-offset_left = 210.0
+offset_left = 276.0
 offset_top = 82.0
-offset_right = 330.0
+offset_right = 422.0
 offset_bottom = 130.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp4/C4T1A2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 2"
 label_settings = ExtResource("15_2y2r2")
@@ -2430,24 +2674,31 @@ label_settings = ExtResource("15_2y2r2")
 horizontal_alignment = 1
 
 [node name="C4T2Button" type="TextureButton" parent="Buttons/Comp4"]
-visible = false
 layout_mode = 0
-offset_left = 133.0
-offset_right = 253.0
-offset_bottom = 48.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 134.0
+offset_top = 2.0
+offset_right = 274.0
+offset_bottom = 50.0
+texture_normal = ExtResource("25_aby0o")
+texture_pressed = ExtResource("26_p5p86")
+texture_hover = ExtResource("27_at457")
+texture_disabled = ExtResource("28_r5h2n")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp4/C4T2Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tier 2"
 label_settings = ExtResource("15_2y2r2")
@@ -2456,23 +2707,30 @@ horizontal_alignment = 1
 [node name="C4T2A1Button" type="TextureButton" parent="Buttons/Comp4"]
 visible = false
 layout_mode = 0
-offset_left = 65.0
-offset_top = 83.0
-offset_right = 185.0
-offset_bottom = 131.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 105.0
+offset_top = 84.0
+offset_right = 251.0
+offset_bottom = 132.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp4/C4T2A1Button"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Action 1"
 label_settings = ExtResource("15_2y2r2")
@@ -2729,23 +2987,30 @@ horizontal_alignment = 1
 
 [node name="C4SwapButton" type="TextureButton" parent="Buttons/Comp4"]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 164.0
-offset_right = 186.0
-offset_bottom = 212.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 121.0
+offset_top = 157.0
+offset_right = 249.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp4/C4SwapButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Swap"
 label_settings = ExtResource("15_2y2r2")
@@ -2753,23 +3018,30 @@ horizontal_alignment = 1
 
 [node name="C4WaitButton" type="TextureButton" parent="Buttons/Comp4"]
 layout_mode = 0
-offset_left = 309.0
-offset_top = 162.0
-offset_right = 429.0
-offset_bottom = 210.0
-texture_normal = ExtResource("12_rd3yp")
-texture_pressed = ExtResource("13_y2dij")
-texture_hover = ExtResource("13_y2dij")
-texture_disabled = ExtResource("14_4bi7d")
+offset_left = 272.0
+offset_top = 157.0
+offset_right = 400.0
+offset_bottom = 205.0
+texture_normal = ExtResource("21_wtuf5")
+texture_pressed = ExtResource("22_4ew0g")
+texture_hover = ExtResource("23_b4as7")
+texture_disabled = ExtResource("24_slypl")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Buttons/Comp4/C4WaitButton"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 11.0
-offset_right = 106.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -11.5
+offset_right = 48.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wait"
 label_settings = ExtResource("15_2y2r2")
@@ -2885,9 +3157,9 @@ horizontal_alignment = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -694.0
+offset_left = 48.0
 offset_top = 496.0
-offset_right = -1974.0
+offset_right = -1232.0
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -2898,7 +3170,7 @@ offset_left = 3.0
 offset_top = 203.0
 offset_right = 637.0
 offset_bottom = 379.0
-texture = ExtResource("19_rgoc0")
+texture = ExtResource("19_a7qi3")
 expand_mode = 1
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
@@ -2920,9 +3192,9 @@ scale = Vector2(0.2, 0.2)
 [node name="Label" type="Label" parent="TeamOrder"]
 layout_mode = 0
 offset_left = 428.0
-offset_top = 14.0
+offset_top = 21.0
 offset_right = 617.0
-offset_bottom = 53.0
+offset_bottom = 60.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "SP: "

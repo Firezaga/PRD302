@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
-[ext_resource type="Texture2D" uid="uid://bahld1iy3d2uy" path="res://Art/UI/Battle/HPBarBack.png" id="3_cepgi"]
 [ext_resource type="Texture2D" uid="uid://bby30d6prqvp5" path="res://Art/BlakeTest/Comp1.png" id="3_s4q7e"]
 [ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="4_nbqtf"]
-[ext_resource type="Texture2D" uid="uid://dtbj53oqh3j7w" path="res://Art/UI/Battle/HPBarFront.png" id="4_phkr0"]
 [ext_resource type="LabelSettings" uid="uid://bmhp3078ewa1a" path="res://Fonts/battle_log_font.tres" id="4_ut2ga"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="5_bw7tk"]
 [ext_resource type="Texture2D" uid="uid://cqel1uur1sx7e" path="res://Art/BlakeTest/Comp2.png" id="5_n3q7f"]
-[ext_resource type="Texture2D" uid="uid://bwi6gjsi7v5cw" path="res://Art/UI/Battle/HPBarFill.png" id="5_urbfp"]
+[ext_resource type="Texture2D" uid="uid://c3m4dvug7ees6" path="res://Art/UI [New]/Bars/HPBarBack.png" id="6_1lf8j"]
+[ext_resource type="Texture2D" uid="uid://chr2pejdtvnx1" path="res://Art/UI [New]/Bars/HPBarFront.png" id="7_vam7s"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_ybd0t"]
 [ext_resource type="Texture2D" uid="uid://ck4fqj11vhc5p" path="res://Art/Characters/Extor/Battle/ExtorBattleIdle1.png" id="8_8h07o"]
+[ext_resource type="Texture2D" uid="uid://7cyty8vc81o0" path="res://Art/UI [New]/Bars/HPBarFill.png" id="8_s6f3n"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="8_wcxfo"]
 [ext_resource type="Texture2D" uid="uid://cie5r048hkccr" path="res://Art/UI/TextButtonBlue.png" id="9_vcbur"]
 [ext_resource type="Texture2D" uid="uid://b3vi7pvok3ump" path="res://Art/UI/TextButtonRed.png" id="10_sahna"]
@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://fwroksbopjr6" path="res://Art/UI [New]/General Button Wave Y/WaveYNormal.png" id="18_5rymf"]
 [ext_resource type="Texture2D" uid="uid://cel3leb25mkyi" path="res://Art/UI [New]/General Button Wave Y/WaveYPressedBlue.png" id="19_11ud6"]
 [ext_resource type="Texture2D" uid="uid://cndh4vdsn3p22" path="res://Art/UI [New]/General Button Wave Y/WaveYPressedRed.png" id="19_kmfqt"]
-[ext_resource type="Texture2D" uid="uid://dij0vhca16o61" path="res://Art/UI/Battle/Wave.png" id="19_tvcso"]
 [ext_resource type="Texture2D" uid="uid://bo3lamk27bmfo" path="res://Art/UI [New]/General Button Wave Y/WaveYHoverRed.png" id="20_2wg8t"]
 [ext_resource type="Texture2D" uid="uid://bk6wvqpa3v6cs" path="res://Art/UI [New]/General Button Wave Y/WaveYHoverBlue.png" id="20_b14m1"]
 [ext_resource type="Texture2D" uid="uid://blnn00c21gx81" path="res://Art/UI [New]/General Button Wave Y/WaveYDisabled.png" id="21_ye7pl"]
@@ -35,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bvre23aib3wfc" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonPressed.png" id="27_trsyf"]
 [ext_resource type="Texture2D" uid="uid://c0e8gesnipjwf" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonHover.png" id="28_u3swg"]
 [ext_resource type="Texture2D" uid="uid://cbr7rg7q4xtro" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonDisabled.png" id="29_k1uqo"]
+[ext_resource type="Texture2D" uid="uid://bo57m7cxkmo2y" path="res://Art/UI [New]/Battle Wave/Wave.png" id="34_vn63b"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -387,9 +387,9 @@ offset_bottom = 72.0
 value = 52.0
 fill_mode = 6
 nine_patch_stretch = true
-texture_under = ExtResource("3_cepgi")
-texture_over = ExtResource("4_phkr0")
-texture_progress = ExtResource("5_urbfp")
+texture_under = ExtResource("6_1lf8j")
+texture_over = ExtResource("7_vam7s")
+texture_progress = ExtResource("8_s6f3n")
 tint_over = Color(1, 1, 1, 0.905882)
 tint_progress = Color(1, 0, 0, 0.717647)
 
@@ -402,9 +402,9 @@ offset_bottom = 72.0
 value = 52.0
 fill_mode = 6
 nine_patch_stretch = true
-texture_under = ExtResource("3_cepgi")
-texture_over = ExtResource("4_phkr0")
-texture_progress = ExtResource("5_urbfp")
+texture_under = ExtResource("6_1lf8j")
+texture_over = ExtResource("7_vam7s")
+texture_progress = ExtResource("8_s6f3n")
 tint_over = Color(1, 1, 1, 0.905882)
 tint_progress = Color(0, 0.74902, 0.960784, 0.870588)
 
@@ -3201,7 +3201,7 @@ offset_left = 3.0
 offset_top = 203.0
 offset_right = 637.0
 offset_bottom = 379.0
-texture = ExtResource("19_tvcso")
+texture = ExtResource("34_vn63b")
 expand_mode = 1
 
 [node name="Slot1" type="Sprite2D" parent="TeamOrder"]
