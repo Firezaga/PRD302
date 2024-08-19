@@ -49,6 +49,7 @@ texture = ExtResource("2_qc1xm")
 stretch_mode = 1
 
 [node name="PLXSpaceCloud" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
 
 [node name="SpaceCloud" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
 position = Vector2(713.889, -195.25)
@@ -97,38 +98,166 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_blua1")
 flip_h = true
 
+[node name="SpaceCloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1281.89, -1243.25)
+scale = Vector2(0.441319, 0.441319)
+texture = ExtResource("3_0baeo")
+
+[node name="PurpleRift1Cloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(587, -1648)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_3n2w8")
+
+[node name="PurpleRift2Cloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1864, -1689)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_cmi7j")
+
+[node name="PurpleRift3Cloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1267, -723)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_8citp")
+
+[node name="PurpleRift4Cloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(365, -914)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("16_571sx")
+
+[node name="PurpleRift5Cloud2" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(2198, -1281)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("18_byhpc")
+
+[node name="BluePlanetCloud4" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(415, -1324)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_blua1")
+
+[node name="BluePlanetCloud5" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1801, -952)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_blua1")
+flip_h = true
+
+[node name="BluePlanetCloud6" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(1890, -1018)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_blua1")
+flip_h = true
+
+[node name="SpaceCloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-1182.11, 668.75)
+scale = Vector2(0.441319, 0.441319)
+texture = ExtResource("3_0baeo")
+
+[node name="PurpleRift1Cloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-1877, 264)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_3n2w8")
+
+[node name="PurpleRift2Cloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-600, 223)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_cmi7j")
+
+[node name="PurpleRift3Cloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-1197, 1189)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_8citp")
+
+[node name="PurpleRift4Cloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-2099, 998)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("16_571sx")
+
+[node name="PurpleRift5Cloud3" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-266, 631)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("18_byhpc")
+
+[node name="BluePlanetCloud7" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-2049, 588)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_blua1")
+
+[node name="BluePlanetCloud8" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-663, 960)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_blua1")
+flip_h = true
+
+[node name="BluePlanetCloud9" type="Sprite2D" parent="ParallaxBackground/PLXSpaceCloud"]
+position = Vector2(-574, 894)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_blua1")
+flip_h = true
+
 [node name="PLXStarsBack" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/PLXStarsBack"]
-offset_left = -620.0
-offset_top = -832.0
-offset_right = 1940.0
-offset_bottom = 608.0
+offset_left = -12460.0
+offset_top = -10407.0
+offset_right = 11092.0
+offset_bottom = 5894.0
 texture = ExtResource("4_2buqj")
 stretch_mode = 1
 
 [node name="PLXStarsFront" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.2, 1.2)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/PLXStarsFront"]
-offset_left = -615.0
-offset_top = -844.0
-offset_right = 1945.0
-offset_bottom = 596.0
+offset_left = -12576.0
+offset_top = -10358.0
+offset_right = 11215.0
+offset_bottom = 5882.0
 texture = ExtResource("5_wejyx")
 stretch_mode = 1
 
 [node name="PLXStarsFrontADD (opt)" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.3, 1.3)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/PLXStarsFrontADD (opt)"]
 material = SubResource("CanvasItemMaterial_mwxyh")
-offset_left = -614.0
-offset_top = -847.0
-offset_right = 1946.0
-offset_bottom = 593.0
+offset_left = -12545.0
+offset_top = -10422.0
+offset_right = 11007.0
+offset_bottom = 5758.0
 texture = ExtResource("6_2ba6k")
 stretch_mode = 1
 
 [node name="Rifts" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="PurpleRift6" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(1624, 711)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_xsdqf")
+
+[node name="PurpleRift7" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(-1542, -595)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_18bc4")
+
+[node name="PurpleRift8" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(1330.8, -1209.6)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_8dl2b")
+
+[node name="PurpleRift9" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(-269, -1303)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("17_ny8qt")
+
+[node name="PurpleRift10" type="Sprite2D" parent="ParallaxBackground/Rifts"]
+modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(-1193, 598)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("19_16riq")
 
 [node name="PurpleRift1" type="Sprite2D" parent="ParallaxBackground/Rifts"]
 modulate = Color(1, 1, 1, 0.768627)
@@ -206,7 +335,7 @@ position = Vector2(40, 35)
 shape = SubResource("RectangleShape2D_ijytg")
 
 [node name="Enemy2" type="Sprite2D" parent="."]
-position = Vector2(964, 185)
+position = Vector2(1224, 563)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("21_qjp6s")
 
@@ -225,7 +354,41 @@ texture = ExtResource("21_qjp6s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/Enemy3"]
 shape = SubResource("RectangleShape2D_ijytg")
 
+[node name="Enemy4" type="Sprite2D" parent="."]
+position = Vector2(1929, -412)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_qjp6s")
+
+[node name="Enemy1" type="Area2D" parent="Enemy4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4/Enemy1"]
+position = Vector2(40, 35)
+shape = SubResource("RectangleShape2D_ijytg")
+
+[node name="Enemy5" type="Sprite2D" parent="."]
+position = Vector2(-670, 606)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_qjp6s")
+
+[node name="Enemy2" type="Area2D" parent="Enemy5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy5/Enemy2"]
+shape = SubResource("RectangleShape2D_ijytg")
+
+[node name="Enemy6" type="Sprite2D" parent="."]
+position = Vector2(-248, -958)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_qjp6s")
+
+[node name="Enemy3" type="Area2D" parent="Enemy6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy6/Enemy3"]
+shape = SubResource("RectangleShape2D_ijytg")
+
 [connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy1/Enemy1" to="." method="_on_enemy_1_area_entered"]
 [connection signal="area_entered" from="Enemy2/Enemy2" to="." method="_on_enemy_2_area_entered"]
 [connection signal="area_entered" from="Enemy3/Enemy3" to="." method="_on_enemy_3_area_entered"]
+[connection signal="area_entered" from="Enemy4/Enemy1" to="." method="_on_enemy_1_area_entered"]
+[connection signal="area_entered" from="Enemy5/Enemy2" to="." method="_on_enemy_2_area_entered"]
+[connection signal="area_entered" from="Enemy6/Enemy3" to="." method="_on_enemy_3_area_entered"]
