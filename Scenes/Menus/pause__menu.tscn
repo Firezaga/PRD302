@@ -223,6 +223,7 @@ tint_over = Color(1, 1, 1, 0.905882)
 tint_progress = Color(0, 0.74902, 0.960784, 0.941176)
 
 [node name="LabelHP" type="Label" parent="ExtorReg/PlayerHealth"]
+layout_mode = 0
 offset_left = -73.0
 offset_top = 7.0
 offset_right = -25.0
