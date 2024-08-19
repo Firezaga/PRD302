@@ -68,7 +68,7 @@ func t2_a2(base):
 		return base + (Strength*0.1)
 		#Alcora completely lost the bet...
 
-var T2A3_unlock = true
+var T2A3_unlock = false
 var T2A3_name = "SP Shaker"
 var T2A3_log = "Alcora puts her energy into a bottle, then shakes it!"
 var T2A3_cost = 10

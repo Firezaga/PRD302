@@ -119,9 +119,9 @@ func PT_Comp1():
 	if Global.Comp1.T2_unlock:
 		$Buttons/Comp1/C1T2Button.visible = true
 	if Global.Comp1.T3_unlock:
-		$Buttons/Comp1/C1T3Button.visible = true
+		$Buttons/Comp1/C1T3Button.visible = false
 	if Global.Comp1.T4_unlock:
-		$Buttons/Comp1/C1T4Button.visible = true
+		$Buttons/Comp1/C1T4Button.visible = false
 	
 	$Buttons/Comp1/C1SwapButton.visible = true
 	$Buttons/Comp1/C1WaitButton.visible = true
