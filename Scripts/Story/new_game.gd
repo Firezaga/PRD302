@@ -38,7 +38,7 @@ func _ready():
 	Global.Verity.T4_unlock = false
 	Global.DiaFinished = false
 	
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act0/Act0BG.png"
 	Global.DiaText = "???: A new threat looms upon us. You will be summoned to the Planar of Reality with one main purpose.~???: To destroy the threats of Annihilation.%"
 	Global.LOAD_dialogue()
 
@@ -53,7 +53,7 @@ func _process(delta):
 		Global.GOTO_movement_tutorial()
 
 func Dia2():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act0/Act0BG.png"
 	Global.DiaText = "???: I will brief you with all you need to know. Please remember this throughout your journey.~MOAT: I am Moat, an Annihilation Averter. You are Extor, my summon to destroy the threats that seeks destruction. The persons you saw on my side are the people who seek destruction of all things, and your purpose will be to stop them.~MOAT: In order to succeed, you will require others by your side to join your cause. I will soon bring you near them. It will be up to you to state your purpose. Good luck.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1

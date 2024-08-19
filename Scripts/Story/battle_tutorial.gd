@@ -1643,7 +1643,7 @@ func damage_enemy(damage):
 		await log_process_text("Currency rewarded: " + str(Global.Enemy.Reward))
 		await get_tree().create_timer(1.0).timeout
 		Global.PlayerCurrency += Global.Enemy.Reward
-		Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+		Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S3.png"
 		Global.DiaText = "THE ENEMY BEFORE YOU DISINTERGRATES. CLARICO IS RELIEVED, BEOUL IS SHOCKED, AND ALCORA JUMPS IN EXCITEMENT WHILE VERITY FACEPALMS.~BEOUL: GEEZ, KILL HIM HARDER, WHY DON'T YA!? YEAH!!!~ALCORA: YES!!! WOOO!!!!! Veeeerity!!! You're gonna give me your fake beard now!~VERITY: Drat. Here.~ Verity took out a fake beard from his pouch and gave it to Alcora.~ALCORA: What the... ANOTHER ONE? JUST HOW MANY DO YOU HAVE?~VERITY: Just enough that if one gets cut off, I can change-~CLARICO: Ugh...~Clarico falls to the ground... well, the surface of that the humans walk on.%"
 		await Global.LOAD_dialogue()
 		DiaCount += 1
