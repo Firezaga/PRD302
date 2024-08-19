@@ -39,7 +39,6 @@ func _ready():
 	$TeamOrder/Slot3.texture = ResourceLoader.load(Global.Comp3.IconBattleFP)
 	$TeamOrder/Slot4.texture = ResourceLoader.load(Global.Comp4.IconBattleFP)
 	
-	
 
 #endregion
 
@@ -67,6 +66,7 @@ func _process(delta):
 #region DIALOG
 func battle_start1():
 	$AnimationPlayer.play("start_battle")
+	$AnimationPlayer.play("idle_battle")
 
 func Dia():
 	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S2.png"

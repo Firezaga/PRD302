@@ -419,12 +419,12 @@ offset_bottom = 158.0
 text = "DEFENSE DEBUG"
 
 [node name="Enemy" type="Sprite2D" parent="."]
-position = Vector2(868, 434)
+position = Vector2(911, 472)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_e01j0")
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(1452, 568)
+position = Vector2(1616, 583)
 scale = Vector2(0.477078, 0.477078)
 texture = ExtResource("8_rw18e")
 
