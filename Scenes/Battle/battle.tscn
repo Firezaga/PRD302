@@ -3161,6 +3161,7 @@ vertical_alignment = 2
 text_overrun_behavior = 2
 
 [node name="Button" type="Button" parent="Log"]
+visible = false
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3169,6 +3170,7 @@ offset_bottom = 53.0
 text = "LOG DEBUG"
 
 [node name="Button2" type="Button" parent="Log"]
+visible = false
 layout_mode = 0
 offset_left = 32.0
 offset_top = 72.0
@@ -3177,6 +3179,7 @@ offset_bottom = 103.0
 text = "ATTACK DEBUG"
 
 [node name="Button3" type="Button" parent="Log"]
+visible = false
 layout_mode = 0
 offset_left = 34.0
 offset_top = 126.0
