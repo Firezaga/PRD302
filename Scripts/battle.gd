@@ -118,10 +118,16 @@ func PT_Comp1():
 	
 	if Global.Comp1.T2_unlock:
 		$Buttons/Comp1/C1T2Button.visible = true
+	else:
+		$Buttons/Comp1/C1T2Button.visible = false
 	if Global.Comp1.T3_unlock:
 		$Buttons/Comp1/C1T3Button.visible = true
+	else:
+		$Buttons/Comp1/C1T3Button.visible = false
 	if Global.Comp1.T4_unlock:
 		$Buttons/Comp1/C1T4Button.visible = true
+	else:
+		$Buttons/Comp1/C1T4Button.visible = false
 	
 	$Buttons/Comp1/C1SwapButton.visible = true
 	$Buttons/Comp1/C1WaitButton.visible = true
@@ -474,10 +480,16 @@ func PT_Comp2():
 	
 	if Global.Comp2.T2_unlock:
 		$Buttons/Comp2/C2T2Button.visible = true
+	else:
+		$Buttons/Comp2/C2T2Button.visible = false
 	if Global.Comp2.T3_unlock:
 		$Buttons/Comp2/C2T3Button.visible = true
+	else:
+		$Buttons/Comp2/C2T3Button.visible = false
 	if Global.Comp2.T4_unlock:
 		$Buttons/Comp2/C2T4Button.visible = true
+	else:
+		$Buttons/Comp2/C2T4Button.visible = false
 	
 	$Buttons/Comp2/C2SwapButton.visible = true
 	$Buttons/Comp2/C2WaitButton.visible = true
@@ -829,10 +841,16 @@ func PT_Comp3():
 	
 	if Global.Comp3.T2_unlock:
 		$Buttons/Comp3/C3T2Button.visible = true
+	else:
+		$Buttons/Comp3/C3T2Button.visible = false
 	if Global.Comp3.T3_unlock:
 		$Buttons/Comp3/C3T3Button.visible = true
+	else:
+		$Buttons/Comp3/C3T3Button.visible = false
 	if Global.Comp3.T4_unlock:
 		$Buttons/Comp3/C3T4Button.visible = true
+	else:
+		$Buttons/Comp3/C3T4Button.visible = false
 	
 	$Buttons/Comp3/C3SwapButton.visible = true
 	$Buttons/Comp3/C3WaitButton.visible = true
@@ -1184,10 +1202,16 @@ func PT_Comp4():
 	
 	if Global.Comp4.T2_unlock:
 		$Buttons/Comp4/C4T2Button.visible = true
+	else:
+		$Buttons/Comp4/C4T2Button.visible = false
 	if Global.Comp4.T3_unlock:
 		$Buttons/Comp4/C4T3Button.visible = true
+	else:
+		$Buttons/Comp4/C4T3Button.visible = false
 	if Global.Comp4.T4_unlock:
 		$Buttons/Comp4/C4T4Button.visible = true
+	else:
+		$Buttons/Comp4/C4T4Button.visible = false
 	
 	$Buttons/Comp4/C4SwapButton.visible = true
 	$Buttons/Comp4/C4WaitButton.visible = true
