@@ -77,7 +77,7 @@ func Dia():
 
 func Dia1():
 	Global.DiaBackground = "res://Art/BlakeTest/1920x1080 transparent.png"
-	Global.DiaText = "EXPLANATION OF BATTLE~Extor's four companions act in order, using their abilities to strengthen Extor.~Extor acts last and decides the main course of action for the turn.~Rinse.~Repeat.~BE CAREFUL: All choices are final and cannot be changed.%"
+	Global.DiaText = "€EXPLANATION OF BATTLE~Extor's four companions act in order, using their abilities to strengthen Extor.~Extor acts last and decides the main course of action for the turn.~Rinse.~Repeat.~BE CAREFUL: All choices are final and cannot be changed.%"
 	await Global.LOAD_dialogue()
 	$AnimationPlayer.play("start_battle")
 	DiaCount += 1

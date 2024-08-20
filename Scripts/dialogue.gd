@@ -59,6 +59,7 @@ func ProText():
 			continue
 		if raw_text[i] == '€':
 			$TextureButton.disabled = true
+			continue
 		if raw_text[i] == '%':
 			await DisplayText(text_to_send)
 			await advancedialog
@@ -77,6 +78,9 @@ func ProTextM(text):
 			continue
 		if (text[i] == '@'):
 			$Choice.visible = true
+		if raw_text[i] == '€':
+			$TextureButton.disabled = true
+			continue
 		if text[i] == '%':
 			await DisplayText(text_to_send)
 			await advancedialog
