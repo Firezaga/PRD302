@@ -66,7 +66,7 @@ func _process(delta):
 #region DIALOG
 func battle_start1():
 	$AnimationPlayer.play("start_battle")
-	$AnimationPlayer.play("idle_battle")
+	$AnimationPlayer.queue("idle_battle")
 
 func Dia():
 	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S2.png"
