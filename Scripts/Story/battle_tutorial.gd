@@ -1660,7 +1660,7 @@ func damage_extor(damage):
 		await log_process_text("Extor has been defeated")
 		await log_process_text("Currency lost forever: " + str(Global.PlayerCurrency))
 		await get_tree().create_timer(1.0).timeout
-		Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+		Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 Alternative Ending.png"
 		Global.DiaText = "THE ENEMY BEFORE YOU DELIVERED A DECISIVE BLOW~Clarico falls to the ground... well, the surface of that the humans walk on.%"
 		await Global.LOAD_dialogue()
 		DiaCount += 1
