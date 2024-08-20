@@ -16,6 +16,8 @@ extends CanvasLayer
 
 var raw_text
 var can_skip = true
+var canFullSkip = false
+#canFullSkip to disable/enable Skip Dialog button
 
 var base_text
 var button_1_text
