@@ -67,35 +67,35 @@ func Dia2():
 
 func Dia3():
 	Global.DiaBackground = "res://Art/StoryScenes/Act1/Act1S3.png"
-	Global.DiaText = "The four look bamboozled. The red girl is shocked, the blue one lowered her weapon already, and the bearded man... who looks far too young to have a beard, has lowered their energy. The only one to have yet to do so, is the barbaric man in front of you.~BEOUL: Come on! Try and hit us, see if you even can!~CLARICO: Beoul, stop!~BEOUL: What? You want us to die here and now? What if this... person...?~CLARICO: Please, lower your energy. I don't think this person poses a threat to us. In fact...%"
+	Global.DiaText = "The four look bamboozled. The red girl is shocked, the blue one lowered her guard already, and the bearded man... who looks far too young to have a beard, has lowered their energy. The only one to have yet to do so, is the barbaric man in front of you.~BEOUL: Come on! Try and hit us, see if you even can!~CLARICO: Beoul, stop!~BEOUL: What? You want us to die here and now? What if this... person...?~CLARICO: Please, lower your energy. I don't think this person poses a threat to us. In fact...%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
 
 func Dia4():
 	Global.DiaBackground = "res://Art/StoryScenes/Act1/Act1S4.png"
-	Global.DiaText = "Clarico approaches you and starts examining you in detail. Alcora, the girl in red, follows her. She still seems wary and has a weapon on her right hand. Clarico closed her eyes...~CLARICO: Hmm...~ALCORA: Anything, Clarico? If this thing suddenly kills us, I'm forever putting you out of my afterlife.~Clarico is still deep in thought...~ALCORA: Clarico? Don't you dare say that you've been possessed!%"
+	Global.DiaText = "Clarico approaches you and starts examining you in detail. Alcora, the girl in red, follows her. She still seems wary and preparing for you to strike. Clarico closed her eyes...~CLARICO: Hmm...~ALCORA: Anything, Clarico? If this thing suddenly kills us, I'm forever putting you out of my afterlife.~Clarico is still deep in thought...~ALCORA: Clarico? Don't you dare say that you've been possessed!%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
 
 func Dia5():
 	Global.DiaBackground = "res://Art/StoryScenes/Act1/Act1S5.png"
-	Global.DiaText = "Alcora draws her weapon and threatens you with it.~ALCORA: You! What have you done to her!? Speak up, damn it!~EXTOR: I didn't do anything.~Clarico finishes her thought process... and then...~CLARICO: ALCORA, STOP IT. Put your weapon down.%"
+	Global.DiaText = "Alcora's readying herself to strike you!~ALCORA: You! What have you done to her!? Speak up, damn it!~EXTOR: I didn't do anything.~Clarico finishes her thought process... and then...~CLARICO: ALCORA, STOP IT.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
 
 func Dia6():
 	Global.DiaBackground = "res://Art/StoryScenes/Act1/Act1S6.png"
-	Global.DiaText = "Alcora puts away her weapon, still angry.~ALCORA: Fine, you've got some explaining to do. Especially after your mini \"zombie\" arc.~CLARICO: Please, come with me. And everyone, don't worry; this person is safe.~BEOUL: What is that supposed to mean?~VERITY: It means that he's invited, and he's already been accepted. Certainly a record for the group we have here... considering our history.%"
+	Global.DiaText = "Alcora lowered her guard, still angry.~ALCORA: Fine, you've got some explaining to do. Especially after your mini \"zombie\" arc.~CLARICO: Please, come with me. And everyone, don't worry; this person is safe.~BEOUL: What is that supposed to mean?~VERITY: It means that he's invited, and he's already been accepted. Certainly a record for the group we have here... considering our history.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
 
 func Dia7():
 	Global.DiaBackground = "res://Art/StoryScenes/Act1/Act1S7.png"
-	Global.DiaText = "You group up with the four. Beoul seems attentive to you, waiting for you to strike, though he realizes that you aren't a threat. Alcora is also attentive to you, though she put down her weapon after a while. Verity, on the other hand is relaxed, while Clarico is deep in thought... again.~CLARICO: Everyone... I am sorry for worrying you.~ALCORA: Well, what is it? Spit it out already!~CLARICO: It concerns this person before us.~BEOUL: What, we kicking this guy out already?~VERITY: Very funny, wait for her to finish, bucko.~CLARICO: I believe, it will be prudent for us to have him with our journey.%"
+	Global.DiaText = "You group up with the four. Beoul seems attentive to you, waiting for you to strike, though he realizes that you aren't a threat. Alcora is also attentive to you, keeping an eye on you for a while. Verity, on the other hand is relaxed, while Clarico is deep in thought... again.~CLARICO: Everyone... I am sorry for worrying you.~ALCORA: Well, what is it? Spit it out already!~CLARICO: It concerns this person before us.~BEOUL: What, we kicking this guy out already?~VERITY: Very funny, wait for her to finish, bucko.~CLARICO: I believe, it will be prudent for us to have him with our journey.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
