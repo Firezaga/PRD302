@@ -33,14 +33,14 @@ func _process(delta):
 
 
 func Dia():
-	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S5.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S5.5.png"
 	Global.DiaText = "^YOU APPROACH THE TWO.~EXTOR: Are you okay?~ALCORA: She said to give her a minute. Might as well do something else while we wait.~ALCORA: Oh, and she said you were amazing. Exceeded her expectations by a cosmic mile.~@^I'm like that.^It was nothing.^Thanks^ALCORA: For a second there, I was expecting you to destroy reality or something!%^ALCORA: If there's anything smaller, I wanna see you tear it to shreds!%^ALCORA: Heh... makes me wish I was as strong as you.%^"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 
 
 func Dia1():
-	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S5.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S5.5.png"
 	Global.DiaText = "Clarico gets up then walks towards Alcora and Extor.~CLARICO: Okay, I'm ready. Alcora, could you get the others?~ALCORA: On it, ma'am!~Alcora runs straight to the other two.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
@@ -61,7 +61,7 @@ func Dia3():
 
 
 func Dia4():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S7.png"
 	Global.DiaText = "FROM THIS POINT ON THE GAME WORLD IS YOURS TO EXPLORE ON YOUR OWN.~IT WOULD BE WISE TO INVGESTIGATE THE PORTAL WHERE YOU FIRST ENCOUNTERED YOUR COMPANIONS.%"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
