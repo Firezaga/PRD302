@@ -65,7 +65,6 @@ func _process(delta):
 
 #region DIALOG
 func battle_start1():
-	$AnimationPlayer.play("start_battle")
 	$AnimationPlayer.queue("idle_battle")
 
 func Dia():
