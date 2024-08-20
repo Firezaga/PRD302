@@ -4,7 +4,7 @@ var DiaCount = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.DiaBackground = "res://Art/Overworld/OverworldSkyBG.png"
+	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S5.png"
 	Global.DiaText = "A FEW HOURS LATER, EVERYONE WAKES FROM THEIR SLEEP. CLARICO IS REFRESHED AND IS PREPARING A SPEECH TO THE OTHERS. ALCORA IS WAITING AND SUPPORTING HER. THE OTHER TWO ARE REGAINING THEIR ENERGY.~ALCORA (serious): Well, are you ready?~CLARICO: Give me another minute, I'm still in the process of waking up.~ALCORA: Take your time.%"
 	Global.LOAD_dialogue()
 
