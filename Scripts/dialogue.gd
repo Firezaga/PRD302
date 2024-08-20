@@ -2,6 +2,7 @@
 # Normal
 # '~' is used to seperate blocks of text for processing to the text box
 # '%' is used to end the dialogue scene
+# '€' is used to hide the skip dialogue button (one shot)
 # Example below
 # Simple placeholder text.~Some more simple placeholder text.~
 
@@ -11,8 +12,8 @@
 # ^Placeholder text for the start of the conversation.~@^Button 1 Placehold^Button 2 Placehold^Button 3 Placehold^Reply 1%^Reply 2%^Reply 3%^
 #endregion
 
+extends CanvasLayer 
 
-extends CanvasLayer
 
 var raw_text
 var can_skip = true
@@ -56,6 +57,8 @@ func ProText():
 			await advancedialog
 			text_to_send = ""
 			continue
+		if raw_text[i] == '€':
+			$TextureButton.disabled = true
 		if raw_text[i] == '%':
 			await DisplayText(text_to_send)
 			await advancedialog
