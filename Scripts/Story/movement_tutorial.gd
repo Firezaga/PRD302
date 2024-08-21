@@ -39,6 +39,10 @@ func _process(delta):
 	if (Global.DiaFinished && DiaCount == 9):
 		Global.DiaFinished = false
 		Dia11()
+	if (Global.DiaFinished && DiaCount == 10):
+		Global.DiaFinished = false
+		Global.LOAD_battle_tutorial()
+		Dia12()
 	
 	
 	#$NPC.rotation -= 0.1 * delta
@@ -127,4 +131,9 @@ func Dia11():
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 	Global.DiaFinished = false
-	Global.LOAD_battle_tutorial()
+	
+func Dia12():
+	Global.DiaText = "THERE DOESN'T SEEM TO BE A SURFACE FOR YOUR LEGS TO STAND ON, YET ALL OF YOU SEEMINGLY STAND UPRIGHT AS IF THERE WAS A FLOOR. BEOUL LOOKS AS IF HE HAS A HARD TIME ADJUSTING. CLARICO IS STILL LOOKING DOWN, PRESUMABLY STILL TIRED. ALCORA ON THE OTHER HAND IS LOOKING FOR THOSE MORSELS YOU TALKED ABOUT BEFOREHAND.~CLARICO: Everyone, I have a request.~VERITY: Go on, I'm listening.~CLARICO: I want to keep this short... I don't feel like I can last much longer...~ALCORA: Ah, don't worry! It's just one little rat, what could possibly go wrong?~VERITY: I'm telling you, if this Extor is a fake, Clarico is doomed.~CLARICO:  If that is the case, I can die with shame knowing all hope is lost.~ALCORA: Clarico...~Alcora suddenly looks sad. She suddenly seems sorry.~BEOUL: Hey! We looking for the morsel or what?%"
+	await Global.LOAD_dialogue()
+	DiaCount += 1
+	Global.DiaFinished = false
