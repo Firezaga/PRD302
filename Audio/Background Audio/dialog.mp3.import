@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/dialog.mp3-0f1f37af0b6adbf23e0e920d47fcc08d.m
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://61do18gq2c46"
-path="res://.godot/imported/test.wav-284030786d9159e5ec55c089e358c7c7.sample"
+path="res://.godot/imported/battle.wav-c80773940e06db3ba8917f73cd740f3b.sample"
 
 [deps]
 
-source_file="res://Audio/Sound Effects/test.wav"
-dest_files=["res://.godot/imported/test.wav-284030786d9159e5ec55c089e358c7c7.sample"]
+source_file="res://Audio/Background Audio/battle.wav"
+dest_files=["res://.godot/imported/battle.wav-c80773940e06db3ba8917f73cd740f3b.sample"]
 
 [params]
 
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=0

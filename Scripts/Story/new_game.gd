@@ -5,6 +5,7 @@ var DiaCount = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.BackgroundAudioChange("res://Audio/Background Audio/dialog.mp3")
 	Global.PlayerMaxHealth = 200
 	Global.PlayerAttack = 50
 	Global.PlayerAPMax = 50
