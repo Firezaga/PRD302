@@ -5,8 +5,6 @@ extends Control
 func _ready():
 	if not FileAccess.file_exists("user://savegame.save"):
 		$ContinueButton.disabled = true
-	
-	Global.BackgroundAudioChange("res://Audio/Background Audio/Main Menu.mp3")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://gxejndecq43m"]
+[gd_scene load_steps=63 format=3 uid="uid://gxejndecq43m"]
 
 [ext_resource type="Script" path="res://Scripts/Story/movement_tutorial.gd" id="1_r7kht"]
 [ext_resource type="Shader" path="res://Shaders/texture_scrolling2.gdshader" id="2_4can1"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://dkwvl0vxcltkv" path="res://Art/Characters/Beoul/Sidescroller/BeoulIdle1.png" id="34_ru8b3"]
 [ext_resource type="Texture2D" uid="uid://b5hcwh8sxn7o2" path="res://Art/Characters/Clarico/Sidescroller/ClaricoIdle1.png" id="35_w10ej"]
 [ext_resource type="Texture2D" uid="uid://uoq1x7tpsxks" path="res://Art/Characters/Verity/SideScroller/VerityIdle1.png" id="36_6an48"]
+[ext_resource type="AudioStream" uid="uid://fpjfvrsvqljh" path="res://Audio/Background Audio/dialog.mp3" id="40_npa8c"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vl8nq"]
 load_path = "res://.godot/imported/SkyBG.png-a9a86e395f66a1e5bb94b9ea62713528.ctex"
@@ -706,6 +707,9 @@ texture = ExtResource("35_w10ej")
 position = Vector2(2541, -147)
 scale = Vector2(0.0965278, 0.0965278)
 texture = ExtResource("36_6an48")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("40_npa8c")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="NPCArea" to="." method="_on_npc_area_area_entered"]

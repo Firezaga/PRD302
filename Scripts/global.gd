@@ -73,11 +73,6 @@ var DiaSpriteLeft = ""
 var DiaText = "^Placeholder text for the start of the conversation.~Pain in the fucking ass to get working.~@^Button 1 Placehold^Button 2 Placehold^Button 3 Placehold^Reply 1~Had worse experiences%^Reply 2~Second response%^Reply 3~Does this work?%^"
 #endregion
 
-#region Sounds
-var BackgroundAudio = AudioStreamPlayer.new()
-var SEAudio = AudioStreamPlayer.new()
-#endregion
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var root = get_tree().get_root()
@@ -106,18 +101,6 @@ func _ready():
 	Enemy = node.instantiate()
 	
 	
-
-func BackgroundAudioChange(loc):
-	get_tree().get_root().add_child(BackgroundAudio)
-	var audio = load(loc)
-	BackgroundAudio.set_stream(audio)
-	BackgroundAudio.play()
-
-func SEAudioChange(loc):
-	get_tree().get_root().add_child(SEAudio)
-	var audio = load(loc)
-	SEAudio.set_stream(audio)
-	SEAudio.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
