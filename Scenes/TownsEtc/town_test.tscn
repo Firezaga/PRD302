@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://b0wwd12kpysa7"]
+[gd_scene load_steps=59 format=3 uid="uid://b0wwd12kpysa7"]
 
 [ext_resource type="Script" path="res://Scripts/town_test.gd" id="1_1e6pi"]
 [ext_resource type="PackedScene" uid="uid://dx02ogge4lfm5" path="res://Scenes/Player/player_town.tscn" id="1_1f5yi"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://bddmo23f57isl" path="res://Art/UI [New]/Square Button Blank/SquareDark.png" id="31_ltn5s"]
 [ext_resource type="LabelSettings" uid="uid://qd1d0clj5h8l" path="res://Fonts/dialogue_font.tres" id="32_d0eq1"]
 [ext_resource type="Texture2D" uid="uid://b7glgt2m10hrb" path="res://Art/SideScroller/Structures/Structure2Dark.png" id="32_j0vjq"]
+[ext_resource type="AudioStream" uid="uid://fpjfvrsvqljh" path="res://Audio/Background Audio/dialog.mp3" id="38_c18xd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gptcc"]
 shader = ExtResource("2_iu243")
@@ -653,6 +654,10 @@ shape = SubResource("RectangleShape2D_4ao53")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_25poj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_c18xd")
+autoplay = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="NPCArea" to="." method="_on_npc_area_area_entered"]
