@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bjow41pg3pvx1"]
+[gd_scene load_steps=22 format=3 uid="uid://bjow41pg3pvx1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_s2kol"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="2_14rfb"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cyolhflkffudd" path="res://Art/UI [New]/General Button Wave X/WaveXDisabled.png" id="13_xn22t"]
 [ext_resource type="Texture2D" uid="uid://cqmbafgsltvjj" path="res://Art/UI [New]/General Button Wave X/WaveXPressedRed.png" id="16_ui3n0"]
 [ext_resource type="Texture2D" uid="uid://crrk68rmo5sbj" path="res://Art/UI [New]/General Button Wave X/WaveXHoverRed.png" id="17_4agok"]
+[ext_resource type="AudioStream" uid="uid://q3usk4cp6n7p" path="res://Audio/Background Audio/Main Menu.mp3" id="18_x04xg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7op5x"]
 shader = ExtResource("4_k7i5f")
@@ -278,6 +279,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "QUIT GAME"
 label_settings = ExtResource("4_pn020")
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_x04xg")
+autoplay = true
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
