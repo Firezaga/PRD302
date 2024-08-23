@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b0yx7cgvclxw3"]
+[gd_scene load_steps=25 format=3 uid="uid://b0yx7cgvclxw3"]
 
 [ext_resource type="Script" path="res://Scripts/upgrade_shop.gd" id="1_48kuf"]
 [ext_resource type="Shader" path="res://Shaders/blur.gdshader" id="2_dyn5e"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://crrk68rmo5sbj" path="res://Art/UI [New]/General Button Wave X/WaveXHoverRed.png" id="18_fk0d5"]
 [ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="19_1qsjr"]
 [ext_resource type="Texture2D" uid="uid://ogqkberuc3ys" path="res://Art/UI [New]/Currency Icons/SoulsIcon.png" id="20_fvsoh"]
+[ext_resource type="AudioStream" uid="uid://dobiea8tnj7sm" path="res://Audio/Sound Effects/button_test_4.wav" id="23_3sos2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xfe0q"]
 shader = ExtResource("2_dyn5e")
@@ -1157,6 +1158,9 @@ label_settings = ExtResource("8_hiwle")
 position = Vector2(1168, 97)
 scale = Vector2(0.483871, 0.483871)
 texture = ExtResource("20_fvsoh")
+
+[node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_3sos2")
 
 [connection signal="pressed" from="FirstMenu/ExtorButton" to="." method="_on_extor_button_pressed"]
 [connection signal="pressed" from="FirstMenu/Comp1Button" to="." method="_on_comp_1_button_pressed"]

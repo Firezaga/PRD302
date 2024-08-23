@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b3hl7rijx5lim"]
+[gd_scene load_steps=14 format=3 uid="uid://b3hl7rijx5lim"]
 
 [ext_resource type="Script" path="res://Scripts/pause__menu.gd" id="1_716a7"]
 [ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="2_3q0pl"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cqmbafgsltvjj" path="res://Art/UI [New]/General Button Wave X/WaveXPressedRed.png" id="8_uhthe"]
 [ext_resource type="Texture2D" uid="uid://crrk68rmo5sbj" path="res://Art/UI [New]/General Button Wave X/WaveXHoverRed.png" id="9_svok3"]
 [ext_resource type="LabelSettings" uid="uid://d33ujo48pv6fy" path="res://Fonts/heading_font_medium.tres" id="10_is47e"]
+[ext_resource type="AudioStream" uid="uid://dobiea8tnj7sm" path="res://Audio/Sound Effects/button_test_4.wav" id="11_uv8fq"]
 
 [sub_resource type="Gradient" id="Gradient_5t135"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -157,6 +158,9 @@ offset_bottom = 164.0
 theme_override_font_sizes/font_size = 52
 text = "Game Paused"
 label_settings = ExtResource("10_is47e")
+
+[node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_uv8fq")
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]

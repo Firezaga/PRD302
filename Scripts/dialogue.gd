@@ -162,21 +162,29 @@ func _on_dia_timer_timeout():
 
 
 func _on_button_1_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Choice.visible = false
 	ProTextM(reply_1)
 
 
 func _on_button_2_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Choice.visible = false
 	ProTextM(reply_2)
 
 
 func _on_button_3_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Choice.visible = false
 	ProTextM(reply_3)
 
 
 func _on_texture_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.DiaFinished = true
 	get_tree().paused = false
 	queue_free()

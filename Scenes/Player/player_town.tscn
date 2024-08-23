@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dx02ogge4lfm5"]
+[gd_scene load_steps=35 format=3 uid="uid://dx02ogge4lfm5"]
 
 [ext_resource type="Script" path="res://Scripts/player_town.gd" id="1_j6iwr"]
 [ext_resource type="Texture2D" uid="uid://cqvg7y6rrjgae" path="res://Art/UI [New]/Pause Button/PauseButtonNormal.png" id="2_nokbs"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b3hl7rijx5lim" path="res://Scenes/Menus/cinematic_pause_menu.tscn" id="7_cbhu1"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="7_vwxk5"]
 [ext_resource type="LabelSettings" uid="uid://dlet3wyb4qe0j" path="res://Fonts/heading_font_small.tres" id="10_6cpa2"]
+[ext_resource type="AudioStream" uid="uid://dobiea8tnj7sm" path="res://Audio/Sound Effects/button_test_4.wav" id="11_v3kc2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5lx"]
 radius = 24.0
@@ -7804,5 +7805,8 @@ parameters/conditions/is_not_running = false
 parameters/conditions/is_running = false
 parameters/Idle/blend_position = Vector2(0, -0.1)
 parameters/Run/blend_position = Vector2(0.20277, -0.0291005)
+
+[node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_v3kc2")
 
 [connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]

@@ -12,19 +12,27 @@ func _process(delta):
 
 
 func _on_main_menu_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.GOTO_main_menu()
 
 
 func _on_resume_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.CORE_unpause()
 	$".".visible = false
 
 
 func _on_quit_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.CORE_quit()
 
 
 func _on_save_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.CORE_save_game()
 
 func refresh():

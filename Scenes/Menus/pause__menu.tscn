@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://t5no0sfgmup2"]
+[gd_scene load_steps=20 format=3 uid="uid://t5no0sfgmup2"]
 
 [ext_resource type="Script" path="res://Scripts/pause__menu.gd" id="1_oo2o2"]
 [ext_resource type="PackedScene" uid="uid://buthq1411514a" path="res://Scenes/UI/blue_nine_patch.tscn" id="2_ajg4t"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c3m4dvug7ees6" path="res://Art/UI [New]/Bars/HPBarBack.png" id="15_o512x"]
 [ext_resource type="Texture2D" uid="uid://cyolhflkffudd" path="res://Art/UI [New]/General Button Wave X/WaveXDisabled.png" id="16_htwqi"]
 [ext_resource type="Texture2D" uid="uid://chr2pejdtvnx1" path="res://Art/UI [New]/Bars/HPBarFront.png" id="16_xthag"]
+[ext_resource type="AudioStream" uid="uid://dobiea8tnj7sm" path="res://Audio/Sound Effects/button_test_4.wav" id="17_2sr35"]
 [ext_resource type="Texture2D" uid="uid://7cyty8vc81o0" path="res://Art/UI [New]/Bars/HPBarFill.png" id="17_oig2g"]
 
 [sub_resource type="Gradient" id="Gradient_5t135"]
@@ -438,6 +439,9 @@ offset_right = 267.0
 offset_bottom = 267.0
 text = "Strength: ???"
 label_settings = ExtResource("3_5140f")
+
+[node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_2sr35")
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]

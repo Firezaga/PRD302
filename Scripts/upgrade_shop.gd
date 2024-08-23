@@ -17,6 +17,8 @@ func _process(delta):
 
 #region Menu Navigation
 func _on_back_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	back.reparent($Control)
 	$FirstMenu/GLBLLVL.text = "Global LVL: " + str(Global.PlayerLvl + Global.Alcora.Lvl + Global.Beoul.Lvl + Global.Clarico.Lvl + Global.Verity.Lvl)
 	$FirstMenu2.visible = false
@@ -28,6 +30,8 @@ func _on_back_button_pressed():
 
 
 func _on_extor_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	back.reparent($FirstMenu)
 	$FirstMenu2.visible = true
 	$FirstMenu2/Extor.visible = true
@@ -39,6 +43,8 @@ func _on_extor_button_pressed():
 
 
 func _on_comp_1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	back.reparent($FirstMenu)
 	$FirstMenu2/Comp1/Name.text = Global.Comp1.Name
 	$FirstMenu2/Comp1/Lvl.text = "LVL: " + str(Global.Comp1.Lvl)
@@ -52,6 +58,8 @@ func _on_comp_1_button_pressed():
 
 
 func _on_comp_2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	back.reparent($FirstMenu)
 	$FirstMenu2/Comp2/Name.text = Global.Comp2.Name
 	$FirstMenu2/Comp2/Lvl.text = "LVL: " + str(Global.Comp2.Lvl)
@@ -64,6 +72,8 @@ func _on_comp_2_button_pressed():
 
 
 func _on_comp_3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	back.reparent($FirstMenu)
 	$FirstMenu2/Comp3/Name.text = Global.Comp3.Name
 	$FirstMenu2/Comp3/Lvl.text = "LVL: " + str(Global.Comp3.Lvl)
@@ -76,6 +86,8 @@ func _on_comp_3_button_pressed():
 
 
 func _on_comp_4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	back.reparent($FirstMenu)
 	$FirstMenu2/Comp4/Name.text = Global.Comp4.Name
 	$FirstMenu2/Comp4/Lvl.text = "LVL: " + str(Global.Comp4.Lvl)
@@ -90,6 +102,8 @@ func _on_comp_4_button_pressed():
 
 #region Extor Upgrades
 func _on_health_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.PlayerMaxHealth += 50
@@ -101,6 +115,8 @@ func _on_health_button_pressed():
 
 
 func _on_damage_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.PlayerAttack += 10
@@ -111,6 +127,8 @@ func _on_damage_button_pressed():
 
 
 func _on_sp_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.PlayerAPMax += 5
@@ -125,6 +143,8 @@ func _on_sp_button_pressed():
 
 #region Comp1 Upgrades
 func _on_strength_1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp1.Strength += 5
@@ -135,6 +155,8 @@ func _on_strength_1_button_pressed():
 
 
 func _on_sp_1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp1.SPMax += 10
@@ -149,6 +171,8 @@ func _on_sp_1_button_pressed():
 
 #region Comp2 Upgrades
 func _on_strength_2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp2.Strength += 5
@@ -159,6 +183,8 @@ func _on_strength_2_button_pressed():
 
 
 func _on_sp_2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp2.SPMax += 10
@@ -173,6 +199,8 @@ func _on_sp_2_button_pressed():
 
 #region Comp3 Upgrades
 func _on_strength_3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp3.Strength += 5
@@ -183,6 +211,8 @@ func _on_strength_3_button_pressed():
 
 
 func _on_sp_3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp3.SPMax += 10
@@ -195,8 +225,10 @@ func _on_sp_3_button_pressed():
 #endregion
 
 
-#region Comp1 Upgrades
+#region Comp4 Upgrades
 func _on_strength_4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp4.Strength += 5
@@ -207,6 +239,8 @@ func _on_strength_4_button_pressed():
 
 
 func _on_sp_4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if (Global.PlayerCurrency >= 5):
 		Global.PlayerCurrency -= 5
 		Global.Comp4.SPMax += 10
@@ -220,11 +254,15 @@ func _on_sp_4_button_pressed():
 
 
 func _on_debug_curr_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.PlayerCurrency += 20
 	$FirstMenu2/Extor/Currency.text = "Currency: " + str(Global.PlayerCurrency)
 
 
 func _on_exit_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.PlayerMove = true
 	queue_free()
 
