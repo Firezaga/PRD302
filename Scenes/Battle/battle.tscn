@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bkrfggobo587i"]
+[gd_scene load_steps=41 format=3 uid="uid://bkrfggobo587i"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_ndcpt"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_frhtk"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bvre23aib3wfc" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonPressed.png" id="27_trsyf"]
 [ext_resource type="Texture2D" uid="uid://c0e8gesnipjwf" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonHover.png" id="28_u3swg"]
 [ext_resource type="Texture2D" uid="uid://cbr7rg7q4xtro" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonDisabled.png" id="29_k1uqo"]
+[ext_resource type="AudioStream" uid="uid://61do18gq2c46" path="res://Audio/Background Audio/battle.wav" id="33_q1nsd"]
 [ext_resource type="Texture2D" uid="uid://bo57m7cxkmo2y" path="res://Art/UI [New]/Battle Wave/Wave.png" id="34_vn63b"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
@@ -3582,6 +3583,11 @@ libraries = {
 "": SubResource("AnimationLibrary_8w1jy")
 }
 autoplay = "start_battle"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_q1nsd")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="Buttons/Extor/EAttackButton" to="." method="_on_e_attack_button_pressed"]
 [connection signal="pressed" from="Buttons/Extor/EDefendButton" to="." method="_on_e_defend_button_pressed"]

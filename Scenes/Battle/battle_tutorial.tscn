@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dptnfvantwogv"]
+[gd_scene load_steps=44 format=3 uid="uid://dptnfvantwogv"]
 
 [ext_resource type="Script" path="res://Scripts/Story/battle_tutorial.gd" id="1_c2sm0"]
 [ext_resource type="Texture2D" uid="uid://dkhsjjsjet5sq" path="res://Art/Battle/Battle BG Original.png" id="2_ajltp"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://bvre23aib3wfc" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonPressed.png" id="30_44d5r"]
 [ext_resource type="Texture2D" uid="uid://c0e8gesnipjwf" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonHover.png" id="31_2txu0"]
 [ext_resource type="Texture2D" uid="uid://cbr7rg7q4xtro" path="res://Art/UI [New]/Battle Panel Buttons/RightEdgeButtonDisabled.png" id="32_lw6ft"]
+[ext_resource type="AudioStream" uid="uid://61do18gq2c46" path="res://Audio/Background Audio/battle.wav" id="36_7arjd"]
 
 [sub_resource type="Gradient" id="Gradient_sf557"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -3618,6 +3619,10 @@ reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_8w1jy")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("36_7arjd")
+volume_db = -15.0
 
 [connection signal="pressed" from="Log/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Log/Button2" to="." method="_on_button_2_pressed"]
