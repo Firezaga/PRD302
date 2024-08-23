@@ -57,6 +57,7 @@ func _on_area_2d_area_entered(area):
 
 
 func _on_npc_area_area_entered(area):
+	$AudioStreamPlayer.stop()
 	Global.DiaBackground = "res://Art/StoryScenes/Act1/Act1S1.png"
 	Global.DiaText = "THERE ARE FOUR PEOPLE CAMPING AROUND EACH OTHER. ONE IS A GIRL IN BLUE, THAT SEEMS TO BE EYEING ON ANOTHER GIRL IN RED THAT IS DEEP IN AN ARGUMENT. THE THIRD IS A GRIM-LOOKING BARBARIAN WHO HOLDS A LARGE WEAPON, ARGUING WITH THE RED GIRL, AND THE LAST IS A MAN WHO LOOKS AS IF HE'S TRYING TO HIDE HIS IDENTITY, THOUGH HIS BEARD POKES OUT OF HIS THICK HOOD.~BARBARIC MAN: I'm telling you that we need more power to beat them! We're just grabbing small meat after small meat to get better!~GIRL IN RED: And I'm telling YOU that YOU need to wait for ME to distract them for YOU to attack their back! What's so hard about that?~BARBARIC MAN:  The hard part is keeping you safe! Do you know how many times you were hurt just because you wanted to keep them looking at you!? Clarico! How many times did you heal her?~GIRL IN BLUE: Ugh... I don't know... about forty times... I think? Either way, Beoul has a point. Alcora, we can't afford you being injured every time you want to make an opening; if you get hurt, I have to pick you back up.~BEARDED BOY...?: Perhaps it would make sense for them to be struck by their own attack, like me giving them a dose of... poison to make them hurt themselves trying to hit us? You know, the thing I've been doing the whole time?~GIRL IN BLUE: Actually, I agree with Verity; if we weaken them with Verity's ability, that is, in and of itself, a weak point.~BARBARIC MAN: Wait.~BARBARIC MAN: Something's coming.%"
 	Global.LOAD_dialogue()
@@ -127,13 +128,13 @@ func Dia10():
 
 func Dia11():
 	Global.DiaBackground = "res://Art/StoryScenes/Act1/Act1S11.png"
-	Global.DiaText = "THE PORTAL ON THE EDGE OF THE SURFACE SEEMS OMINOUS. THE AURA EXHUMES HOSTILITY.~ALCORA: And here we are! Welcome to the plane of \"get-ready-to-die-because-everything-has-already-been-ruined-and-you-will-die!\"~Everyone looks at Alcora with a dumbfounded face. Clarico on the other hand, looks like she's going to pass out of stupidity.~ALCORA: Anyway! Just jump on in, stick together and find something to kill!~Everyone jumps in.%"
+	Global.DiaText = "THE PORTAL ON THE EDGE OF THE SURFACE SEEMS OMINOUS. THE AURA EXHUMES HOSTILITY.~ALCORA: And here we are! Welcome to the plane of \"get-ready-to-die-because-everything-has-already-been-ruined-and-you-will-die!\"~Everyone looks at Alcora with a dumbfounded face. Clarico on the other hand, looks like she's going to pass out of stupidity.~ALCORA: Anyway! Just jump on in, stick together and find something to kill!~Everyone jumps in.%₽"
 	await Global.LOAD_dialogue()
 	DiaCount += 1
 	Global.DiaFinished = false
 	
 func Dia12():
-	Global.DiaText = "THERE DOESN'T SEEM TO BE A SURFACE FOR YOUR LEGS TO STAND ON, YET ALL OF YOU SEEMINGLY STAND UPRIGHT AS IF THERE WAS A FLOOR. BEOUL LOOKS AS IF HE HAS A HARD TIME ADJUSTING. CLARICO IS STILL LOOKING DOWN, PRESUMABLY STILL TIRED. ALCORA ON THE OTHER HAND IS LOOKING FOR THOSE MORSELS YOU TALKED ABOUT BEFOREHAND.~CLARICO: Everyone, I have a request.~VERITY: Go on, I'm listening.~CLARICO: I want to keep this short... I don't feel like I can last much longer...~ALCORA: Ah, don't worry! It's just one little rat, what could possibly go wrong?~VERITY: I'm telling you, if this Extor is a fake, Clarico is doomed.~CLARICO:  If that is the case, I can die with shame knowing all hope is lost.~ALCORA: Clarico...~Alcora suddenly looks sad. She suddenly seems sorry.~BEOUL: Hey! We looking for the morsel or what?%"
+	Global.DiaText = "THERE DOESN'T SEEM TO BE A SURFACE FOR YOUR LEGS TO STAND ON, YET ALL OF YOU SEEMINGLY STAND UPRIGHT AS IF THERE WAS A FLOOR. BEOUL LOOKS AS IF HE HAS A HARD TIME ADJUSTING. CLARICO IS STILL LOOKING DOWN, PRESUMABLY STILL TIRED. ALCORA ON THE OTHER HAND IS LOOKING FOR THOSE MORSELS YOU TALKED ABOUT BEFOREHAND.~CLARICO: Everyone, I have a request.~VERITY: Go on, I'm listening.~CLARICO: I want to keep this short... I don't feel like I can last much longer...~ALCORA: Ah, don't worry! It's just one little rat, what could possibly go wrong?~VERITY: I'm telling you, if this Extor is a fake, Clarico is doomed.~CLARICO:  If that is the case, I can die with shame knowing all hope is lost.~ALCORA: Clarico...~Alcora suddenly looks sad. She suddenly seems sorry.~BEOUL: Hey! We looking for the morsel or what?%₽"
 	#await Global.LOAD_dialogue()
 	DiaCount += 1
 	Global.DiaFinished = false
