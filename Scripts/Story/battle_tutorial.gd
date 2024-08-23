@@ -82,6 +82,7 @@ func Dia1():
 	DiaCount += 1
 
 func Dia3():
+	$AudioStreamPlayer.stop()
 	Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S4.png"
 	Global.DiaText = "ALCORA: Oh no, CLARICO!?~VERITY: This is bad, let's get her to the safe point.~BEOUL: Don't worry Alcora, I'll carry her. She's still got a heartbeat. Must be for you.~Alcora is... angry?~ALCORA: Stop it! She'd better be alive when we get there, or else!~ As per your group's agreement, everyone returned to the safe point.%"
 	await Global.LOAD_dialogue()
@@ -1642,6 +1643,7 @@ func damage_enemy(damage):
 		await log_process_text("Currency rewarded: " + str(Global.Enemy.Reward))
 		await get_tree().create_timer(1.0).timeout
 		Global.PlayerCurrency += Global.Enemy.Reward
+		$AudioStreamPlayer.stop()
 		Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 S3.png"
 		Global.DiaText = "THE ENEMY BEFORE YOU DISINTERGRATES. CLARICO IS RELIEVED, BEOUL IS SHOCKED, AND ALCORA JUMPS IN EXCITEMENT WHILE VERITY FACEPALMS.~BEOUL: GEEZ, KILL HIM HARDER, WHY DON'T YA!? YEAH!!!~ALCORA: YES!!! WOOO!!!!! Veeeerity!!! You're gonna give me your fake beard now!~VERITY: Drat. Here.~ Verity took out a fake beard from his pouch and gave it to Alcora.~ALCORA: What the... ANOTHER ONE? JUST HOW MANY DO YOU HAVE?~VERITY: Just enough that if one gets cut off, I can change-~CLARICO: Ugh...~Clarico falls to the ground... well, the surface of that the humans walk on.%"
 		await Global.LOAD_dialogue()
@@ -1659,6 +1661,7 @@ func damage_extor(damage):
 		await log_process_text("Extor has been defeated")
 		await log_process_text("Currency lost forever: " + str(Global.PlayerCurrency))
 		await get_tree().create_timer(1.0).timeout
+		$AudioStreamPlayer.stop()
 		Global.DiaBackground = "res://Art/StoryScenes/Act2/Act 2 Alternative Ending.png"
 		Global.DiaText = "THE ENEMY BEFORE YOU DELIVERED A DECISIVE BLOW~Clarico falls to the ground... well, the surface of that the humans walk on.%"
 		await Global.LOAD_dialogue()
