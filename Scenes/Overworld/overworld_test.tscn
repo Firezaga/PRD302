@@ -388,6 +388,7 @@ shape = SubResource("RectangleShape2D_ijytg")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_cw57q")
+volume_db = -13.565
 autoplay = true
 
 [connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
