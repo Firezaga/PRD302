@@ -3,7 +3,6 @@
 # '~' is used to seperate blocks of text for processing to the text box
 # '%' is used to end the dialogue scene
 # '€' is used to hide the skip dialogue button (one shot)
-# '₽' is used to stop the audio stream from playing
 # Example below
 # Simple placeholder text.~Some more simple placeholder text.~
 
@@ -61,8 +60,6 @@ func ProText():
 		if raw_text[i] == '€':
 			$TextureButton.disabled = true
 			continue
-		if raw_text[i] == '₽':
-			!$AudioStreamPlayer.is_playing()
 		if raw_text[i] == '%':
 			await DisplayText(text_to_send)
 			await advancedialog
