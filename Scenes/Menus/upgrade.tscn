@@ -1161,6 +1161,7 @@ texture = ExtResource("20_fvsoh")
 
 [node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_3sos2")
+volume_db = -20.0
 
 [connection signal="pressed" from="FirstMenu/ExtorButton" to="." method="_on_extor_button_pressed"]
 [connection signal="pressed" from="FirstMenu/Comp1Button" to="." method="_on_comp_1_button_pressed"]

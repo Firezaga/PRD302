@@ -234,6 +234,7 @@ autoplay = true
 
 [node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_s5v3c")
+volume_db = -20.0
 
 [connection signal="timeout" from="DiaTimer" to="." method="_on_dia_timer_timeout"]
 [connection signal="pressed" from="Choice/Button1" to="." method="_on_button_1_pressed"]

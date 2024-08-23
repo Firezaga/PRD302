@@ -161,6 +161,7 @@ label_settings = ExtResource("10_is47e")
 
 [node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_uv8fq")
+volume_db = -20.0
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]

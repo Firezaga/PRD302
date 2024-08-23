@@ -288,7 +288,7 @@ autoplay = true
 
 [node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_q487e")
-volume_db = -13.049
+volume_db = -20.0
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

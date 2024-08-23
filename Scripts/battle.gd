@@ -43,12 +43,18 @@ func _process(delta):
 
 #region DEBUG
 func _on_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	await log_process_text("TEST TEST TEST")
 
 func _on_button_2_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	await log_process_text(str(total_attack))
 
 func _on_button_3_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	await log_process_text(str(total_defense))
 
 #endregion
@@ -140,6 +146,8 @@ func PT_Comp1():
 	$Buttons/GreyNinePatch.visible = true
 
 func _on_c1_t1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp1/C1T2A1Button.visible = false
 	$Buttons/Comp1/C1T2A2Button.visible = false
 	$Buttons/Comp1/C1T2A3Button.visible = false
@@ -170,6 +178,8 @@ func _on_c1_t1_button_pressed():
 			$Buttons/Comp1/C1T1A3Button.disabled = false
 
 func _on_c1_t2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp1/C1T1A1Button.visible = false
 	$Buttons/Comp1/C1T1A2Button.visible = false
 	$Buttons/Comp1/C1T1A3Button.visible = false
@@ -201,6 +211,8 @@ func _on_c1_t2_button_pressed():
 			$Buttons/Comp1/C1T2A3Button.disabled = false
 
 func _on_c1_t3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp1/C1T1A1Button.visible = false
 	$Buttons/Comp1/C1T1A2Button.visible = false
 	$Buttons/Comp1/C1T1A3Button.visible = false
@@ -232,6 +244,8 @@ func _on_c1_t3_button_pressed():
 			$Buttons/Comp1/C1T3A3Button.disabled = false
 
 func _on_c1_t4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp1/C1T1A1Button.visible = false
 	$Buttons/Comp1/C1T1A2Button.visible = false
 	$Buttons/Comp1/C1T1A3Button.visible = false
@@ -263,6 +277,8 @@ func _on_c1_t4_button_pressed():
 			$Buttons/Comp1/C1T4A3Button.disabled = false
 
 func _on_c1_t1_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T1A1_is_attack:
 		total_attack = Global.Comp1.t1_a1(total_attack)
 	else:
@@ -273,6 +289,8 @@ func _on_c1_t1_a1_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t1_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T1A2_is_attack:
 		total_attack = Global.Comp1.t1_a2(total_attack)
 	else:
@@ -283,6 +301,8 @@ func _on_c1_t1_a2_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t1_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T1A3_is_attack:
 		total_attack = Global.Comp1.t1_a3(total_attack)
 	else:
@@ -293,6 +313,8 @@ func _on_c1_t1_a3_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t2_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T2A1_is_attack:
 		total_attack = Global.Comp1.t2_a1(total_attack)
 	else:
@@ -303,6 +325,8 @@ func _on_c1_t2_a1_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t2_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T2A2_is_attack:
 		total_attack = Global.Comp1.t2_a2(total_attack)
 	else:
@@ -313,6 +337,8 @@ func _on_c1_t2_a2_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t2_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T2A3_is_attack:
 		total_attack = Global.Comp1.t2_a3(total_attack)
 	else:
@@ -323,6 +349,8 @@ func _on_c1_t2_a3_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t3_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T3A1_is_attack:
 		total_attack = Global.Comp1.t3_a1(total_attack)
 	else:
@@ -333,6 +361,8 @@ func _on_c1_t3_a1_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t3_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T3A2_is_attack:
 		total_attack = Global.Comp1.t3_a2(total_attack)
 	else:
@@ -343,6 +373,8 @@ func _on_c1_t3_a2_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t3_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T3A3_is_attack:
 		total_attack = Global.Comp1.t3_a3(total_attack)
 	else:
@@ -353,6 +385,8 @@ func _on_c1_t3_a3_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t4_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T4A1_is_attack:
 		total_attack = Global.Comp1.t4_a1(total_attack)
 	else:
@@ -363,6 +397,8 @@ func _on_c1_t4_a1_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t4_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T4A2_is_attack:
 		total_attack = Global.Comp1.t4_a2(total_attack)
 	else:
@@ -373,6 +409,8 @@ func _on_c1_t4_a2_button_pressed():
 	PT_Comp2()
 
 func _on_c1_t4_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp1.T4A3_is_attack:
 		total_attack = Global.Comp1.t4_a3(total_attack)
 	else:
@@ -383,6 +421,8 @@ func _on_c1_t4_a3_button_pressed():
 	PT_Comp2()
 
 func _on_c1_wait_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.Comp1.SP += int(0.3 * Global.Comp1.SPMax)
 	if Global.Comp1.SP > Global.Comp1.SPMax:
 		Global.Comp1.SP = Global.Comp1.SPMax
@@ -391,6 +431,8 @@ func _on_c1_wait_button_pressed():
 	PT_Comp2()
 
 func _on_c1_swap_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp1/C1T1Button.visible = false
 	$Buttons/Comp1/C1T1A1Button.visible = false
 	$Buttons/Comp1/C1T1A2Button.visible = false
@@ -412,6 +454,8 @@ func _on_c1_swap_button_pressed():
 	$Buttons/Comp1/SwapButtons.visible = true
 
 func _on_c1_s2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp1
 	Global.Comp1 = Global.Comp2
 	Global.Comp2 = temp
@@ -425,6 +469,8 @@ func _on_c1_s2_button_pressed():
 	PT_Comp2()
 
 func _on_c1_s3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp1
 	Global.Comp1 = Global.Comp3
 	Global.Comp3 = temp
@@ -438,6 +484,8 @@ func _on_c1_s3_button_pressed():
 	PT_Comp2()
 
 func _on_c1_s4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp1
 	Global.Comp1 = Global.Comp4
 	Global.Comp4 = temp
@@ -501,6 +549,8 @@ func PT_Comp2():
 	$Buttons/Comp2.visible = true
 
 func _on_c2_t1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp2/C2T2A1Button.visible = false
 	$Buttons/Comp2/C2T2A2Button.visible = false
 	$Buttons/Comp2/C2T2A3Button.visible = false
@@ -531,6 +581,8 @@ func _on_c2_t1_button_pressed():
 			$Buttons/Comp2/C2T1A3Button.disabled = false
 
 func _on_c2_t2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp2/C2T1A1Button.visible = false
 	$Buttons/Comp2/C2T1A2Button.visible = false
 	$Buttons/Comp2/C2T1A3Button.visible = false
@@ -562,6 +614,8 @@ func _on_c2_t2_button_pressed():
 			$Buttons/Comp2/C2T2A3Button.disabled = false
 
 func _on_c2_t3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp2/C2T1A1Button.visible = false
 	$Buttons/Comp2/C2T1A2Button.visible = false
 	$Buttons/Comp2/C2T1A3Button.visible = false
@@ -593,6 +647,8 @@ func _on_c2_t3_button_pressed():
 			$Buttons/Comp2/C2T3A3Button.disabled = false
 
 func _on_c2_t4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp2/C2T1A1Button.visible = false
 	$Buttons/Comp2/C2T1A2Button.visible = false
 	$Buttons/Comp2/C2T1A3Button.visible = false
@@ -624,6 +680,8 @@ func _on_c2_t4_button_pressed():
 			$Buttons/Comp2/C2T4A3Button.disabled = false
 
 func _on_c2_t1_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T1A1_is_attack:
 		total_attack = Global.Comp2.t1_a1(total_attack)
 	else:
@@ -634,6 +692,8 @@ func _on_c2_t1_a1_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t1_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T1A2_is_attack:
 		total_attack = Global.Comp2.t1_a2(total_attack)
 	else:
@@ -644,6 +704,8 @@ func _on_c2_t1_a2_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t1_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T1A3_is_attack:
 		total_attack = Global.Comp2.t1_a3(total_attack)
 	else:
@@ -654,6 +716,8 @@ func _on_c2_t1_a3_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t2_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T2A1_is_attack:
 		total_attack = Global.Comp2.t2_a1(total_attack)
 	else:
@@ -664,6 +728,8 @@ func _on_c2_t2_a1_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t2_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T2A2_is_attack:
 		total_attack = Global.Comp2.t2_a2(total_attack)
 	else:
@@ -674,6 +740,8 @@ func _on_c2_t2_a2_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t2_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T2A3_is_attack:
 		total_attack = Global.Comp2.t2_a3(total_attack)
 	else:
@@ -684,6 +752,8 @@ func _on_c2_t2_a3_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t3_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T3A1_is_attack:
 		total_attack = Global.Comp2.t3_a1(total_attack)
 	else:
@@ -694,6 +764,8 @@ func _on_c2_t3_a1_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t3_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T3A2_is_attack:
 		total_attack = Global.Comp2.t3_a2(total_attack)
 	else:
@@ -704,6 +776,8 @@ func _on_c2_t3_a2_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t3_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T3A3_is_attack:
 		total_attack = Global.Comp2.t3_a3(total_attack)
 	else:
@@ -714,6 +788,8 @@ func _on_c2_t3_a3_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t4_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T4A1_is_attack:
 		total_attack = Global.Comp2.t4_a1(total_attack)
 	else:
@@ -724,6 +800,8 @@ func _on_c2_t4_a1_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t4_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T4A2_is_attack:
 		total_attack = Global.Comp2.t4_a2(total_attack)
 	else:
@@ -734,6 +812,8 @@ func _on_c2_t4_a2_button_pressed():
 	PT_Comp3()
 
 func _on_c2_t4_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp2.T4A3_is_attack:
 		total_attack = Global.Comp2.t4_a3(total_attack)
 	else:
@@ -744,6 +824,8 @@ func _on_c2_t4_a3_button_pressed():
 	PT_Comp3()
 
 func _on_c2_wait_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.Comp2.SP += int(0.3 * Global.Comp2.SPMax)
 	if Global.Comp2.SP > Global.Comp2.SPMax:
 		Global.Comp2.SP = Global.Comp2.SPMax
@@ -752,6 +834,8 @@ func _on_c2_wait_button_pressed():
 	PT_Comp3()
 
 func _on_c2_swap_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp2/C2T1Button.visible = false
 	$Buttons/Comp2/C2T1A1Button.visible = false
 	$Buttons/Comp2/C2T1A2Button.visible = false
@@ -773,6 +857,8 @@ func _on_c2_swap_button_pressed():
 	$Buttons/Comp2/SwapButtons.visible = true
 
 func _on_c2_s1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp2
 	Global.Comp2 = Global.Comp1
 	Global.Comp1 = temp
@@ -786,6 +872,8 @@ func _on_c2_s1_button_pressed():
 	PT_Comp3()
 
 func _on_c2_s3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp2
 	Global.Comp2 = Global.Comp3
 	Global.Comp3 = temp
@@ -799,6 +887,8 @@ func _on_c2_s3_button_pressed():
 	PT_Comp3()
 
 func _on_c2_s4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp2
 	Global.Comp2 = Global.Comp4
 	Global.Comp4 = temp
@@ -862,6 +952,8 @@ func PT_Comp3():
 	$Buttons/Comp3.visible = true
 
 func _on_c3_t1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp3/C3T2A1Button.visible = false
 	$Buttons/Comp3/C3T2A2Button.visible = false
 	$Buttons/Comp3/C3T2A3Button.visible = false
@@ -892,6 +984,8 @@ func _on_c3_t1_button_pressed():
 			$Buttons/Comp3/C3T1A3Button.disabled = false
 
 func _on_c3_t2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp3/C3T1A1Button.visible = false
 	$Buttons/Comp3/C3T1A2Button.visible = false
 	$Buttons/Comp3/C3T1A3Button.visible = false
@@ -923,6 +1017,8 @@ func _on_c3_t2_button_pressed():
 			$Buttons/Comp3/C3T2A3Button.disabled = false
 
 func _on_c3_t3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp3/C3T1A1Button.visible = false
 	$Buttons/Comp3/C3T1A2Button.visible = false
 	$Buttons/Comp3/C3T1A3Button.visible = false
@@ -954,6 +1050,8 @@ func _on_c3_t3_button_pressed():
 			$Buttons/Comp3/C3T3A3Button.disabled = false
 
 func _on_c3_t4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp3/C3T1A1Button.visible = false
 	$Buttons/Comp3/C3T1A2Button.visible = false
 	$Buttons/Comp3/C3T1A3Button.visible = false
@@ -985,6 +1083,8 @@ func _on_c3_t4_button_pressed():
 			$Buttons/Comp3/C3T4A3Button.disabled = false
 
 func _on_c3_t1_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T1A1_is_attack:
 		total_attack = Global.Comp3.t1_a1(total_attack)
 	else:
@@ -995,6 +1095,8 @@ func _on_c3_t1_a1_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t1_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T1A2_is_attack:
 		total_attack = Global.Comp3.t1_a2(total_attack)
 	else:
@@ -1005,6 +1107,8 @@ func _on_c3_t1_a2_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t1_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T1A3_is_attack:
 		total_attack = Global.Comp3.t1_a3(total_attack)
 	else:
@@ -1015,6 +1119,8 @@ func _on_c3_t1_a3_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t2_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T2A1_is_attack:
 		total_attack = Global.Comp3.t2_a1(total_attack)
 	else:
@@ -1025,6 +1131,8 @@ func _on_c3_t2_a1_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t2_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T2A2_is_attack:
 		total_attack = Global.Comp3.t2_a2(total_attack)
 	else:
@@ -1035,6 +1143,8 @@ func _on_c3_t2_a2_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t2_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T2A3_is_attack:
 		total_attack = Global.Comp3.t2_a3(total_attack)
 	else:
@@ -1045,6 +1155,8 @@ func _on_c3_t2_a3_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t3_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T3A1_is_attack:
 		total_attack = Global.Comp3.t3_a1(total_attack)
 	else:
@@ -1055,6 +1167,8 @@ func _on_c3_t3_a1_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t3_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T3A2_is_attack:
 		total_attack = Global.Comp3.t3_a2(total_attack)
 	else:
@@ -1065,6 +1179,8 @@ func _on_c3_t3_a2_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t3_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T3A3_is_attack:
 		total_attack = Global.Comp3.t3_a3(total_attack)
 	else:
@@ -1075,6 +1191,8 @@ func _on_c3_t3_a3_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t4_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T4A1_is_attack:
 		total_attack = Global.Comp3.t4_a1(total_attack)
 	else:
@@ -1085,6 +1203,8 @@ func _on_c3_t4_a1_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t4_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T4A2_is_attack:
 		total_attack = Global.Comp3.t4_a2(total_attack)
 	else:
@@ -1095,6 +1215,8 @@ func _on_c3_t4_a2_button_pressed():
 	PT_Comp4()
 
 func _on_c3_t4_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp3.T4A3_is_attack:
 		total_attack = Global.Comp3.t4_a3(total_attack)
 	else:
@@ -1105,6 +1227,8 @@ func _on_c3_t4_a3_button_pressed():
 	PT_Comp4()
 
 func _on_c3_wait_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.Comp3.SP += int(0.3 * Global.Comp3.SPMax)
 	if Global.Comp3.SP > Global.Comp3.SPMax:
 		Global.Comp3.SP = Global.Comp3.SPMax
@@ -1113,6 +1237,8 @@ func _on_c3_wait_button_pressed():
 	PT_Comp4()
 
 func _on_c3_swap_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp3/C3T1Button.visible = false
 	$Buttons/Comp3/C3T1A1Button.visible = false
 	$Buttons/Comp3/C3T1A2Button.visible = false
@@ -1134,6 +1260,8 @@ func _on_c3_swap_button_pressed():
 	$Buttons/Comp3/SwapButtons.visible = true
 
 func _on_c3_s1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp3
 	Global.Comp3 = Global.Comp1
 	Global.Comp1 = temp
@@ -1147,6 +1275,8 @@ func _on_c3_s1_button_pressed():
 	PT_Comp4()
 
 func _on_c3_s2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp3
 	Global.Comp3 = Global.Comp2
 	Global.Comp2 = temp
@@ -1160,6 +1290,8 @@ func _on_c3_s2_button_pressed():
 	PT_Comp4()
 
 func _on_c3_s4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp3
 	Global.Comp3 = Global.Comp4
 	Global.Comp4 = temp
@@ -1223,6 +1355,8 @@ func PT_Comp4():
 	$Buttons/Comp4.visible = true
 
 func _on_c4_t1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp4/C4T2A1Button.visible = false
 	$Buttons/Comp4/C4T2A2Button.visible = false
 	$Buttons/Comp4/C4T2A3Button.visible = false
@@ -1253,6 +1387,8 @@ func _on_c4_t1_button_pressed():
 			$Buttons/Comp4/C4T1A3Button.disabled = false
 
 func _on_c4_t2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp4/C4T1A1Button.visible = false
 	$Buttons/Comp4/C4T1A2Button.visible = false
 	$Buttons/Comp4/C4T1A3Button.visible = false
@@ -1284,6 +1420,8 @@ func _on_c4_t2_button_pressed():
 			$Buttons/Comp4/C4T2A3Button.disabled = false
 
 func _on_c4_t3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp4/C4T1A1Button.visible = false
 	$Buttons/Comp4/C4T1A2Button.visible = false
 	$Buttons/Comp4/C4T1A3Button.visible = false
@@ -1315,6 +1453,8 @@ func _on_c4_t3_button_pressed():
 			$Buttons/Comp4/C4T3A3Button.disabled = false
 
 func _on_c4_t4_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp4/C4T1A1Button.visible = false
 	$Buttons/Comp4/C4T1A2Button.visible = false
 	$Buttons/Comp4/C4T1A3Button.visible = false
@@ -1346,6 +1486,8 @@ func _on_c4_t4_button_pressed():
 			$Buttons/Comp4/C4T4A3Button.disabled = false
 
 func _on_c4_t1_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T1A1_is_attack:
 		total_attack = Global.Comp4.t1_a1(total_attack)
 	else:
@@ -1356,6 +1498,8 @@ func _on_c4_t1_a1_button_pressed():
 	PT_Extor()
 
 func _on_c4_t1_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T1A2_is_attack:
 		total_attack = Global.Comp4.t1_a2(total_attack)
 	else:
@@ -1366,6 +1510,8 @@ func _on_c4_t1_a2_button_pressed():
 	PT_Extor()
 
 func _on_c4_t1_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T1A3_is_attack:
 		total_attack = Global.Comp4.t1_a3(total_attack)
 	else:
@@ -1376,6 +1522,8 @@ func _on_c4_t1_a3_button_pressed():
 	PT_Extor()
 
 func _on_c4_t2_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T2A1_is_attack:
 		total_attack = Global.Comp4.t2_a1(total_attack)
 	else:
@@ -1386,6 +1534,8 @@ func _on_c4_t2_a1_button_pressed():
 	PT_Extor()
 
 func _on_c4_t2_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T2A2_is_attack:
 		total_attack = Global.Comp4.t2_a2(total_attack)
 	else:
@@ -1396,6 +1546,8 @@ func _on_c4_t2_a2_button_pressed():
 	PT_Extor()
 
 func _on_c4_t2_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T2A3_is_attack:
 		total_attack = Global.Comp4.t2_a3(total_attack)
 	else:
@@ -1406,6 +1558,8 @@ func _on_c4_t2_a3_button_pressed():
 	PT_Extor()
 
 func _on_c4_t3_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T3A1_is_attack:
 		total_attack = Global.Comp4.t3_a1(total_attack)
 	else:
@@ -1416,6 +1570,8 @@ func _on_c4_t3_a1_button_pressed():
 	PT_Extor()
 
 func _on_c4_t3_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T3A2_is_attack:
 		total_attack = Global.Comp4.t3_a2(total_attack)
 	else:
@@ -1426,6 +1582,8 @@ func _on_c4_t3_a2_button_pressed():
 	PT_Extor()
 
 func _on_c4_t3_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T3A3_is_attack:
 		total_attack = Global.Comp4.t3_a3(total_attack)
 	else:
@@ -1436,6 +1594,8 @@ func _on_c4_t3_a3_button_pressed():
 	PT_Extor()
 
 func _on_c4_t4_a1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T4A1_is_attack:
 		total_attack = Global.Comp4.t4_a1(total_attack)
 	else:
@@ -1446,6 +1606,8 @@ func _on_c4_t4_a1_button_pressed():
 	PT_Extor()
 
 func _on_c4_t4_a2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T4A2_is_attack:
 		total_attack = Global.Comp4.t4_a2(total_attack)
 	else:
@@ -1456,6 +1618,8 @@ func _on_c4_t4_a2_button_pressed():
 	PT_Extor()
 
 func _on_c4_t4_a3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	if Global.Comp4.T4A3_is_attack:
 		total_attack = Global.Comp4.t4_a3(total_attack)
 	else:
@@ -1466,6 +1630,8 @@ func _on_c4_t4_a3_button_pressed():
 	PT_Extor()
 
 func _on_c4_wait_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.Comp4.SP += int(0.3 * Global.Comp4.SPMax)
 	if Global.Comp4.SP > Global.Comp4.SPMax:
 		Global.Comp4.SP = Global.Comp4.SPMax
@@ -1474,6 +1640,8 @@ func _on_c4_wait_button_pressed():
 	PT_Extor()
 
 func _on_c4_swap_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Comp4/C4T1Button.visible = false
 	$Buttons/Comp4/C4T1A1Button.visible = false
 	$Buttons/Comp4/C4T1A2Button.visible = false
@@ -1495,6 +1663,8 @@ func _on_c4_swap_button_pressed():
 	$Buttons/Comp4/SwapButtons.visible = true
 
 func _on_c4_s1_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp4
 	Global.Comp4 = Global.Comp1
 	Global.Comp1 = temp
@@ -1508,6 +1678,8 @@ func _on_c4_s1_button_pressed():
 	PT_Extor()
 
 func _on_c4_s2_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp4
 	Global.Comp4 = Global.Comp2
 	Global.Comp2 = temp
@@ -1521,6 +1693,8 @@ func _on_c4_s2_button_pressed():
 	PT_Extor()
 
 func _on_c4_s3_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	var temp = Global.Comp3
 	Global.Comp3 = Global.Comp4
 	Global.Comp4 = temp
@@ -1553,6 +1727,8 @@ func PT_Extor():
 	$Buttons/Extor.visible = true
 
 func _on_e_attack_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	total_defense = Global.PlayerDefense
@@ -1561,18 +1737,24 @@ func _on_e_attack_button_pressed():
 	ET_start()
 
 func _on_e_defend_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	await log_process_text("Extor defends")
 	ET_start()
 
 func _on_e_specials_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/Extor/EAttackButton.visible = false
 	$Buttons/Extor/EDefendButton.visible = false
 	$Buttons/Extor/ESpecialsButton.visible = false
 	$Buttons/Extor/Specials.visible = true
 
 func _on_all_out_atk_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	Global.PlayerAPCur -= 20
@@ -1583,6 +1765,8 @@ func _on_all_out_atk_button_pressed():
 	ET_start()
 
 func _on_all_out_def_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	$Buttons/GreyNinePatch.visible = false
 	$Buttons/Extor.visible = false
 	Global.PlayerAPCur -= 20
@@ -1636,9 +1820,3 @@ func damage_extor(damage):
 		Global.PlayerMove = true
 		queue_free()
 #endregion
-
-
-
-
-
-

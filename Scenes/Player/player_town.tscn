@@ -7808,5 +7808,6 @@ parameters/Run/blend_position = Vector2(0.20277, -0.0291005)
 
 [node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_v3kc2")
+volume_db = -20.0
 
 [connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]
