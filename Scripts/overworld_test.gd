@@ -18,18 +18,21 @@ func _on_area_2d_area_entered(area):
 
 
 func _on_enemy_1_area_entered(area):
+	AudioServer.set_bus_volume_db(1, -80.0)
 	Global.PlayerMove = false
 	Global.LOAD_battle("res://Scenes/Enemies/enemy_test.tscn")
 	$Enemy1.queue_free()
 
 
 func _on_enemy_2_area_entered(area):
+	AudioServer.set_bus_volume_db(1, -80.0)
 	Global.PlayerMove = false
 	Global.LOAD_battle("res://Scenes/Enemies/enemy_test.tscn")
 	$Enemy2.queue_free()
 
 
 func _on_enemy_3_area_entered(area):
+	AudioServer.set_bus_volume_db(1, -80.0)
 	Global.PlayerMove = false
 	Global.LOAD_battle("res://Scenes/Enemies/enemy_test.tscn")
 	$Enemy3.queue_free()

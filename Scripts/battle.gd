@@ -1615,6 +1615,7 @@ func damage_enemy(damage):
 		await get_tree().create_timer(1.0).timeout
 		Global.PlayerCurrency += Global.Enemy.Reward
 		Global.PlayerMove = true
+		AudioServer.set_bus_volume_db(1, 0.0)
 		queue_free()
 
 func damage_extor(damage):
