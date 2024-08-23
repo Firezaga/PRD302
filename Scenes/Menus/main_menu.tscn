@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bjow41pg3pvx1"]
+[gd_scene load_steps=23 format=3 uid="uid://bjow41pg3pvx1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_s2kol"]
 [ext_resource type="Texture2D" uid="uid://bea72qimiiiae" path="res://Art/UI/TextButtonGreyNormal.png" id="2_14rfb"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cqmbafgsltvjj" path="res://Art/UI [New]/General Button Wave X/WaveXPressedRed.png" id="16_ui3n0"]
 [ext_resource type="Texture2D" uid="uid://crrk68rmo5sbj" path="res://Art/UI [New]/General Button Wave X/WaveXHoverRed.png" id="17_4agok"]
 [ext_resource type="AudioStream" uid="uid://q3usk4cp6n7p" path="res://Audio/Background Audio/Main Menu.mp3" id="18_x04xg"]
+[ext_resource type="AudioStream" uid="uid://dobiea8tnj7sm" path="res://Audio/Sound Effects/button_test_4.wav" id="19_q487e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7op5x"]
 shader = ExtResource("4_k7i5f")
@@ -283,6 +284,10 @@ horizontal_alignment = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_x04xg")
 autoplay = true
+
+[node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_q487e")
+volume_db = -13.049
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

@@ -710,6 +710,8 @@ texture = ExtResource("36_6an48")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("40_npa8c")
+volume_db = 9.886
+autoplay = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="NPCArea" to="." method="_on_npc_area_area_entered"]

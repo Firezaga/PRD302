@@ -8,3 +8,5 @@ script = ExtResource("1_terkn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_jmcxr")
+volume_db = 9.49
+autoplay = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dyroak05o2fy"]
+[gd_scene load_steps=26 format=3 uid="uid://dyroak05o2fy"]
 
 [ext_resource type="PackedScene" uid="uid://fq3lc6h4our0" path="res://Scenes/Player/player_overworld.tscn" id="1_sdr83"]
 [ext_resource type="Script" path="res://Scripts/overworld_test.gd" id="1_wt7q3"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ckglg62v5hryv" path="res://Art/Overworld/Planets/BluePlanet.png" id="18_wdcq7"]
 [ext_resource type="Texture2D" uid="uid://cp5ge0wnq3vgq" path="res://Art/Overworld/PurpleRifts/PurpleRift5.png" id="19_16riq"]
 [ext_resource type="Texture2D" uid="uid://dpkl1yvg0b8y7" path="res://Art/Enemies/Octospider.png" id="21_qjp6s"]
+[ext_resource type="AudioStream" uid="uid://q3usk4cp6n7p" path="res://Audio/Background Audio/Main Menu.mp3" id="22_cw57q"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mwxyh"]
 blend_mode = 1
@@ -384,6 +385,10 @@ texture = ExtResource("21_qjp6s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy6/Enemy3"]
 shape = SubResource("RectangleShape2D_ijytg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_cw57q")
+autoplay = true
 
 [connection signal="area_entered" from="Town/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy1/Enemy1" to="." method="_on_enemy_1_area_entered"]
