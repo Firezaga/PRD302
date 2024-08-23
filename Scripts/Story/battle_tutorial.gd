@@ -64,6 +64,7 @@ func _process(delta):
 
 #region DIALOG
 func battle_start1():
+	$AudioStreamPlayer.play()
 	$AnimationPlayer.queue("idle_battle")
 
 func Dia():

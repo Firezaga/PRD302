@@ -283,6 +283,7 @@ horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_x04xg")
+volume_db = -14.018
 autoplay = true
 
 [node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
