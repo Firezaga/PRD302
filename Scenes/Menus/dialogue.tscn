@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c25wos2dasiwm"]
+[gd_scene load_steps=15 format=3 uid="uid://c25wos2dasiwm"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_oohnh"]
 [ext_resource type="PackedScene" uid="uid://cgh8duyso88by" path="res://Scenes/UI/grey_nine_patch.tscn" id="2_v67bk"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cel3leb25mkyi" path="res://Art/UI [New]/General Button Wave Y/WaveYPressedBlue.png" id="8_mewme"]
 [ext_resource type="Texture2D" uid="uid://bk6wvqpa3v6cs" path="res://Art/UI [New]/General Button Wave Y/WaveYHoverBlue.png" id="9_pi0f1"]
 [ext_resource type="Texture2D" uid="uid://blnn00c21gx81" path="res://Art/UI [New]/General Button Wave Y/WaveYDisabled.png" id="10_lelgh"]
+[ext_resource type="AudioStream" uid="uid://fpjfvrsvqljh" path="res://Audio/Background Audio/dialog.mp3" id="13_lf3i1"]
+[ext_resource type="AudioStream" uid="uid://dobiea8tnj7sm" path="res://Audio/Sound Effects/button_test_4.wav" id="14_s5v3c"]
 
 [node name="Dialogue" type="CanvasLayer"]
 process_mode = 3
@@ -225,6 +227,13 @@ text = "SKIP DIALOGUE"
 label_settings = ExtResource("6_wofe7")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_lf3i1")
+autoplay = true
+
+[node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_s5v3c")
 
 [connection signal="timeout" from="DiaTimer" to="." method="_on_dia_timer_timeout"]
 [connection signal="pressed" from="Choice/Button1" to="." method="_on_button_1_pressed"]

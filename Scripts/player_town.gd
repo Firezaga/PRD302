@@ -38,6 +38,8 @@ func update_blend_position():
 	animation_tree["parameters/Run/blend_position"] = velocity
 
 func _on_pause_button_pressed():
+	$SEAudioPlayer.play()
+	await get_tree().create_timer(0.5).timeout
 	Global.PlayerMove = false
 	$PauseMenu.refresh()
 	$PauseMenu.visible = true

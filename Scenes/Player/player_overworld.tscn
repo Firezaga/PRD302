@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://fq3lc6h4our0"]
+[gd_scene load_steps=10 format=3 uid="uid://fq3lc6h4our0"]
 
 [ext_resource type="Script" path="res://Scripts/player_overworld.gd" id="1_ixyi4"]
 [ext_resource type="Texture2D" uid="uid://d3vg7mxk11mhc" path="res://Art/Characters/Extor/SideScroller/ExtorIdle1.png" id="2_1p603"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cwq0vcfdi3vh8" path="res://Art/UI [New]/Pause Button/PauseButtonHover.png" id="5_2geme"]
 [ext_resource type="PackedScene" uid="uid://t5no0sfgmup2" path="res://Scenes/Menus/pause__menu.tscn" id="5_iyagj"]
 [ext_resource type="Texture2D" uid="uid://coj8ae58joiqy" path="res://Art/UI [New]/Pause Button/PauseButtonDisabled.png" id="6_eeocu"]
+[ext_resource type="AudioStream" uid="uid://dobiea8tnj7sm" path="res://Audio/Sound Effects/button_test_4.wav" id="8_unw0g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbj54"]
 radius = 29.0
@@ -46,5 +47,8 @@ shape = SubResource("CapsuleShape2D_kbj54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_kbj54")
+
+[node name="SEAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_unw0g")
 
 [connection signal="pressed" from="Camera2D/PauseButton" to="." method="_on_pause_button_pressed"]
